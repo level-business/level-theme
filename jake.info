@@ -1,0 +1,99 @@
+name = "Jake"
+description = "Theme for MN3. Jake is a little dog."
+core = "6.x"
+engine = "phptemplate"
+base theme = "rubik"
+
+project = "jake"
+
+scripts[] = "js/theme.js"
+
+stylesheets[print][] = "print.css"
+stylesheets[screen][] = "css/openlayers.css"
+stylesheets[screen][] = "style.css"
+stylesheets[screen][] = "css/feeditem_lists.css"
+stylesheets[screen][] = "css/designkit_defaults.css"
+
+regions[palette] = "Palette"
+regions[page_tools] = "Page tools"
+regions[page_title] = "Page title"
+regions[left] = "Left sidebar"
+regions[right] = "Right sidebar"
+regions[content] = "Content"
+regions[header] = "Header"
+
+; Theme features ======================================================
+
+features[] = "mission"
+features[] = "slogan"
+
+; DesignKit ===========================================================
+
+; Site logo
+designkit[image][logo][title] = "Site logo"
+designkit[image][logo][description] = "Header logo."
+designkit[image][logo][imagecache] = "imagecache_scale:240x40"
+
+; Print logo
+designkit[image][printlogo][title] = "Print logo"
+designkit[image][printlogo][description] = "Print logo."
+designkit[image][printlogo][imagecache] = "imagecache_scale:720x120"
+
+; Wallpaper
+designkit[image][wallpaper][title] = "Wallpaper"
+designkit[image][wallpaper][description] = "Wallpaper."
+designkit[image][wallpaper][imagecache] = "imagecache_scale:800x600"
+
+; Background
+designkit[color][background_color][title] = "Background"
+designkit[color][background_color][default] = "#d0dcdc"
+
+; Foreground
+designkit[color][foreground_color][title] = "Foreground"
+designkit[color][foreground_color][default] = "#dd4422"
+
+; Header
+designkit[color][header_color][title] = "Header"
+designkit[color][header_color][default] = "#333333"
+
+; Maps
+designkit[color][map_color][title] = "Maps"
+designkit[color][map_color][default] = "#b3b3b3"
+
+; Context layouts =====================================================
+
+; Layout: Default
+layouts[default][name] = "Default"
+layouts[default][description] = "Standard three column page."
+layouts[default][template] = "page"
+layouts[default][regions][] = "palette"
+layouts[default][regions][] = "page_tools"
+layouts[default][regions][] = "page_title"
+layouts[default][regions][] = "left"
+layouts[default][regions][] = "right"
+layouts[default][regions][] = "content"
+layouts[default][regions][] = "header"
+
+; Layout: Single sidebar
+layouts[sidebar][name] = "Single sidebar"
+layouts[sidebar][description] = "Page with left sidebar."
+layouts[sidebar][template] = "layout-sidebar"
+layouts[sidebar][stylesheet] = "layout.css"
+layouts[sidebar][regions][] = "palette"
+layouts[sidebar][regions][] = "page_tools"
+layouts[sidebar][regions][] = "page_title"
+layouts[sidebar][regions][] = "left"
+layouts[sidebar][regions][] = "content"
+layouts[sidebar][regions][] = "header"
+
+; Layout: Two column
+layouts[twocolumn][name] = "Two column"
+layouts[twocolumn][description] = "Page with two columns split 50/50."
+layouts[twocolumn][template] = "layout-twocolumn"
+layouts[twocolumn][stylesheet] = "layout.css"
+layouts[twocolumn][regions][] = "palette"
+layouts[twocolumn][regions][] = "page_tools"
+layouts[twocolumn][regions][] = "page_title"
+layouts[twocolumn][regions][] = "right"
+layouts[twocolumn][regions][] = "content"
+layouts[twocolumn][regions][] = "header"
