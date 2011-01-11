@@ -21,6 +21,9 @@ regions[left] = "Left sidebar"
 regions[right] = "Right sidebar"
 regions[content] = "Content"
 regions[header] = "Header"
+regions[identity] = "Company profile identity"
+regions[indicators] = "Company profile indicators"
+regions[benchmarks] = "Company profile benchmarks"
 
 ; Theme features ======================================================
 
@@ -74,8 +77,8 @@ layouts[default][regions][] = "right"
 layouts[default][regions][] = "content"
 layouts[default][regions][] = "header"
 
-; Layout: Single sidebar
-layouts[sidebar][name] = "Single sidebar"
+; Layout: Single sidebar (Left)
+layouts[sidebar][name] = "Single sidebar (Left)"
 layouts[sidebar][description] = "Page with left sidebar."
 layouts[sidebar][template] = "layout-sidebar"
 layouts[sidebar][stylesheet] = "layout.css"
@@ -97,3 +100,18 @@ layouts[twocolumn][regions][] = "page_title"
 layouts[twocolumn][regions][] = "right"
 layouts[twocolumn][regions][] = "content"
 layouts[twocolumn][regions][] = "header"
+
+; Layout: Company profile
+layouts[profile][name] = "Company profile"
+layouts[profile][description] = "3 column page."
+layouts[profile][template] = "layout-profile"
+layouts[profile][regions][] = "palette"
+layouts[profile][regions][] = "page_tools"
+layouts[profile][regions][] = "page_title"
+layouts[profile][regions][] = "left"
+layouts[profile][regions][] = "right"
+layouts[profile][regions][] = "content"
+layouts[profile][regions][] = "header"
+layouts[profile][regions][] = "identity"
+layouts[profile][regions][] = "indicators"
+layouts[profile][regions][] = "benchmarks"
