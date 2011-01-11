@@ -1,14 +1,14 @@
 <?php
 // Render fields with known formatting first.
-$date        = jake_views_render_field($fields['timestamp_1']);
-$feed        = jake_views_render_field($fields['title_1']);
-$title       = jake_views_render_field($fields['title']);
-$description = jake_views_render_field($fields['description']);
-$labels      = jake_views_render_field($fields['data_taxonomy_form']);
-$links       = jake_views_render_field($fields['simpleshare_link']) . jake_views_render_field($fields['mark_trash']);
+$date        = level_views_render_field($fields['timestamp_1']);
+$feed        = level_views_render_field($fields['title_1']);
+$title       = level_views_render_field($fields['title']);
+$description = level_views_render_field($fields['description']);
+$labels      = level_views_render_field($fields['data_taxonomy_form']);
+$links       = level_views_render_field($fields['simpleshare_link']) . level_views_render_field($fields['mark_trash']);
 
 // All other fields.
-$other       = jake_views_render_field($fields);
+$other       = level_views_render_field($fields);
 ?>
 <div class='feeditem clear-block'>
 

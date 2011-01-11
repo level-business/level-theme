@@ -1,10 +1,10 @@
-name = "Jake"
-description = "Theme for MN3. Jake is a little dog."
+name = "level"
+description = "Theme for level."
 core = "6.x"
 engine = "phptemplate"
 base theme = "rubik"
 
-project = "jake"
+project = "level"
 
 scripts[] = "js/theme.js"
 

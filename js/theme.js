@@ -1,6 +1,6 @@
 // $Id$
 
-Drupal.behaviors.jake = function (context) {
+Drupal.behaviors.level = function (context) {
   /**
    * Open feed item links in new windows.
    */
@@ -56,9 +56,9 @@ Drupal.behaviors.jake = function (context) {
   $('.views-field-mark-trash .mark-link > a').bind('mark.drupalMark', function() { $(this).parents('li.views-row').hide(600);});
 
   // Change the z-index of the l10n client when it is expanded
-  Drupal.jake.checkl10n();
+  Drupal.level.checkl10n();
   $('#l10n-client .toggle').click(function() {
-    Drupal.jake.checkl10n();
+    Drupal.level.checkl10n();
   });
 
   // Hide the context ui category selector if there is only one option
@@ -70,8 +70,8 @@ Drupal.behaviors.jake = function (context) {
   });
 
   // Activate spaces dashboard editor when a box is edited
-  $('.boxes-box-controls .links li.edit').children('a:not(.jake-processed)').each(function() {
-    $(this).addClass('jake-processed');
+  $('.boxes-box-controls .links li.edit').children('a:not(.level-processed)').each(function() {
+    $(this).addClass('level-processed');
     $(this).click(function() {
       var block = $('#palette div.block');
       if (!$('body').hasClass('context-editing')) {
@@ -122,8 +122,8 @@ Drupal.behaviors.jake = function (context) {
     });
   });
 
-  $('#content div.feeditem div.feeditem-labels:not(.jake-processed)')
-    .addClass('jake-processed')
+  $('#content div.feeditem div.feeditem-labels:not(.level-processed)')
+    .addClass('level-processed')
     .each(function() {
       $(this).hover(
         function() {
@@ -136,8 +136,8 @@ Drupal.behaviors.jake = function (context) {
     });
 };
 
-Drupal.jake = {}
-Drupal.jake.checkl10n = function() {
+Drupal.level = {}
+Drupal.level.checkl10n = function() {
   client = $('#l10n-client');
   if (client.hasClass('hidden')) {
     index = 100;

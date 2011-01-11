@@ -3,7 +3,7 @@
 /**
  * Implementation of hook_theme().
  */
-function jake_theme($existing, $type, $theme, $path) {
+function level_theme($existing, $type, $theme, $path) {
   return array(
     'site_name' => array(),
     'print_logo' => array(),
@@ -13,7 +13,7 @@ function jake_theme($existing, $type, $theme, $path) {
 /**
  * Move taxonomy back to first node edit page.
  */
-function jake_preprocess_node_form(&$vars) {
+function level_preprocess_node_form(&$vars) {
   $vars['form']['taxonomy'] = $vars['sidebar']['taxonomy'];
   unset($vars['sidebar']['taxonomy']);
 }
@@ -21,7 +21,7 @@ function jake_preprocess_node_form(&$vars) {
 /**
  * Preprocessor for theme('help').
  */
-function jake_preprocess_help(&$vars) {
+function level_preprocess_help(&$vars) {
   $vars['title'] = t('Need help?');
   $vars['layout'] = FALSE;
   $vars['attr'] = array();
@@ -31,7 +31,7 @@ function jake_preprocess_help(&$vars) {
 /**
  * Preprocessor for theme('page').
  */
-function jake_preprocess_page(&$vars) {
+function level_preprocess_page(&$vars) {
   // Help link
   if (!empty($vars['help'])) {
     $vars['help_link'] = l('?', $_GET['q'], array('fragment' => 'help', 'attributes' => array('class' => 'help-link')));
@@ -85,7 +85,7 @@ function jake_preprocess_page(&$vars) {
 /**
  * Preprocessor for theme('block').
  */
-function jake_preprocess_block(&$vars) {
+function level_preprocess_block(&$vars) {
   if ($vars['block']->region === 'palette') {
     $vars['attr']['class'] .= !empty($vars['title']) ? ' block-toggle' : ' widget';
   }
@@ -110,11 +110,11 @@ function jake_preprocess_block(&$vars) {
 /**
  * Helper function to render views fields.
  */
-function jake_views_render_field(&$field, $skip = TRUE) {
+function level_views_render_field(&$field, $skip = TRUE) {
   $output = '';
   if (is_array($field) && count($field) && is_object(current($field))) {
     foreach ($field as $k => $f) {
-      $output .= jake_views_render_field($field[$k]);
+      $output .= level_views_render_field($field[$k]);
     }
   }
   else if (is_object($field)) {
@@ -136,7 +136,7 @@ function jake_views_render_field(&$field, $skip = TRUE) {
 /**
  * Preprocessor for theme('node').
  */
-function jake_preprocess_node(&$vars) {
+function level_preprocess_node(&$vars) {
   $vars['layout'] = FALSE;
 
   // Don't show node title on page views
@@ -159,7 +159,7 @@ function jake_preprocess_node(&$vars) {
  * Preprocessor for theme('flot_views_style').
  * Supply DesignKit colors to OpenLayers styles.
  */
-function jake_preprocess_flot_views_style(&$vars) {
+function level_preprocess_flot_views_style(&$vars) {
   static $id = 0;
   $id++;
 
@@ -169,7 +169,7 @@ function jake_preprocess_flot_views_style(&$vars) {
   $vars['options']->grid->tickColor = '#eee';
   $vars['options']->grid->backgroundColor = '#fff';
 
-  $id_string = $vars['element']['id'] = "jake-flot-{$id}";
+  $id_string = $vars['element']['id'] = "level-flot-{$id}";
 
   // Add js to vars rather than calling drupal_add_js() directly.
   // This gives subthemes a chance to override this JS or omit it altogether
@@ -209,7 +209,7 @@ function jake_preprocess_flot_views_style(&$vars) {
  * Override of theme_openlayers_styles().
  * Supply DesignKit colors to OpenLayers styles.
  */
-function jake_openlayers_styles($styles = array(), $map = array()) {
+function level_openlayers_styles($styles = array(), $map = array()) {
   $color = variable_get('designkit_color', array());
   if (isset($styles['default'])) {
     $styles['default']['fillColor'] = !empty($color['foreground_color']) ? $color['foreground_color'] : '#ace';
@@ -221,7 +221,7 @@ function jake_openlayers_styles($styles = array(), $map = array()) {
 /**
  * Override of theme_status_message().
  */
-function jake_status_messages($display = NULL) {
+function level_status_messages($display = NULL) {
   $output = '';
   $first = TRUE;
   $autoclose = array('status' => 1, 'warning' => 0, 'error' => 0);
@@ -261,7 +261,7 @@ function jake_status_messages($display = NULL) {
 /**
  * Theme function for generating a site logo/name.
  */
-function jake_site_name() {
+function level_site_name() {
   $image = variable_get('designkit_image', array());
   $name = variable_get('site_name', 'Drupal');
   if (!empty($image['logo'])) {
@@ -273,7 +273,7 @@ function jake_site_name() {
 /**
  * Preprocess for theme('print_header').
  */
-function jake_preprocess_print_header(&$vars) {
+function level_preprocess_print_header(&$vars) {
   $vars['site_name'] = theme('print_logo');
   $vars['date'] = format_date(time(), 'large');
 }
@@ -281,8 +281,8 @@ function jake_preprocess_print_header(&$vars) {
 /**
  * Print logo.
  */
-function jake_print_logo() {
-  $settings = theme_get_settings('jake');
+function level_print_logo() {
+  $settings = theme_get_settings('level');
   $name = check_plain(variable_get('site_name', 'Drupal'));
 
   if (!empty($settings['printlogo_path']) && file_exists($settings['printlogo_path']) && module_exists('imagecache') && imagecache_preset_by_name('logo_print')) {
