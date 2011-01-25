@@ -1,0 +1,113 @@
+#block-webform-client-block-8 h2 {
+	display: none;
+}
+
+#breadcrumb {
+	display: none;
+}
+
+#content .section {
+  padding: 0;
+}
+
+#edit-submit {
+	width: 218px;
+}
+
+#footer {
+	font-size: 0.7em;
+}
+
+#footer-columns {
+  /*border-top: 4px solid black;*/
+}
+
+  #footer-columns p {
+    margin-top: 0;
+    padding-top: 0.8em;
+    line-height: 17px;
+  }
+
+#footer-wrapper {
+  color: #000000;
+}
+
+  #footer-wrapper a:hover,
+  #footer-wrapper a {
+    color: #449bc9;
+    text-decoration: none;
+  }
+
+  #footer-wrapper h2 {
+    border-top: 4px solid black;
+    border-bottom: 1px solid black;
+    font-weight: bold;
+    text-transform: none;
+  }
+
+  #footer-wrapper .block {
+    margin: 0;
+    padding: 0;
+  }
+
+#header div.section {
+  border-top: 4px solid black;
+  border-bottom: 1px solid black;
+}
+
+#name-and-slogan {
+  margin-left: 0;
+  margin-bottom: 24px;
+  padding-top: 0;
+}
+
+#node-6 p {
+  font-size: 2em;
+}
+
+#site-name a {
+  color: #000000;
+  font-size: 2.1em;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#site-slogan {
+  display: none;
+  font-style: normal;
+}
+
+#edit-submitted-email-address {
+	width: 460px;
+}
+
+#webform-component-email-address {
+	float: left;
+	padding-right: 20px;
+	margin-top: -10px;
+}
+
+a {
+  color: #449bc9;
+  text-decoration: none;
+}
+
+body.page-node-6 h1.title {
+  display: none;
+}
+
+h2 {
+  border-top: 4px solid black;
+  border-bottom: 1px solid black;
+}
+
+body,
+#site-slogan,
+.ui-widget,
+.comment-form label {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.meta {
+	display: none;
+}
