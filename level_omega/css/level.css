@@ -1,0 +1,169 @@
+body {
+ font-size: 14px;
+ padding:0px;
+ margin:0px;
+}
+
+h1 {
+ margin-top: 10px;
+ margin-bottom: 14px;
+}
+#block-webform-client-block-8 h2 {
+	display: none;
+}
+
+#breadcrumb {
+	display: none;
+}
+
+#content .section {
+  padding: 0;
+}
+
+
+#footer {
+	font-size: 0.7em;
+}
+
+#footer-columns {
+  /*border-top: 4px solid black;*/
+}
+
+  #footer-columns p {
+    margin-top: 0;
+    padding-top: 0.8em;
+    line-height: 17px;
+  }
+
+#footer-wrapper {
+  color: #000000;
+}
+
+  #footer-wrapper a:hover,
+  #footer-wrapper a {
+    color: #449bc9;
+    text-decoration: none;
+  }
+
+  #footer-wrapper h2 {
+    border-top: 4px solid black;
+    border-bottom: 1px solid black;
+    font-weight: bold;
+    text-transform: none;
+  }
+
+  #footer-wrapper .block {
+    margin: 0;
+    padding: 0;
+  }
+
+#header div.section, #site-header {
+  border-top: 4px solid black;
+  border-bottom: 1px solid black;
+}
+
+#name-and-slogan {
+  margin-left: 0;
+  margin-bottom: 24px;
+  padding-top: 0;
+}
+
+#node-6 p {
+  font-size: 2em;
+}
+
+#site-name a {
+  color: #000000;
+  font-size: 2.1em;
+  font-weight: bold;
+  text-decoration: none;
+  letter-spacing: -0.06em;
+  line-height: 1em;
+}
+
+#site-slogan {
+  display: none;
+  font-style: normal;
+}
+
+#edit-submitted-email-address {
+	width: 460px;
+}
+
+#webform-component-email-address {
+	float: left;
+	padding-right: 20px;
+	margin-top: -10px;
+}
+
+a {
+  color: #449bc9;
+  text-decoration: none;
+}
+
+body.page-node-6 h1.title {
+  display: none;
+}
+
+h2 {
+ font-size: 1.1em;
+}
+h2 , .view-content {
+  border-top: 4px solid black;
+  border-bottom: 1px solid black;
+  
+}
+
+body,
+#site-slogan,
+.ui-widget,
+.comment-form label {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.meta {
+	display: none;
+}
+
+.views-field-company-name a {
+ color: black;
+ text-decoration: underline;
+}
+
+.views-field-company-name a:hover {
+ color: #449BC9;
+ text-decoration: none;
+}
+
+h2 { margin: 0px; }
+
+ form#views-exposed-form-Solr-page-1 {
+  position: relative;
+  top: 0px;
+  left: 0px;
+  height: 75px; 
+}
+
+ form#views-exposed-form-Solr-page-1 input#edit-text {
+   height: 25px;
+   position: relative;
+   left: 0px;
+   top: 12px;
+   width: 454px; 
+}
+
+
+ form#views-exposed-form-Solr-page-1 input#edit-submit-Solr {
+display: none;
+}
+
+#node-page-1 p {
+    font-size: 2em;
+}
+
+.block-user label, .block-user input {
+ text-align: left;
+ width: 100%;
+ padding: 0px;
+}
+
