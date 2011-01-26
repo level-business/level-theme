@@ -15,7 +15,9 @@
 <body class="<?php print $body_classes; ?>">
   <?php if (!empty($admin)) print $admin; ?>
   <div id="page" class="clearfix">
-    <div id="site-header" class="container_4 ?> clearfix">
+   <div id="header_container" class="container_4">
+    <div id="site-header" class="grid_4 ?> clearfix">
+    
       <div id="branding" class="grid-<?php print $header_logo_width; ?>">
         <?php if ($linked_logo_img): ?>
           <?php print $linked_logo_img; ?>
@@ -24,7 +26,7 @@
           <?php if ($title): ?>
             <h2 id="site-name" class=""><?php print $linked_site_name; ?></h2>
           <?php else: ?>
-            <h1 id="site-name" class=""><?php print $linked_site_name; ?></h1>
+            <h2 id="site-name" class=""><?php print $linked_site_name; ?></h2>
           <?php endif; ?>
         <?php endif; ?>
       </div><!-- /#branding -->
@@ -40,7 +42,7 @@
         </div><!-- /#site-menu -->
       <?php endif; ?>
     </div><!-- /#site-header -->
-
+   </div><!--  /#header-container -->
     <?php if($header_first || $header_last): ?>
     <div id="header-regions" class="container-<?php print $header_wrapper_width; ?> clearfix">
       <?php if($header_first): ?>
@@ -114,7 +116,7 @@
         <?php endif; ?>
     
         <?php if ($title): ?>
-          <h1 class="title" id="page-title"><?php print $title; ?></h1>
+          <h2 class="title" id="page-title"><?php print $title; ?></h2>
         <?php endif; ?>
         <div id="main-content" class="region clearfix ">
           <?php print $content; ?>
