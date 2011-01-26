@@ -208,6 +208,16 @@ form#search-block-form {
 	
 	dl.search-results dd { margin-left: 0px; }
 	
-	span.fw-label {display: block; float: left; width: 220px;}
+	.fw-label {display: block; float: left; width: 220px;}
 	
 	span.field-content { font-weight: bold; }
+
+.views-label-address-line-2,
+.views-label-address-line-3,
+.views-label-address-line-4 {
+  visibility: hidden;
+}
+
+.views-field {
+  clear: both;
+}
