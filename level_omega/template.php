@@ -19,7 +19,7 @@ if (theme_get_setting('omega_starterkit_fixed')) {
 /**
  * Implementation of HOOK_theme().
  */
-function omega_starterkit_theme(&$existing, $type, $theme, $path) {
+function level_omega_theme(&$existing, $type, $theme, $path) {
   $hooks = omega_theme($existing, $type, $theme, $path);
   // Add your theme hooks like this:
   /*
@@ -37,12 +37,20 @@ function omega_starterkit_theme(&$existing, $type, $theme, $path) {
  * @param $hook
  *   The name of the template being rendered (name of the .tpl.php file.)
  */
-/* -- Delete this line if you want to use this function
-function omega_starterkit_preprocess(&$vars, $hook) {
-  $vars['sample_variable'] = t('Lorem ipsum.');
+function level_omega_preprocess(&$vars, $hook) {
 }
-// */
 
+function level_omega_preprocess_views_view_field(&$vars, $hook) {
+  //var_dump(array_keys($vars));
+  //var_dump($vars['field']->options['id']);
+  switch($vars['field']->options['id']) {
+  case 'return_made_up_date':
+  case 'accounts_made_up_date':
+  case 'incorporation_date':
+    $vars['output'] = date('Y m d',strtotime($vars['output']));
+  break;
+  }
+}
 /**
  * Override or insert variables into the page templates.
  *
@@ -51,11 +59,8 @@ function omega_starterkit_preprocess(&$vars, $hook) {
  * @param $hook
  *   The name of the template being rendered ("page" in this case.)
  */
-/* -- Delete this line if you want to use this function
-function omega_starterkit_preprocess_page(&$vars, $hook) {
-  $vars['sample_variable'] = t('Lorem ipsum.');
+function level_omega_preprocess_page(&$vars, $hook) {
 }
-// */
 
 /**
  * Override or insert variables into the node templates.

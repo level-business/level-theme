@@ -1,4 +1,4 @@
-body {
+body  {
  font-size: 14px;
  padding:0px;
  margin:0px;
@@ -129,8 +129,10 @@ body.section-search div#main-wrapper h2 {
 
 body,
 #site-slogan,
+#site-name,
 .ui-widget,
-.comment-form label {
+.comment-form label,
+h1, h2, h3, h4, h5 {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
@@ -209,12 +211,18 @@ form#search-block-form {
 	dl.search-results dd { margin-left: 0px; }
 	
 	.fw-label {display: block; float: left; width: 220px;}
-	
+        .section { padding-top: 20px; }	
 	span.field-content { font-weight: bold; }
-
+span.field-content { font-weight: normal; }
+        .sic_code { font-size: 1.5em; font-weight: bold; }
+        .sic_term, .fw-label { font-size: 0.9em; color:rgb(102,97,94); } 
 .views-label-address-line-2,
 .views-label-address-line-3,
-.views-label-address-line-4 {
+.views-label-address-line-4, 
+.views-label-postcode,
+.views-label-sic-term-2,
+.views-label-sic-term-3,
+.views-label-sic-term-4 {
   visibility: hidden;
 }
 
