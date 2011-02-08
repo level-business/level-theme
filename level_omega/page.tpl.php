@@ -113,8 +113,8 @@
     if(!$left_sidebar) $content_width++;
     if(!$right_sidebar) $content_width++;
         ?> 
-    <div id="main-content-container" class="grid_<?php print($content_width);?>"><!-- TODO: calculate width depending on block visibility -->
-      <div id="main-wrapper" class="<?php print $main_content_classes; ?>">
+    <div id="main-content-container" ><!-- TODO: calculate width depending on block visibility -->
+      <div id="main-wrapper" >
         <?php if (!empty($mission)) {
           print $mission;
         }?>
