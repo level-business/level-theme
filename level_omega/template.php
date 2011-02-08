@@ -111,6 +111,6 @@ function omega_starterkit_preprocess_block(&$vars, $hook) {
  * @param $attributes
  * @return string
  */
-function omega_starterkit_render_attributes($attributes) {
+function level_omega_render_attributes($attributes) {
 	return omega_render_attributes($attributes);  
 }
