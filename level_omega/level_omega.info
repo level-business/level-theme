@@ -11,6 +11,7 @@ base theme = omega
 
 stylesheets[all][] = css/level.css
 stylesheets[all][] = css/grid.css
+stylesheets[all][] = css/960.css ; To block out 960s grid and use our own.
 
 ; ------- Declare default javascript includes
 
@@ -27,6 +28,7 @@ regions[content_top] = content top
 regions[content_bottom] = content bottom
 
 regions[top_bar] = top bar
+regions[page_tools] = page tools
 regions[left_sidebar] = left sidebar
 regions[right_sidebar] = right sidebar
 

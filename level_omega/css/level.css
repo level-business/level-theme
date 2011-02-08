@@ -1,3 +1,5 @@
+
+
 body  {
  font-size: 14px;
  padding:0px;
@@ -57,13 +59,14 @@ h1 {
     padding: 0;
   }
 
-#header div.section, #site-header {
+#header div.section, #header_container {
   border-top: 4px solid black;
   border-bottom: 1px solid black;
   margin-bottom: 20px;
 }
 
-#site-header h2 { border: none; }
+/* exceptions to the header border */
+div#header_container h2 { border: none; }
 
 #name-and-slogan {
   margin-left: 0;

@@ -13,10 +13,21 @@
 </head>
 
 <body class="<?php print $body_classes; ?>">
+   <?php if($help || $messages): ?>
+    <div id="system_messages">
+        <?php print $help; ?>
+        <?php print $messages; ?>
+    </div><!-- /.container-xx -->
+    <?php endif; ?>
   <?php if (!empty($admin)) print $admin; ?>
   <div id="page" class="clearfix">
-   <div id="header_container" class="container_4">
-    <div id="site-header" class="grid_4 ?> clearfix">
+   <div id="header_container" class="container_4 clearfix">
+   <?php //Calculate suffix (TODO: put in preprocess function)
+   $header_suffix = 3;
+   if ($header_first) { $header_suffix -=2; }
+   if ($header_last) { $header_suffix -=1; }
+   ?>
+    <div id="site-header" class="grid_1 suffix_<?php print $header_suffix; ?> clearfix">
     
       <div id="branding" class="grid-<?php print $header_logo_width; ?>">
         <?php if ($linked_logo_img): ?>
@@ -42,22 +53,20 @@
         </div><!-- /#site-menu -->
       <?php endif; ?>
     </div><!-- /#site-header -->
-   </div><!--  /#header-container -->
-    <?php if($header_first || $header_last): ?>
-    <div id="header-regions" class="container-<?php print $header_wrapper_width; ?> clearfix">
+   
+    <?php if($header_first || $header_last): ?>    
       <?php if($header_first): ?>
-        <div id="header-first" class="<?php print $header_first_classes; ?>">
+        <div id="header-first" class="grid_2">
           <?php print $header_first; ?>
         </div><!-- /#header-first -->
       <?php endif; ?>
       <?php if($header_last): ?>
-        <div id="header-last" class="<?php print $header_last_classes; ?>">
+        <div id="header-last" class=" grid_1">
           <?php print $header_last; ?>
         </div><!-- /#header-last -->
       <?php endif; ?>
-    </div><!-- /#header-regions -->
     <?php endif; ?>
-    
+    </div><!--  /#header-container -->
     <?php if($site_slogan && $is_front || $search_box || $breadcrumb): ?>
     <div id="internal-nav" class="container-<?php print $internal_nav_wrapper_width; ?> clearfix">
       <div id="slogan-bcrumb" class="grid-<?php print $breadcrumb_slogan_width; ?>">
@@ -74,18 +83,21 @@
     </div><!-- /#internal-nav -->
     <?php endif; ?>
     
-    
-    <?php if($help || $messages): ?>
-    <div class="container-<?php print $default_container_width; ?> clearfix">
-      <div class="grid-<?php print $default_container_width; ?>">
-        <?php print $help; ?><?php print $messages; ?>
-      </div>
-    </div><!-- /.container-xx -->
-    <?php endif; ?>
-    <?php if($top_bar): ?>
-    <div class="container_4">
-      <div class="prefix_1 suffix_1 grid_2">
+    <?php if($top_bar):
+      //top_bar can be used for bold page titles such as company names on the company profile page
+    ?>
+    <div class="container_4" id="top_bar">
+      <div class="grid_4">
         <?php print $top_bar; ?>
+      </div>
+    </div>
+    <?php endif; ?>
+    <?php if($page_tools):
+     // Page tools is a region for tools specific to a page, things such as like or tweet.
+    ?>
+    <div class="container_4" id="page_tools">
+      <div class="grid_4">
+        <?php print $page_tools; ?>
       </div>
     </div>
     <?php endif; ?>
@@ -102,7 +114,7 @@
     if(!$right_sidebar) $content_width++;
         ?> 
     <div id="main-content-container" class="grid_<?php print($content_width);?>"><!-- TODO: calculate width depending on block visibility -->
-      <div id="main-wrapper" class="column <?php print $main_content_classes; ?>">
+      <div id="main-wrapper" class="<?php print $main_content_classes; ?>">
         <?php if (!empty($mission)) {
           print $mission;
         }?>
