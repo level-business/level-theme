@@ -229,6 +229,38 @@ span.field-content { font-weight: normal; }
   visibility: hidden;
 }
 
+#system_messages {
+	color: white;
+	font-weight: bold;
+	text-align: center;
+	}
+	
+#system_messages div {
+	margin_bottom: 1px;
+	padding: 5px;
+	}	
+
+#system_messages div.status {
+  background-color: rgb(89,195,38);
+}
+
+#system_messages div.error {
+  background-color: rgb(247,47,32);
+}
+
+#system_messages div.warn {
+  background-color: rgb(79,167,226);
+}
+
+h1.company_name {
+	background-color: rgb(89,195,38);
+	/* other statuse will affect the background color */
+	color: white;
+	font-size: 30px;
+	padding: 10px;
+	font-weight: bold;
+	}
+
 .views-field {
   clear: both;
 }
