@@ -113,7 +113,7 @@
     if(!$left_sidebar) $content_width++;
     if(!$right_sidebar) $content_width++;
         ?> 
-    <div id="main-content-container" ><!-- TODO: calculate width depending on block visibility -->
+    <div id="main-content-container"  class="grid_<?php print $content_width; ?> " ><!-- TODO: calculate width depending on block visibility -->
       <div id="main-wrapper" >
         <?php if (!empty($mission)) {
           print $mission;
@@ -140,14 +140,14 @@
         </div><!-- /#content-bottom -->
         <?php endif; ?>
       </div><!-- /#main-wrapper -->
-      </div>
+ </div>    
 	<?php if($right_sidebar): ?>
           <div id="right_sidebar" class="grid_1">
 	    <?print $right_sidebar ?>
           </div>
         <?php endif;?> 
     </div> <!-- /container -->    
-    
+     
     <?php if($footer_first || $footer_last || $footer_message): ?>
     <div id="footer-wrapper" class="container-<?php print $footer_container_width; ?> clearfix">
       <?php if($footer_first): ?>
