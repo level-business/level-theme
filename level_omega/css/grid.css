@@ -1,130 +1,130 @@
-* Containers
+/*
+	Variable Grid System.
+	Learn more ~ http://www.spry-soft.com/grids/
+	Based on 960 Grid System - http://960.gs/
+
+	Licensed under GPL and MIT.
+*/
+
+
+/* Containers
 ----------------------------------------------------------------------------------------------------*/
 .container_4 {
-  margin-left: auto;
-  margin-right: auto;
-  width: 960px;
-  
-  
+	margin-left: auto;
+	margin-right: auto;
+	width: 960px;
+}
+
+/* Grid >> Global
+----------------------------------------------------------------------------------------------------*/
+
+.grid_1,
+.grid_2,
+.grid_3,
+.grid_4 {
+	display:inline;
+	float: left;
+	position: relative;
+	margin-left: 10px;
+	margin-right: 10px;
 }
 
 /* Grid >> Children (Alpha ~ First, Omega ~ Last)
 ----------------------------------------------------------------------------------------------------*/
 
 .alpha {
-  margin-left: 0 !important;
+	margin-left: 0;
 }
 
 .omega {
-  margin-right: 0 !important;
+	margin-right: 0;
 }
 
-
-
-/* Grid >> Global
-----------------------------------------------------------------------------------------------------*/
- 
-.grid_1, 
-.grid_2, 
-.grid_3,
-.grid_4{
-  display:inline;
-  float: left;
-  position: relative;
-  margin-left: 10.0px;
-  margin-right: 10.0px;
-}
-
-
-/* Grid >> 2 Columns
+/* Grid >> 4 Columns
 ----------------------------------------------------------------------------------------------------*/
 
-.container_4 .grid_1{
-  width:220px;
+.container_4 .grid_1 {
+	width:220px;
 }
 
-.container_4 .grid_2{
-  width:460px;
+.container_4 .grid_2 {
+	width:460px;
 }
 
-.container_4 .grid_3{
-  width:700px;
+.container_4 .grid_3 {
+	width:700px;
 }
 
-.container_4 .grid_4{
-  width:940px;
+.container_4 .grid_4 {
+	width:940px;
 }
 
 
 
-
-
-/* Prefix Extra Space >> 2 Columns
+/* Prefix Extra Space >> 4 Columns
 ----------------------------------------------------------------------------------------------------*/
 
-    .container_4 .prefix_1 {
-  padding-left:240px;
+.container_4 .prefix_1 {
+	padding-left:240px;
 }
 
-    .container_4 .prefix_2 {
-  padding-left:480px;
+.container_4 .prefix_2 {
+	padding-left:480px;
 }
 
-    .container_4 .prefix_3 {
-  padding-left:720px;
+.container_4 .prefix_3 {
+	padding-left:720px;
 }
 
 
 
-/* Suffix Extra Space >> 2 Columns
+/* Suffix Extra Space >> 4 Columns
 ----------------------------------------------------------------------------------------------------*/
 
-    .container_4 .suffix_1 {
-  padding-right:240px;
+.container_4 .suffix_1 {
+	padding-right:240px;
 }
 
-    .container_4 .suffix_2 {
-  padding-right:480px;
+.container_4 .suffix_2 {
+	padding-right:480px;
 }
 
-    .container_4 .suffix_3 {
-  padding-right:720px;
+.container_4 .suffix_3 {
+	padding-right:720px;
 }
 
 
 
-/* Push Space >> 2 Columns
+/* Push Space >> 4 Columns
 ----------------------------------------------------------------------------------------------------*/
 
-    .container_4 .push_1 {
-  left:240px;
+.container_4 .push_1 {
+	left:240px;
 }
 
-    .container_4 .push_2 {
-  left:480px;
+.container_4 .push_2 {
+	left:480px;
 }
 
-    .container_4 .push_3 {
-  left:720px;
+.container_4 .push_3 {
+	left:720px;
 }
 
 
 
-
-
-/* Pull Space >> 2 Columns
+/* Pull Space >> 4 Columns
 ----------------------------------------------------------------------------------------------------*/
 
-    .container_4 .pull_1 {
-  right:240px;
+.container_4 .pull_1 {
+	left:-240px;
 }
 
-    .container_4 .pull_2 {
-  right:480px;
+.container_4 .pull_2 {
+	left:-480px;
 }
 
-    .container_4 .pull_3 {
-  right:720px;
+.container_4 .pull_3 {
+	left:-720px;
 }
 
 
@@ -133,36 +133,38 @@
 /* Clear Floated Elements
 ----------------------------------------------------------------------------------------------------*/
 
+/* http://sonspring.com/journal/clearing-floats */
 
 .clear {
-  clear: both;
-  display: block;
-  overflow: hidden;
-  visibility: hidden;
-  width: 0;
-  height: 0;
+	clear: both;
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 0;
 }
 
+/* http://perishablepress.com/press/2008/02/05/lessons-learned-concerning-the-clearfix-css-hack */
 
 .clearfix:after {
-  clear: both;
-  content: ' ';
-  display: block;
-  font-size: 0;
-  line-height: 0;
-  visibility: hidden;
-  width: 0;
-  height: 0;
+	clear: both;
+	content: ' ';
+	display: block;
+	font-size: 0;
+	line-height: 0;
+	visibility: hidden;
+	width: 0;
+	height: 0;
 }
 
 .clearfix {
-  display: inline-block;
+	display: inline-block;
 }
 
 * html .clearfix {
-  height: 1%;
+	height: 1%;
 }
 
 .clearfix {
-  display: block;
+	display: block;
 }
