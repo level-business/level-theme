@@ -12,24 +12,19 @@
   <?php print $scripts; ?>
 </head>
 
+
 <body class="<?php print $body_classes; ?>">
-   <?php if($help || $messages): ?>
+  <?php if($help || $messages): ?>
     <div id="system_messages">
-        <?php print $help; ?>
-        <?php print $messages; ?>
+       <?php print $help; ?>
+       <?php print $messages; ?>
     </div><!-- /.container-xx -->
-    <?php endif; ?>
+  <?php endif; ?>              
   <?php if (!empty($admin)) print $admin; ?>
   <div id="page" class="clearfix">
-   <div id="header_container" class="container_4 clearfix">
-   <?php //Calculate suffix (TODO: put in preprocess function)
-   $header_suffix = 3;
-   if ($header_first) { $header_suffix -=2; }
-   if ($header_last) { $header_suffix -=1; }
-   ?>
-    <div id="site-header" class="grid_1 suffix_<?php print $header_suffix; ?> clearfix">
-    
-      <div id="branding" class="grid-<?php print $header_logo_width; ?>">
+  <div id="header_container" class="container_4">
+    <div id="site-header" class="grid_4 ">
+      <div id="branding" class="grid_1 alpha omega">
         <?php if ($linked_logo_img): ?>
           <?php print $linked_logo_img; ?>
         <?php endif; ?>
@@ -41,125 +36,105 @@
           <?php endif; ?>
         <?php endif; ?>
       </div><!-- /#branding -->
+       <?php /* When needed insert other drupal header things here */ ?>
 
-      <?php if ($main_menu_links || $secondary_menu_links): ?>
-        <div id="site-menu" class="grid-<?php print $header_menu_width; ?>">
-        <?php if($main_menu_links): ?>
-          <div><?php print $main_menu_links; ?></div>
-        <?php endif; ?>
-        <?php if($secondary_menu_links): ?>
-          <div><?php print $secondary_menu_links; ?></div>
-        <?php endif; ?>
-        </div><!-- /#site-menu -->
-      <?php endif; ?>
-    </div><!-- /#site-header -->
-   
-    <?php if($header_first || $header_last): ?>    
-      <?php if($header_first): ?>
-        <div id="header-first" class="grid_2">
-          <?php print $header_first; ?>
-        </div><!-- /#header-first -->
-      <?php endif; ?>
-      <?php if($header_last): ?>
-        <div id="header-last" class=" grid_1">
-          <?php print $header_last; ?>
-        </div><!-- /#header-last -->
-      <?php endif; ?>
-    <?php endif; ?>
-    </div><!--  /#header-container -->
-    
-    <!-- container splitting left sidebar from the rest of the content -->
-    <div class="container_4">
-   	   <!--  for the moment the let sidebar is allways there ---> 
-   	   
-   	     <div id="left_sidebad_container" class="grid_1">
-	        <?php 
+    </div>
+  </div>
+                
+
+  <div id="content" class="container_4">
+
+    <div id="left_sidebar" class="grid_1 ">
+      <?php 
 	        if($left_sidebar) {
 	          print $left_sidebar; 
 	        }
 	        else {
 	         print "&nbsp;";
-	        }?>
-         </div>
+	       }?>
+    </div>
 
-  <?php 
-    // TODO move to preprocess function
-    $content_width = 2;
-    //if(!$left_sidebar) $content_width++;
-    if(!$right_sidebar) $content_width++;
-        ?> 
-    <div id="main-content-container"  class="grid_<?php print $content_width; ?> " ><!-- TODO: calculate width depending on block visibility -->
-    
-
-
-
-    <?php if($site_slogan && $is_front || $search_box || $breadcrumb): ?>
-    <div id="internal-nav" class="container-<?php print $internal_nav_wrapper_width; ?> clearfix">
-      <div id="slogan-bcrumb" class="grid-<?php print $breadcrumb_slogan_width; ?>">
-        <?php if ($site_slogan && $is_front): ?>
-          <div id="slogan"><?php print $site_slogan; ?></div><!-- /#slogan -->
-        <?php endif; ?>
-        <?php if($breadcrumb): ?>
-          <div id="bcrumb"><?php print $breadcrumb; ?></div><!-- /#bcrumb -->
-        <?php endif; ?>
-      </div>
-      <?php if ($search_box): ?>
-        <div id="search-box" class="grid-<?php print $search_width; ?>"><?php print $search_box; ?></div><!-- /#search-box -->
-      <?php endif; ?>
-    </div><!-- /#internal-nav -->
-    <?php endif; ?>
-    
-    <?php if($top_bar):
-      //top_bar can be used for bold page titles such as company names on the company profile page
+<div id="main-content-container" class="grid_3">
+  <?php if($top_bar):
+      /* top_bar can be used for bold page titles such as company
+       * names on the company profile page. It will allways span 
+       * the page after the left column.
+       */
     ?>
      <div id="top_bar">
+         <?php /* if ($title): ?>
+          <h2 class="title" id="page-title"><?php print $title; ?></h2>
+        <?php endif; */ ?>
         <?php print $top_bar; ?>
      </div>
-    <?php endif; ?>
-    <?php if($page_tools):
-     // Page tools is a region for tools specific to a page, things such as like or tweet.
-    ?>
-      <div id="page_tools">
-        <?php print $page_tools; ?>
-      </div>
-    <?php endif; ?>
-      <div id="main-wrapper" >
-        <?php if (!empty($mission)) {
-          print $mission;
-        }?>
-        <?php if($content_top): ?>
-        <div id="content-top">
+   <?php endif; ?>
+
+   <?php if (!empty($page_tools)): ?>
+     <div id="page_tools">
+       <?php print $page_tools; ?>
+     </div>
+   <?php endif; ?>
+
+   <?php //Calculate suffix (TODO: put in preprocess function)
+   
+   if ($right_sidebar) {
+     $content_classes = "grid_2 alpha";
+    }
+    else {
+      $content_classes = "grid_3 alpha omega";
+    }
+   ?>
+
+   <div id="main_wrapper" class="<?php print $content_classes; ?>">
+     <?php if (!empty($page_tools)): ?>
+       <div id="page_tools">
+         <?php print $page_tools; ?>
+       </div>
+     <?php endif; ?>
+     <?php if($content_top): ?>
+       <div id="content-top">
           <?php print $content_top; ?>
-        </div><!-- /#content-top -->
-        <?php endif; ?>
-        <?php if ($tabs): ?>
+       </div><!-- /#content-top -->
+      <?php endif; ?>
+      <?php if ($tabs): ?>
           <div id="content-tabs" class=""><?php print $tabs; ?></div><!-- /#content-tabs -->
-        <?php endif; ?>
-    
-        <?php if ($title): ?>
-          <h2 class="title" id="page-title"><?php print $title; ?></h2>
-        <?php endif; ?>
-        <div id="main-content" class="region clearfix ">
-          <?php print $content; ?>
-        </div><!-- /#main-content -->
-        
-        <?php if($content_bottom): ?>
+      <?php endif; ?>
+      <div id="main-content" class="">
+        <?php print $content; ?>
+      </div><!-- /#main-content -->
+      <?php if($content_bottom): ?>
         <div id="content-bottom">
           <?php print $content_bottom; ?>
         </div><!-- /#content-bottom -->
-        <?php endif; ?>
-      </div><!-- /#main-wrapper -->
- </div>    
-	<?php if($right_sidebar): ?>
-          <div id="right_sidebar" class="grid_1">
+      <?php endif; ?>
+      </div><!-- /#main-wrapper -->   
+
+
+   <?php if($right_sidebar): ?>
+      <div id="right_sidebar" class="grid_1 omega">
 	    <?print $right_sidebar ?>
-          </div>
-        <?php endif;?> 
-    </div> <!-- /container -->    
-    <div id="footer-wrapper" class="container_4 clearfix">
-    </div><!--  /footer -->
-    
-  </div><!-- /#page -->
+       </div>
+   <?php endif;?> 
+
+
+</div>
+</div>
+                
+
+<div id="footer_wrapper" class="container_4">
+
+<div id="footer_first" class="grid_1 ">
+</div>
+
+<div id="footer_main" class="grid_3 ">
+  <?php if($footer) {
+            print $footer;
+          }?>
+</div>
+
+</div>
+  </div><!-- /page -->
   <?php print $closure; ?>
+            
 </body>
 </html>

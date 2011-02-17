@@ -4,6 +4,7 @@ body  {
  font-size: 14px;
  padding:0px;
  margin:0px;
+ background-color: #FFFCFA;
 }
 
 h1 {
@@ -47,23 +48,12 @@ h1 {
     text-decoration: none;
   }
 
-  #footer-wrapper h2 {
-    border-top: 4px solid black;
-    border-bottom: 1px solid black;
-    font-weight: bold;
-    text-transform: none;
-  }
 
   #footer-wrapper .block {
     margin: 0;
     padding: 0;
   }
 
-#header div.section, #header_container {
-  border-top: 4px solid black;
-  border-bottom: 1px solid black;
-  margin-bottom: 20px;
-}
 
 /* exceptions to the header border */
 div#header_container h2 { border: none; }
@@ -87,10 +77,6 @@ div#header_container h2 { border: none; }
   line-height: 1em;
 }
 
-#site-name {
- padding-top: 10px;
- padding-bottom: 20px;
-}
 #site-slogan {
   display: none;
   font-style: normal;
@@ -190,17 +176,13 @@ display: none;
 	margin-right: 0.25em;
 	} 
 	
-form#search-block-form {
-	
-	}
 
-  div.block-search {
-  width: 460px;
-  height: 50px;
-  }
+  #main-content-container {
+	border-top: 1px solid #999390;
+	}
   
   div.block-search input#edit-search-block-form-1 {
-  width: 374px;
+ 
   }
 
 	div.block-search h2 {
@@ -253,11 +235,11 @@ span.field-content { font-weight: normal; }
 }
 
 h1.company_name {
-	background-color: rgb(89,195,38);
 	/* other statuse will affect the background color */
-	color: white;
+	color: #4fa7e2;
 	font-size: 30px;
 	padding: 10px;
+	margin: 0px;
 	font-weight: bold;
 	}
 
