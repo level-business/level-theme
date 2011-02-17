@@ -67,6 +67,32 @@
       <?php endif; ?>
     <?php endif; ?>
     </div><!--  /#header-container -->
+    
+    <!-- container splitting left sidebar from the rest of the content -->
+    <div class="container_4">
+   	   <!--  for the moment the let sidebar is allways there ---> 
+   	   
+   	     <div id="left_sidebad_container" class="grid_1">
+	        <?php 
+	        if($left_sidebar) {
+	          print $left_sidebar; 
+	        }
+	        else {
+	         print "&nbsp;";
+	        }?>
+         </div>
+
+  <?php 
+    // TODO move to preprocess function
+    $content_width = 2;
+    //if(!$left_sidebar) $content_width++;
+    if(!$right_sidebar) $content_width++;
+        ?> 
+    <div id="main-content-container"  class="grid_<?php print $content_width; ?> " ><!-- TODO: calculate width depending on block visibility -->
+    
+
+
+
     <?php if($site_slogan && $is_front || $search_box || $breadcrumb): ?>
     <div id="internal-nav" class="container-<?php print $internal_nav_wrapper_width; ?> clearfix">
       <div id="slogan-bcrumb" class="grid-<?php print $breadcrumb_slogan_width; ?>">
@@ -86,34 +112,17 @@
     <?php if($top_bar):
       //top_bar can be used for bold page titles such as company names on the company profile page
     ?>
-    <div class="container_4" id="top_bar">
-      <div class="grid_4">
+     <div id="top_bar">
         <?php print $top_bar; ?>
-      </div>
-    </div>
+     </div>
     <?php endif; ?>
     <?php if($page_tools):
      // Page tools is a region for tools specific to a page, things such as like or tweet.
     ?>
-    <div class="container_4" id="page_tools">
-      <div class="grid_4">
+      <div id="page_tools">
         <?php print $page_tools; ?>
       </div>
-    </div>
     <?php endif; ?>
-    <div class="container_4">
-	<?php if($left_sidebar): ?>
-          <div id="left_sidebad_container" class="grid_1">
-	    <?print $left_sidebar ?>
-          </div>
-        <?php endif;?> 
-    <?php
-    // TODO move to preprocess function
-    $content_width = 2;
-    if(!$left_sidebar) $content_width++;
-    if(!$right_sidebar) $content_width++;
-        ?> 
-    <div id="main-content-container"  class="grid_<?php print $content_width; ?> " ><!-- TODO: calculate width depending on block visibility -->
       <div id="main-wrapper" >
         <?php if (!empty($mission)) {
           print $mission;
@@ -147,26 +156,9 @@
           </div>
         <?php endif;?> 
     </div> <!-- /container -->    
-     
-    <?php if($footer_first || $footer_last || $footer_message): ?>
-    <div id="footer-wrapper" class="container-<?php print $footer_container_width; ?> clearfix">
-      <?php if($footer_first): ?>
-        <div id="footer-first" class="<?php print $footer_first_classes; ?>">
-          <?php print $footer_first; ?>
-        </div><!-- /#footer-first -->
-      <?php endif; ?>
-      <?php if($footer_last || $footer_message): ?>
-        <div id="footer-last" class="<?php print $footer_last_classes; ?>">
-          <?php print $footer_last; ?>
-          <?php if ($footer_message): ?>
-            <div id="footer-message">
-              <?php print $footer_message; ?>
-            </div><!-- /#footer-message -->
-          <?php endif; ?>
-        </div><!-- /#footer-last -->
-      <?php endif; ?>
-    </div><!-- /#footer-wrapper -->
-    <?php endif; ?>
+    <div id="footer-wrapper" class="container_4 clearfix">
+    </div><!--  /footer -->
+    
   </div><!-- /#page -->
   <?php print $closure; ?>
 </body>
