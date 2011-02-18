@@ -122,22 +122,22 @@
 
 
 </div>
+
 </div>
                 
 
 <div id="footer_wrapper" class="container_4">
-
-<div id="footer_first" class="grid_1 ">
-</div>
-
-<div id="footer_main" class="grid_3 ">
+ 
+ <div id="footer_main" class="grid_4 clearfix">
+  <div class="block">
+   &nbsp; <?php /* This is a spacer */ ?>
+  </div>
   <?php if($footer) {
             print $footer;
           }?>
 </div>
-
 </div>
-  </div><!-- /page -->
+</div><!-- /page -->
   <?php print $closure; ?>
             
 </body>
