@@ -54,7 +54,7 @@
 	       }?>
     </div>
 
-<div id="main-content-container" class="grid_3">
+<div id="main_content_container" class="grid_3">
   <?php if($top_bar):
       /* top_bar can be used for bold page titles such as company
        * names on the company profile page. It will allways span 
@@ -85,20 +85,24 @@
     }
    ?>
 
-   <div id="main_wrapper" class="<?php print $content_classes; ?>">
-     <?php if (!empty($page_tools)): ?>
-       <div id="page_tools">
-         <?php print $page_tools; ?>
-       </div>
-     <?php endif; ?>
+   <div id="main_wrapper" class="<?php print $content_classes; ?> clearfix">
+      <?php if ($tabs): ?>
+          <div id="content-tabs" class=""><?php print $tabs; ?></div><!-- /#content-tabs -->
+      <?php endif; ?>
+ 
      <?php if($content_top): ?>
        <div id="content-top">
           <?php print $content_top; ?>
        </div><!-- /#content-top -->
       <?php endif; ?>
-      <?php if ($tabs): ?>
-          <div id="content-tabs" class=""><?php print $tabs; ?></div><!-- /#content-tabs -->
-      <?php endif; ?>
+ 
+      
+     <?php if (!empty($page_tools)): ?>
+       <div id="page_tools">
+         <?php print $page_tools; ?>
+       </div>
+     <?php endif; ?>
+ 
       <div id="main-content" class="">
         <?php print $content; ?>
       </div><!-- /#main-content -->
@@ -107,7 +111,7 @@
           <?php print $content_bottom; ?>
         </div><!-- /#content-bottom -->
       <?php endif; ?>
-      </div><!-- /#main-wrapper -->   
+    </div><!-- /#main-wrapper -->   
 
 
    <?php if($right_sidebar): ?>
