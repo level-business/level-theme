@@ -120,6 +120,14 @@ div#header_container h2 { border: none; }
   font-size: 2em;
 }
 
+h2#site-name {
+	text-align: right;
+	}
+
+h2#site-name:before {
+	content: "_";
+	}
+
 #site-name a {
   color: #000000;
   font-size: 2.1em;
@@ -207,8 +215,8 @@ display: none;
 	} 
 	
 
-  #main-content-container {
-	border-top: 1px solid #999390;
+  #main_content_container {
+	border-top: 2px solid #999390;
 	}
   
   div.block-search input#edit-search-block-form-1 {
@@ -279,7 +287,8 @@ h1.company_name {
 
 #edit-text {
 	border: 1px solid #999390;
-	width: 100%;
+	width: 220px;
+	height: 20px;
 	}
 	
 /* Styles for the search results page */
@@ -321,8 +330,69 @@ h1.company_name {
 	}
 	
 .company_address div {
-	line-height: 1.2em;
+	font-size: 0.9em;
+	line-height: 1.5em;
 	}
-	
+
+#main-content .views-row  {
+	margin: 0px;
+  padding-bottom: 0.8em;
+  padding-top: 0.4em;
+
+	}
 /* Styling for the company details page */
 
+/* for debug 
+.company-details-view .views-field {
+	border: 1px solid black;
+	}*/
+	
+.company-details-view {
+	 background-color: #FFFFFF;
+}
+
+.company-details-view .company-details-label {
+	font-size: 0.9em;
+	}	
+	
+.company-details-view .field-content {
+	  color: #000000;
+    font-size: 1.4em;
+    font-weight: bold;
+	}	
+
+.company-details-view  .views-field {
+	clear: none;
+	float:left;
+	margin: 5px;
+	}
+
+.company-details-view .company-address,
+.company-details-view .company-age, 
+.company-details-view .company-number {
+    width: 220px;
+   
+	}
+
+.company-details-view .company-sic-codes {
+	  width: 440px;
+	}
+	
+.company-details-view dt { font-size: 0.9em;
+     float: left;
+     margin-right: 10px;
+    }
+.company-details-view dd { font-size: 0.8em;
+      color: #898481;
+      }
+      
+.company-details-view dl {
+  padding-top: 5px;
+  padding-bottom: 5px;
+ border-bottom:1px solid #999390;
+ }
+.company-details-view dl:last-child {
+	border-bottom: none;
+	} 
+ 
+ 
