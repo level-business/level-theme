@@ -114,3 +114,13 @@ function omega_starterkit_preprocess_block(&$vars, $hook) {
 function level_omega_render_attributes($attributes) {
 	return omega_render_attributes($attributes);  
 }
+
+
+function level_omega_apachesolr_facet_link($facet_text, $path, $options = array(), $count, $active = FALSE, $num_found = NULL) {
+  $options['attributes']['class'][] = 'apachesolr-facet';
+  if ($active) {
+    $options['attributes']['class'][] = 'active';
+  }
+  $options['attributes']['class'] = implode(' ', $options['attributes']['class']);
+  return $facet_text . "&nbsp;" .apachesolr_l("($count)",   $path, $options);
+}
