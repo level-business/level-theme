@@ -124,3 +124,15 @@ function level_omega_apachesolr_facet_link($facet_text, $path, $options = array(
   $options['attributes']['class'] = implode(' ', $options['attributes']['class']);
   return $facet_text . "&nbsp;" .apachesolr_l("($count)",   $path, $options);
 }
+
+function level_omega_apachesolr_unclick_link($facet_text, $path, $options = array()) {
+  if (empty($options['html'])) {
+    $facet_text = check_plain($facet_text);
+  }
+  else {
+    // Don't pass this option as TRUE into apachesolr_l().
+    unset($options['html']);
+  }
+  $options['attributes']['class'] = 'apachesolr-unclick';
+  return $facet_text . ' ' . apachesolr_l("(remove)", $path, $options);
+}
