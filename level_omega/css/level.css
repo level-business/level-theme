@@ -55,6 +55,58 @@ h1 {
   }
 
 
+#main_wrapper, #right_sidebar, #main_content_container {
+	background-color: #f2f2f2;
+	color: #898481;
+	}
+	
+#main_wrapper .views-row, #right_sidebar .block {
+	border-bottom: 1px solid #999390;
+	border-top: 1px solid #fffcfa;
+	} 
+
+#main_wrapper .views-row {
+  padding-top: 10px;
+  padding-bottom: 10px;	
+	}
+
+#right_sidebar .block-apachesolr_passthru h2 {
+	line-height: 2em;
+	color: #5b5754;
+	}
+
+#right_sidebar .block-apachesolr_passthru ul {
+	margin: 0px;
+	margin-bottom: 10px;
+	padding: 0px;
+	}
+
+#right_sidebar .block-apachesolr_passthru ul li {
+    display: block;
+    font-size: 0.9em;
+    line-height: 1.4em;
+    list-style: none inside none;
+    margin: 0.8em 0;
+	}	
+	
+/* First and last exceptions */
+	#main_wrapper .views-row-first, #right_sidebar div:first-child {
+	border-top: none;
+	}
+	
+	#main_wrapper .views-row-last, #right_sidebar div:last-child {
+  border-bottom: none;
+  }
+  
+  
+
+#top_bar {
+	background-color: #FFFFFF;
+	border-bottom: 1px solid #999390;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	
+	}
 /* exceptions to the header border */
 div#header_container h2 { border: none; }
 
@@ -92,8 +144,8 @@ div#header_container h2 { border: none; }
 	margin-top: -10px;
 }
 
-a {
-  color: #449bc9;
+a, ul.pager a {
+  color: #21A0E1;
   text-decoration: none;
 }
 
@@ -105,12 +157,8 @@ body.page-node-6 h1.title {
  
 
 h2  {
-  border-top: 4px solid black;
-  border-bottom: 1px solid black;
-  font-size: 1em;
+   font-size: 1em;
   margin: 0px;
-  padding-top: 5px;
-  padding-bottom: 5px;
 }
 
 body.section-search div#main-wrapper h2 {
@@ -138,24 +186,6 @@ h1, h2, h3, h4, h5 {
  color: #449BC9;
  text-decoration: none;
 }
-
-
-
- form#views-exposed-form-Solr-page-1 {
-  position: relative;
-  top: 0px;
-  left: 0px;
-  height: 75px; 
-}
-
- form#views-exposed-form-Solr-page-1 input#edit-text {
-   height: 25px;
-   position: relative;
-   left: 0px;
-   top: 12px;
-   width: 454px; 
-}
-
 
  form#views-exposed-form-Solr-page-1 input#edit-submit-Solr {
 display: none;
@@ -246,3 +276,53 @@ h1.company_name {
 .views-field {
   clear: both;
 }
+
+#edit-text {
+	border: 1px solid #999390;
+	width: 100%;
+	}
+	
+/* Styles for the search results page */
+
+#block-apachesolr_search-currentsearch h2 {
+	display: none;
+	}
+
+#block-apachesolr_search-currentsearch .results_string {
+
+	font-size: 1.6em;
+	color: #999390;
+  }
+  
+#block-apachesolr_search-currentsearch  .results_string em {
+  font-size: 1em;
+  font-style: normal;
+	color: #000000;
+	font-weight: bold;
+	}
+	
+#block-apachesolr_search-currentsearch  .search_term {
+  font-size: 1em;
+  }
+  
+#block-apachesolr_search-currentsearch .results_filter {
+	float: right;
+	}
+	
+.company-search-title {
+    font-size: 1.6em;
+    line-height: 1.2em;
+	}
+
+
+.item-list ul.pager li {
+	  margin: 0 2px;
+	  padding: 0;	
+	}
+	
+.company_address div {
+	line-height: 1.2em;
+	}
+	
+/* Styling for the company details page */
+
