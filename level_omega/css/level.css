@@ -316,6 +316,7 @@ h1.company_name {
   
 #block-apachesolr_search-currentsearch .results_filter {
 	float: right;
+	width: 220px;
 	}
 	
 .company-search-title {
@@ -365,6 +366,8 @@ h1.company_name {
 	clear: none;
 	float:left;
 	margin: 5px;
+	margin-left:10px;
+	margin-right:10px;
 	}
 
 .company-details-view .company-address,
@@ -408,7 +411,8 @@ h1.company_name {
 #footer_main .block {
 	float: left;
 	width: 220px;
-	margin-right: 10px;
+	margin-left: 10px;
+  margin-right: 10px;
 	}
 	
 #footer_main h2 {
