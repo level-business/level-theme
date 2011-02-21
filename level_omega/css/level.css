@@ -101,7 +101,7 @@ h1 {
   
 
 #top_bar {
-	background-color: #FFFFFF;
+	background-color: #FFFCFA;
 	border-bottom: 1px solid #999390;
 	padding-top: 10px;
 	padding-bottom: 10px;
@@ -281,9 +281,9 @@ h1.company_name {
 	font-weight: bold;
 	}
 
-.views-field {
+/*.views-field {
   clear: both;
-}
+}*/
 
 #edit-text {
 	border: 1px solid #999390;
@@ -323,6 +323,11 @@ h1.company_name {
     font-size: 1.6em;
     line-height: 1.2em;
 	}
+	
+/* Classes for liquidated companies */
+a.dissolved {
+	color: #CCC7C4
+	} 
 
 
 .item-list ul.pager li {
@@ -341,6 +346,24 @@ h1.company_name {
   padding-top: 0.4em;
 
 	}
+	
+/* Testing the styling of the accounts image */
+/* #main-content .views-row  {
+  background-image: URL('../images/ACCOUNTS_ICON_2011.png');
+  background-position: right center;
+  background-repeat: no-repeat
+} */
+
+.accounts_icon {
+  display: block; float: right;
+	background-image: URL('../images/ACCOUNTS_ICON_2011.png');
+  background-position: right center;
+  background-repeat: no-repeat;
+  width: 55px;
+  height: 80px;
+  margin-top: -20px;
+	}
+
 /* Styling for the company details page */
 
 /* for debug 
