@@ -60,9 +60,11 @@ function level_omega_preprocess_views_view_field(&$vars, $hook) {
   //var_dump($vars['field']->options['id']);
   switch($vars['field']->options['id']) {
   case 'return_made_up_date':
-  case 'accounts_made_up_date':
   case 'incorporation_date':
     $vars['output'] = date('Y m d',strtotime($vars['output']));
+  break;
+  case 'accounts_made_up_date':
+    $vars['output'] = date('d M Y',strtotime($vars['output']));
   break;
   }
 }
@@ -75,10 +77,11 @@ function level_omega_preprocess_views_view_field(&$vars, $hook) {
  *   The name of the template being rendered ("page" in this case.)
  */
 function level_omega_preprocess_page(&$vars, $hook) {
-
-  $vars['scripts'] .= '<script src="http://platform.twitter.com/widgets.js"></script>';
-  $vars['scripts'] .= '<script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>';
-
+  if(arg(0) == 'company') {
+    $vars['scripts'] .= '<script src="http://platform.twitter.com/widgets.js"></script>';
+    $vars['scripts'] .= '<script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>';
+    $vars['scripts'] .= '<script src="http://www.scribd.com/javascripts/view.js"></script>';
+  }
 }
 
 function level_omega_preprocess_apachesolr_currentsearch(&$vars, $hook) {

@@ -421,6 +421,8 @@ a.dissolved {
 	border-bottom: none;
 	} 
  
+  h2.views-field-accounts-made-up-date * { display: inline; color: #4fa7e2; font-size: 2em; font-weight: normal; }
+  h2.views-field-accounts-made-up-date { margin: 1em; }
  /* page tools style */
  
  
@@ -440,6 +442,9 @@ a.dissolved {
     
   #page_tools .views-label-company-number  { font-weight: bold; }
   #page_tools .company-uri { padding: 0.1em; border: 1px solid #999390; }
+ 
+ 
+ 
  /* styles for the footer */
 
 #footer_main {
