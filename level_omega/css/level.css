@@ -272,7 +272,7 @@ span.field-content { font-weight: normal; }
   background-color: rgb(79,167,226);
 }
 
-h1.company_name {
+h1.company-name {
 	/* other statuse will affect the background color */
 	color: #4fa7e2;
 	font-size: 30px;
@@ -420,6 +420,17 @@ a.dissolved {
 .company-details-view dl:last-child {
 	border-bottom: none;
 	} 
+ 
+ /* page tools style */
+ 
+ 
+ #page_tools { background-color: #FFFCFA; padding-top: 5px;
+               padding-bottom: 5px;  
+               border-bottom: 1px solid #999390;}
+ 
+ .block-boxes, .block-boxes div, .block-boxes p { display: inline;}
+ 
+ #page_tools  .fb_iframe_widget iframe { vertical-align: baseline; }
  
  /* styles for the footer */
 
