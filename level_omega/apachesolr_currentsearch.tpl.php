@@ -12,4 +12,4 @@
   </ul>
 </div>
 
-<div class="results_string"><em><?php /* TODO: format number */ print $total_found?></em> Results for <span class="search_term"><?php print $current_search ?></span></div>
+<div class="results_string"><em><?php print number_format($total_found) ?></em> Results for <span class="search_term"><?php print $current_search ?></span></div>

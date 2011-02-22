@@ -147,7 +147,8 @@ function level_omega_apachesolr_facet_link($facet_text, $path, $options = array(
     $options['attributes']['class'][] = 'active';
   }
   $options['attributes']['class'] = implode(' ', $options['attributes']['class']);
-  return $facet_text . "&nbsp;" .apachesolr_l("($count)",   $path, $options);
+  $formatted_count = number_format($count);
+  return $facet_text . "&nbsp;" .apachesolr_l("($formatted_count)",   $path, $options);
 }
 
 function level_omega_apachesolr_unclick_link($facet_text, $path, $options = array()) {
