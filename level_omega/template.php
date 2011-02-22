@@ -75,6 +75,16 @@ function level_omega_preprocess_views_view_field(&$vars, $hook) {
  *   The name of the template being rendered ("page" in this case.)
  */
 function level_omega_preprocess_page(&$vars, $hook) {
+
+  $vars['scripts'] .= '<script src="http://platform.twitter.com/widgets.js"></script>';
+  $vars['scripts'] .= '<script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>';
+
+}
+
+function level_omega_preprocess_apachesolr_currentsearch(&$vars, $hook) {
+  // Create the current search term as a variable
+  $vars['current_search'] = $_GET['text'];
+  
 }
 
 /**
