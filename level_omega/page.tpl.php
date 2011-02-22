@@ -75,7 +75,7 @@
        * the page after the left column.
        */
     ?>
-     <div id="top_bar">
+     <div id="top_bar" class="clearfix">
          <?php /* if ($title): ?>
           <h2 class="title" id="page-title"><?php print $title; ?></h2>
         <?php endif; */ ?>
