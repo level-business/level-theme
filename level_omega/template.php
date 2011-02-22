@@ -38,7 +38,22 @@ function level_omega_theme(&$existing, $type, $theme, $path) {
  *   The name of the template being rendered (name of the .tpl.php file.)
  */
 function level_omega_preprocess(&$vars, $hook) {
+  // Preprocessing for items we don't have templates for
+  switch($hook) {
+    case 'views_view':
+      // Set the title of the the page for the company profile view.
+      if($vars['name'] == "companies_house_latest_profile_2") {
+        drupal_set_title($vars['view']->result[0]->name);
+     }
+
+    break;
+    
+  }
+  
+
 }
+
+
 
 function level_omega_preprocess_views_view_field(&$vars, $hook) {
   //var_dump(array_keys($vars));
