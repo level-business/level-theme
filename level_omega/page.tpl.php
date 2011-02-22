@@ -69,12 +69,6 @@
      </div>
    <?php endif; ?>
 
-   <?php if (!empty($page_tools)): ?>
-     <div id="page_tools">
-       <?php print $page_tools; ?>
-     </div>
-   <?php endif; ?>
-
    <?php //Calculate suffix (TODO: put in preprocess function)
    
    if ($right_sidebar) {
