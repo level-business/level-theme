@@ -87,8 +87,14 @@ function level_omega_preprocess_page(&$vars, $hook) {
 function level_omega_preprocess_apachesolr_currentsearch(&$vars, $hook) {
   // Create the current search term as a variable
   drupal_add_js(drupal_get_path('module', 'apachesolr') . '/apachesolr.js');
-  $vars['current_search'] = $_GET['text'];
-  
+  $vars['current_search'] = filter_xss($_GET['text']);
+  if ($vars['current_search'] == "*:*") {
+    $vars['current_search'] = '';    
+  }
+  $title = filter_xss($_GET['title']);
+  if ($title) {
+    drupal_set_title($title);    
+  }
 }
 
 /**
@@ -156,13 +162,16 @@ function level_omega_apachesolr_facet_link($facet_text, $path, $options = array(
 }
 
 function level_omega_apachesolr_unclick_link($facet_text, $path, $options = array()) {
+  var_dump($facet_text);
   if (empty($options['html'])) {
     $facet_text = check_plain($facet_text);
   }
+
   else {
     // Don't pass this option as TRUE into apachesolr_l().
     unset($options['html']);
   }
   $options['attributes']['class'] = 'apachesolr-unclick';
+//  var_dump($options);
   return $facet_text . ' ' . apachesolr_l("(remove)", $path, $options);
 }
