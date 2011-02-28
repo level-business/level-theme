@@ -69,17 +69,19 @@
     </div>
 
 <div id="main_content_container" class="grid_3">
-  <?php if($top_bar):
+  <?php if($top_bar || $title):
       /* top_bar can be used for bold page titles such as company
        * names on the company profile page. It will allways span 
        * the page after the left column.
        */
-    ?>
+     
+     ?>
      <div id="top_bar" class="clearfix">
-         <?php /* if ($title): ?>
-          <h2 class="title" id="page-title"><?php print $title; ?></h2>
-        <?php endif; */ ?>
+     <?php  if ($top_bar): // TOP bar used in place of standard page title ?>
         <?php print $top_bar; ?>
+     <?php else:?>
+       <h1 class="title" id="page-title"><?php print $title; ?></h1>
+     <?php endif;  ?>       
      </div>
    <?php endif; ?>
 
@@ -94,9 +96,10 @@
    ?>
 
    <div id="main_wrapper" class="<?php print $content_classes; ?> clearfix">
-      <?php if ($tabs): ?>
-          <div id="content-tabs" class=""><?php print $tabs; ?></div><!-- /#content-tabs -->
-      <?php endif; ?>
+   
+   <?php if ($tabs): ?>
+     <div id="content-tabs" class=""><?php print $tabs; ?></div><!-- /#content-tabs -->
+   <?php endif; ?>
  
      <?php if($content_top): ?>
        <div id="content-top">

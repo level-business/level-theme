@@ -10,7 +10,17 @@ body  {
 h1 {
  margin-top: 10px;
  margin-bottom: 14px;
+ color: #2b2d29;
+ font-size: 30px;
+ padding: 10px;
+ margin: 0px;
+ font-weight: bold;
 }
+
+h1.company-name {
+  color: #4fa7e2;
+}
+  
 #block-webform-client-block-8 h2 {
 	display: none;
 }
@@ -272,14 +282,6 @@ span.field-content { font-weight: normal; }
   background-color: rgb(79,167,226);
 }
 
-h1.company-name {
-	/* other statuse will affect the background color */
-	color: #4fa7e2;
-	font-size: 30px;
-	padding: 10px;
-	margin: 0px;
-	font-weight: bold;
-	}
 
 /*.views-field {
   clear: both;
@@ -472,4 +474,18 @@ a.dissolved {
 #footer_main .content {
 	margin-top: 5px;
 	font-size: 0.8em;
+	}
+	
+/* Static page styles */
+.node-type-page #main_content_container #main-content {
+	color: #2B2B29;
+	background-color: #FFFCFA;
+	}
+	
+.node-type-page #main-content h2 {
+	font-size: 1.6em;
+	}	
+	
+.node-type-page #main-content li {
+	list-style-type:lower-latin;
 	}
