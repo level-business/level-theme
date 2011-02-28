@@ -17,7 +17,6 @@ stylesheets[all][] = css/960.css ; To block out 960s grid and use our own.
 
 ;scripts[] = js/your_js_file.js
 
-
 ; ------- Declare default theme regions
 
 

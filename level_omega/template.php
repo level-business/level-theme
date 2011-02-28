@@ -86,6 +86,7 @@ function level_omega_preprocess_page(&$vars, $hook) {
 
 function level_omega_preprocess_apachesolr_currentsearch(&$vars, $hook) {
   // Create the current search term as a variable
+  drupal_add_js(drupal_get_path('module', 'apachesolr') . '/apachesolr.js');
   $vars['current_search'] = $_GET['text'];
   
 }

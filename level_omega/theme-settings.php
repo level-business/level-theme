@@ -12,7 +12,7 @@ include_once './' . drupal_get_path('theme', 'omega') . '/theme-settings.php';
  * @return
  *   A form array.
  */
-function omega_starterkit_settings($saved_settings) {
+function level_omega_settings($saved_settings) {
   // Get the default values from the .info file.
   $subtheme_defaults = omega_theme_get_default_settings('omega_starterkit');
   // Merge the saved variables and their default values.
