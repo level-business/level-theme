@@ -162,7 +162,6 @@ function level_omega_apachesolr_facet_link($facet_text, $path, $options = array(
 }
 
 function level_omega_apachesolr_unclick_link($facet_text, $path, $options = array()) {
-  var_dump($facet_text);
   if (empty($options['html'])) {
     $facet_text = check_plain($facet_text);
   }
