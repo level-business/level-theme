@@ -57,7 +57,15 @@ function level_omega_preprocess(&$vars, $hook) {
 
 }
 
-
+function level_omega_preprocess_block(&$vars, $hook) {
+  $vars['extra_classes'] = '';
+  if ($vars['block']->region == 'footer') {
+    if ($vars['block_id'] == 3) {
+      $vars['extra_classes'] = 'omega';
+    } 
+    
+  }
+}
 
 function level_omega_preprocess_views_view_field(&$vars, $hook) {
   //var_dump(array_keys($vars));
@@ -174,6 +182,7 @@ function level_omega_apachesolr_unclick_link($facet_text, $path, $options = arra
     // Don't pass this option as TRUE into apachesolr_l().
     unset($options['html']);
   }
+  
   $options['attributes']['class'] = 'apachesolr-unclick';
 //  var_dump($options);
   return $facet_text . ' ' . apachesolr_l("(remove)", $path, $options);

@@ -437,7 +437,7 @@ a.dissolved {
  /* styles for the footer */
 
 #footer_main {
-	color: #FFFFFF;
+	color: #E5E2E0;
 	background-color: #32302D;
   padding-top: 5px;
   padding-bottom: 5px;
@@ -463,6 +463,23 @@ a.dissolved {
 	font-size: 0.8em;
 	}
 	
+#footer_main hr {
+	margin-left: 0;
+ width: 20%;
+}
+
+#footer_main a {
+	color: #FFFFFF;
+	}
+
+/* add some default styles for the node page  */
+.node-type-page #main-content h2 { font-size: 1.5em; margin: .75em 0; }
+.node-type-page #main-content h3 { font-size: 1.17em; margin: .83em 0; }
+.node-type-page #main-content blockquote      { margin-left: 40px; margin-right: 40px; }
+
+.node-type-page #main-content ul,
+.node-type-page #main-content ol { margin: 1.12em 0; }
+
 /* Static page styles */
 .node-type-page #main_content_container #main-content {
 	color: #2B2B29;
@@ -479,6 +496,9 @@ a.dissolved {
 	line-height: 1.2em;
 	}	
 	
-.node-type-page #main-content li {
+.node-type-page #main-content ol {
+  list-style-position: inside;
 	list-style-type:lower-latin;
 	}
+	
+
