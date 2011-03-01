@@ -126,10 +126,6 @@ div#header_container h2 { border: none; }
   padding-top: 0;
 }
 
-#node-6 p {
-  font-size: 2em;
-}
-
 h2#site-name {
 	text-align: right;
 	}
@@ -167,12 +163,6 @@ a, ul.pager a {
   text-decoration: none;
 }
 
-body.page-node-6 h1.title {
-  display: none;
-}
-
-
- 
 
 h2  {
    font-size: 1em;
@@ -209,9 +199,6 @@ h1, h2, h3, h4, h5 {
 display: none;
 }
 
-#node-page-2 p {
-    font-size: 2em;
-}
 
 .block-user label, .block-user input {
  text-align: left;
@@ -484,6 +471,12 @@ a.dissolved {
 	
 .node-type-page #main-content h2 {
 	font-size: 1.6em;
+	}	
+	
+.node-type-page #main-content  p {
+	margin-top: 14px;
+	margin-bottom: 14px;
+	line-height: 1.2em;
 	}	
 	
 .node-type-page #main-content li {
