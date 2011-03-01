@@ -45,7 +45,11 @@ function level_omega_preprocess(&$vars, $hook) {
       if($vars['name'] == "companies_house_latest_profile_2") {
         drupal_set_title($vars['view']->result[0]->name);
      }
-
+     if($vars['name'] == 'ch_solr_transactions' && $vars['display_id'] == 'summary_page') {
+       variable_get('level_platform_latest_daily_date','');
+       // TODO:  format date here;
+       drupal_set_title('@leveldaily update');
+     }
     break;
     
   }
@@ -77,7 +81,7 @@ function level_omega_preprocess_views_view_field(&$vars, $hook) {
  *   The name of the template being rendered ("page" in this case.)
  */
 function level_omega_preprocess_page(&$vars, $hook) {
-  if(arg(0) == 'company') {
+  if(arg(1) == 'company' || arg(0) == 'company') {
     $vars['scripts'] .= '<script src="http://platform.twitter.com/widgets.js"></script>';
     $vars['scripts'] .= '<script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>';
     $vars['scripts'] .= '<script src="http://www.scribd.com/javascripts/view.js"></script>';
