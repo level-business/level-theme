@@ -49,7 +49,7 @@ settings[text_css] = 0
 settings[regions_css] = 0
 settings[defaults_css] = 0
 settings[custom_css] = 0
-
+settings[toggle_logo] = 0
 settings[front_page_title_display] = title_slogan
 settings[page_title_display_custom] = ''
 settings[other_page_title_display] = ptitle_stitle

@@ -195,10 +195,70 @@ h1, h2, h3, h4, h5 {
  text-decoration: none;
 }
 
- form#views-exposed-form-Solr-page-1 input#edit-submit-Solr {
+
+#edit-text {
+  border: 1px solid #999390;
+  }
+
+#left_sidebar #edit-text {
+	width: 220px;
+  height: 20px;
+  
+	}
+
+#left_sidebar form#views-exposed-form-Solr-page-1 input#edit-submit-Solr {
 display: none;
 }
 
+#left_sidebar .compact-form-label {
+	display: none;
+	}
+
+#content-top form#views-exposed-form-Solr-page-1 input#edit-submit-Solr  {
+    background-color: #4FA7E2;
+    border: 0;
+    margin: 0;
+    color: #FFFFFF;
+    font-size: 1.4em;
+    font-weight: bold;
+    height: 32px;
+    margin: 0;
+    padding: 0;
+    width: 218px;
+}
+
+#boxes-box-hp_search_blurb {
+    background-image: url("../images/intro_arrow.png");
+    background-position: 300px 0;
+    background-repeat: no-repeat;
+    display: block;
+    height: 100px;
+    line-height: 1.2em;
+    margin: 0 0 2em auto;
+    padding-right: 220px;
+    padding-top: 2em;
+    text-align: right;
+    width: 300px;
+}
+
+
+#content-top .views-exposed-widget {
+	margin: 0;
+	padding: 0;
+	padding-top: 1em;
+	}
+
+#content-top #edit-text {
+  width: 470px;
+  height: 20px;
+  padding: 5px;
+  font-size: 1.2em;
+  
+  }
+#content-top .compact-form-label {
+    top: 22px;
+    color: #B7B2B0;
+}
 
 .block-user label, .block-user input {
  text-align: left;
@@ -274,11 +334,7 @@ span.field-content { font-weight: normal; }
   clear: both;
 }*/
 
-#edit-text {
-	border: 1px solid #999390;
-	width: 220px;
-	height: 20px;
-	}
+
 	
 /* Styles for the search results page */
 
