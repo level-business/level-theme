@@ -1,12 +1,11 @@
-
-
 body  {
  font-size: 14px;
  padding:0px;
  margin:0px;
  background-color: #FFFCFA;
+ font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
-
+ 
 h1 {
  margin-top: 10px;
  margin-bottom: 14px;
@@ -66,7 +65,6 @@ h1.company-name {
 
 
 #main_wrapper, #right_sidebar, #main_content_container {
-	background-color: #f2f2f2;
 	color: #898481;
 	}
 	
@@ -85,13 +83,13 @@ h1.company-name {
 	color: #5b5754;
 	}
 
-#right_sidebar .block-apachesolr_passthru ul {
+#left_sidebar .block-apachesolr_passthru ul {
 	margin: 0px;
 	margin-bottom: 10px;
 	padding: 0px;
 	}
 
-#right_sidebar .block-apachesolr_passthru ul li {
+#left_sidebar .block-apachesolr_passthru ul li {
     display: block;
     font-size: 0.9em;
     line-height: 1.4em;
@@ -140,7 +138,7 @@ h2#site-name:before {
   font-weight: bold;
   text-decoration: none;
   letter-spacing: -0.06em;
-  line-height: 1em;
+  line-height: 2em;
 }
 
 #site-slogan {
@@ -177,6 +175,7 @@ body,
 #site-name,
 .ui-widget,
 .comment-form label,
+input,
 h1, h2, h3, h4, h5 {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
@@ -210,8 +209,13 @@ h1, h2, h3, h4, h5 {
 display: none;
 }
 
-#left_sidebar .compact-form-label {
-	display: none;
+#block-views--exp-Solr-page_1 {
+	padding-top: 10px;
+	
+	}
+
+#left_sidebar #block-views--exp-Solr-page_1 label {
+	display: none !important;
 	}
 
 #content-top form#views-exposed-form-Solr-page-1 input#edit-submit-Solr  {
@@ -225,8 +229,24 @@ display: none;
     margin: 0;
     padding: 0;
     width: 218px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    text-shadow: 1px 1px 0 #0F6490;
+		-webkit-border-top-right-radius: 3px;
+		-webkit-border-bottom-right-radius: 3px;
+		-moz-border-radius-topright: 3px;
+		-moz-border-radius-bottomright: 3px;
+		border-top-right-radius: 3px;
+		border-bottom-right-radius: 3px;
 }
 
+#content-top form#views-exposed-form-Solr-page-1 input#edit-submit-Solr:hover {
+	background-color: #52B1F2;
+	}
+
+#content-top form#views-exposed-form-Solr-page-1 input#edit-submit-Solr:active {
+    text-shadow: 0px 0px 0 #0F6490;	
+	}
+	
 #boxes-box-hp_search_blurb {
     background-image: url("../images/intro_arrow.png");
     background-position: 300px 0;
@@ -251,12 +271,15 @@ display: none;
 #content-top #edit-text {
   width: 470px;
   height: 20px;
-  padding: 5px;
+  padding: 5px 0px 5px 10px;
   font-size: 1.2em;
   
   }
 #content-top .compact-form-label {
     top: 22px;
+    left: 10px;
+    font-weight: normal;
+    font-size: 1.2em;
     color: #B7B2B0;
 }
 
@@ -334,7 +357,16 @@ span.field-content { font-weight: normal; }
   clear: both;
 }*/
 
+/* styles for the home apge */
 
+.view-display-id-summary_homepage_page .attachment-after .view-id-ch_solr_transactions {
+	float: left;
+	width: 220px;
+	}
+
+.view-display-id-summary_homepage_page .attachment-after a {
+	font-size: 3em;
+	}
 	
 /* Styles for the search results page */
 
@@ -493,11 +525,10 @@ a.dissolved {
  /* styles for the footer */
 
 #footer_main {
-	color: #E5E2E0;
-	background-color: #32302D;
+	margin-top: 30px;
+	border-top: 2px solid #2B2D29;
   padding-top: 5px;
   padding-bottom: 5px;
-  margin-top: 10px;
 	}
 
 #footer_main .block {
@@ -520,13 +551,22 @@ a.dissolved {
 	}
 	
 #footer_main hr {
-	margin-left: 0;
- width: 20%;
+    margin-left: 0;
+    width: 5%;
+    background-color: #B2B7B0;
+    border: 0 solid gray;
+    color: black;
+    height: 1px;
 }
 
 #footer_main a {
-	color: #FFFFFF;
+    line-height: 1.4em;
 	}
+	
+#footer_main div {
+	  display: block;
+	  line-height: 1.5em;
+	} 	
 
 /* add some default styles for the node page  */
 .node-type-page #main-content h2 { font-size: 1.5em; margin: .75em 0; }
