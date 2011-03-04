@@ -39,17 +39,28 @@ function level_omega_theme(&$existing, $type, $theme, $path) {
  */
 function level_omega_preprocess(&$vars, $hook) {
   // Preprocessing for items we don't have templates for
-  switch($hook) {
+  switch ($hook) {
     case 'views_view':
       // Set the title of the the page for the company profile view.
       if($vars['name'] == "companies_house_latest_profile_2") {
         drupal_set_title($vars['view']->result[0]->name);
      }
-     if($vars['name'] == 'ch_solr_transactions' && $vars['display_id'] == 'summary_page') {
-       variable_get('level_platform_latest_daily_date','');
-       // TODO:  format date here;
-       drupal_set_title('@leveldaily update');
-     }
+     if ($vars['name'] == 'ch_solr_transactions') {
+        // Get the date and set the title if the view is one of the main blocks
+        // summary_page, page_2 or block
+        $system_date = variable_get('level_platform_latest_daily_date','0000-00-00');
+        $date = date('jS F Y',$system_date);
+        $title = "level daily for " . $date;
+        if ($vars['display_id'] == 'block_1') {
+          $vars['view']->build_info['title'] = $title;
+        }
+        if ($vars['display_id'] == 'summary_page') {
+          drupal_set_title($title);
+        }
+        if ($vars['display_id'] == 'summary_homepage_page') {
+          $vars['header'] = '<h1>' . $title . '</h1>';
+        }
+      }
     break;
     
   }
