@@ -442,14 +442,31 @@ a.dissolved {
   background-repeat: no-repeat
 } */
 
-.accounts_icon {
-  display: block; float: right; clear: both;
+.accounts_icon, .tif_dl_icon {
+	display: block;
 	background-image: URL('../images/ACCOUNTS_ICON_2011.png');
   background-position: right center;
   background-repeat: no-repeat;
-  width: 55px;
-  height: 80px;
+  width: 74px;
+  height: 87px;
+
 	}
+
+.accounts_icon  {
+  float: right; clear: both;
+	}
+
+.tif_dl_icon {
+	float: left;
+   margin: 0 1em 1em;
+	
+}
+	
+.tif_dl_linktext {
+	float: left;
+	clear: left;
+	}	
+
 
 /* Styling for the company details page */
 
