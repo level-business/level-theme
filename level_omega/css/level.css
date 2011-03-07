@@ -249,7 +249,7 @@ display: none;
 	
 #boxes-box-hp_search_blurb {
     background-image: url("../images/intro_arrow.png");
-    background-position: 300px 0;
+    background-position: 500px 0;
     background-repeat: no-repeat;
     display: block;
     height: 100px;
@@ -257,8 +257,9 @@ display: none;
     margin: 0 0 2em auto;
     padding-right: 220px;
     padding-top: 2em;
-    text-align: right;
-    width: 300px;
+    text-align: center;
+    width: 480px;
+    font-size: 1.6em;
 }
 
 
@@ -366,6 +367,15 @@ span.field-content { font-weight: normal; }
 
 .view-display-id-summary_homepage_page .attachment-after a {
 	font-size: 3em;
+	}
+	
+.view-ch-solr-transactions h1	a {
+	color: #2B2D29;
+	}
+
+.view-ch-solr-transactions h1 em {
+	font-weight: normal;
+	font-style: normal;
 	}
 	
 /* Styles for the search results page */
@@ -597,4 +607,11 @@ a.dissolved {
 	list-style-type:lower-latin;
 	}
 	
+	
+/* styles for the level daily page */
+
+.view-display-id-summary_page div.ld_label {
+	float: left;
+	padding-right: 1em;
+	}
 
