@@ -13,14 +13,13 @@
   <?php print $head; ?>
   <?php print $styles; ?>
   <?php print $scripts; ?>
-  
+  <meta property="og:site_name" content="Level Business" />
+  <meta property="fb:admins" content="200205950008579" />
   <?php 
   // TODO move this to a seperate module
     if (arg(0) == 'company') {
-      print '<meta property="og:type" value="company" />';
-      print '<meta property="og:title" value="'. trim($title) . '" />';
-      print '<meta property="og:site_name" value="Level Business" />';
-      
+      print '<meta property="og:type" content="company" />';
+      print '<meta property="og:title" content="'. trim($title) . '" />';
     }
   ?>
   
