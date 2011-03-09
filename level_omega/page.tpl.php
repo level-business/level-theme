@@ -14,12 +14,18 @@
   <?php print $styles; ?>
   <?php print $scripts; ?>
   <meta property="og:site_name" content="Level Business" />
-  <meta property="fb:admins" content="200205950008579" />
+  <meta property="fb:app_id" content="206040062739797" />
   <?php 
+  // TODO: add fb_app id and fb_admins as system variables 
+  // TODO, we can get some of the types from the SIC code for bars, hotes etc. 
   // TODO move this to a seperate module
     if (arg(1) == 'company') {
+      global $base_root;
+      $path = $base_root . request_uri();
+      
       print '<meta property="og:type" content="company" />';
       print '<meta property="og:title" content="'. trim($title) . '" />';
+      print '<meta property="og:url" content="http://levelbusiness.com'. request_uri() .'" />';
     }
   ?>
   
@@ -67,7 +73,7 @@
 	       }?>
     </div>
 
-<div id="main_content_container" class="grid_3">
+<div id="main_content_container" class="grid_3 clearfix">
   <?php if($top_bar || $title):
       /* top_bar can be used for bold page titles such as company
        * names on the company profile page. It will allways span 
