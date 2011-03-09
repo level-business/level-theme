@@ -48,7 +48,7 @@ function level_omega_preprocess(&$vars, $hook) {
      if ($vars['name'] == 'ch_solr_transactions') {
         // Get the date and set the title if the view is one of the main blocks
         // summary_page, page_2 or block
-        $system_date = variable_get('level_platform_latest_daily_date','0000-00-00');
+        $system_date = strtotime(variable_get('level_platform_latest_daily_date','0000-00-00'));
         $date = date('jS F Y',$system_date);
         $title = "<a href=\"/leveldaily\">leveldaily</a> update for ";
         if ($vars['display_id'] == 'block_1') {
@@ -57,8 +57,7 @@ function level_omega_preprocess(&$vars, $hook) {
         if ($vars['display_id'] == 'summary_page') {
           drupal_set_title($title . $date);
         }
-        if ($vars['display_id'] == 'summary_homepage_page') {
-           
+        if ($vars['display_id'] == 'summary_homepage_page') {          
           $vars['header'] = '<h1>' . $title . '<em>' . date('jS F',$system_date) . '</em> ' . date('Y',$system_date) . '</h1>';
         }
       }
