@@ -100,6 +100,7 @@ function level_omega_preprocess_views_view_field(&$vars, $hook) {
  *   The name of the template being rendered ("page" in this case.)
  */
 function level_omega_preprocess_page(&$vars, $hook) {
+   
   if(arg(1) == 'company' || arg(0) == 'company') {
     $vars['scripts'] .= '<script src="http://platform.twitter.com/widgets.js"></script>';
     $vars['scripts'] .= '<script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>';

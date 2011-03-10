@@ -7,14 +7,21 @@ body  {
 }
  
 h1 {
- margin-top: 10px;
- margin-bottom: 14px;
- color: #2b2d29;
- font-size: 30px;
- padding: 10px;
- margin: 0px;
- font-weight: bold;
+    border-bottom: 1px solid #999390;
+    border-top: 1px solid #999390;
+    color: #2B2D29;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 10px 0;
 }
+
+#top_bar h1 {
+	border: none;
+	padding: 0px;
+	}
 
 h1.company-name {
   color: #4fa7e2;
@@ -91,7 +98,7 @@ h1.company-name {
 
 #left_sidebar .block-apachesolr_passthru ul li {
     display: block;
-    font-size: 0.9em;
+    font-size: 0.8em;
     line-height: 1.4em;
     list-style: none inside none;
     margin: 0.8em 0;
@@ -132,13 +139,19 @@ h2#site-name:before {
 	content: "_";
 	}
 
+div#branding {
+	margin-top: 10px;
+	margin-bottom: -2px;
+	}
+
 #site-name a {
   color: #000000;
   font-size: 2.1em;
   font-weight: bold;
   text-decoration: none;
   letter-spacing: -0.06em;
-  line-height: 2em;
+  line-height: 1em;
+  vertical-align: baseline;
 }
 
 #site-slogan {
@@ -200,23 +213,31 @@ h1, h2, h3, h4, h5 {
   }
 
 #left_sidebar #edit-text {
-	width: 220px;
-  height: 20px;
-  
+    font-size: 1.1em;
+    height: 20px;
+    padding-left: 8px;
+    width: 220px;
 	}
 
 #left_sidebar form#views-exposed-form-Solr-page-1 input#edit-submit-Solr {
 display: none;
 }
 
-#block-views--exp-Solr-page_1 {
-	padding-top: 10px;
-	
+ #block-views--exp-Solr-page_1 {
+  padding-top: 5px;
+  }
+
+.front #block-views--exp-Solr-page_1 {
+  padding-top: 40px;
 	}
+	
+
 
 #left_sidebar #block-views--exp-Solr-page_1 label {
 	display: none !important;
 	}
+
+
 
 #content-top form#views-exposed-form-Solr-page-1 input#edit-submit-Solr  {
     background-color: #4FA7E2;
@@ -252,14 +273,16 @@ display: none;
     background-position: 500px 0;
     background-repeat: no-repeat;
     display: block;
+    font-size: 1.4em;
     height: 100px;
     line-height: 1.2em;
-    margin: 0 0 2em auto;
+    margin-bottom: 2em;
+    margin-left: auto;
+    margin-right: 0;
     padding-right: 220px;
-    padding-top: 2em;
-    text-align: center;
+    padding-top: 0.5em;
+    text-align: left;
     width: 480px;
-    font-size: 1.6em;
 }
 
 
@@ -296,8 +319,9 @@ display: none;
 	} 
 	
 
-  #main_content_container {
-	border-top: 2px solid #999390;
+  #main_content_container,
+  #block-views-company_files-switcher {
+	border-top: 1px solid #999390;
 	}
   
   div.block-search input#edit-search-block-form-1 {
@@ -363,10 +387,26 @@ span.field-content { font-weight: normal; }
 .view-display-id-summary_homepage_page .attachment-after .view-id-ch_solr_transactions {
 	float: left;
 	width: 220px;
+	margin: 10px;
 	}
 
+.view-display-id-summary_homepage_page .attachment-after  .view-id-ch_solr_transactions:first-child {
+	margin-left: 0px;
+	}
+	
+.view-display-id-summary_homepage_page .attachment-after  .view-id-ch_solr_transactions:last-child,
+.view-display-id-summary_homepage_page .attachment-after .view-dom-id-3 {
+  margin-right: 0px;
+  }	
+
 .view-display-id-summary_homepage_page .attachment-after a {
-	font-size: 3em;
+	font-size: 4em;
+	}
+	
+
+div.ld_label {
+	   font-size: 0.9em;
+    line-height: 1.5em;
 	}
 	
 .view-ch-solr-transactions h1	a {
@@ -377,6 +417,10 @@ span.field-content { font-weight: normal; }
 	font-weight: normal;
 	font-style: normal;
 	}
+	
+.front drush #main-content {
+	background-color: #FFFFFF;
+	}	
 	
 /* Styles for the search results page */
 
@@ -447,24 +491,42 @@ a.dissolved {
 	background-image: URL('../images/ACCOUNTS_ICON_2011.png');
   background-position: right center;
   background-repeat: no-repeat;
-  width: 74px;
+  width: 73px;
   height: 87px;
 
 	}
 
 .accounts_icon  {
+	background-image: URL('../images/ACCOUNTS_AVAILABLE_ICON_2011.png');
   float: right; clear: both;
+  width: 64px;
+  height: 86px;
 	}
 
 .tif_dl_icon {
 	float: left;
-   margin: 0 1em 1em;
-	
+   margin: 0 1em 1em 0;
 }
+
+#block-views-company_files-switcher {
+    padding-top: 10px;
+    padding-bottom: 10px;	
+	}
+
+#block-views-company_files-switcher p {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: black;
+	}
+	
+#block-views-company_files-switcher p	em {
+	font-style: normal;
+	font-weight: normal;
+	}
 	
 .tif_dl_linktext {
-	float: left;
-	clear: left;
+    font-size: 0.9em;
+    line-height: 1.8em;
 	}	
 
 
@@ -558,7 +620,7 @@ a.dissolved {
   padding-bottom: 5px;
 	}
 
-#footer_main .block {
+#footer_main .block  {
 	float: left;
 	width: 220px;
 	margin-left: 10px;
@@ -579,11 +641,13 @@ a.dissolved {
 	
 #footer_main hr {
     margin-left: 0;
-    width: 5%;
+    width: 100%;
+    /* should be 5% but need ie fix */
     background-color: #B2B7B0;
     border: 0 solid gray;
     color: black;
     height: 1px;
+    align: left;
 }
 
 #footer_main a {
@@ -631,4 +695,22 @@ a.dissolved {
 	float: left;
 	padding-right: 1em;
 	}
+	
+/* Drop shadow */
 
+#main_wrapper {
+
+    background-image: url("/sites/all/themes/level-theme/level_omega/images/drop.png");
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    padding-bottom: 27px;
+	}
+
+.company-address .field-content div {
+	padding-top: 2px;
+	padding-bottom: 2px;
+	}
+
+#content-bottom {
+	background-color: white;
+	}
