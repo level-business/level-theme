@@ -76,7 +76,7 @@ function level_omega_preprocess_block(&$vars, $hook) {
   // Substitute in some text into the twitter block. 
   if($vars['block']->delta == 'tweet_block') {
     global $company_name;
-    $vars['block']->content = str_replace('class="twitter-share-button"', 'class="twitter-share-button" data-text="I\'ve been looking at the level profile for ' . $company_name , $vars['block']->content);    
+    $vars['block']->content = str_replace('class="twitter-share-button"', 'class="twitter-share-button" data-text="I\'ve been looking at the level profile for ' . $company_name . '"' , $vars['block']->content);    
   }
   
   $vars['extra_classes'] = '';
