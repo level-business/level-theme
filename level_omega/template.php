@@ -43,7 +43,11 @@ function level_omega_preprocess(&$vars, $hook) {
     case 'views_view':
       // Set the title of the the page for the company profile view.
       if($vars['name'] == "companies_house_latest_profile_2") {
-        drupal_set_title($vars['view']->result[0]->name);
+        if ($vars['view']->result[0]->name) {
+          drupal_set_title($vars['view']->result[0]->name);
+          global $company_name;
+          $company_name = $vars['view']->result[0]->name;
+        }
      }
      if ($vars['name'] == 'ch_solr_transactions') {
         // Get the date and set the title if the view is one of the main blocks
@@ -69,6 +73,12 @@ function level_omega_preprocess(&$vars, $hook) {
 }
 
 function level_omega_preprocess_block(&$vars, $hook) {
+  // Substitute in some text into the twitter block. 
+  if($vars['block']->delta == 'tweet_block') {
+    global $company_name;
+    $vars['block']->content = str_replace('class="twitter-share-button"', 'class="twitter-share-button" data-text="I\'ve been looking at the level profile for ' . $company_name , $vars['block']->content);    
+  }
+  
   $vars['extra_classes'] = '';
   if ($vars['block']->region == 'footer') {
     if ($vars['block_id'] == 3) {
