@@ -665,7 +665,10 @@ a.dissolved {
 .node-type-page #main-content blockquote      { margin-left: 40px; margin-right: 40px; }
 
 .node-type-page #main-content ul,
-.node-type-page #main-content ol { margin: 1.12em 0; }
+.node-type-page #main-content ol { margin: 1.12em; }
+
+.node-type-page #main-content li { padding-top:2px; padding-bottom: 2px; }
+
 
 /* Static page styles */
 .node-type-page #main_content_container #main-content {
