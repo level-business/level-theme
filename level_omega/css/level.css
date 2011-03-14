@@ -576,6 +576,10 @@ a.dissolved {
     }
 .company-details-view dd { font-size: 0.8em;
       color: #898481;
+      font-size: 0.8em;
+      font-weight: normal;
+      line-height: 1.2em;
+      vertical-align: text-bottom;
       }
       
 .company-details-view dl {
