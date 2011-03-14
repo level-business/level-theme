@@ -15,6 +15,7 @@
   <?php print $scripts; ?>
   <meta property="og:site_name" content="Level Business" />
   <meta property="fb:app_id" content="206040062739797" />
+  <meta property="og:image" content="http://<?php print $_SERVER['HTTP_HOST'] . '/' . drupal_get_path('theme','level_omega'); ?>/images/level_fb_like.png" />  
   <?php 
   // TODO: add fb_app id and fb_admins as system variables 
   // TODO, we can get some of the types from the SIC code for bars, hotes etc. 
