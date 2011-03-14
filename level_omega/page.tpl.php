@@ -26,7 +26,7 @@
       
       print '<meta property="og:type" content="company" />';
       print '<meta property="og:title" content="'. trim($title) . '" />';
-      print '<meta property="og:url" content="http://levelbusiness.com'. request_uri() .'" />';
+ //     print '<meta property="og:url" content="http://levelbusiness.com'. request_uri() .'" />';
     }
   ?>
   
