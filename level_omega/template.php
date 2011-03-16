@@ -38,6 +38,7 @@ function level_omega_theme(&$existing, $type, $theme, $path) {
  *   The name of the template being rendered (name of the .tpl.php file.)
  */
 function level_omega_preprocess(&$vars, $hook) {
+
   // Preprocessing for items we don't have templates for
   switch ($hook) {
     case 'views_view':
@@ -49,6 +50,7 @@ function level_omega_preprocess(&$vars, $hook) {
           $company_name = $vars['view']->result[0]->name;
         }
      }
+
      if ($vars['name'] == 'ch_solr_transactions') {
         // Get the date and set the title if the view is one of the main blocks
         // summary_page, page_2 or block
@@ -113,8 +115,15 @@ function level_omega_preprocess_page(&$vars, $hook) {
    
   if(arg(1) == 'company' || arg(0) == 'company') {
     $vars['scripts'] .= '<script src="http://platform.twitter.com/widgets.js"></script>';
-    $vars['scripts'] .= '<script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>';
+    $vars['scripts'] .= '<script> FB.init({
+     appId  : "206040062739797",
+     status : false, // check login status
+     cookie : false, // enable cookies to allow the server to access the session
+     xfbml  : true  // parse XFBML
+   });
+    </script>';
     $vars['scripts'] .= '<script src="http://www.scribd.com/javascripts/view.js"></script>';
+  
   }
 }
 
