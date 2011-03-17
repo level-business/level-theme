@@ -26,10 +26,10 @@
       
       print '<meta property="og:type" content="company" />';
       print '<meta property="og:title" content="'. trim($title) . '" />';
- //     print '<meta property="og:url" content="http://levelbusiness.com'. request_uri() .'" />';
+     // TODO: change this to be just http://levelbusiness.com
+      print '<meta property="og:url" content="http://'. $_SERVER['HTTP_HOST'] . request_uri() .'" />';
     }
-  ?>
-  
+  ?> 
 </head>
 
 
@@ -156,6 +156,8 @@
 </div>
 </div><!-- /page -->
   <?php print $closure; ?>
-            
+   <script>
+     FB.XFBML.parse();
+   </script>          
 </body>
 </html>
