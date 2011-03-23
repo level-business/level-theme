@@ -6,7 +6,7 @@ body  {
  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
  
-h1 {
+h1, .block-level_visualization h2 {
     border-bottom: 1px solid #999390;
     border-top: 1px solid #999390;
     color: #2B2D29;
@@ -721,3 +721,15 @@ a.dissolved {
 #content-bottom {
 	background-color: white;
 	}
+	
+/* Graph styles */
+
+.block-level_visualization  h3, #flot_legend {
+    padding: 1em 1em 1em 0;
+}
+
+.legendLabel { 
+    line-height: 2em;
+    padding: 8px;
+    vertical-align: text-top;
+}

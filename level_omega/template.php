@@ -56,7 +56,7 @@ function level_omega_preprocess(&$vars, $hook) {
         // summary_page, page_2 or block
         $system_date = strtotime(variable_get('level_platform_latest_daily_date','0000-00-00'));
         $date = date('jS F Y',$system_date);
-        $title = "<a href=\"/leveldaily\">leveldaily</a> update for ";
+        $title = "leveldaily update for ";
         if ($vars['display_id'] == 'block_1') {
           $vars['view']->build_info['title'] = $title . $date;
         }
