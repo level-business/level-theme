@@ -424,6 +424,11 @@ div.ld_label {
 	
 /* Styles for the search results page */
 
+
+a .link_text {
+	color: #000000;
+	}
+
 #block-apachesolr_search-currentsearch h2 {
 	display: none;
 	}

@@ -76,6 +76,34 @@ function level_omega_preprocess(&$vars, $hook) {
 
 function level_omega_preprocess_block(&$vars, $hook) {
   // Substitute in some text into the twitter block. 
+  switch($vars['block']->delta) {
+    case 'tweet_block':
+      global $company_name;
+      $vars['block']->content = str_replace('class="twitter-share-button"', 'class="twitter-share-button" data-text="I\'ve been looking at the level profile for ' . $company_name . '"' , $vars['block']->content);    
+    break;
+    case 'company_transactions':
+      // Set up the solr objects
+      $views_query = apachesolr_current_query();
+      list($module, $solr_search_class) = variable_get('apachesolr_query_class', array('apachesolr', 'Solr_Base_Query'));
+      $filters = $_GET['filters'];
+      $solr_query =  new $solr_search_class(apachesolr_get_solr(), '' , $filters , $views_query->get_solrsort() , $views_query->get_path());
+      // Check that there is a company transacitions filter.
+      $filter_search = $views_query->get_filters('company_transactions');
+      if (isset($filter_search[0]['#value'])) {
+        // Remove the filter
+        $transaction_filter = $filter_search[0]['#value'];
+        $filter_elements = explode('|',$transaction_filter);
+        $solr_query->remove_filter('company_transactions', $transaction_filter);
+        $facet_text = constant ('LEVEL_PLATFORM_TRANSACTION_TYPES_' .  $filter_elements[1]);
+        $facet_text .= ' on ' . $filter_elements[0]; 
+        $options['query'] = $solr_query->get_url_queryvalues();
+        $vars['block']->title = 'Filtered by';
+        $vars['block']->content = theme('apachesolr_unclick_link', $facet_text, $solr_query->get_path(), $options);
+        $vars['show_facet'] = TRUE;
+      }
+    break;
+  }
+  
   if($vars['block']->delta == 'tweet_block') {
     global $company_name;
     $vars['block']->content = str_replace('class="twitter-share-button"', 'class="twitter-share-button" data-text="I\'ve been looking at the level profile for ' . $company_name . '"' , $vars['block']->content);    
@@ -88,6 +116,12 @@ function level_omega_preprocess_block(&$vars, $hook) {
     } 
     
   }
+  
+
+}
+
+function level_omega_preprocess_block__apachesolr_passthru_company_transactions(&$vars, $hook) {
+  print('test');
 }
 
 function level_omega_preprocess_views_view_field(&$vars, $hook) {
@@ -215,6 +249,7 @@ function level_omega_apachesolr_unclick_link($facet_text, $path, $options = arra
   }
   
   $options['attributes']['class'] = 'apachesolr-unclick';
+  $options['html'] = '<div class="link_text">' . $facet_text . '</div> (remove)';
 //  var_dump($options);
-  return $facet_text . ' ' . apachesolr_l("(remove)", $path, $options);
+  return   apachesolr_l('<div class="link_text">' . $facet_text . '</div> (remove)', $path, $options);
 }
