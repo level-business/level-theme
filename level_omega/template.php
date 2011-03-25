@@ -51,7 +51,7 @@ function level_omega_ui_date($date, $prefix = '') {
    '<em>' .
   date('jS F', $date) .
   '</em> ' .
-  date('Y',$date) .
+  '<span class="year">' . date('Y',$date) . '</span>' .
   '</span>';
   
   return $ui_date;

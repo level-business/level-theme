@@ -96,14 +96,16 @@ h1.company-name {
 	padding: 0px;
 	}
 
-#left_sidebar .block-apachesolr_passthru ul li {
+#left_sidebar .block-apachesolr_passthru .content {
     display: block;
     font-size: 0.8em;
     line-height: 1.4em;
-    list-style: none inside none;
     margin: 0.8em 0;
 	}	
-	
+
+#left_sidebar .block-apachesolr_passthru .content li {
+	    list-style: none inside none;
+}
 /* First and last exceptions */
 	#main_wrapper .views-row-first, #right_sidebar div:first-child {
 	border-top: none;
@@ -122,6 +124,11 @@ h1.company-name {
 	padding-bottom: 10px;
 	
 	}
+	
+#top_bar span.ui_date em {
+	font-weight: normal;
+
+	}	
 /* exceptions to the header border */
 div#header_container h2 { border: none; }
 
@@ -434,9 +441,9 @@ a .link_text {
 	}
 
 #block-apachesolr_search-currentsearch .results_string {
-
-	font-size: 1.6em;
-	color: #999390;
+    color: #000000;
+    font-size: 1.6em;
+    font-weight: bold;
   }
   
 #block-apachesolr_search-currentsearch  .results_string em {
@@ -459,6 +466,10 @@ a .link_text {
 .company-search-title {
     font-size: 1.6em;
     line-height: 1.2em;
+	}
+	
+.block-apachesolr_passthru	{
+	padding-bottom: 12px;
 	}
 	
 /* Classes for liquidated companies */
