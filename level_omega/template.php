@@ -21,6 +21,12 @@ if (theme_get_setting('omega_starterkit_fixed')) {
  */
 function level_omega_theme(&$existing, $type, $theme, $path) {
   $hooks = omega_theme($existing, $type, $theme, $path);
+  // Consistant UI friendly date which can't be created with format date
+  $hooks['ui_date'] = array(
+    'arguments' => array ('date' => NULL, $prefix = ''),
+   );
+
+  
   // Add your theme hooks like this:
   /*
   $hooks['hook_name_here'] = array( // Details go here );
@@ -28,6 +34,44 @@ function level_omega_theme(&$existing, $type, $theme, $path) {
   // @TODO: Needs detailed comments. Patches welcome!
   return $hooks;
 }
+
+/** @defgroup theme_functions
+ * Theme functions implementations.
+ *  @{
+ */  
+
+
+/**
+ * 
+ * Format a date in HTLM in a ui friendly format
+ * @param unknown_type $date
+ */
+function level_omega_ui_date($date, $prefix = '') {
+  $ui_date = '<span class="ui_date">' . $prefix .
+   '<em>' .
+  date('jS F', $date) .
+  '</em> ' .
+  date('Y',$date) .
+  '</span>';
+  
+  return $ui_date;
+}
+
+/** @} */
+
+/** @defgroup custom functions
+ *  Functions which are common to the theme but not standard drupal theme 
+ *  functions.
+ *  @{
+ */  
+
+/** @} */
+
+/** @defgroup Preprocessors
+ *  Pre process functions. 
+ *  @{
+ */  
+
 
 /**
  * Override or insert variables into all templates.
@@ -64,7 +108,7 @@ function level_omega_preprocess(&$vars, $hook) {
           drupal_set_title($title . $date);
         }
         if ($vars['display_id'] == 'summary_homepage_page') {          
-          $vars['header'] = '<h1>' . $title . '<em>' . date('jS F',$system_date) . '</em> ' . date('Y',$system_date) . '</h1>';
+          $vars['header'] = '<h1>' . theme('ui_date',$system_date,$title) . '</h1>';
         }
       }
     break;
@@ -89,17 +133,21 @@ function level_omega_preprocess_block(&$vars, $hook) {
       $solr_query =  new $solr_search_class(apachesolr_get_solr(), '' , $filters , $views_query->get_solrsort() , $views_query->get_path());
       // Check that there is a company transacitions filter.
       $filter_search = $views_query->get_filters('company_transactions');
+           
       if (isset($filter_search[0]['#value'])) {
-        // Remove the filter
         $transaction_filter = $filter_search[0]['#value'];
         $filter_elements = explode('|',$transaction_filter);
-        $solr_query->remove_filter('company_transactions', $transaction_filter);
         $facet_text = constant ('LEVEL_PLATFORM_TRANSACTION_TYPES_' .  $filter_elements[1]);
-        $facet_text .= ' on ' . $filter_elements[0]; 
+        $facet_text .= ' on ' . theme('ui_date',strtotime($filter_elements[0]));       
+        // Remove the filter
+        $solr_query->remove_filter('company_transactions', $transaction_filter);
         $options['query'] = $solr_query->get_url_queryvalues();
-        $vars['block']->title = 'Filtered by';
+        $options['html'] = $facet_text;
+        $vars['block']->subject = 'Filtered by';
         $vars['block']->content = theme('apachesolr_unclick_link', $facet_text, $solr_query->get_path(), $options);
-        $vars['show_facet'] = TRUE;
+      }
+      else {
+        unset($vars['block']);
       }
     break;
   }
@@ -114,14 +162,10 @@ function level_omega_preprocess_block(&$vars, $hook) {
     if ($vars['block_id'] == 3) {
       $vars['extra_classes'] = 'omega';
     } 
-    
+  
   }
   
 
-}
-
-function level_omega_preprocess_block__apachesolr_passthru_company_transactions(&$vars, $hook) {
-  print('test');
 }
 
 function level_omega_preprocess_views_view_field(&$vars, $hook) {
@@ -168,54 +212,24 @@ function level_omega_preprocess_apachesolr_currentsearch(&$vars, $hook) {
   if ($vars['current_search'] == "*:*") {
     $vars['current_search'] = '';    
   }
-  $title = filter_xss($_GET['title']);
+
+  $views_query = apachesolr_current_query();
+  $filter_search = $views_query->get_filters('company_transactions');
+  if (isset($filter_search[0]['#value'])) {
+        $transaction_filter = $filter_search[0]['#value'];
+        $filter_elements = explode('|',$transaction_filter);
+        $facet_text .=  theme('ui_date',strtotime($filter_elements[0]),constant ('LEVEL_PLATFORM_TRANSACTION_TYPES_' .  $filter_elements[1]) . ' on ');       
+        $vars['transaction_search'] = $facet_text;    
+        $title =  $facet_text;
+  }
+  
+
   if ($title) {
     drupal_set_title($title);    
   }
 }
 
-/**
- * Override or insert variables into the node templates.
- *
- * @param $vars
- *   An array of variables to pass to the theme template.
- * @param $hook
- *   The name of the template being rendered ("node" in this case.)
- */
-/* -- Delete this line if you want to use this function
-function omega_starterkit_preprocess_node(&$vars, $hook) {
-  $vars['sample_variable'] = t('Lorem ipsum.');
-}
-// */
-
-/**
- * Override or insert variables into the comment templates.
- *
- * @param $vars
- *   An array of variables to pass to the theme template.
- * @param $hook
- *   The name of the template being rendered ("comment" in this case.)
- */
-/* -- Delete this line if you want to use this function
-function omega_starterkit_preprocess_comment(&$vars, $hook) {
-  $vars['sample_variable'] = t('Lorem ipsum.');
-}
-// */
-
-/**
- * Override or insert variables into the block templates.
- *
- * @param $vars
- *   An array of variables to pass to the theme template.
- * @param $hook
- *   The name of the template being rendered ("block" in this case.)
- */
-/* -- Delete this line if you want to use this function
-function omega_starterkit_preprocess_block(&$vars, $hook) {
-  $vars['sample_variable'] = t('Lorem ipsum.');
-}
-// */
-
+/** @} */
 
 /**
  * Create a string of attributes form a provided array.
