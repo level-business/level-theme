@@ -111,7 +111,12 @@ h1.company-name {
 	border-top: none;
 	}
 	
-	#main_wrapper .views-row-last, #right_sidebar div:last-child {
+	#main_wrapper .views-row-last {
+	border-bottom: none;
+	}
+	
+	
+	#right_sidebar div:last-child {
   border-bottom: none;
   }
   
@@ -401,8 +406,10 @@ span.field-content { font-weight: normal; }
 	margin-left: 0px;
 	}
 	
-.view-display-id-summary_homepage_page .attachment-after  .view-id-ch_solr_transactions:last-child,
 .view-display-id-summary_homepage_page .attachment-after .view-dom-id-3 {
+  margin-right: 0px;	
+	}
+.view-display-id-summary_homepage_page .attachment-after  .view-id-ch_solr_transactions:last-child  {
   margin-right: 0px;
   }	
 
