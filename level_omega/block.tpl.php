@@ -21,12 +21,13 @@
  * - $is_front: Flags true when presented in the front page.
  * - $logged_in: Flags true when the current user is a logged-in member.
  * - $is_admin: Flags true when the current user is an administrator.
- *
+ * - $extra_classes: Extra classes (as a string) to apply to the block
+ * 
  * @see template_preprocess()
  * @see template_preprocess_block()
  */
 ?>
-<div id="block-<?php print $block->module .'-'. $block->delta; ?>" class="block block-<?php print $block->module; print " "; ?>">
+<div id="block-<?php print $block->module .'-'. $block->delta; ?>" class="block block-<?php print $block->module; print " "; print $extra_classes; ?>">
 <?php if ($block->subject): ?>
   <h2><?php print $block->subject ?></h2>
 <?php endif;?>

@@ -120,6 +120,8 @@ function level_omega_preprocess(&$vars, $hook) {
 
 function level_omega_preprocess_block(&$vars, $hook) {
   // Substitute in some text into the twitter block. 
+  $vars['extra_classes'] = '';
+  
   switch($vars['block']->delta) {
     case 'tweet_block':
       global $company_name;
@@ -150,19 +152,21 @@ function level_omega_preprocess_block(&$vars, $hook) {
         unset($vars['block']);
       }
     break;
+    case 'converted_count-block_counter':
+       $vars['extra_classes'] = 'grid_2 alpha';
+    break;
   }
   
-  if($vars['block']->delta == 'tweet_block') {
-    global $company_name;
-    $vars['block']->content = str_replace('class="twitter-share-button"', 'class="twitter-share-button" data-text="I\'ve been looking at the level profile for ' . $company_name . '"' , $vars['block']->content);    
+  if ($vars['block']->module == 'webform') {
+    $vars['extra_classes'] = 'grid_1 omega';
   }
+
   
-  $vars['extra_classes'] = '';
+
   if ($vars['block']->region == 'footer') {
     if ($vars['block_id'] == 3) {
       $vars['extra_classes'] = 'omega';
     } 
-  
   }
   
 
@@ -202,6 +206,31 @@ function level_omega_preprocess_page(&$vars, $hook) {
     </script>';
     $vars['scripts'] .= '<script src="http://www.scribd.com/javascripts/view.js"></script>';
   
+  }
+}
+/**
+ * Override or insert variables into the node templates.
+ *
+ * @param $vars
+ *   An array of variables to pass to the theme template.
+ * @param $hook
+ *   The name of the template being rendered ("page" in this case.)
+ */
+function level_omega_preprocess_node(&$vars, $hook) {
+  // Change classes for items on the homepage
+  
+  if($vars['node']->type == 'in_the_news') {
+    $vars['node_attributes']['class'][] = 'grid_1';
+    if($vars['id'] % 3 == 1) {
+      $vars['node_attributes']['class'][] = 'alpha';
+    }
+    if($vars['id'] % 3 == 0) {
+      $vars['node_attributes']['class'][] = 'omega';
+    }
+    // Attributes has already been set, so re do them
+    $new_attributes = $vars['node_attributes'];
+    $new_attributes['class'] = implode(' ',$new_attributes['class']);
+    $vars['attributes'] = drupal_attributes($new_attributes);
   }
 }
 
