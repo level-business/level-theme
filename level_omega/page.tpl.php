@@ -1,18 +1,18 @@
 <?php
 // $Id: page.tpl.php,v 1.1.2.16 2010/11/16 14:39:39 himerus Exp $
-?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:og="http://ogp.me/ns#"
       xmlns:fb="http://www.facebook.com/2008/fbml"
       xml:lang="<?php print $language->language ?>" lang="<?php print $language->language ?>" dir="<?php print $language->dir ?>">
 
 <head>
+<meta http-equiv="X-UA-Compatible" content="IE=8" />
   <title><?php print $head_title; ?></title>
   <?php print $head; ?>
   <?php print $styles; ?>
   <?php print $scripts; ?>
+  <meta name="google-site-verification" content="pZgSESN5QxVKkNG8sfYvuTkAG_sSYMh6IyN0em74Gso" />
   <meta property="og:site_name" content="Level Business" />
   <meta property="fb:app_id" content="206040062739797" />
   <meta property="og:image" content="http://<?php print $_SERVER['HTTP_HOST'] . '/' . drupal_get_path('theme','level_omega'); ?>/images/level_fb_like.png" />  
