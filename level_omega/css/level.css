@@ -12,7 +12,6 @@ body.not-front {
  
 h1, .block-level_visualization h2 {
     border-bottom: 1px solid #999390;
-    border-top: 1px solid #999390;
     color: #2B2D29;
     font-size: 30px;
     font-weight: bold;
@@ -622,9 +621,10 @@ a.dissolved {
  
  #page_tools { background-color: #F9F9F9; padding-top: 5px;
                padding-bottom: 5px;  
-               border-bottom: 1px solid #999390;}
+               border-bottom: 1px solid #999390;
+               height: 22px;}
  
- .block-boxes, .block-boxes div, .block-boxes p, #page_tools .block-views, #page_tools .block-views div { display: inline;}
+ #page_tools .block-boxes, #page_tools .block-views, #page_tools .block-views div { display: block; float: left; margin-right: 0.2em;}
  
  
  #page_tools  .fb_iframe_widget iframe { vertical-align: baseline; }
@@ -635,7 +635,7 @@ a.dissolved {
     vertical-align: top; }
     
   #page_tools .views-label-company-number  { font-weight: bold; }
-  #page_tools .company-uri { padding: 0.1em; border: 1px solid #999390; }
+  #page_tools .company-uri { padding: 0.2em; border: 1px solid #999390; }
  
  
  
@@ -691,9 +691,12 @@ a.dissolved {
 	} 	
 
 /* add some default styles for the node page  */
-.node-type-page #main-content h2 { font-size: 1.5em; margin: .75em 0; }
-.node-type-page #main-content h3 { font-size: 1.17em; margin: .83em 0; }
-.node-type-page #main-content blockquote      { margin-left: 40px; margin-right: 40px; }
+.node-type-page #main-content h2 { font-size: 1.5em; padding-top: 1.8em; line-height: 1.2em; }
+.node-type-page #main-content h3 { font-size: 1.17em; margin-top: 0.5em; }
+.node-type-page #main-content blockquote      {     font-style: italic;
+    margin-left: 3em;
+    margin-right: 3em;
+    text-align: justify; }
 
 .node-type-page #main-content ul,
 .node-type-page #main-content ol { margin: 1.12em; }
@@ -712,16 +715,20 @@ a.dissolved {
 	}	
 	
 .node-type-page #main-content  p {
-	margin-top: 14px;
+	margin-top: 0.5em;
 	margin-bottom: 14px;
-	line-height: 1.2em;
+	line-height: 1.5em;
 	}	
 	
 .node-type-page #main-content ol {
-  list-style-position: inside;
-	list-style-type:lower-latin;
+  list-style-position: outside;
+	list-style-type: decimal;
 	}
-	
+
+.node-type-page #main-content ul {
+  list-style-position: inside;
+  list-style-type: disc;
+  }
 	
 /* styles for the level daily page */
 
@@ -732,9 +739,9 @@ a.dissolved {
 	
 /* Drop shadow */
 
-#main_wrapper {
+body.not-front #main_wrapper {
 
-    background-image: url("/sites/all/themes/level-theme/level_omega/images/drop.png");
+    background-image: url("/sites/all/themes/level-theme/level_omega/images/drop_2.png");
     background-position: center bottom;
     background-repeat: no-repeat;
     padding-bottom: 27px;
@@ -865,7 +872,7 @@ body.front #content-bottom {
 	}
 	
 body.front #block-views-converted_count-block_counter .view-content	{
-	width: 312px; 
+	width: 212px; 
 	 margin-left: auto;
   margin-right: auto;
 	display: block;
@@ -882,4 +889,6 @@ body.front #block-views-converted_count-block_counter .view-footer {
   display: block;
   text-align: center;
   font-size: 1.4em;
+  clear: both;
+   padding-top: 20px;
   }	

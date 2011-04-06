@@ -16,6 +16,7 @@ stylesheets[all][] = css/960.css ; To block out 960s grid and use our own.
 ; ------- Declare default javascript includes
 
 scripts[] = js/fb-connect.js
+scripts[] = js/odo.js
 
 ; ------- Declare default theme regions
 
