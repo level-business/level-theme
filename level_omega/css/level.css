@@ -548,10 +548,21 @@ a.dissolved {
 	}
 	
 .tif_dl_linktext {
-    font-size: 0.9em;
-    line-height: 1.8em;
+    font-size: 1em;
+    line-height: 2em;
 	}	
 
+#block-views-company_files-switcher  .tif_conversion_note {
+	font-size: 0.9em;
+
+  color: #F72F20;
+  font-weight: normal;
+  }
+
+.pdf_dl_linktext {
+    font-size: 0.9em;
+    line-height: 3em;
+}
 
 /* Styling for the company details page */
 
@@ -767,7 +778,10 @@ body.not-front #main_wrapper {
 /* Styles for the homepage featured companies */
 body.front .in_the_news  { background-color: #FFFFFF; height: 200px; position: relative; left:0px; top:0px; }
 body.front .in_the_news h2 { font-size: 1.8em; font-weight: bold; color: #21A0E1; padding: 20px 15px; }
-body.front .in_the_news p { font-size: 1.4em; padding:0 15px; }
+body.front .in_the_news p {
+	  font-size: 1.2em;
+    line-height: 1.2;
+    padding:0 15px; }
 body.front .in_the_news .field-content a {
 	position: absolute;
 	bottom: 20px;
@@ -848,8 +862,17 @@ body.front #content-bottom #webform-component-privacy-link a {
 body.front #block-views-converted_count-block_counter {
 	height: 220px;
 	-moz-border-radius: 5px 5px 5px 5px;
-  -moz-box-shadow: 1px 6px 6px rgba(0, 0, 0, 0.5);
-  background: -moz-linear-gradient(top, #FCFCFC, #F7F7F7);
+	dr-webkit-border-radius:5px;
+  -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  background: #FFFFFF;
+  background: -moz-linear-gradient(top, #FFFFFF , #EFEFEF);
+  background: -webkit-gradient(linear,
+                left top, left bottom, from(#FFFFFF), to(#EFEFEF));
+       filter: progid:DXImageTransform.Microsoft.Gradient(
+                StartColorStr='#FFFFFF', EndColorStr='#EFEFEF', GradientType=0);
+  
 	}
 	
 body.front #block-views-converted_count-block_counter h2 {
