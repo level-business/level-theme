@@ -915,3 +915,25 @@ body.front #block-views-converted_count-block_counter .view-footer {
   clear: both;
    padding-top: 20px;
   }	
+  
+#block-boxes-level_profile_blurb{
+	border-top: 1px solid #999390;
+  padding-left: 15px;
+	}
+	
+#block-boxes-level_profile_blurb h2{
+  color: black; 
+  font-size: 1.6em;
+  line-height: 1.5em;
+  }
+
+#block-boxes-level_profile_blurb p{
+	padding-top: 1em;
+	padding-bottom: 1em;
+	line-height:1.6em;
+	
+}
+
+page-doc-company-uk-06937730 #main_content_container, #block-views-company_files-switcher {
+   border: none;
+}
