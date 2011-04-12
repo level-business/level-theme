@@ -107,7 +107,8 @@ h1.company-name {
 	}	
 
 #left_sidebar .block-apachesolr_passthru .content li {
-	    list-style: none inside none;
+	list-style: none inside none;
+  margin: 0;
 }
 /* First and last exceptions */
 	#main_wrapper .views-row-first, #right_sidebar div:first-child {
@@ -702,7 +703,7 @@ a.dissolved {
 	} 	
 
 /* add some default styles for the node page  */
-.node-type-page #main-content h2 { font-size: 1.5em; padding-top: 1.8em; line-height: 1.2em; }
+.node-type-page #main-content h2, .node-type-blog #main-content h2 { font-size: 1.5em; padding-top: 1.8em; line-height: 1.2em; }
 .node-type-page #main-content h3 { font-size: 1.17em; margin-top: 0.5em; }
 .node-type-page #main-content blockquote      {     font-style: italic;
     margin-left: 3em;
@@ -725,7 +726,7 @@ a.dissolved {
 	font-size: 1.6em;
 	}	
 	
-.node-type-page #main-content  p {
+.node-type-page #main-content  p, .node-type-blog #main-content  p {
 	margin-top: 0.5em;
 	margin-bottom: 14px;
 	line-height: 1.5em;
