@@ -280,7 +280,6 @@ function level_omega_apachesolr_facet_link($facet_text, $path, $options = array(
   $formatted_count = number_format($count);
   return $facet_text . "&nbsp;" .apachesolr_l("($formatted_count)",   $path, $options);
 }
-
 function level_omega_apachesolr_unclick_link($facet_text, $path, $options = array()) {
   if (empty($options['html'])) {
     $facet_text = check_plain($facet_text);
@@ -290,7 +289,12 @@ function level_omega_apachesolr_unclick_link($facet_text, $path, $options = arra
     // Don't pass this option as TRUE into apachesolr_l().
     unset($options['html']);
   }
-  
+
+  // If 'filters' is not present apachesolr_l will ignore it and keep the 
+  // existing filter so add the empty string to clear final filter.
+  if (!isset($options['query']['filters'])) {
+    $options['query']['filters']  = "";
+  }
   $options['attributes']['class'] = 'apachesolr-unclick';
   $options['html'] = '<div class="link_text">' . $facet_text . '</div> (remove)';
 //  var_dump($options);
