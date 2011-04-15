@@ -560,11 +560,28 @@ a.dissolved {
   font-weight: normal;
   }
 
-.pdf_dl_linktext {
+.pdf_dl_linktext, .accounts_explained_linktext {
     font-size: 0.9em;
-    line-height: 3em;
+    line-height: 1.2em;
+}   
+
+.pdf_dl_linktext div, .accounts_explained_linktext div {
+	margin-left: 18px;
+	}
+
+.pdf_dl_linktext {
+	  margin-top: 5px;
+    background-image: url("/sites/all/themes/level-theme/level_omega/images/download.png");
+    background-position: 0 1px;
+    background-repeat: no-repeat;
 }
 
+.accounts_explained_linktext  {
+    margin-top: 5px;
+    background-image: url("/sites/all/themes/level-theme/level_omega/images/question.png");
+    background-position: 0 1px;
+    background-repeat: no-repeat;
+}
 /* Styling for the company details page */
 
 /* for debug 
@@ -703,7 +720,9 @@ a.dissolved {
 	} 	
 
 /* add some default styles for the node page  */
-.node-type-page #main-content h2, .node-type-blog #main-content h2 { font-size: 1.5em; padding-top: 1.8em; line-height: 1.2em; }
+.node-type-page #main-content h2, .node-type-blog #main-content h2 { 
+	font-size: 1.5em; padding-top: 1.8em; line-height: 1.2em;
+	}
 .node-type-page #main-content h3 { font-size: 1.17em; margin-top: 0.5em; }
 .node-type-page #main-content blockquote      {     font-style: italic;
     margin-left: 3em;
@@ -713,7 +732,7 @@ a.dissolved {
 .node-type-page #main-content ul,
 .node-type-page #main-content ol { margin: 1.12em; }
 
-.node-type-page #main-content li { padding-top:2px; padding-bottom: 2px; }
+.node-type-page #main-content li { padding-top:2px; padding-bottom: 2px; line-height:1.4em;}
 
 
 /* Static page styles */
@@ -724,6 +743,7 @@ a.dissolved {
 	
 .node-type-page #main-content h2 {
 	font-size: 1.6em;
+	clear: both;
 	}	
 	
 .node-type-page #main-content  p, .node-type-blog #main-content  p {
@@ -735,12 +755,46 @@ a.dissolved {
 .node-type-page #main-content ol {
   list-style-position: outside;
 	list-style-type: decimal;
+	margin-left: 28px;
 	}
 
 .node-type-page #main-content ul {
-  list-style-position: inside;
+  list-style-position: outside;
   list-style-type: disc;
+  margin-left: 28px;
   }
+ 
+.node-type-page #main-content dl {
+	  margin-top: 2em;
+	  background-color: #FFFFFF;
+	  background-image: url("/sites/all/themes/level-theme/level_omega/images/paper_tear.png");
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    padding-bottom: 27px;
+	} 
+  
+.node-type-page #main-content dt {
+	font-size: 1.4em;
+	font-weight: bold;
+	}
+	
+.node-type-page #main-content dt div {
+	padding-top: 10px; 
+	padding-left: 10px;
+	}
+
+.node-type-page #main-content dd div {
+  padding-top: 10px; 
+  padding-right: 10px;
+  }
+
+
+.node-type-page #main-content dd {
+  padding-bottom: 2em;
+  line-height: 1.5em;
+  }
+  
+.node-type-page #main-content dd p { padding-top: 0; margin-top: 0; }
 	
 /* styles for the level daily page */
 
@@ -938,3 +992,111 @@ body.front #block-views-converted_count-block_counter .view-footer {
 page-doc-company-uk-06937730 #main_content_container, #block-views-company_files-switcher {
    border: none;
 }
+
+/* Styles for the accounts explained page */
+
+div.bus_size {
+	background-color: #f2f2f2;
+	height: 520px;
+	 -moz-border-radius: 5px 5px 5px 5px;
+  dr-webkit-border-radius:5px;
+  -moz-box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+  background: #FFFFFF;
+  background: -moz-linear-gradient(top, #FFFFFF , #EFEFEF);
+  background: -webkit-gradient(linear,
+                left top, left bottom, from(#FFFFFF), to(#EFEFEF));
+       filter: progid:DXImageTransform.Microsoft.Gradient(
+                StartColorStr='#FFFFFF', EndColorStr='#EFEFEF', GradientType=0);
+
+	}
+
+   div.bus_size_heading {
+    display: block;
+    height: 105px;
+    position: relative;
+    border-bottom: 1px solid #ccc7c4;
+   }
+   
+   div.bus_accounts_section {
+   position:relative;
+   border-bottom: 1px solid #ccc7c4;
+   border-top: 1px solid #FFFFFF;
+   height: 200px;
+   }
+   
+   div.bus_conditions_section {
+   position:relative;
+   height: 180x;
+   }
+
+div.bus_size_heading, div.bus_size ul {
+	
+	}	
+	
+div.bus_size h4 {
+  border-top: 1px solid #FFFFFF;
+  } 
+
+.node-type-page #main-content div.bus_size ul {
+	margin: 0;
+	}
+	
+.node-type-page #main-content div.bus_size ol {
+	margin-left: 10px;
+	  margin-top: 0;
+	}	
+	
+div.bus_size ul li {
+  background: url("/sites/all/themes/level-theme/level_omega/images/green_tick.png") no-repeat scroll 0 0 transparent;
+  line-height: 1.4em;
+  list-style-type: none;
+  padding-left: 26px;
+	}	
+
+ div.bus_size h4, .node-type-page #main-content div.bus_size h3, div.bus_size ul {
+	padding-top: 10px;
+	padding-bottom: 10px; 
+	padding-left: 20px;
+	} 
+	
+	div.bus_size ul {
+	 padding-left: 15px;
+	}
+	
+	div.bus_conditions_section h4 {
+	padding-top: 20px;
+	padding-bottom: 5px;
+	}
+
+  div.bus_conditions_section  li { font-size: 0.9em; }
+	
+	div.bus_size ol {
+	 padding-left: 30px;
+	}
+	
+	 .node-type-page #main-content a.section_link {
+	   padding-top: 1em;
+	   display: block;
+	   color: #000000;
+	   clear: left;
+	   font-size: 1.5em;
+	   font-weight: bold;
+	 }
+	
+ .node-type-page #main-content div.bus_size h3 {
+    position: absolute; 
+    bottom: 0; 
+	}
+	
+ .node-type-page #main-content div.large h3 {
+	 font-size: 3em;
+  }
+	 
+	.node-type-page #main-content div.medium h3 {
+   font-size: 2em;
+   }
+   
+
+   
