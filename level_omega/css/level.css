@@ -721,7 +721,7 @@ a.dissolved {
 
 /* add some default styles for the node page  */
 .node-type-page #main-content h2, .node-type-blog #main-content h2 { 
-	font-size: 1.5em; padding-top: 1.8em; line-height: 1.2em;
+	font-size: 1.5em; padding-top: 0.5em; line-height: 1.2em;
 	}
 .node-type-page #main-content h3 { font-size: 1.17em; margin-top: 0.5em; }
 .node-type-page #main-content blockquote      {     font-style: italic;
@@ -1009,7 +1009,8 @@ div.bus_size {
                 left top, left bottom, from(#FFFFFF), to(#EFEFEF));
        filter: progid:DXImageTransform.Microsoft.Gradient(
                 StartColorStr='#FFFFFF', EndColorStr='#EFEFEF', GradientType=0);
-
+  margin-top: 20px;
+  margin-bottom: 20px;
 	}
 
    div.bus_size_heading {
