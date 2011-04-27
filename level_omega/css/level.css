@@ -1099,5 +1099,76 @@ div.bus_size ul li {
    font-size: 2em;
    }
    
+/* Company profile directors information styling */
+#block-views-ch_company_appointments-block_1
+{
+  padding-top: 10px;
+  backgound-color: #FFF; /* Being overridden?*/
+}
 
-   
+#block-views-ch_company_appointments-block_1 h2
+{
+  font-weight: normal;
+  padding-bottom: 3px;
+  border-bottom: 1px solid #999390;
+}
+
+#block-views-ch_company_appointments-block_1 .view-content .views-field
+{
+  margin-bottom: 5px;
+}
+
+#block-views-ch_company_appointments-block_1 .view-content .views-field-phpcode-4
+{
+  color: #000;
+  font-weight: bold;
+}
+
+#block-views-ch_company_appointments-block_1 .view-content .views-field-phpcode-4 .officer-age
+{
+  font-weight: normal;
+}
+
+#block-views-ch_company_appointments-block_1 .view-content .views-field-occupation
+{
+  clear:both;
+}
+
+#block-views-ch_company_appointments-block_1 .view-content .views-field-phpcode-1 .field-content,
+#block-views-ch_company_appointments-block_1 .view-content .views-field-phpcode-2 .field-content,
+#block-views-ch_company_appointments-block_1 .view-content .views-field-phpcode-3 .field-content,
+#block-views-ch_company_appointments-block_1 .view-content .views-field-occupation .field-content,
+#block-views-ch_company_appointments-block_1 .view-content .views-field-phpcode-5 .field-content
+{
+  color: #000;
+  font-weight: bold;
+}
+
+#block-views-ch_company_appointments-block_1 .view-content .views-field-phpcode-1,
+#block-views-ch_company_appointments-block_1 .view-content .views-field-phpcode-2
+{
+  width: 240px;
+  float: left;
+}
+
+#block-views-ch_company_appointments-block_1 .view-content .views-field-phpcode-1 .views-label-phpcode-1,
+#block-views-ch_company_appointments-block_1 .view-content .views-field-phpcode-2 .views-label-phpcode-2,
+#block-views-ch_company_appointments-block_1 .view-content .views-field-phpcode-3 .views-label-phpcode-3,
+#block-views-ch_company_appointments-block_1 .view-content .views-field-occupation .views-label-occupation,
+#block-views-ch_company_appointments-block_1 .view-content .views-field-phpcode-5 .views-label-phpcode-5
+{
+  float: left;
+  width: 80px;
+}
+
+#block-views-ch_company_appointments-block_1 .view-content .views-field-phpcode-3 .views-label-phpcode-3,
+#block-views-ch_company_appointments-block_1 .view-content .views-field-phpcode-5 .views-label-phpcode-5
+{
+  width: 130px;
+}
+
+#block-views-ch_company_appointments-block_1 .view-content .views-field-phpcode-3 .field-content,
+#block-views-ch_company_appointments-block_1 .view-content .views-field-phpcode-5 .field-content
+{
+  margin-left: 240px;
+}
