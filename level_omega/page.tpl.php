@@ -55,11 +55,26 @@
           <?php endif; ?>
         <?php endif; ?>
       </div><!-- /#branding -->
-       <?php /* When needed insert other drupal header things here */ ?>
-
+       <?php
+       if (isset($primary_links)) {
+         print theme('links', $primary_links, array('class' => 'links primary-links'));
+       }
+       if ($header_last) {
+         print $header_last;
+       }
+      ?>
     </div>
   </div>
-                
+  <?php if (!empty($page_tools)): ?>
+    <div class="container_4"> 
+      <div class="grid_1 alpha">
+        &nbsp;
+      </div>
+      <div id="page_tools" class="grid_3 omega">
+        <?php print $page_tools; ?>
+      </div>            
+    </div>
+ <?php endif; ?>
 
   <div id="content" class="container_4">
 
@@ -113,11 +128,7 @@
       <?php endif; ?>
  
       
-     <?php if (!empty($page_tools)): ?>
-       <div id="page_tools">
-         <?php print $page_tools; ?>
-       </div>
-     <?php endif; ?>
+
  
       <div id="main-content" class="">
         <?php print $content; ?>

@@ -38,6 +38,14 @@ h1.company-name {
 	display: none;
 }
 
+#page_tools {
+	z-index: 2;
+	}
+
+#content {
+	z-index: 1;
+	}
+
 #content .section {
   padding: 0;
 }
@@ -127,8 +135,7 @@ h1.company-name {
   
 
 #top_bar {
-	background-color: #F9F9F9;
-	border-bottom: 1px solid #999390;
+	background-color: #FFFFFF;
 	padding-top: 10px;
 	padding-bottom: 10px;
 	
@@ -147,13 +154,6 @@ div#header_container h2 { border: none; }
   padding-top: 0;
 }
 
-h2#site-name {
-	text-align: right;
-	}
-
-h2#site-name:before {
-	content: "_";
-	}
 
 div#branding {
 	margin-top: 10px;
@@ -171,8 +171,9 @@ div#branding {
 }
 
 .front #site-name a {
-	font-size: 3em;
+	font-size: 2em;
 	letter-spacing: -0.07em;
+	line-height: 2em;
 	}
 
 #site-slogan {
@@ -229,11 +230,11 @@ h1, h2, h3, h4, h5 {
 }
 
 
-#edit-text {
+#edit-text, #edit-officer-name {
   border: 1px solid #999390;
   }
 
-#left_sidebar #edit-text {
+#left_sidebar #edit-text, #left_sidebar #edit-officer-name {
     font-size: 1.1em;
     height: 20px;
     padding-left: 8px;
@@ -327,8 +328,13 @@ display: none;
 	margin-right: 0.25em;
 	} 
 	
-
-  #main_content_container,
+	#block-boxes-login_or_register {
+	float:right;
+	}
+	
+  #site-header {
+    border-bottom: 2px solid #2B2D29;
+  }
   #block-views-company_files-switcher {
 	border-top: 1px solid #999390;
 	}
@@ -649,11 +655,14 @@ a.dissolved {
  
  
  #page_tools { background-color: #F9F9F9; padding-top: 5px;
-               padding-bottom: 5px;  
-               border-bottom: 1px solid #999390;
-               height: 22px;}
+               padding-bottom: 5px;
+               height: 22px;
+               border-bottom: 1px solid #999999;
+               }
  
- #page_tools .block-boxes, #page_tools .block-views, #page_tools .block-views div { display: block; float: left; margin-right: 0.2em;}
+ #page_tools .block-boxes, #page_tools .block-views, #page_tools .block-views div { display: block; float: right; margin-right: 0.2em;}
+ 
+ #page_tools #block-level_tagging-save_block { float: left; }
  
  
  #page_tools  .fb_iframe_widget iframe { vertical-align: baseline; }
@@ -1099,5 +1108,20 @@ div.bus_size ul li {
    font-size: 2em;
    }
    
+/* Styles for the tabs on the search */
+.block-level_search ul { border-bottom: 1px solid #999390; padding-bottom:5px;  margin-bottom: 1px; margin-top: 2em;}
 
-   
+.block-level_search ul li {  padding-bottom: 5px; padding-left: 1em; padding-right: 1em; padding-top: 0.5em; }
+.block-level_search ul li.active_tab {  border: 1px solid #999390; border-bottom: 0; background-color: #FFFFFF; font-weight: bold; } 
+div.level_search_tabbed_form p,
+div.level_search_tabbed_form .form-item label,
+div.level_search_tabbed_form .form-instructions, 
+div.level_search_tabbed_form  #edit-submit { display: none }
+
+/* Hide all forms */
+.level_search_tabbed_form { display: none; }
+.level_search_tabbed_form_active { display: block; } 
+/* undo default item list styling */
+.block-level_search  .item-list ul li {
+    list-style: none;
+    margin: 0; }
