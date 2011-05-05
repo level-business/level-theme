@@ -164,7 +164,10 @@ function level_omega_preprocess_block(&$vars, $hook) {
   
 
   if ($vars['block']->region == 'footer') {
-    if ($vars['block_id'] == 3) {
+    if ($vars['block_id'] == 1) {
+      $vars['extra_classes'] = 'alpha';
+    } 
+    if ($vars['block_id'] == 4) {
       $vars['extra_classes'] = 'omega';
     } 
   }
