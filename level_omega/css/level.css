@@ -852,13 +852,23 @@ body.front .in_the_news h3 { font-size: 1em; }
 body.front .in_the_news .accounts_icon { clear: none; float: none; display: none; }
 body.front #main_wrapper  .views_row {border: none;}
 body.front #content-bottom { clear:both; }
-body.front #content-bottom .block-webform h2 {
+
+body.front #footer_main .block-webform h2 {
 	color: #FFFFFF;
 	font-size: 1.2em;
 	margin-top: 20px;
 	margin-left: 15px;
 	margin-right: 15px;
 	}
+	
+#block-webform-client-block-4 {
+	font-size: 12px; 
+	}	
+
+#block-webform-client-block-4 h2 {
+  border: 0;
+  } 
+
 
 body.front .block-webform  {
        background: #21A0E1;
@@ -882,7 +892,7 @@ body.front .block-webform  {
     position: absolute;
 	}
 
-body.front #content-bottom input#edit-submit {
+ #footer_main input#edit-submit {
   position: absolute;
   bottom: 20px;
   left: 15px;
@@ -893,28 +903,32 @@ body.front #content-bottom input#edit-submit {
   height: 24px;
   }
   
-body.front #content-bottom  #webform-component-info-text {
+ #footer_main  #webform-component-info-text {
 	margin-left: 15px;
 	margin-right: 15px;
 	color: #FFFFFF;
 	font-size: 1.3em;
 	}
 	
-body.front #content-bottom .form-required {
+	
+	
+	
+	
+ #footer_main .form-required {
 	display: none; 
 	}
 
-body.front #content-bottom #webform-component-privacy-link {
+ #footer_main #webform-component-privacy-link {
 	position: absolute;
 	bottom: 20px;
 	right: 15px;
 	}
 	
-body.front #content-bottom #webform-component-privacy-link a {
+ #footer_main #webform-component-privacy-link a {
 	color: #FFFFFF;
   font-size: 1.2em;
 	}	
-body.front #block-views-converted_count-block_counter {
+ #block-views-converted_count-block_counter {
 	height: 220px;
 	-moz-border-radius: 5px 5px 5px 5px;
 	dr-webkit-border-radius:5px;
@@ -930,47 +944,13 @@ body.front #block-views-converted_count-block_counter {
   
 	}
 	
-body.front #block-views-converted_count-block_counter h2 {
-  -moz-box-shadow: 0px -1px 1px rgba(0, 0, 0, 0.5);
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	width: 312px; 
-	margin-top: 20px;
-	margin-bottom: 10px;
-	font-size: 2em;
-	background-color: #FFFFFF;
-	text-align: center;
-	line-height: 30px;
-	}	
+
 
 body.front #content-bottom {
     clear: both;
     padding-top: 40px;
 	}
-	
-body.front #block-views-converted_count-block_counter .view-content	{
-	width: 212px; 
-	 margin-left: auto;
-  margin-right: auto;
-	display: block;
-	text-align: center;
-	font-size: 3em;
-	color: #21A0E1;
-	padding: 10px;
-	}
-	
-body.front #block-views-converted_count-block_counter .view-footer {
-	width: 312px; 
-	 margin-left: auto;
-  margin-right: auto;
-  display: block;
-  text-align: center;
-  font-size: 1.4em;
-  clear: both;
-   padding-top: 20px;
-  }	
-  
+
 #block-boxes-level_profile_blurb{
 	border-top: 1px solid #999390;
   padding-left: 15px;
