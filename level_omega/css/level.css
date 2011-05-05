@@ -853,7 +853,7 @@ body.front .in_the_news .accounts_icon { clear: none; float: none; display: none
 body.front #main_wrapper  .views_row {border: none;}
 body.front #content-bottom { clear:both; }
 
-body.front #footer_main .block-webform h2 {
+body #footer_main .block-webform h2 {
 	color: #FFFFFF;
 	font-size: 1.2em;
 	margin-top: 20px;
@@ -870,7 +870,7 @@ body.front #footer_main .block-webform h2 {
   } 
 
 
-body.front .block-webform  {
+body .block-webform  {
        background: #21A0E1;
        background: -moz-linear-gradient(top, #149BE0, #187FB8);
        background: -webkit-gradient(linear,
