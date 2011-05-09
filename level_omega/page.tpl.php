@@ -156,9 +156,6 @@
 <div id="footer_wrapper" class="container_4">
  
  <div id="footer_main" class="grid_4 clearfix">
-  <div class="block alpha">
-   &nbsp; <?php /* This is a spacer */ ?>
-  </div>
   <?php if($footer) {
             print $footer;
           }?>

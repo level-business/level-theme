@@ -861,21 +861,25 @@ body.front .in_the_news h3 { font-size: 1em; }
 body.front .in_the_news .accounts_icon { clear: none; float: none; display: none; }
 body.front #main_wrapper  .views_row {border: none;}
 body.front #content-bottom { clear:both; }
-body.front #content-bottom .block-webform h2 {
-	color: #FFFFFF;
+
+body #footer_main .block-webform h2 {
+	color: #000000;
 	font-size: 1.2em;
 	margin-top: 20px;
 	margin-left: 15px;
 	margin-right: 15px;
 	}
+	
+#block-webform-client-block-4 {
+	font-size: 12px; 
+	}	
 
-body.front .block-webform  {
-       background: #21A0E1;
-       background: -moz-linear-gradient(top, #149BE0, #187FB8);
-       background: -webkit-gradient(linear,
-                left top, left bottom, from(#149BE0), to(#187FB8));
-       filter: progid:DXImageTransform.Microsoft.Gradient(
-                StartColorStr='#149BE0', EndColorStr='#187FB8', GradientType=0);
+#block-webform-client-block-4 h2 {
+  border: 0;
+  } 
+
+
+body .block-webform  {
       height:220px;
       position: relative;
       top: 0px;
@@ -891,7 +895,7 @@ body.front .block-webform  {
     position: absolute;
 	}
 
-body.front #content-bottom input#edit-submit {
+ #footer_main input#edit-submit {
   position: absolute;
   bottom: 20px;
   left: 15px;
@@ -902,84 +906,40 @@ body.front #content-bottom input#edit-submit {
   height: 24px;
   }
   
-body.front #content-bottom  #webform-component-info-text {
+ #footer_main  #webform-component-info-text {
 	margin-left: 15px;
 	margin-right: 15px;
-	color: #FFFFFF;
+	color: #000000;
 	font-size: 1.3em;
 	}
 	
-body.front #content-bottom .form-required {
+	
+	
+	
+	
+ #footer_main .form-required {
 	display: none; 
 	}
 
-body.front #content-bottom #webform-component-privacy-link {
+ #footer_main #webform-component-privacy-link {
 	position: absolute;
 	bottom: 20px;
 	right: 15px;
 	}
 	
-body.front #content-bottom #webform-component-privacy-link a {
-	color: #FFFFFF;
+ #footer_main #webform-component-privacy-link a {
+	color: #000000;
   font-size: 1.2em;
 	}	
-body.front #block-views-converted_count-block_counter {
-	height: 220px;
-	-moz-border-radius: 5px 5px 5px 5px;
-	dr-webkit-border-radius:5px;
-  -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-  background: #FFFFFF;
-  background: -moz-linear-gradient(top, #FFFFFF , #EFEFEF);
-  background: -webkit-gradient(linear,
-                left top, left bottom, from(#FFFFFF), to(#EFEFEF));
-       filter: progid:DXImageTransform.Microsoft.Gradient(
-                StartColorStr='#FFFFFF', EndColorStr='#EFEFEF', GradientType=0);
-  
-	}
+
 	
-body.front #block-views-converted_count-block_counter h2 {
-  -moz-box-shadow: 0px -1px 1px rgba(0, 0, 0, 0.5);
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	width: 312px; 
-	margin-top: 20px;
-	margin-bottom: 10px;
-	font-size: 2em;
-	background-color: #FFFFFF;
-	text-align: center;
-	line-height: 30px;
-	}	
+
 
 body.front #content-bottom {
     clear: both;
     padding-top: 40px;
 	}
-	
-body.front #block-views-converted_count-block_counter .view-content	{
-	width: 212px; 
-	 margin-left: auto;
-  margin-right: auto;
-	display: block;
-	text-align: center;
-	font-size: 3em;
-	color: #21A0E1;
-	padding: 10px;
-	}
-	
-body.front #block-views-converted_count-block_counter .view-footer {
-	width: 312px; 
-	 margin-left: auto;
-  margin-right: auto;
-  display: block;
-  text-align: center;
-  font-size: 1.4em;
-  clear: both;
-   padding-top: 20px;
-  }	
-  
+
 #block-boxes-level_profile_blurb{
 	border-top: 1px solid #999390;
   padding-left: 15px;
@@ -1108,8 +1068,13 @@ div.bus_size ul li {
    font-size: 2em;
    }
    
-/* Styles for the tabs on the search */
-.block-level_search ul { border-bottom: 1px solid #999390; padding-bottom:5px;  margin-bottom: 1px; margin-top: 2em;}
+
+/* Company profile directors information styling */
+#block-views-ch_company_appointments-block_1
+{
+  padding-top: 10px;
+  background-color: #FFF;
+}
 
 .block-level_search ul li {  padding-bottom: 5px; padding-left: 1em; padding-right: 1em; padding-top: 0.5em; }
 .block-level_search ul li.active_tab {  border: 1px solid #999390; border-bottom: 0; background-color: #FFFFFF; font-weight: bold; } 
@@ -1125,3 +1090,70 @@ div.level_search_tabbed_form  #edit-submit { display: none }
 .block-level_search  .item-list ul li {
     list-style: none;
     margin: 0; }
+
+#block-views-ch_company_appointments-block_1 h2
+{
+  font-weight: normal;
+  padding-bottom: 3px;
+  border-bottom: 1px solid #999390;
+}
+
+#block-views-ch_company_appointments-block_1 .view-content .views-field
+{
+  margin-bottom: 5px;
+}
+
+#block-views-ch_company_appointments-block_1 .view-content .views-field-phpcode-4
+{
+  color: #000;
+  font-weight: bold;
+}
+
+#block-views-ch_company_appointments-block_1 .view-content .views-field-phpcode-4 .officer-age
+{
+  font-weight: normal;
+}
+
+#block-views-ch_company_appointments-block_1 .view-content .views-field-occupation
+{
+  clear:both;
+}
+
+#block-views-ch_company_appointments-block_1 .view-content .views-field-phpcode-1 .field-content,
+#block-views-ch_company_appointments-block_1 .view-content .views-field-phpcode-2 .field-content,
+#block-views-ch_company_appointments-block_1 .view-content .views-field-phpcode-3 .field-content,
+#block-views-ch_company_appointments-block_1 .view-content .views-field-occupation .field-content,
+#block-views-ch_company_appointments-block_1 .view-content .views-field-phpcode-5 .field-content
+{
+  color: #000;
+  font-weight: bold;
+}
+
+#block-views-ch_company_appointments-block_1 .view-content .views-field-phpcode-1,
+#block-views-ch_company_appointments-block_1 .view-content .views-field-phpcode-2
+{
+  width: 240px;
+  float: left;
+}
+
+#block-views-ch_company_appointments-block_1 .view-content .views-field-phpcode-1 .views-label-phpcode-1,
+#block-views-ch_company_appointments-block_1 .view-content .views-field-phpcode-2 .views-label-phpcode-2,
+#block-views-ch_company_appointments-block_1 .view-content .views-field-phpcode-3 .views-label-phpcode-3,
+#block-views-ch_company_appointments-block_1 .view-content .views-field-occupation .views-label-occupation,
+#block-views-ch_company_appointments-block_1 .view-content .views-field-phpcode-5 .views-label-phpcode-5
+{
+  float: left;
+  width: 80px;
+}
+
+#block-views-ch_company_appointments-block_1 .view-content .views-field-phpcode-3 .views-label-phpcode-3,
+#block-views-ch_company_appointments-block_1 .view-content .views-field-phpcode-5 .views-label-phpcode-5
+{
+  width: 130px;
+}
+
+#block-views-ch_company_appointments-block_1 .view-content .views-field-phpcode-3 .field-content,
+#block-views-ch_company_appointments-block_1 .view-content .views-field-phpcode-5 .field-content
+{
+  margin-left: 240px;
+}
