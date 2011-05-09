@@ -164,7 +164,10 @@ function level_omega_preprocess_block(&$vars, $hook) {
   
 
   if ($vars['block']->region == 'footer') {
-    if ($vars['block_id'] == 3) {
+    if ($vars['block_id'] == 1) {
+      $vars['extra_classes'] = 'alpha';
+    } 
+    if ($vars['block_id'] == 4) {
       $vars['extra_classes'] = 'omega';
     } 
   }
@@ -299,4 +302,38 @@ function level_omega_apachesolr_unclick_link($facet_text, $path, $options = arra
   $options['html'] = '<div class="link_text">' . $facet_text . '</div> (remove)';
 //  var_dump($options);
   return   apachesolr_l('<div class="link_text">' . $facet_text . '</div> (remove)', $path, $options);
+}
+
+function level_omega_form_element($element, $value) {
+  // This is also used in the installer, pre-database setup.
+  $t = get_t();
+
+  $output = '<div class="form-item"';
+  if (!empty($element['#id'])) {
+    $output .= ' id="'. $element['#id'] .'-wrapper"';
+  }
+  $output .= ">\n";
+  $required = !empty($element['#required']) ? '<span class="form-required" title="'. $t('This field is required.') .'">*</span>' : '';
+  
+  if (!empty($element['#title'])) {
+    $title = $element['#title'];
+    if (!empty($element['#id'])) {
+      $output .= ' <label for="'. $element['#id'] .'">'. $t('!title !required', array('!title' => filter_xss_admin($title), '!required' => $required)) ."</label>\n";
+    }
+    else {
+      $output .= ' <label>'. $t('!title !required', array('!title' => filter_xss_admin($title), '!required' => $required)) ."</label>\n";
+    }
+  }
+  
+  if (!empty($element['#description'])) {
+    $output .= ' <div class="description">'. $element['#description'] ."</div>\n";
+  }
+
+  $output .= " $value\n";
+
+
+
+  $output .= "</div>\n";
+
+  return $output;
 }

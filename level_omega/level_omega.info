@@ -10,13 +10,15 @@ base theme = omega
 ; ------- Declare default stylesheets
 
 stylesheets[all][] = css/level.css
+stylesheets[all][] = css/registration.css
 stylesheets[all][] = css/grid.css
 stylesheets[all][] = css/960.css ; To block out 960s grid and use our own.
 
 ; ------- Declare default javascript includes
 
 scripts[] = js/fb-connect.js
-scripts[] = js/odo.js
+scripts[] = js/superfish.js
+
 
 ; ------- Declare default theme regions
 

@@ -1,0 +1,26 @@
+@CHARSET "UTF-8";
+/* some changes for the register page */
+body.page-register #top_bar { background-color:inherit; }
+body.page-register #main_wrapper  {
+	                   background-color: #FFFFFF;
+                     margin-bottom: 20px; }
+form#user-register { padding-left: 10px; padding-bottom: 20px;}
+#user-register legend { display: none; }
+
+#user-register label { font-size: 1.6em; font-weight: bold;  color: #4fa7e2;  }
+#user-register .simplenews label, #edit-legal-accept-wrapper label { font-size:0.8em; font-weight: normal;  color:  #999999;  }
+#user-register #edit-pass-pass1-wrapper label , #user-register #edit-pass-pass2-wrapper label  { font-size:0.9em; font-weight: normal;  color:  #999999; padding-top:3px; }
+#user-register input { border: 1px solid #999999; }
+#user-register label .form-required { display: none; width: 100%; height: 25px;}
+#user-register input.form-text { width: 50%; height: 20px; }
+#user-register input#edit-profile-real-name, #user-register input#edit-mail, #user-register textarea { width: 100%;    margin-top: 10px;}
+
+#user-register input#edit-submit { background-color: #4fa7e2; color: white; font-weight: bold; font-size: 1.2em; padding:5px; border:2px solid #FFFFFF; cursor: pointer;}
+#user-register input#edit-submit:hover {  border: 2px solid #999999;  }
+
+
+#user-register .description {
+    font-size: 0.85em;
+    line-height: 1.6em;
+    margin-bottom: 5px;
+    margin-top: 5px; }
