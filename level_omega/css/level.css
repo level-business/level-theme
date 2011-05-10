@@ -1157,3 +1157,11 @@ div.level_search_tabbed_form  #edit-submit { display: none }
 {
   margin-left: 240px;
 }
+
+#block-level_user-user_login_logout_links {
+	float: right;
+	}
+	
+body.front 	#block-level_user-user_login_logout_links {
+	font-size: 1.4em;
+	}
