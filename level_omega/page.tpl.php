@@ -78,7 +78,7 @@
 
   <div id="content" class="container_4">
 
-    <div id="left_sidebar" class="grid_1 ">
+    <div id="left_sidebar" class="grid_1 alpha">
       <?php 
 	        if($left_sidebar) {
 	          print $left_sidebar; 
@@ -88,7 +88,7 @@
 	       }?>
     </div>
 
-<div id="main_content_container" class="grid_3 clearfix">
+<div id="main_content_container" class="grid_3 clearfix omega">
   <?php if($top_bar || $title):
       /* top_bar can be used for bold page titles such as company
        * names on the company profile page. It will allways span 
