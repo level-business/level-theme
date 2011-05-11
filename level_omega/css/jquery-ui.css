@@ -9,7 +9,7 @@
 /* Accordion */
 .ui-accordion {
   /*resets*/margin: 0; padding: 0; border: 0; outline: 0; line-height: 1.3; text-decoration: none; font-size: 100%; list-style: none;
-  font-family: Verdana, Arial, sans-serif;
+  
   border-bottom: 1px solid #d3d3d3;
 }
 .ui-accordion-group {
@@ -59,7 +59,7 @@
 /* Main Style Sheet for jQuery UI date picker */
 .ui-datepicker-div, #ui-datepicker-div, .ui-datepicker-inline {
   /*resets*/margin: 0; padding: 0; border: 0; outline: 0; line-height: 1.3; text-decoration: none; font-size: 100%; list-style: none;
-  font-family: Verdana, Arial, sans-serif;
+  
   background: #ffffff;
   font-size: 1.1em;
   border: 4px solid #d3d3d3;
@@ -177,7 +177,7 @@ table.ui-datepicker .ui-datepicker-title-row td a {
 /* Dialog */
 .ui-dialog {
   /*resets*/margin: 0; padding: 0; border: 0; outline: 0; line-height: 1.3; text-decoration: none; font-size: 100%; list-style: none;
-  font-family: Verdana, Arial, sans-serif;
+  
   background: #ffffff;
   color: #222222;
   border: 4px solid #d3d3d3;
@@ -401,7 +401,7 @@ body .ui-resizable-autohide .ui-resizable-handle { display: none; } /* use 'body
 /* Slider */
 .ui-slider {
   /*resets*/margin: 0; padding: 0; border: 0; outline: 0; line-height: 1.3; text-decoration: none; font-size: 100%; list-style: none;
-  font-family: Verdana, Arial, sans-serif;
+  
   background: #ffffff;
   border: 1px solid #d3d3d3;
   height: .8em;
@@ -445,7 +445,7 @@ Generic ThemeRoller Classes
 /*component global class*/
 .ui-component {
   /*resets*/margin: 0; padding: 0; border: 0; outline: 0; line-height: 1.3; text-decoration: none; font-size: 100%; list-style: none;
-  font-family: Verdana, Arial, sans-serif;
+  
   font-size: 1.1em;
 }
 /*component content styles*/
