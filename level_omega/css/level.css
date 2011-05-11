@@ -115,7 +115,7 @@ h1.company-name {
 	}	
 
 #left_sidebar .block-apachesolr_passthru .content li {
-	list-style: none inside none;
+	list-style: none outside none;
   margin: 0;
 }
 /* First and last exceptions */
@@ -237,8 +237,13 @@ h1, h2, h3, h4, h5 {
     font-size: 1.1em;
     height: 20px;
     padding-left: 8px;
-    width: 220px;
+    width: 209px; /* IE6 problems with column wrapping if > 209 Temp fix. */
 	}
+
+/* Stop exceeding width of grid column */
+#left_sidebar form#views-exposed-form-Solr-page-1 .views-exposed-widget {
+  padding-right: 0;
+}
 
 #left_sidebar form#views-exposed-form-Solr-page-1 input#edit-submit-Solr {
 display: none;
