@@ -42,7 +42,7 @@
   <?php if (!empty($admin)) print $admin; ?>
   <div id="page" class="clearfix">
   <div id="header_container" class="container_4">
-    <div id="site-header" class="grid_4 ">
+    <div id="site-header" class="grid_4 alpha">
       <div id="branding" class="grid_1 alpha omega">
         <?php if ($linked_logo_img): ?>
           <?php print $linked_logo_img; ?>
@@ -155,7 +155,7 @@
 
 <div id="footer_wrapper" class="container_4">
  
- <div id="footer_main" class="grid_4 clearfix">
+ <div id="footer_main" class="grid_4 clearfix alpha">
   <?php if($footer) {
             print $footer;
           }?>
