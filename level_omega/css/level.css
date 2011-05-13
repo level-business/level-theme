@@ -637,7 +637,7 @@ a.dissolved {
 	
 .company-details-view dt { font-size: 0.9em;
      float: left;
-     margin-right: 10px;
+     margin-right: 10px;user_
     }
 .company-details-view dd { font-size: 0.8em;
       color: #898481;
@@ -739,8 +739,8 @@ a.dissolved {
 .node-type-page #main-content h2, .node-type-blog #main-content h2 { 
 	font-size: 1.5em; padding-top: 0.5em; line-height: 1.2em;
 	}
-.node-type-page #main-content h3 { font-size: 1.17em; margin-top: 0.5em; }
-.node-type-page #main-content blockquote      {     font-style: italic;
+.node-type-page #main-content h3, .node-type-blog .node-type-page #main-content h3 { font-size: 1.17em; margin-top: 0.5em; }
+.node-type-page #main-content blockquote, .node-type-blog #main-content blockquote      {     font-style: italic;
     margin-left: 3em;
     margin-right: 3em;
     text-align: justify; }
@@ -752,10 +752,16 @@ a.dissolved {
 
 
 /* Static page styles */
-.node-type-page #main_content_container #main-content {
+.node-type-page #main_content_container #main-content, .node-type-blog #main_content_container #main-content {
 	color: #2B2B29;
 	background-color: #F9F9F9;
+	padding-bottom: 20px;
 	}
+	
+ 
+.node-type-blog #main_content_container #main-content {	
+	 background-color: #FFFFFF;
+}
 	
 .node-type-page #main-content h2 {
 	font-size: 1.6em;
@@ -1167,6 +1173,8 @@ div.level_search_tabbed_form  #edit-submit { display: none }
 
 #block-level_user-user_login_logout_links {
 	float: right;
+  font-size: 0.9em;
+  margin-top: 3px;
 	}
 	
 body.front 	#block-level_user-user_login_logout_links {
