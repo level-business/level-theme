@@ -1179,3 +1179,16 @@ div.level_search_tabbed_form  #edit-submit { display: none }
 body.front 	#block-level_user-user_login_logout_links {
 	font-size: 1.4em;
 	}
+
+/* Styling of frontpage twitter widget */
+#block-boxes-levelbusiness_twitter {
+  width: 220px;
+  margin-top: 50px;
+}
+
+#twtr-widget-1 {
+}
+
+#twtr-widget-1 .twtr-doc {
+  width: 220px !important; /* override the inline style in script */
+}
