@@ -909,14 +909,10 @@ body .block-webform  {
 	}
 
  #footer_main input#edit-submit {
-  position: absolute;
-  bottom: 20px;
-  left: 15px;
   background-color: #000000;
   color: #FFFFFF;
   border: 0;
-  width: 66px;
-  height: 24px;
+
   }
   
  #footer_main  #webform-component-info-text {
