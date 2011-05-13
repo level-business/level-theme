@@ -1142,8 +1142,7 @@ div.level_search_tabbed_form  #edit-submit { display: none }
   font-weight: bold;
 }
 
-#block-views-ch_company_appointments-block_1 .view-content .views-field-phpcode-1,
-#block-views-ch_company_appointments-block_1 .view-content .views-field-phpcode-2
+#block-views-ch_company_appointments-block_1 .view-content .views-field-phpcode-1
 {
   width: 240px;
   float: left;
