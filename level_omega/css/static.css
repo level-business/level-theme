@@ -30,7 +30,7 @@ body.not-front #main-content .node {
    background-color: #FFFFFF;
 }
   
-#main-content .nodeh2 {
+body.not-front #main-content .node h2 {
   font-size: 1.6em;
   clear: both;
   } 
@@ -67,12 +67,12 @@ body.not-front #main-content .node p  {
   font-weight: bold;
   }
   
-#main-content .nodedt div {
+#main-content .node dt div {
   padding-top: 10px; 
   padding-left: 10px;
   }
 
-#main-content .nodedd div {
+#main-content .node dd div {
   padding-top: 10px; 
   padding-right: 10px;
   }
