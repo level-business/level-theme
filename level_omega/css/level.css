@@ -2,7 +2,7 @@ body  {
  font-size: 10px;
  padding:0px;
  margin:0px;
- background-color: #F9F9F9;
+ background-color: #FFF;
  font-family: Arial, sans-serif;
 }
 
@@ -85,6 +85,10 @@ h1.company-name {
 #main_wrapper, #right_sidebar, #main_content_container {
 	color: #999999;
 	}
+
+.front #main_wrapper {
+	margin-top: 30px;
+}
 	
 #main_wrapper .views-row, #right_sidebar .block {
 	border-bottom: 1px solid #999390;
@@ -154,9 +158,9 @@ div#header_container h2 { border: none; }
 
 
 div#branding {
-	margin-top: 10px;
-	margin-bottom: -2px;
-	}
+	margin-top: 15px;
+	/*margin-bottom: 15px; */
+}
 
 #site-name a {
   color: #000000;
@@ -252,71 +256,66 @@ display: none;
   }
 
 .front #block-views--exp-Solr-page_1 {
-  padding-top: 40px;
-	}
-	
-
+  padding-top: 50px;
+  /* margin-top: 30px; */
+}
 
 #left_sidebar #block-views--exp-Solr-page_1 label {
 	display: none !important;
 	}
 
 
-
+/* Search button */
 #content-top form#views-exposed-form-Solr-page-1 input#edit-submit-Solr  {
-    background-color: #4FA7E2;
+    background-color: transparent;
     border: 0;
-    margin: 0;
     color: #FFFFFF;
     font-size: 1.4em;
     font-weight: bold;
-    height: 40px;
-    margin: 0 0 0 20px;
+    height: 50px;
+    margin: 0 0 0 10px;
     padding: 0;
-    width: 220px;
-    
     font-family: Arial,sans-serif;
+    width: 110px;
 
+	background-image: url('../images/search-button-static.png');
+	background-repeat: no-repeat;
 }
 
 #content-top form#views-exposed-form-Solr-page-1 input#edit-submit-Solr:hover {
-	background-color: #52B1F2;
-	}
-
-
-	
-#boxes-box-hp_search_blurb {
-    display: block;
-    font-size: 2.4em;
-    line-height: 1.4em;
-    margin-bottom: 2em;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 0.5em;
-    text-align: left;
-    
+	background-image: url('../images/search-button-rollover.png');
+	background-repeat: no-repeat;
+	cursor: pointer;
 }
 
+#boxes-box-hp_search_blurb {
+    font-size: 12px;
+    margin-left: 60px;
+    margin-bottom: 2em;
+}
 
 #content-top .views-exposed-widget {
 	margin: 0;
 	padding: 0;
 	padding-top: 1em;
-	}
+}
 
+/* Search input */
 #content-top #edit-text {
-    font-size: 1.9em;
+    font-size: 20px;
     height: 28px;
-    padding: 5px 0 5px 10px;
-    width: 448px;
-    
+    padding: 10px 0 10px 10px;
+    width: 670px;
+    margin-left: 60px;
   }
 #content-top .compact-form-label {
     top: 22px;
     left: 10px;
     font-weight: normal;
     font-size: 1.9em;
-    color: #B7B2B0;
+    color: #999999;
+    margin-left: 60px;
+    padding-top: 5px;
 }
 
 .block-user label, .block-user input {
@@ -334,9 +333,17 @@ display: none;
 	float:right;
 	}
 	
-  #site-header {
-    border-bottom: 2px solid #2B2D29;
-  }
+#site-header {
+  border-bottom: 2px solid #2B2D29;
+  padding-bottom: 15px;
+}
+
+.front #site-header {
+  background-image: url('../images/beta-tab.png');
+  background-position: right top;
+  background-repeat: no-repeat;
+}
+
   #block-views-company_files-switcher {
 	border-top: 1px solid #999390;
 	}
@@ -693,9 +700,9 @@ a.dissolved {
   padding-bottom: 5px;
 	}
 	
-.front #footer_main {
-	font-size: 1.4em;
-	}	
+.front #footer_main .content {
+	font-size: 13px !important;
+}	
 
 #footer_main .block  {
 	float: left;
@@ -720,7 +727,7 @@ a.dissolved {
     width: 100%;
     /* should be 5% but need ie fix */
     background-color: #B2B7B0;
-    border: 0 solid gray;
+    border: 0 solid #CCCCCC;
     color: black;
     height: 1px;
     align: left;
@@ -1071,8 +1078,10 @@ div.level_search_tabbed_form  #edit-submit { display: none }
 	}
 	
 body.front 	#block-level_user-user_login_logout_links {
-	font-size: 1.4em;
-	}
+	font-size: 13px;
+	margin-right: 90px;
+	margin-top: 15px;
+}
 
 /* Styling of frontpage twitter widget */
 #block-boxes-levelbusiness_twitter {
@@ -1085,4 +1094,115 @@ body.front 	#block-level_user-user_login_logout_links {
 
 #twtr-widget-1 .twtr-doc {
   width: 220px !important; /* override the inline style in script */
+}
+
+/* 2011-05-16 Front page */
+.front h1#page-title,
+.front #main_content_container #top_bar
+{
+	display: none !important;
+}
+
+.front #content-top {
+	background-image: url('../images/search-box.png');
+	background-repeat: no-repeat;
+	height: 190px;
+	background-color: #FFF;
+}
+
+.front #block-boxes-hp_search_blurb {
+  color: #FFF;
+}
+
+.front #page #content #main_content_container #main_wrapper #main-content {
+	background-color: #FFF;
+}
+
+.front-page-main-graphic-wrapper {
+	margin: 10px 0 50px; 0;
+}
+
+#front-page-list-left .item,
+#front-page-list-right .item
+{
+  border-top: 1px dashed #000;
+  height: 1%;  /*IE bug*/
+}
+
+#front-page-list-left .item-1 {
+	background-image: url('../images/icon-accounts.gif');
+	background-position: right center;
+  background-repeat: no-repeat;
+  padding: 10px 0 20px 0;
+}
+
+#front-page-list-left .item-2 {
+	background-image: url('../images/icon-download2.gif');
+	background-position: right center;
+  background-repeat: no-repeat;
+  padding: 10px 0 20px 0;
+  border-bottom: 1px dashed #000;
+}
+
+#front-page-list-right .item-3 {
+	background-image: url('../images/icon-updated.gif');
+	background-position: right center;
+  background-repeat: no-repeat;
+  padding: 10px 0 20px 0;
+}
+
+#front-page-list-right .item-4 {
+  background-image: url('../images/icon-comingsoon.gif');
+  background-position: right center;
+  background-repeat: no-repeat;
+  padding: 10px 0 20px 0;
+  border-bottom: 1px dashed #000;
+}
+
+#front-page-list-left div h3,
+#front-page-list-right div h3
+{
+	padding: 0 0 5px 0;
+	font-size: 20px !important;
+	color: #333333;
+}
+
+#front-page-list-left div div,
+#front-page-list-right div div
+{
+  font-size: 15px !important;
+  color: #999999;
+  padding-right: 90px;
+  line-height: 20px;
+}
+
+.front #footer_main #boxes-box-footer_external div.boxes-box-content div,
+.front #footer_main #block-boxes-footer_links div.boxes-box-content div
+{
+	border-bottom: 1px dashed #CCCCCC;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin: 2px 0 0 0;
+}
+
+.front #footer_main #boxes-box-footer_external .level-daily,
+.front #footer_main #boxes-box-footer_external .level-business
+{
+  background-image: url('../images/twitter-icon.jpg');
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding-left: 28px;
+}
+
+.front #footer_main #boxes-box-footer_contact .contact-detail {
+  margin-bottom: 20px;
+  color: #999999;
+}
+
+.front #footer_main #boxes-box-footer_contact .registered-in,
+.front #footer_main #boxes-box-footer_contact .company-number,
+.front #footer_main #boxes-box-footer_contact .vat-number
+{
+	font-size: 11px;
+	color: #999999;
 }
