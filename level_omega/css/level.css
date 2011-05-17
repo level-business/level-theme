@@ -735,89 +735,7 @@ a.dissolved {
 	  line-height: 1.5em;
 	} 	
 
-/* add some default styles for the node page  */
-.node-type-page #main-content h2, .node-type-blog #main-content h2 { 
-	font-size: 1.5em; padding-top: 0.5em; line-height: 1.2em;
-	}
-.node-type-page #main-content h3, .node-type-blog .node-type-page #main-content h3 { font-size: 1.17em; margin-top: 0.5em; }
-.node-type-page #main-content blockquote, .node-type-blog #main-content blockquote      {     font-style: italic;
-    margin-left: 3em;
-    margin-right: 3em;
-    text-align: justify; }
 
-.node-type-page #main-content ul,
-.node-type-page #main-content ol { margin: 1.12em; }
-
-.node-type-page #main-content li { padding-top:2px; padding-bottom: 2px; line-height:1.4em;}
-
-
-/* Static page styles */
-.node-type-page #main_content_container #main-content, .node-type-blog #main_content_container #main-content {
-	color: #2B2B29;
-	background-color: #F9F9F9;
-	padding-bottom: 20px;
-	}
-	
- 
-.node-type-blog #main_content_container #main-content {	
-	 background-color: #FFFFFF;
-}
-	
-.node-type-page #main-content h2 {
-	font-size: 1.6em;
-	clear: both;
-	}	
-	
-.node-type-page #main-content  p, .node-type-blog #main-content  p {
-	margin-top: 0.5em;
-	margin-bottom: 14px;
-	line-height: 1.5em;
-	}	
-	
-.node-type-page #main-content ol {
-  list-style-position: outside;
-	list-style-type: decimal;
-	margin-left: 28px;
-	}
-
-.node-type-page #main-content ul {
-  list-style-position: outside;
-  list-style-type: disc;
-  margin-left: 28px;
-  }
- 
-.node-type-page #main-content dl {
-	  margin-top: 2em;
-	  background-color: #FFFFFF;
-	  background-image: url("/sites/all/themes/level-theme/level_omega/images/paper_tear.png");
-    background-position: center bottom;
-    background-repeat: no-repeat;
-    padding-bottom: 27px;
-	} 
-  
-.node-type-page #main-content dt {
-	font-size: 1.4em;
-	font-weight: bold;
-	}
-	
-.node-type-page #main-content dt div {
-	padding-top: 10px; 
-	padding-left: 10px;
-	}
-
-.node-type-page #main-content dd div {
-  padding-top: 10px; 
-  padding-right: 10px;
-  }
-
-
-.node-type-page #main-content dd {
-  padding-bottom: 2em;
-  line-height: 1.5em;
-  }
-  
-.node-type-page #main-content dd p { padding-top: 0; margin-top: 0; }
-	
 /* styles for the level daily page */
 
 .view-display-id-summary_page div.ld_label {
@@ -1055,27 +973,7 @@ div.bus_size ul li {
 	 padding-left: 30px;
 	}
 	
-	 .node-type-page #main-content a.section_link {
-	   padding-top: 1em;
-	   display: block;
-	   color: #000000;
-	   clear: left;
-	   font-size: 1.5em;
-	   font-weight: bold;
-	 }
-	
- .node-type-page #main-content div.bus_size h3 {
-    position: absolute; 
-    bottom: 0; 
-	}
-	
- .node-type-page #main-content div.large h3 {
-	 font-size: 3em;
-  }
-	 
-	.node-type-page #main-content div.medium h3 {
-   font-size: 2em;
-   }
+
    
 
 /* Company profile directors information styling */
