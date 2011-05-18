@@ -54,7 +54,7 @@
             <!-- h2 id="site-name" class=""><?php //print $linked_site_name; ?></h2 -->
           <?php //endif; ?>
         <?php //endif; ?>
-        <a href="http://<?php print $_SERVER['HTTP_HOST'] ?>"><img src="<?php print drupal_get_path('theme','level_omega'); ?>/images/Logo.png" alt="Level business logo" /></a>
+        <a href="http://<?php print $_SERVER['HTTP_HOST'] ?>"><img src="/<?php print drupal_get_path('theme','level_omega'); ?>/images/Logo.png" alt="Level business logo" /></a>
       </div><!-- /#branding -->
        <?php
        if (isset($primary_links)) {
