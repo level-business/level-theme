@@ -1125,7 +1125,7 @@ body.front 	#block-level_user-user_login_logout_links {
 #front-page-list-left .item,
 #front-page-list-right .item
 {
-  border-top: 1px dashed #000;
+  border-top: 1px dotted #999999;
   height: 1%;  /*IE bug*/
 }
 
@@ -1141,7 +1141,7 @@ body.front 	#block-level_user-user_login_logout_links {
 	background-position: right center;
   background-repeat: no-repeat;
   padding: 10px 0 20px 0;
-  border-bottom: 1px dashed #000;
+  border-bottom: 1px dotted #999999;
 }
 
 #front-page-list-right .item-3 {
@@ -1156,7 +1156,7 @@ body.front 	#block-level_user-user_login_logout_links {
   background-position: right center;
   background-repeat: no-repeat;
   padding: 10px 0 20px 0;
-  border-bottom: 1px dashed #000;
+  border-bottom: 1px dotted #999999
 }
 
 #front-page-list-left div h3,
@@ -1179,7 +1179,7 @@ body.front 	#block-level_user-user_login_logout_links {
 .front #footer_main #boxes-box-footer_external div.boxes-box-content div,
 .front #footer_main #block-boxes-footer_links div.boxes-box-content div
 {
-	border-bottom: 1px dashed #CCCCCC;
+	border-bottom: 1px dotted #CCCCCC;
 	padding-top: 5px;
 	padding-bottom: 5px;
 	margin: 2px 0 0 0;
