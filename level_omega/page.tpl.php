@@ -22,7 +22,7 @@
     if (arg(1) == 'company') {
       global $base_root;
       $path = $base_root . request_uri();
-      
+      print '<meta property="description" content="Company details for ' . $title .'" />';
       print '<meta property="og:type" content="company" />';
       print '<meta property="og:title" content="'. trim($title) . '" />';
      // TODO: change this to be just http://levelbusiness.com
