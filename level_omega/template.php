@@ -197,7 +197,6 @@ function level_omega_preprocess_views_view_field(&$vars, $hook) {
  *   The name of the template being rendered ("page" in this case.)
  */
 function level_omega_preprocess_page(&$vars, $hook) {
-   
   if(arg(1) == 'company' || arg(0) == 'company') {
     $vars['scripts'] .= '<script src="http://platform.twitter.com/widgets.js"></script>';
     $vars['scripts'] .= '<script> FB.init({
@@ -210,7 +209,18 @@ function level_omega_preprocess_page(&$vars, $hook) {
     $vars['scripts'] .= '<script src="http://www.scribd.com/javascripts/view.js"></script>';
   
   }
+  $vars['main_content_attributes'] = array();
+  /* The following code should be moved to somewhere more applicable in the neer future */
+  if(arg(1) == 'company') {
+    $vars['main_content_attributes']['typeof'] = 'v:Organization gr:BusinessEntity vcard:Organization';
+  }
+  elseif (arg(1) == 'person') {
+    $vars['main_content_attributes']['typeof'] = 'v:Person';
+  }
+  
 }
+
+
 /**
  * Override or insert variables into the node templates.
  *

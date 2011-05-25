@@ -2,8 +2,15 @@
 // $Id: page.tpl.php,v 1.1.2.16 2010/11/16 14:39:39 himerus Exp $
 ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+      xmlns:gr="http://purl.org/goodrelations/v1#"
+      xmlns:foaf="http://xmlns.com/foaf/0.1/"
+      xmlns:vcard="http://www.w3.org/2006/vcard/ns#"
       xmlns:og="http://ogp.me/ns#"
       xmlns:fb="http://www.facebook.com/2008/fbml"
+      xmlns:v="http://rdf.data-vocabulary.org/#"
       xml:lang="<?php print $language->language ?>" lang="<?php print $language->language ?>" dir="<?php print $language->dir ?>">
 
 <head>
@@ -89,7 +96,7 @@
 	       }?>
     </div>
 
-<div id="main_content_container" class="grid_3 clearfix omega">
+<div id="main_content_container" class="grid_3 clearfix omega" <?php print drupal_attributes($main_content_attributes); ?>>
   <?php if($top_bar || $title):
       /* top_bar can be used for bold page titles such as company
        * names on the company profile page. It will allways span 
