@@ -35,6 +35,16 @@
      // TODO: change this to be just http://levelbusiness.com
       print '<meta property="og:url" content="http://'. $_SERVER['HTTP_HOST'] . request_uri() .'" />';
     }
+    if (arg(1) == 'person') {
+      global $base_root;
+      $path = $base_root . request_uri();
+      print '<meta property="description" content="Details of ' . $title .'" />';
+      print '<meta property="og:type" content="public_figure" />';
+      print '<meta property="og:title" content="'. trim($title) . '" />';
+     // TODO: change this to be just http://levelbusiness.com
+      print '<meta property="og:url" content="http://'. $_SERVER['HTTP_HOST'] . request_uri() .'" />';
+      
+    }
   ?> 
 </head>
 
@@ -105,7 +115,7 @@
      
      ?>
      <div id="top_bar" class="clearfix">
-     <?php  if ($top_bar): // TOP bar used in place of standard page title ?>
+     <?php  if ($top_bar || arg(1) == 'person'): // TOP bar used in place of standard page title ?>
         <?php print $top_bar; ?>
      <?php else:?>
        <h1 class="title" id="page-title"><?php print $title; ?></h1>
