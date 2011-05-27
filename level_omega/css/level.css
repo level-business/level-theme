@@ -56,7 +56,6 @@ h1.company-name {
 }
 
 #footer-columns {
-  /*border-top: 4px solid black;*/
 }
 
   #footer-columns p {
@@ -141,7 +140,7 @@ h1.company-name {
 #top_bar {
 	background-color: #FFFFFF;
 	padding: 10px;
-	}
+}
 	
 #top_bar span.ui_date em {
 	font-weight: normal;
@@ -230,59 +229,148 @@ h1, h2, h3, h4, h5 {
  text-decoration: none;
 }
 
-
-#edit-text, #edit-officer-name {
+/* Seartch forms */
+#edit-text,
+#edit-name
+{
   border: 1px solid #999390;
-  }
+}
 
-#left_sidebar #edit-text, #left_sidebar #edit-officer-name {
-    font-size: 1.1em;
-    height: 20px;
-    padding-left: 8px;
-    width: 209px; /* IE6 problems with column wrapping if > 209 Temp fix. */
-	}
+#left_sidebar #edit-text,
+#left_sidebar #edit-name 
+{
+  font-size: 1.1em;
+  height: 20px;
+  padding-left: 8px;
+  width: 209px; /* IE6 problems with column wrapping if > 209 Temp fix. */
+}
 
 /* Stop exceeding width of grid column */
-#left_sidebar form#views-exposed-form-Solr-page-1 .views-exposed-widget {
+#left_sidebar form#views-exposed-form-Solr-page-1 .views-exposed-widget,
+#left_sidebar form#views-exposed-form-director-search-page-1 .views-exposed-widget
+{
   padding-right: 0;
 }
 
-#left_sidebar form#views-exposed-form-Solr-page-1 input#edit-submit-Solr {
-display: none;
+#left_sidebar form#views-exposed-form-Solr-page-1 input#edit-submit-Solr,
+#left_sidebar form#views-exposed-form-director-search-page-1 input#edit-submit-director-search
+{
+  display: none;
 }
 
- #block-views--exp-Solr-page_1 {
+#left_sidebar #block-views--exp-Solr-page_1,
+#left_sidebar #block-views--exp-director_search-page_1
+{
   padding-top: 5px;
-  }
+  border-top: 1px solid #999390;
+}
 
 .front #block-views--exp-Solr-page_1 {
-  padding-top: 50px;
-  /* margin-top: 30px; */
 }
 
-#left_sidebar #block-views--exp-Solr-page_1 label {
+/* Left col search tabs */
+#left_sidebar #block-views--exp-Solr-page_1 label,
+#left_sidebar #block-views--exp-director_search-page_1 label
+{
 	display: none !important;
-	}
-
-
-/* Search button */
-#content-top form#views-exposed-form-Solr-page-1 input#edit-submit-Solr  {
-    background-color: transparent;
-    border: 0;
-    color: #FFFFFF;
-    font-size: 1.4em;
-    font-weight: bold;
-    height: 50px;
-    margin: 0 0 0 10px;
-    padding: 0;
-    font-family: Arial,sans-serif;
-    width: 110px;
-
-	background-image: url('../images/search-button-static.png');
-	background-repeat: no-repeat;
 }
 
-#content-top form#views-exposed-form-Solr-page-1 input#edit-submit-Solr:hover {
+#left_sidebar #block-level_search-level_search_tabs {
+  margin-top: 10px;
+  padding-bottom: 0;
+}
+
+/* Front page search tabs */
+.front #block-level_search-level_search_tabs {
+}
+
+.front #block-level_search-level_search_tabs ul.links {
+	font-size: 80px;
+	padding: 0;
+	text-align: center;
+}
+
+.front #block-level_search-level_search_tabs ul.links li {
+  padding: 0 0 50px 0;
+  height: 82px; /* required to stop some browsers spacing problems with tet going from normal to bold weight */
+}
+
+.front #block-level_search-level_search_tabs .content .item-list {
+	background-color: #FFF;
+}
+
+.front #block-level_search-level_search_tabs .content .item-list ul.links li a {
+  color: #a0a0a0;
+  font-family: Helvetica;
+}
+
+
+.front #block-level_search-level_search_tabs .content .item-list ul.links li.first
+{
+	background-image: url('../images/home_search_companiesoff.png');
+	background-repeat: no-repeat;
+  background-position: 100% 100%;
+	display: block;
+	float: left;
+	width: 50%;
+}
+
+.front #block-level_search-level_search_tabs .content .item-list ul.links li.last
+{
+	background-image: url('../images/home_search_directorsoff.png');
+	background-repeat: no-repeat;
+  background-position: 0 100%;
+	display: block;
+	float:left;
+	width: 50%;
+}
+
+.front #block-level_search-level_search_tabs .content .item-list ul.links li.active_tab a {
+  color: #21A0E1;
+  font-weight: bold;
+}
+
+/*IE 6 doesn't like this type of chained class selector, just displaying the first class in the chain...*/
+.front #block-level_search-level_search_tabs .content .item-list ul.links li.active_tab.first {
+	background-image: url('../images/home_search_companieson.png');
+	background-repeat: no-repeat;
+  background-position: 100% 100%;
+}
+
+.front #block-level_search-level_search_tabs .content .item-list ul.links li.active_tab.last {
+	background-image: url('../images/home_search_directorson.png');
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+}
+
+.front #level_search_block_form_companies,
+.front #level_search_block_form_directors
+{
+	background-image: url('../images/home_search_bottom.png');
+	height: 92px;
+}
+
+/* Front page search buttons */
+#content-top form#views-exposed-form-Solr-page-1 input#edit-submit-Solr,
+#content-top form#views-exposed-form-director-search-page-1 input#edit-submit-director-search
+{
+  border: 0;
+  color: #FFF;
+  font-family: Arial,sans-serif;
+  font-size: 1.4em;
+  font-weight: bold;
+  height: 50px;
+  width: 110px;
+  margin: 0 0 0 10px;
+  padding: 0;
+  background-image: url('../images/search-button-static.png');
+  background-repeat: no-repeat;
+  background-color: transparent;
+}
+
+#content-top form#views-exposed-form-Solr-page-1 input#edit-submit-Solr:hover,
+#content-top form#views-exposed-form-director-search-page-1 input#edit-submit-director-search:hover
+{
 	background-image: url('../images/search-button-rollover.png');
 	background-repeat: no-repeat;
 	cursor: pointer;
@@ -297,19 +385,21 @@ display: none;
 #content-top .views-exposed-widget {
 	margin: 0;
 	padding: 0;
-	padding-top: 1em;
 }
 
 /* Search input */
-#content-top #edit-text {
+#content-top #edit-text,
+#content-top #edit-name
+{
     font-size: 20px;
     height: 28px;
     padding: 10px 0 10px 10px;
     width: 670px;
     margin-left: 60px;
-  }
+}
+
 #content-top .compact-form-label {
-    top: 22px;
+    top: 12px;
     left: 10px;
     font-weight: normal;
     font-size: 1.9em;
@@ -990,20 +1080,42 @@ div.bus_size ul li {
   background-color: #FFF;
 }
 
-.block-level_search ul li {  padding-bottom: 5px; padding-left: 1em; padding-right: 1em; padding-top: 0.5em; }
-.block-level_search ul li.active_tab {  border: 1px solid #999390; border-bottom: 0; background-color: #FFFFFF; font-weight: bold; } 
+#left_sidebar .block-level_search ul
+{
+	padding-top: 10px;
+}
+
+#left_sidebar .block-level_search ul li {
+	padding-bottom: 4px;
+	padding-left: 1em;
+	padding-right: 1em;
+	padding-top: 0.5em;
+}
+
+#left_sidebar .block-level_search ul li.active_tab {
+	border: 1px solid #999390;
+	border-bottom: 0;
+	background-color: #FFF;
+	font-weight: bold;
+}
+
 div.level_search_tabbed_form p,
 div.level_search_tabbed_form .form-item label,
-div.level_search_tabbed_form .form-instructions, 
-div.level_search_tabbed_form  #edit-submit { display: none }
+div.level_search_tabbed_form .form-instructions,
+div.level_search_tabbed_form #edit-submit
+{
+	display: none;
+}
 
 /* Hide all forms */
 .level_search_tabbed_form { display: none; }
-.level_search_tabbed_form_active { display: block; } 
+.level_search_tabbed_form_active { display: block; }
+
 /* undo default item list styling */
-.block-level_search  .item-list ul li {
-    list-style: none;
-    margin: 0; }
+.block-level_search .item-list ul li {
+  list-style: none;
+  margin: 0;
+}
 
 #block-views-ch_company_appointments-block_1 h2
 {
@@ -1104,9 +1216,6 @@ body.front 	#block-level_user-user_login_logout_links {
 }
 
 .front #content-top {
-	background-image: url('../images/search-box.png');
-	background-repeat: no-repeat;
-	height: 190px;
 	background-color: #FFF;
 }
 
@@ -1287,4 +1396,28 @@ body.front 	#block-level_user-user_login_logout_links {
 	float: left;
 	width: 210px;
 	margin-bottom: 20px;
+}
+
+/* Non XMLGW Director search results */
+.view-id-director_search, 
+.view-id-director_search .item-list
+{
+  margin-top: 10px;
+}
+
+#main-content .view-id-director_search .view-content .views-row {
+  border: 0;
+}
+
+#main-content .view-id-director_search .view-content .views-row-last {
+  border-bottom: 1px solid #999390;
+}
+
+.view-id-director_search h3 {
+  font-size: 1.6em;
+  padding: 0.4em 0;
+}
+
+.view-id-director_search .views-field {
+  font-size: 0.9em;
 }
