@@ -96,7 +96,7 @@ function level_omega_preprocess(&$vars, $hook) {
       }
       if($vars['name'] == "director_profile") {
         if ($vars['view']->result[0]->name) {
-          drupal_set_title($vars['view']->result[0]->name);
+          drupal_set_title($vars['view']->result[0]->name . ' director profile');
           global $director_name;
           $director_name = $vars['view']->result[0]->name;
         }
