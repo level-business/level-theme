@@ -93,6 +93,14 @@ function level_omega_preprocess(&$vars, $hook) {
           global $company_name;
           $company_name = $vars['view']->result[0]->name;
         }
+      }
+      if($vars['name'] == "director_profile") {
+        if ($vars['view']->result[0]->name) {
+          drupal_set_title($vars['view']->result[0]->name);
+          global $director_name;
+          $director_name = $vars['view']->result[0]->name;
+        }
+       
      }
 
      if ($vars['name'] == 'ch_solr_transactions') {
