@@ -304,6 +304,9 @@ h1, h2, h3, h4, h5 {
   font-family: Helvetica;
 }
 
+.front #block-level_search-level_search_tabs .content .item-list ul.links li a:hover {
+  color: #21A0E1;
+}
 
 .front #block-level_search-level_search_tabs .content .item-list ul.links li.first
 {
