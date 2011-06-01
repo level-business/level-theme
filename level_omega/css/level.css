@@ -50,37 +50,6 @@ h1.company-name {
   padding: 0;
 }
 
-
-#footer {
-	font-size: 0.7em;
-}
-
-#footer-columns {
-}
-
-  #footer-columns p {
-    margin-top: 0;
-    padding-top: 0.8em;
-    line-height: 17px;
-  }
-
-#footer-wrapper {
-  color: #000000;
-}
-
-  #footer-wrapper a:hover,
-  #footer-wrapper a {
-    color: #449bc9;
-    text-decoration: none;
-  }
-
-
-  #footer-wrapper .block {
-    margin: 0;
-    padding: 0;
-  }
-
-
 #main_wrapper, #right_sidebar, #main_content_container {
 	color: #999999;
 	}
@@ -781,62 +750,72 @@ a.dissolved {
     
   #page_tools .views-label-company-number  { font-weight: bold; }
   #page_tools .company-uri { padding: 0.2em; border: 1px solid #999390; }
- 
- 
- 
- /* styles for the footer */
 
+/* Styles for the footer */
 #footer_main {
-	margin-top: 30px;
-	border-top: 2px solid #2B2D29;
+  margin-top: 30px;
+  border-top: 2px solid #2B2D29;
   padding-top: 5px;
   padding-bottom: 5px;
-	}
-	
-.front #footer_main .content {
-	font-size: 13px !important;
-}	
+}
 
-#footer_main .block  {
-	float: left;
-	width: 220px;
-	margin-left: 10px;
+#footer_main .block {
+  float: left;
+  width: 220px;
+  margin-left: 10px;
   margin-right: 10px;
-	}
-	
+}
+
 #footer_main h2 {
-	font-weight: bold;
-	line-height: 2em;
-	border-bottom: 1px solid #FFFFFF;
-	} 
+  font-weight: bold;
+  line-height: 2em;
+}
 
 #footer_main .content {
-	margin-top: 5px;
-	font-size: 0.8em;
-	}
-	
-#footer_main hr {
-    margin-left: 0;
-    width: 100%;
-    /* should be 5% but need ie fix */
-    background-color: #B2B7B0;
-    border: 0 solid #CCCCCC;
-    color: black;
-    height: 1px;
-    align: left;
+  margin-top: 5px;
+  font-size: 13px;
 }
 
 #footer_main a {
-    line-height: 1.4em;
-	}
-	
+  line-height: 1.4em;
+}
+
 #footer_main div {
-	  display: block;
-	  line-height: 1.5em;
-	} 	
+  line-height: 1.5em;
+}
 
+#footer_main #boxes-box-footer_external div.boxes-box-content div,
+#footer_main #block-boxes-footer_links div.boxes-box-content div
+{
+  border-bottom: 1px dotted #CCC;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin: 2px 0 0 0;
+}
 
-/* styles for the level daily page */
+#footer_main #boxes-box-footer_external .level-daily,
+#footer_main #boxes-box-footer_external .level-business
+{
+  background-image: url('../images/twitter-icon.jpg');
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding-left: 28px;
+}
+
+#footer_main #boxes-box-footer_contact .contact-detail {
+  margin-bottom: 20px;
+  color: #999;
+}
+
+#footer_main #boxes-box-footer_contact .registered-in,
+#footer_main #boxes-box-footer_contact .company-number,
+#footer_main #boxes-box-footer_contact .vat-number
+{
+  font-size: 11px;
+  color: #999;
+}
+
+/* Styles for the level daily page */
 
 .view-display-id-summary_page div.ld_label {
 	float: left;
@@ -893,14 +872,6 @@ body.front .in_the_news .accounts_icon { clear: none; float: none; display: none
 body.front #main_wrapper  .views_row {border: none;}
 body.front #content-bottom { clear:both; }
 
-body #footer_main .block-webform h2 {
-	color: #000000;
-	font-size: 1.2em;
-	margin-top: 20px;
-	margin-left: 15px;
-	margin-right: 15px;
-	}
-	
 #block-webform-client-block-4 {
 	font-size: 12px; 
 	}	
@@ -926,53 +897,29 @@ body .block-webform  {
     position: absolute;
 	}
 
+/* Newsletter subscription form */
  #footer_main input#edit-submit {
-  background-color: #000000;
-  color: #FFFFFF;
+  background-color: #000;
+  color: #FFF;
   border: 0;
+}
 
-  }
-  
- #footer_main  #webform-component-info-text {
-	margin-left: 15px;
-	margin-right: 15px;
-	color: #000000;
-	font-size: 1.3em;
-	}
-	
-	
-	
-	
-	
- #footer_main .form-required {
-	display: none; 
-	}
+#footer_main .form-required {
+  display: none;
+}
 
- #footer_main #webform-component-privacy-link {
-	position: absolute;
-	bottom: 20px;
-	right: 15px;
-	}
-	
- #footer_main #webform-component-privacy-link a {
-	color: #000000;
-  font-size: 1.2em;
-	}	
-
-	
-
-
+/*  */
 body.front #content-bottom {
-    clear: both;
-    padding-top: 40px;
-	}
+  clear: both;
+  padding-top: 40px;
+}
 
-#block-boxes-level_profile_blurb{
-	border-top: 1px solid #999390;
+#block-boxes-level_profile_blurb {
+  border-top: 1px solid #999390;
   padding-left: 15px;
-	}
-	
-#block-boxes-level_profile_blurb h2{
+}
+
+#block-boxes-level_profile_blurb h2 {
   color: black; 
   font-size: 1.6em;
   line-height: 1.5em;
@@ -1222,10 +1169,6 @@ body.front 	#block-level_user-user_login_logout_links {
 	background-color: #FFF;
 }
 
-.front #block-boxes-hp_search_blurb {
-  color: #FFF;
-}
-
 .front #page #content #main_content_container #main_wrapper #main-content {
 	background-color: #FFF;
 }
@@ -1286,37 +1229,6 @@ body.front 	#block-level_user-user_login_logout_links {
   color: #999999;
   padding-right: 90px;
   line-height: 20px;
-}
-
-.front #footer_main #boxes-box-footer_external div.boxes-box-content div,
-.front #footer_main #block-boxes-footer_links div.boxes-box-content div
-{
-	border-bottom: 1px dotted #CCCCCC;
-	padding-top: 5px;
-	padding-bottom: 5px;
-	margin: 2px 0 0 0;
-}
-
-.front #footer_main #boxes-box-footer_external .level-daily,
-.front #footer_main #boxes-box-footer_external .level-business
-{
-  background-image: url('../images/twitter-icon.jpg');
-  background-repeat: no-repeat;
-  background-position: left center;
-  padding-left: 28px;
-}
-
-.front #footer_main #boxes-box-footer_contact .contact-detail {
-  margin-bottom: 20px;
-  color: #999999;
-}
-
-.front #footer_main #boxes-box-footer_contact .registered-in,
-.front #footer_main #boxes-box-footer_contact .company-number,
-.front #footer_main #boxes-box-footer_contact .vat-number
-{
-	font-size: 11px;
-	color: #999999;
 }
 
 /* Director profile(s) */
