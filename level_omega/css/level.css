@@ -231,7 +231,6 @@ h1, h2, h3, h4, h5 {
 #left_sidebar #block-views--exp-director_search-page_1
 {
   padding-top: 5px;
-  border-top: 1px solid #999390;
 }
 
 .front #block-views--exp-Solr-page_1 {
@@ -1032,21 +1031,22 @@ div.bus_size ul li {
 
 #left_sidebar .block-level_search ul
 {
-	padding-top: 10px;
+  padding: 10px 0 10px 0;
 }
 
 #left_sidebar .block-level_search ul li {
-	padding-bottom: 4px;
-	padding-left: 1em;
-	padding-right: 1em;
-	padding-top: 0.5em;
+  padding: 8px 8px 9px 8px;
+  margin-left: 1.0em;
 }
 
 #left_sidebar .block-level_search ul li.active_tab {
-	border: 1px solid #999390;
-	border-bottom: 0;
-	background-color: #FFF;
+	border-top: 1px solid #999390;
+	border-right: 1px solid #999390;
+	border-bottom: 1px solid #FFF;
+	border-left: 1px solid #999390;
 	font-weight: bold;
+	padding-bottom: 9px;
+	position: relative;
 }
 
 div.level_search_tabbed_form p,
@@ -1058,8 +1058,19 @@ div.level_search_tabbed_form #edit-submit
 }
 
 /* Hide all forms */
-.level_search_tabbed_form { display: none; }
-.level_search_tabbed_form_active { display: block; }
+.level_search_tabbed_form {
+	display: none;
+}
+
+/* Form currently being shown for the active tab */
+.level_search_tabbed_form_active {
+	display: block;
+}
+
+#left_sidebar .level_search_tabbed_form_active {
+  display: block;
+  border-top: 1px solid #999390;
+}
 
 /* undo default item list styling */
 .block-level_search .item-list ul li {
