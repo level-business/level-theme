@@ -1251,6 +1251,7 @@ body.front 	#block-level_user-user_login_logout_links {
 .view-director-profile .views-row .field-content{
   color: #000;
   font-weight: bold;
+  display: block;
 }
 
 .view-director-profile .views-row .views-field-phpcode-2,
@@ -1296,10 +1297,13 @@ body.front 	#block-level_user-user_login_logout_links {
 
 .view-director-profile .views-field-appointment-type .views-label-appointment-type,
 .view-director-profile .views-field-phpcode-1 .views-label-phpcode-1,
-.view-director-profile .views-field-occupation .views-label-occupation
+.view-director-profile .views-field-occupation .views-label-occupation,
+.view-director-profile .views-field-phpcode-5 .views-label-phpcode-5,
+.view-director-profile .views-field-phpcode-6 .views-label-phpcode-6
 {
 	float: left;
   width: 210px;
+  display: block;
 }
 
 .company-not-live
