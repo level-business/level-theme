@@ -301,15 +301,14 @@ h1, h2, h3, h4, h5 {
   font-weight: bold;
 }
 
-/*IE 6 doesn't like this type of chained class selector, just displaying the first class in the chain...*/
-.front #block-level_search-level_search_tabs .content .item-list ul.links li.active_tab.first {
-	background-image: url('../images/home_search_companieson.png');
-	background-repeat: no-repeat;
+.front #block-level_search-level_search_tabs .content .item-list ul.links li.active_tab_companies {
+  background-image: url('../images/home_search_companieson.png');
+  background-repeat: no-repeat;
   background-position: 100% 100%;
 }
 
-.front #block-level_search-level_search_tabs .content .item-list ul.links li.active_tab.last {
-	background-image: url('../images/home_search_directorson.png');
+.front #block-level_search-level_search_tabs .content .item-list ul.links li.active_tab_directors {
+  background-image: url('../images/home_search_directorson.png');
   background-repeat: no-repeat;
   background-position: 0 100%;
 }
