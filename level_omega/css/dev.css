@@ -299,6 +299,22 @@ body.not-front #main-content .node h2.first-faq {
 }
 
 /* Work with us page */
+.node .section-wrapper {
+  margin-bottom: 21px;
+}
+
+.node #work-with-us {
+  background: transparent url(../node-images/work_with_us/work-environment.jpg) 100% 100% no-repeat;
+}
+
+body.not-front #main-content .node p.work-intro {
+  font: normal 35px/1.25em Georgia, 'Adobe Garamond Pro', serif;
+  letter-spacing: -1px;
+}
+
+body.not-front #main-content .node #work-with-us h3.recruit-title {
+  padding-top: 14px;
+}
 
 #main-content .node ul.recruiting {
   border-top: 1px dotted #666;
@@ -325,6 +341,17 @@ body.not-front #main-content .node h2.first-faq {
   padding: 14px 0;
 }
 
+#main-content .node .section-wrapper ul.contact {
+  padding-bottom: 0;
+}
+
+body.not-front #main-content .node .section-wrapper h2 {
+  padding-bottom: 0;
+}
+
+body.not-front #main-content .node .section-wrapper h3  {
+  padding-top: 0;
+}
 
 /* images */
 img.section-image {
