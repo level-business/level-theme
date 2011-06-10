@@ -15,6 +15,7 @@ stylesheets[all][] = css/grid.css
 stylesheets[all][] = css/960.css ; To block out 960s grid and use our own.
 stylesheets[all][] = css/jquery-ui.css
 stylesheets[all][] = css/static.css
+stylesheets[all][] = css/dev.css
 
 
 ; ------- Declare default javascript includes
