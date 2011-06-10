@@ -1,0 +1,157 @@
+/* Typography */
+/**
+ * #333
+ * #666
+ * #21a0e1
+ */
+
+body.not-front #main-content .node {
+  color: #666;
+}
+
+body.not-front #main-content .node h2 {
+  margin: 0;
+  padding: 0 0 20px 0;
+}
+
+body.not-front #main-content .node h3 {
+  font: bold 20px/1.25em Arial, sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 20px 0;
+}
+
+body.not-front #main-content .node h4 {
+  color: #333;
+  margin: 0;
+  padding: 20px 0 0 0;
+}
+
+#main-content .node ul {
+  list-style: disc url(../images/bullet-list.gif);
+  margin-left: 1em;
+}
+
+h1#page-title {
+  font: bold 20px/1em Arial, sans-serif;
+  color: #333;
+  text-align: right;
+  float: right;
+}
+
+body.not-front #main-content .node h2.section-title {
+  font: normal 100px/1em Georgia, 'Adobe Garamond Pro', serif;
+  color: #333;
+  margin: 0 0 20px 0;
+  padding: 20px 0 30px 0;
+  border-bottom: 1px dotted #666;
+}
+
+#main-content .node h2,
+#main-content .node h3,
+#main-content .node a.section_link,
+#main-content .node .page_intro {
+  color: #21a0e1;
+}
+
+/* Explained page */
+
+body.not-front #main-content .node h2,
+#main-content .node a.section_link,
+#main-content .node div.large h3,
+#main-content .node div.medium h3,
+#main-content .node div.small h3 {
+  font: bold 30px/1.25em Arial, sans-serif;
+}
+
+body.not-front #main-content .node .page_intro {
+  font: bold 20px/24px Arial, sans-serif;
+}
+
+#main-content .node dt {
+  font: normal 1em/1em Arial, sans-serif;
+  color: #21a0e1;
+}
+
+div.bus_size ul li {
+  background: transparent url(../images/green_tick.png) 0 0 no-repeat;
+  list-style: none;
+}
+
+/* Team page */
+
+.node .staff {
+  border-top: 1px dotted #666;
+}
+
+.node .staff .staff-content {
+  width: 340px;
+  float: left;
+}
+
+.node .even-row .staff .staff-content {
+  float: right;
+}
+
+#main-content .node .name {
+  font: bold 30px/1.25em Arial, sans-serif;
+  color: #21a0e1;
+}
+
+#main-content .node .job {
+  font: bold 20px/1.25em Arial, sans-serif;
+  color: #333;
+}
+
+/* blockquote */
+body.not-front #main-content .node #ceo .quote-wrapper {
+  width: 302px;
+  float: right;
+  background: #fff url(../images/bq-top.jpg) 50% 0 no-repeat;
+  padding: 9px 0 0 0;
+  margin: 0 19px;
+}
+body.not-front #main-content .node #ceo .quote-wrapper blockquote {
+  background: #fff url(../images/bq-bottom.jpg) 50% 100% no-repeat;
+  padding: 0 0 30px 0;
+  color: #fff;
+}
+body.not-front #main-content .node #ceo .quote-wrapper blockquote p {
+  background: #fff url(../images/bq-content.jpg) 0 0 repeat-y;
+  margin: 0;
+  padding: 10px 20px;
+  font: normal 30px/1.25em Georgia, 'Adobe Garamond Pro', serif ;
+}
+
+#main-content .node ul.contact {
+  margin: 0;
+  padding: 0;
+}
+#main-content .node ul.contact li {
+  display: inline;
+  margin-right: 1.5em;
+}
+
+#main-content .node .investors-images {
+  width: 720px;
+  margin: 10px -10px;
+  padding: 20px 0;
+  background: transparent url(../images/shadow-700.jpg) 50% 100% no-repeat;
+}
+
+#main-content .node .investors-images a {
+  float: left;
+}
+
+/* misc */
+body.not-front #main-content .node {
+  background: transparent;
+}
+
+#top_bar {
+ float: right;
+ padding: 20px 0;
+ position: absolute;
+ right: 0;
+ top: 70px;
+}
