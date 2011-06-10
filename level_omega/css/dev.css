@@ -1,37 +1,38 @@
+/* Layout */
+
+/* node layout */
+body.not-front #main-content .node .node-column {
+  width: 340px;
+  float: left;
+}
+
+body.not-front #main-content .node .first-col {
+  padding-right: 10px;
+}
+body.not-front #main-content .node .last-col {
+  padding-left: 10px;
+}
+
 /* Typography */
 /**
+ * text colors
  * #333
  * #666
  * #21a0e1
  */
 
+/*html, body,*/
 body.not-front #main-content .node {
+  font: normal 14px/1.5 Arial, sans-serif;
   color: #666;
 }
 
-body.not-front #main-content .node h2 {
+body.not-front #main-content .node p {
   margin: 0;
-  padding: 0 0 20px 0;
+  padding: 0 0 21px 0;
 }
 
-body.not-front #main-content .node h3 {
-  font: bold 20px/1.25em Arial, sans-serif;
-  color: #333;
-  margin: 0;
-  padding: 20px 0;
-}
-
-body.not-front #main-content .node h4 {
-  color: #333;
-  margin: 0;
-  padding: 20px 0 0 0;
-}
-
-#main-content .node ul {
-  list-style: disc url(../images/bullet-list.gif);
-  margin-left: 1em;
-}
-
+/* heading */
 h1#page-title {
   font: bold 20px/1em Arial, sans-serif;
   color: #333;
@@ -39,19 +40,38 @@ h1#page-title {
   float: right;
 }
 
+body.not-front #main-content .node h2 {
+  font: bold 30px/1.25em Arial, sans-serif;
+  color: #21a0e1;
+  margin: 0;
+  padding: 0 0 21px 0;
+}
+
 body.not-front #main-content .node h2.section-title {
   font: normal 100px/1em Georgia, 'Adobe Garamond Pro', serif;
   color: #333;
   margin: 0 0 20px 0;
-  padding: 20px 0 30px 0;
+  padding: 21px 0 30px 0;
   border-bottom: 1px dotted #666;
 }
 
-#main-content .node h2,
-#main-content .node h3,
-#main-content .node a.section_link,
-#main-content .node .page_intro {
-  color: #21a0e1;
+body.not-front #main-content .node h3 {
+  font: bold 20px/1.25em Arial, sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 21px 0 14px  0;
+}
+
+body.not-front #main-content .node h4 {
+  font: bold 14px/1.5 Arial, sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+#main-content .node ul {
+  list-style: disc url(../images/bullet-list.gif);
+  margin: 0 21px 21px 14px;
 }
 
 /* Explained page */
@@ -66,6 +86,11 @@ body.not-front #main-content .node h2,
 
 body.not-front #main-content .node .page_intro {
   font: bold 20px/24px Arial, sans-serif;
+}
+
+#main-content .node a.section_link,
+#main-content .node .page_intro {
+  color: #21a0e1;
 }
 
 #main-content .node dt {
@@ -123,13 +148,36 @@ body.not-front #main-content .node #ceo .quote-wrapper blockquote p {
   font: normal 30px/1.25em Georgia, 'Adobe Garamond Pro', serif ;
 }
 
+#main-content .node ul.internal-links,
 #main-content .node ul.contact {
+  display: block;
+  clear: both;
   margin: 0;
-  padding: 0;
+  padding: 14px 0 21px 0;
+  list-style: none;
 }
+#main-content .node ul.internal-links li,
 #main-content .node ul.contact li {
+  list-style: none;
   display: inline;
   margin-right: 1.5em;
+}
+
+#main-content .node ul.recruiting {
+  border-top: 1px dotted #666;
+}
+
+#main-content .node ul.recruiting,
+#main-content .node ul.recruiting li {
+  list-style: none;
+  margin-left: 0;
+}
+#main-content .node ul.recruiting li a {
+  font: bold 20px/1em Arial, sans-serif;
+  display: block;
+  background: transparent url(../images/blue-arrow.gif) 100% 50% no-repeat;
+  border-bottom: 1px dotted #666;
+  padding: 14px 0;
 }
 
 #main-content .node .investors-images {
@@ -144,6 +192,7 @@ body.not-front #main-content .node #ceo .quote-wrapper blockquote p {
 }
 
 /* misc */
+body.not-front #main_wrapper,
 body.not-front #main-content .node {
   background: transparent;
 }
