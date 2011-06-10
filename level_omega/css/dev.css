@@ -21,6 +21,10 @@ body.not-front #main-content .node .last-col {
  * #21a0e1
  */
 
+/* rollover */
+a:hover, ul.pager a:hover {
+  color: #333;
+}
 /*html, body,*/
 body.not-front #main-content .node {
   font: normal 14px/1.5 Arial, sans-serif;
@@ -69,9 +73,22 @@ body.not-front #main-content .node h4 {
   padding: 0;
 }
 
+/* list style*/
 #main-content .node ul {
   list-style: disc url(../images/bullet-list.gif);
   margin: 0 21px 21px 14px;
+}
+
+#main-content .node ol {
+  margin: 0 21px 21px 21px;
+}
+#main-content .node ol li {
+  color: #21a0e1;
+  font-weight: bold;
+}
+#main-content .node ol li span { /* need <span> to wrap around text for different color */
+  color: #666;
+  font-weight: normal;
 }
 
 /* Explained page */
@@ -172,6 +189,13 @@ body.not-front #main-content .node #ceo .quote-wrapper blockquote p {
   list-style: none;
   margin-left: 0;
 }
+
+#main-content .node ul.recruiting li {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
 #main-content .node ul.recruiting li a {
   font: bold 20px/1em Arial, sans-serif;
   display: block;
@@ -190,6 +214,27 @@ body.not-front #main-content .node #ceo .quote-wrapper blockquote p {
 #main-content .node .investors-images a {
   float: left;
 }
+
+/* FAQs page */
+#main-content .node ul.faq-list, #main-content .node ul.faq-list li {
+  list-style: none;
+}
+
+#main-content .node ul.faq-list {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+body.not-front #main-content .node h2.faq-title {
+  font: bold 20px/1em Arial, sans-serif;
+  border-top: 1px dotted #666;
+  padding-top: 21px;
+}
+
+body.not-front #main-content .node h2.first-faq {
+  border-top: 0 none;
+}
+
 
 /* misc */
 body.not-front #main_wrapper,
