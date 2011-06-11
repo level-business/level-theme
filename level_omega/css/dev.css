@@ -1,37 +1,67 @@
+/* Layout */
+#page {
+  padding-bottom: 42px;
+}
+
+#site-header {
+  padding: 25px 0 10px 0;
+  background: transparent url(../images/icon-beta.gif) 100% 0 no-repeat;
+}
+
+div#branding {
+  margin-top: 0;
+}
+
+#block-level_user-user_login_logout_links {
+  padding-right: 75px;
+}
+
+body.not-front #main_wrapper {
+  padding-bottom: 0;
+}
+
+#footer_main {
+  margin-top: 21px;
+  padding-top: 21px;
+}
+
+/* node layout */
+body.not-front #main-content .node .node-column {
+  width: 340px;
+  float: left;
+}
+
+body.not-front #main-content .node .first-col {
+  padding-right: 10px;
+}
+body.not-front #main-content .node .last-col {
+  padding-left: 10px;
+}
+
 /* Typography */
 /**
+ * text colors
  * #333
  * #666
  * #21a0e1
  */
 
+/* rollover */
+a:hover, ul.pager a:hover {
+  color: #333;
+}
+/*html, body,*/
 body.not-front #main-content .node {
+  font: normal 14px/1.5 Arial, sans-serif;
   color: #666;
 }
 
-body.not-front #main-content .node h2 {
+body.not-front #main-content .node p {
   margin: 0;
-  padding: 0 0 20px 0;
+  padding: 0 0 21px 0;
 }
 
-body.not-front #main-content .node h3 {
-  font: bold 20px/1.25em Arial, sans-serif;
-  color: #333;
-  margin: 0;
-  padding: 20px 0;
-}
-
-body.not-front #main-content .node h4 {
-  color: #333;
-  margin: 0;
-  padding: 20px 0 0 0;
-}
-
-#main-content .node ul {
-  list-style: disc url(../images/bullet-list.gif);
-  margin-left: 1em;
-}
-
+/* heading */
 h1#page-title {
   font: bold 20px/1em Arial, sans-serif;
   color: #333;
@@ -39,22 +69,103 @@ h1#page-title {
   float: right;
 }
 
+body.not-front #main-content .node h2 {
+  font: bold 30px/1.25em Arial, sans-serif;
+  color: #21a0e1;
+  margin: 0;
+  padding: 0 0 21px 0;
+}
+
 body.not-front #main-content .node h2.section-title {
   font: normal 100px/1em Georgia, 'Adobe Garamond Pro', serif;
   color: #333;
-  margin: 0 0 20px 0;
-  padding: 20px 0 30px 0;
+  margin: 0 0 28px 0;
+  padding: 21px 0 28px 0;
   border-bottom: 1px dotted #666;
 }
 
-#main-content .node h2,
-#main-content .node h3,
-#main-content .node a.section_link,
-#main-content .node .page_intro {
+body.not-front #main-content .node h3 {
+  font: bold 20px/1.25em Arial, sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 21px 0 14px  0;
+}
+
+body.not-front #main-content .node h4 {
+  font: bold 14px/1.5 Arial, sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* list style*/
+#main-content .node ul {
+  list-style: disc url(../images/bullet-list.gif);
+  margin: 0 21px 21px 14px;
+}
+
+#main-content .node ol {
+  margin: 0 0 21px 21px;
+}
+#main-content .node ol li {
   color: #21a0e1;
+  font-weight: bold;
+}
+#main-content .node ol li span { /* need <span> to wrap around text for different color */
+  color: #666;
+  font-weight: normal;
 }
 
 /* Explained page */
+
+/* tabulation */
+div.bus_size {
+  -moz-bix-shadow: 0 0 0 transparent;
+  -webkit-box-shadow: 0 0 0 transparent;
+  box-shadow: 0 0 0 transparent;
+  background: #fff url(../images/tabular-top.gif) 50% 0 no-repeat;
+  padding-top: 25px;
+  margin-bottom: 35px;
+}
+
+.node .bus_size_heading,
+div.bus_accounts_section ,
+div.bus_conditions_section {
+  padding: 15px 20px;
+}
+
+.node .bus_size_heading {
+  margin: 0;
+  border-bottom: 1px dotted #aaa;
+  height: auto;
+}
+
+div.bus_accounts_section {
+  border-bottom: 1px dotted #aaa;
+  border-top: 0 none;
+  height: 180px;
+}
+
+div.bus_conditions_section {
+  background: #f0f0f0 url(../images/tabular-bottom.gif) 50% 100% no-repeat;
+  height: 185px;
+}
+
+body.not-front #main-content .node .bus_size_heading h3 {
+ font: bold 30px/1.25em Arial, sans-serif;
+  color: #21a0e1;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+body.not-front #main-content .node div.bus_size h4 {
+  border-top: 0 none;
+  line-height: 1.25em;
+  padding-bottom: 14px;
+}
 
 body.not-front #main-content .node h2,
 #main-content .node a.section_link,
@@ -64,23 +175,82 @@ body.not-front #main-content .node h2,
   font: bold 30px/1.25em Arial, sans-serif;
 }
 
-body.not-front #main-content .node .page_intro {
+body.not-front #main-content .node .intro {
   font: bold 20px/24px Arial, sans-serif;
 }
 
-#main-content .node dt {
-  font: normal 1em/1em Arial, sans-serif;
+img#terminology {
+  margin-bottom: 21px;
+}
+
+#main-content .node a.section_link,
+#main-content .node .intro {
   color: #21a0e1;
+  padding-top: 0;
 }
 
 div.bus_size ul li {
-  background: transparent url(../images/green_tick.png) 0 0 no-repeat;
-  list-style: none;
+  background: transparent;
+  padding-left: 0;
 }
 
-/* Team page */
+.node-type-page #main-content div.bus_size ol {
+  padding: 0;
+  margin-left: 21px;
+}
 
-.node .staff {
+/* terminology list & table (without JS) */
+#main-content .node ul.term-list,
+#main-content .node ul.term-list li {
+  list-style: none;
+  padding-bottom: 5px;
+}
+
+#main-content .node ul.term-list {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#main-content .node dl,
+#main-content .node dl.terminology {
+  margin: 0;
+  padding: 0 0 35px 0;
+  background: 0 none;
+}
+
+#main-content .node dl.terminology .grid_1 {
+  width: 220px;
+}
+
+#main-content .node dl.terminology div {
+  clear: both;
+}
+
+#main-content .node dt,
+#main-content .node dd {
+  font: normal 1em/1.5em Arial, sans-serif;
+  padding-bottom: 0;
+  display: block;
+}
+
+#main-content .node dt {
+  font: bold 1em/1.5em Arial, sans-serif;
+  padding-bottom: 21px;
+  color: #21a0e1;
+}
+
+#main-content .node dt div,
+#main-content .node dd div {
+  padding: 0;
+  margin: 0;
+}
+
+
+/* Team page */
+.node .staff-row {
+  position: relative;
+  clear: both;
+  padding: 28px 0;
   border-top: 1px dotted #666;
 }
 
@@ -93,14 +263,16 @@ div.bus_size ul li {
   float: right;
 }
 
-#main-content .node .name {
+body.not-front #main-content .node .name {
   font: bold 30px/1.25em Arial, sans-serif;
   color: #21a0e1;
+  padding-bottom: 0;
 }
 
-#main-content .node .job {
+body.not-front #main-content .node .job {
   font: bold 20px/1.25em Arial, sans-serif;
   color: #333;
+  padding-top: 0;
 }
 
 /* blockquote */
@@ -120,30 +292,174 @@ body.not-front #main-content .node #ceo .quote-wrapper blockquote p {
   background: #fff url(../images/bq-content.jpg) 0 0 repeat-y;
   margin: 0;
   padding: 10px 20px;
-  font: normal 30px/1.25em Georgia, 'Adobe Garamond Pro', serif ;
+  font: normal 28px/1.25em Georgia, 'Adobe Garamond Pro', serif;
+  letter-spacing: -1px;
 }
 
+#main-content .node ul.internal-links,
 #main-content .node ul.contact {
+  display: block;
+  clear: both;
   margin: 0;
-  padding: 0;
+  padding: 14px 0;
+  list-style: none;
 }
+#main-content .node ul.internal-links li,
 #main-content .node ul.contact li {
+  list-style: none;
   display: inline;
   margin-right: 1.5em;
+  /*text-transform: capitalize;*/
+}
+
+img.staff-doodle {
+  position: absolute;
+  bottom: 21px;
+  right: 0;
+  z-index: -1;
+}
+
+.node .even-row img.staff-doodle {
+  position: absolute;
+  bottom: 21px;
+  left: 0;
+  z-index: -1;
+}
+
+/* doodle images as bg */
+#ceo .staff {
+  background: transparent url(../node-images/team/ceo.jpg) 100% 100% no-repeat;
+}
+#cmo .staff {
+  background: transparent url(../node-images/team/cmo.jpg) 0 100% no-repeat;
+}
+#cto .staff {
+  background: transparent url(../node-images/team/cto.jpg) 100% 100% no-repeat;
 }
 
 #main-content .node .investors-images {
   width: 720px;
   margin: 10px -10px;
-  padding: 20px 0;
+  padding: 21px 0 42px 0;
   background: transparent url(../images/shadow-700.jpg) 50% 100% no-repeat;
 }
 
+img#advisor-image {
+  margin-bottom: 0;
+}
+
+.node .advisor {
+  border-top: 1px dotted #666;
+  padding-top: 21px;
+}
+.node .first-advisor {
+  border-top: 0 none;
+}
+
 #main-content .node .investors-images a {
+  width: 360px;
   float: left;
 }
 
+.node .investor {
+  border-top: 1px dotted #666;
+  padding-top: 21px;
+}
+.node .first-investor {
+  border-top: 0 none;
+  padding-top: 0;
+}
+
+body.not-front #main-content .investor .name {
+  padding-bottom: 7px;
+}
+
+/* FAQs page */
+#main-content .node ul.faq-list,
+#main-content .node ul.faq-list li {
+  list-style: none;
+  padding-bottom: 7px;
+}
+
+#main-content .node ul.faq-list {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+body.not-front #main-content .node h2.faq-title {
+  font: bold 20px/1.25em Arial, sans-serif;
+  border-top: 1px dotted #666;
+  padding-top: 21px;
+}
+
+body.not-front #main-content .node h2.first-faq {
+  border-top: 0 none;
+}
+
+/* Work with us page */
+.node .section-wrapper {
+  margin-bottom: 21px;
+}
+
+.node #work-with-us {
+  background: transparent url(../node-images/work_with_us/work-environment.jpg) 100% 100% no-repeat;
+}
+
+body.not-front #main-content .node p.work-intro {
+  font: normal 35px/1.25em Georgia, 'Adobe Garamond Pro', serif;
+  letter-spacing: -1px;
+}
+
+body.not-front #main-content .node #work-with-us h3.recruit-title {
+  padding-top: 14px;
+}
+
+#main-content .node ul.recruiting {
+  border-top: 1px dotted #666;
+}
+
+#main-content .node ul.recruiting,
+#main-content .node ul.recruiting li {
+  list-style: none;
+  margin-left: 0;
+}
+
+#main-content .node ul.recruiting li {
+  display: block;
+  margin: 0;
+  padding: 0;
+  text-transform: capitalize;
+}
+
+#main-content .node ul.recruiting li a {
+  font: bold 20px/1em Arial, sans-serif;
+  display: block;
+  background: transparent url(../images/blue-arrow.gif) 100% 50% no-repeat;
+  border-bottom: 1px dotted #666;
+  padding: 14px 0;
+}
+
+#main-content .node .section-wrapper ul.contact {
+  padding-bottom: 0;
+}
+
+body.not-front #main-content .node .section-wrapper h2 {
+  padding-bottom: 0;
+}
+
+body.not-front #main-content .node .section-wrapper h3  {
+  padding-top: 0;
+}
+
+/* images */
+img.section-image {
+  clear: both;
+  margin-bottom: 42px;
+}
+
+
 /* misc */
+body.not-front #main_wrapper,
 body.not-front #main-content .node {
   background: transparent;
 }
