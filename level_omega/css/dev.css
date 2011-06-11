@@ -105,7 +105,7 @@ body.not-front #main-content .node h4 {
 }
 
 #main-content .node ol {
-  margin: 0 21px 21px 21px;
+  margin: 0 0 21px 21px;
 }
 #main-content .node ol li {
   color: #21a0e1;
@@ -118,6 +118,55 @@ body.not-front #main-content .node h4 {
 
 /* Explained page */
 
+/* tabulation */
+div.bus_size {
+  -moz-bix-shadow: 0 0 0 transparent;
+  -webkit-box-shadow: 0 0 0 transparent;
+  box-shadow: 0 0 0 transparent;
+  background: #fff url(../images/tabular-top.gif) 50% 0 no-repeat;
+  padding-top: 25px;
+  margin-bottom: 35px;
+}
+
+.node .bus_size_heading,
+div.bus_accounts_section ,
+div.bus_conditions_section {
+  padding: 15px 20px;
+}
+
+.node .bus_size_heading {
+  margin: 0;
+  border-bottom: 1px dotted #aaa;
+  height: auto;
+}
+
+div.bus_accounts_section {
+  border-bottom: 1px dotted #aaa;
+  border-top: 0 none;
+  height: 180px;
+}
+
+div.bus_conditions_section {
+  background: #f0f0f0 url(../images/tabular-bottom.gif) 50% 100% no-repeat;
+  height: 185px;
+}
+
+body.not-front #main-content .node .bus_size_heading h3 {
+ font: bold 30px/1.25em Arial, sans-serif;
+  color: #21a0e1;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+body.not-front #main-content .node div.bus_size h4 {
+  border-top: 0 none;
+  line-height: 1.25em;
+  padding-bottom: 14px;
+}
+
 body.not-front #main-content .node h2,
 #main-content .node a.section_link,
 #main-content .node div.large h3,
@@ -126,24 +175,76 @@ body.not-front #main-content .node h2,
   font: bold 30px/1.25em Arial, sans-serif;
 }
 
-body.not-front #main-content .node .page_intro {
+body.not-front #main-content .node .intro {
   font: bold 20px/24px Arial, sans-serif;
 }
 
-#main-content .node a.section_link,
-#main-content .node .page_intro {
-  color: #21a0e1;
+img#terminology {
+  margin-bottom: 21px;
 }
 
-#main-content .node dt {
-  font: normal 1em/1em Arial, sans-serif;
+#main-content .node a.section_link,
+#main-content .node .intro {
   color: #21a0e1;
+  padding-top: 0;
 }
 
 div.bus_size ul li {
-  background: transparent url(../images/green_tick.png) 0 0 no-repeat;
-  list-style: none;
+  background: transparent;
+  padding-left: 0;
 }
+
+.node-type-page #main-content div.bus_size ol {
+  padding: 0;
+  margin-left: 21px;
+}
+
+/* terminology list & table (without JS) */
+#main-content .node ul.term-list,
+#main-content .node ul.term-list li {
+  list-style: none;
+  padding-bottom: 5px;
+}
+
+#main-content .node ul.term-list {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#main-content .node dl,
+#main-content .node dl.terminology {
+  margin: 0;
+  padding: 0 0 35px 0;
+  background: 0 none;
+}
+
+#main-content .node dl.terminology .grid_1 {
+  width: 220px;
+}
+
+#main-content .node dl.terminology div {
+  clear: both;
+}
+
+#main-content .node dt,
+#main-content .node dd {
+  font: normal 1em/1.5em Arial, sans-serif;
+  padding-bottom: 0;
+  display: block;
+}
+
+#main-content .node dt {
+  font: bold 1em/1.5em Arial, sans-serif;
+  padding-bottom: 21px;
+  color: #21a0e1;
+}
+
+#main-content .node dt div,
+#main-content .node dd div {
+  padding: 0;
+  margin: 0;
+}
+
 
 /* Team page */
 .node .staff-row {
@@ -151,10 +252,6 @@ div.bus_size ul li {
   clear: both;
   padding: 28px 0;
   border-top: 1px dotted #666;
-}
-
-.node .staff {
-
 }
 
 .node .staff .staff-content {
@@ -278,7 +375,8 @@ body.not-front #main-content .investor .name {
 }
 
 /* FAQs page */
-#main-content .node ul.faq-list, #main-content .node ul.faq-list li {
+#main-content .node ul.faq-list,
+#main-content .node ul.faq-list li {
   list-style: none;
   padding-bottom: 7px;
 }
