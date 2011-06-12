@@ -224,6 +224,7 @@ div.bus_size ul li {
 
 #main-content .node dl.terminology div {
   clear: both;
+  overflow: auto;
 }
 
 #main-content .node dt,
@@ -243,6 +244,44 @@ div.bus_size ul li {
 #main-content .node dd div {
   padding: 0;
   margin: 0;
+}
+
+/* glossaryToggle JS */
+#main-content .node div.terminology {
+  width: 700px;
+
+  
+  background: #fff url(../images/glossary-top.png) 50% 0 no-repeat; 
+}
+
+#main-content .node div.terminology .inner-wrapper {
+  background: transparent url(../images/glossary-bottom.png) 50% 100% no-repeat;
+  padding: 0 25px;
+}
+.close-button {
+  display: block;
+  clear: both;
+  padding: 30px 0 0 0;
+}
+.close-button a {
+  background: transparent url(../images/icon-close.gif) 100% 50% no-repeat;
+  padding-right: 15px;
+  float: right;
+}
+
+#main-content .node .termDefinition {
+  position: relative;
+  clerar: both;
+}
+
+#main-content .node .termDefinition h3.term  {
+  font: bold 20px/1.5em Arial, sans-serif;
+  padding-bottom: 14px;
+  color: #21a0e1;
+}
+
+#main-content .node .termDefinition div.definition {
+  padding-bottom: 10px;
 }
 
 
@@ -470,4 +509,8 @@ body.not-front #main-content .node {
  position: absolute;
  right: 0;
  top: 70px;
+}
+
+.hidden {
+  display: none !important;
 }
