@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
   // add termDefinition class to definition wrapper
-  $('.node .terminology').children().addClass('termDefinition clearfix').prepend('<a class="close-button" href="#">Hide</a>');
+  $('.node .terminology').children().addClass('termDefinition clearfix').prepend('<div class="close-button"><a href="#">Hide</a></div>');
   
   // hide all term definition
   $('.node .terminology .termDefinition').hide();
@@ -55,7 +55,7 @@ $(document).ready(function() {
 
   
   // "Hide button"
-  $('a.close-button').bind('click', function() {
+  $('.close-button a').bind('click', function() {
     $('.termDefinition').slideUp();
     return false;
   });
