@@ -47,7 +47,7 @@ $(document).ready(function() {
           $('.terminology .current-term').removeClass('current-term').slideUp();
         }
 
-        // add .active class to current trigger
+        // add .active class to current trigger 
         $(this).addClass('active');
 
         // slide down new term definition
