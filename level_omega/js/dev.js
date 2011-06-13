@@ -12,7 +12,6 @@ $(document).ready(function() {
     
   });
   
-  
   // replace <dt> with <h3>
   $('.termDefinition dt').each(function(){
     $(this).replaceWith('<h3 class="term">' + $(this).text() + '</h3>');
@@ -29,30 +28,33 @@ $(document).ready(function() {
   // Glossary toggle
   $('.term-list a:not(.active)').click(function() {
     
-    // match each trigger (term link) with its own difinition
+    // match each trigger (term link) with its own definition
     trigger = $(this).attr('href').replace(/#/g, '');
     defClass = '.terminology .' + trigger;
     currentDefinition = defClass + ':not(.current-term)';
     
-    
-    
-    // if trigger allready has .active class then remove it
-    if ($('.term-list a.active').length > 0) {
+    // this term definition is already open
+    if ($(this).hasClass('active') ) {
       $('.term-list a.active').removeClass('active');
+      $('.termDefinition').slideUp();
     }
     
-    // add .active class to current trigger 
-    $(this).addClass('active');
+    // this term definition is not already open
+    else {
+        // another term definition is open, close it first
+        if ($('.term-list a.active').length > 0) {
+          $('.term-list a.active').removeClass('active');
+          $('.terminology .current-term').removeClass('current-term').slideUp();
+        }
 
-    $('.terminology .current-term').removeClass('current-term').slideUp();
+        // add .active class to current trigger 
+        $(this).addClass('active');
 
-    // slide down new term definition
-    $(defClass).addClass('current-term').slideDown();
-
+        // slide down new term definition
+        $(defClass).addClass('current-term').slideDown();
+    }
     return false;
   });
-    
-
   
   // "Hide button"
   $('.close-button a').bind('click', function() {
@@ -60,7 +62,5 @@ $(document).ready(function() {
     $('.termDefinition').slideUp();
     return false;
   });
-
-
   
 });
