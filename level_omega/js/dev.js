@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
   // add termDefinition class to definition wrapper
-  $('.node .terminology').children().addClass('termDefinition clearfix').prepend('<div class="close-button"><a href="#">Hide</a></div>');
+  $('.node .terminology').children().addClass('termDefinition clearfix').wrapInner('<div class="inner-wrapper" />');
   
   // hide all term definition
   $('.node .terminology .termDefinition').hide();
@@ -11,20 +11,20 @@ $(document).ready(function() {
     $(this).replaceWith('<div class="terminology clearfix">' + $(this).html() + '</div>')
     
   });
-  $('.terminology').wrapInner('<div class="inner-wrapper" />');
+  
   
   // replace <dt> with <h3>
   $('.termDefinition dt').each(function(){
     $(this).replaceWith('<h3 class="term">' + $(this).text() + '</h3>');
   });
-  
+
   // replace <dd> with <div>
   $('.termDefinition dd').each(function(){
     $(this).replaceWith('<div class="definition">' + $(this).html() + '</div>');
   });
   
+  $('.inner-wrapper').before('<div class="close-button clearfix"><a href="#">Hide</a></div>');
 
-  
 
   // Glossary toggle
   $('.term-list a:not(.active)').click(function() {
@@ -56,6 +56,7 @@ $(document).ready(function() {
   
   // "Hide button"
   $('.close-button a').bind('click', function() {
+    $('.term-list a.active').removeClass('active');
     $('.termDefinition').slideUp();
     return false;
   });

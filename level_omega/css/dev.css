@@ -199,6 +199,15 @@ div.bus_size ul li {
   margin-left: 21px;
 }
 
+body.not-front #main-content .node h2.glossary-title {
+  border-top: 1px dotted #666;
+  padding-top: 21px;
+}
+body.not-front #main-content .node h2.first-glossary {
+  border-top: 0 none;
+  padding-top: 0;
+}
+
 /* terminology list & table (without JS) */
 #main-content .node ul.term-list,
 #main-content .node ul.term-list li {
@@ -214,8 +223,9 @@ div.bus_size ul li {
 #main-content .node dl,
 #main-content .node dl.terminology {
   margin: 0;
-  padding: 0 0 35px 0;
+  padding: 0 0 21px 0;
   background: 0 none;
+
 }
 
 #main-content .node dl.terminology .grid_1 {
@@ -249,19 +259,26 @@ div.bus_size ul li {
 /* glossaryToggle JS */
 #main-content .node div.terminology {
   width: 700px;
-
-  
-  background: #fff url(../images/glossary-top.png) 50% 0 no-repeat; 
+  margin: 0;
+  padding: 0 0 35px 0;
 }
 
 #main-content .node div.terminology .inner-wrapper {
-  background: transparent url(../images/glossary-bottom.png) 50% 100% no-repeat;
+  background: #fff url(../images/glossary-wrapper.png) 50% 100% no-repeat; 
   padding: 0 25px;
+  /*border: 1px solid #ccc;
+  -moz-border-radius-bottomleft: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  -moz-border-radius-bottomright: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  border-bottom-right-radius: 5px;*/
 }
 .close-button {
+  background: #fff url(../images/glossary-wrapper.png) 50% 0 no-repeat; 
   display: block;
   clear: both;
-  padding: 30px 0 0 0;
+  padding: 30px 25px 0 25px;
 }
 .close-button a {
   background: transparent url(../images/icon-close.gif) 100% 50% no-repeat;
@@ -277,6 +294,7 @@ div.bus_size ul li {
 #main-content .node .termDefinition h3.term  {
   font: bold 20px/1.5em Arial, sans-serif;
   padding-bottom: 14px;
+  padding-top: 0;
   color: #21a0e1;
 }
 
