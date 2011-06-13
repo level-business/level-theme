@@ -1,6 +1,7 @@
 /* Layout */
 #page {
   padding-bottom: 42px;
+  position: relative;
 }
 
 #site-header {
@@ -18,10 +19,18 @@ div#branding {
 
 body.not-front #main_wrapper {
   padding-bottom: 0;
+  position: relative;
+}
+
+#header_container,
+#content,
+#footer_wrapper {
+  position: relative;
+  clear: both;
 }
 
 #footer_main {
-  margin-top: 21px;
+  margin-top: 14px;
   padding-top: 21px;
 }
 
@@ -202,10 +211,12 @@ div.bus_size ul li {
 body.not-front #main-content .node h2.glossary-title {
   border-top: 1px dotted #666;
   padding-top: 21px;
+  margin-top: 21px;
 }
 body.not-front #main-content .node h2.first-glossary {
   border-top: 0 none;
   padding-top: 0;
+  margin-top: 0;
 }
 
 /* terminology list & table (without JS) */
@@ -260,7 +271,7 @@ body.not-front #main-content .node h2.first-glossary {
 #main-content .node div.terminology {
   width: 700px;
   margin: 0;
-  padding: 0 0 35px 0;
+  padding: 0;
 }
 
 #main-content .node div.terminology .inner-wrapper {
