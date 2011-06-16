@@ -31,7 +31,6 @@ $(document).ready(function() {
     // match each trigger (term link) with its own definition
     trigger = $(this).attr('href').replace(/#/g, '');
     defClass = '.terminology .' + trigger;
-    currentDefinition = defClass + ':not(.current-term)';
     
     // this term definition is already open
     if ($(this).hasClass('active') ) {
