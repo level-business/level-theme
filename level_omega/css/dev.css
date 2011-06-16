@@ -71,12 +71,12 @@ body.not-front #main-content .node p {
 }
 
 /* heading */
-h1#page-title {
+/*h1#page-title {
   font: bold 20px/1em Arial, sans-serif;
   color: #333;
   text-align: right;
   float: right;
-}
+}*/
 
 body.not-front #main-content .node h2 {
   font: bold 30px/1.25em Arial, sans-serif;
@@ -322,6 +322,11 @@ body.not-front #main-content .node h2.first-glossary {
   border-top: 1px dotted #666;
 }
 
+.node #ceo {
+  border-top: 0 none;
+  padding-top: 0;
+}
+
 .node .staff .staff-content {
   width: 340px;
   float: left;
@@ -532,12 +537,31 @@ body.not-front #main-content .node {
   background: transparent;
 }
 
-#top_bar {
+#top-bar {
+  padding: 20px 0;
+}
+
+.page-faq #top_bar,
+.page-team #top_bar,
+.page-accounts-explained #top_bar,
+.page-work #top_bar,
+.page-work-development-manager #top_bar {
  float: right;
  padding: 20px 0;
  position: absolute;
  right: 0;
  top: 70px;
+}
+
+.page-faq h1#page-title,
+.page-team h1#page-title,
+.page-accounts-explained h1#page-title,
+.page-work h1#page-title,
+.page-work-development-manager h1#page-title {
+  font: bold 20px/1em Arial, sans-serif;
+  color: #333;
+  text-align: right;
+  float: right;
 }
 
 .hidden {
