@@ -939,17 +939,17 @@ page-doc-company-uk-06937730 #main_content_container, #block-views-company_files
 div.bus_size {
 	background-color: #f2f2f2;
 	height: 520px;
-	 -moz-border-radius: 5px 5px 5px 5px;
+	/* -moz-border-radius: 5px 5px 5px 5px;
   dr-webkit-border-radius:5px;
   -moz-box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
   -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
-  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);*/
   background: #FFFFFF;
-  background: -moz-linear-gradient(top, #FFFFFF , #EFEFEF);
+  /*background: -moz-linear-gradient(top, #FFFFFF , #EFEFEF);
   background: -webkit-gradient(linear,
                 left top, left bottom, from(#FFFFFF), to(#EFEFEF));
        filter: progid:DXImageTransform.Microsoft.Gradient(
-                StartColorStr='#FFFFFF', EndColorStr='#EFEFEF', GradientType=0);
+                StartColorStr='#FFFFFF', EndColorStr='#EFEFEF', GradientType=0);*/
   margin-top: 20px;
   margin-bottom: 20px;
 	}
