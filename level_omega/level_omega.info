@@ -23,6 +23,7 @@ stylesheets[all][] = css/dev.css
 scripts[] = js/fb-connect.js
 scripts[] = js/superfish.js
 scripts[] = js/dev.js
+scripts[] = js/level_req_login.js
 
 ; ------- Declare default theme regions
 

@@ -156,6 +156,11 @@ input#edit-delete
   border: 1px solid #ccc;
 }
 
+/* error input */
+input.error {
+  border: 1px solid red !important;
+}
+
 /* compact form */
 .compact-form-label {
     font-size: 0.9em;
@@ -210,7 +215,8 @@ input#edit-delete
 }
 
 /* user login page */
-.section-user #main-content {
+.page-user #main-content,
+.page-user-login #main-content {
   width: 420px;
   margin: 0 140px;
 }

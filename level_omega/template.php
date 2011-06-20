@@ -226,6 +226,13 @@ function level_omega_preprocess_page(&$vars, $hook) {
     $vars['main_content_attributes']['typeof'] = 'v:Person';
   }
   
+  /* unset module dialog ui */
+  if (module_exists('level_tagging')) {
+    $scripts = drupal_add_js();
+    unset($scripts['module']['sites/all/modules/level-platform/js/level_req_login.js']);
+    $vars['scripts'] = drupal_get_js('header', $scripts);
+  }
+  
 }
 
 
