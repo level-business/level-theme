@@ -121,14 +121,8 @@ input#edit-delete
 	font-weight: bold;
 	font-size: 1.2em;
 	padding: 5px;
-	border: 2px solid #FFF;
 	cursor: pointer;
-}
-
-input#edit-submit:hover,
-input#edit-delete:hover
-{
-	border: 2px solid #999;
+	border: 0 none;
 }
 
 #user-register .description {
@@ -213,4 +207,50 @@ input#edit-delete:hover
 
 .page-login-opts #main-content .item-list ul li.standard-registration-option a {
   background: transparent url(../images/button-standard-register.gif) 50% 50% no-repeat;
+}
+
+/* user login page */
+.section-user #main-content {
+  width: 420px;
+  margin: 0 140px;
+}
+
+form#user-login .description {
+  display: none;
+}
+
+#main-content form#user-login {
+  width: 330px;
+  margin: 10px 45px;
+}
+
+#main-content form#user-login input#edit-submit {
+  width: 330px;
+  height: 60px;
+  padding: 0;
+  background: transparent url(../images/button-blue-login.gif) 50% 50% no-repeat;
+  text-indent: -9999em;
+}
+
+.section-user #main-content .item-list ul,
+.section-user #main-content .item-list ul li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.section-user #main-content .item-list ul li {
+  padding: 0 0 0 0;
+}
+
+.section-user #main-content .item-list ul li a {
+  display: block;
+  width: 330px;
+  height: 60px;
+  padding: 0;
+  text-indent: -9999em;
+}
+
+.section-user #main-content .item-list ul li.linkedin-auth-login-link-drupal-login-page a {
+  background: transparent url(../images/button-linkedin-login.gif) 50% 50% no-repeat;
 }

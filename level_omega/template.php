@@ -346,10 +346,8 @@ function level_omega_form_element($element, $value) {
   if (!empty($element['#description'])) {
     $output .= ' <div class="description">'. $element['#description'] ."</div>\n";
   }
-
-  $output .= " $value\n";
-
-
+  
+  $output .= "$value\n";
 
   $output .= "</div>\n";
 
