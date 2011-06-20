@@ -1,7 +1,15 @@
 @CHARSET "UTF-8";
-/* some changes for the register page */
-body.page-register #top_bar {
+/* some changes for the user related paged */
+body.page-user #top_bar,
+body.page-user-login #top_bar,
+body.page-login-opts #top_bar,
+body.page-user-password #top_bar,
+body.page-register #top_bar,
+body.page-user-register #top_bar,
+body.section-users #top_bar {
 	background-color: inherit;
+	padding: 10px 0;
+
 }
 
 body.page-register #main_wrapper {
@@ -9,8 +17,22 @@ body.page-register #main_wrapper {
   margin-bottom: 20px;
 }
 
+/* Page titles */
+body.page-user h1.title,
+body.page-register h1.title,
+body.page-user-register h1.title,
+body.page-user-login h1.title,
+body.page-login-opts h1.title,
+body.page-user-password h1.title,
+body.section-users h1.title {
+    color: #333333;
+    font: 100px/1em Georgia,'Adobe Garamond Pro',serif;
+    margin: 0 0 21px 0;
+    padding: 21px 0 !important;
+    border-bottom: 1px solid #333 !important;
+}
+
 #main-content form {
-	padding-left: 10px;
 	padding-bottom: 20px;
 }
 
@@ -20,10 +42,21 @@ body.page-register #main_wrapper {
 	display: none;
 }
 
-label {
-	font-size: 1.6em;
+#user-register .form-item {
+  margin: 0 0 21px 0;
+}
+
+label,
+p.intro-text {
+	font-size: 30px;
+	line-height: 1.2em;
 	font-weight: bold;
-	color: #4fa7e2;
+	color: #21a0e1;
+	padding-top: 14px;
+}
+
+p.intro-text {
+	padding: 21px 0;
 }
 
 #user-register .simplenews label,
@@ -31,7 +64,7 @@ label {
 {
 	font-size: 0.8em;
 	font-weight: normal;
-	color: #999;
+	color: #fff;
 }
 
 #user-register #edit-pass-pass1-wrapper label,
@@ -45,8 +78,19 @@ label {
 	padding-top:3px;
 }
 
-#user-register input {
-	border: 1px solid #999;
+#user-register #edit-pass-wrapper #edit-pass-pass1-wrapper {
+  margin: 0 0 0 0;
+}
+
+#user-login input.form-text,
+#user-register input.form-text,
+#user-pass input.form-text {
+	border: 1px solid #ccc;
+	padding: 10px;
+	background: #ffe;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
 }
 
 #user-login label .form-required,
@@ -58,7 +102,7 @@ label {
 }
 
 #user-register input.form-text {
-	width: 50%;
+	width: 340px;
 	height: 20px;
 }
 
@@ -66,14 +110,13 @@ label {
 #user-register input#edit-mail,
 #user-register textarea
 {
-	width: 100%;
-	margin-top: 10px;
+	width: 340px;
 }
 
 input#edit-submit, 
 input#edit-delete 
 {
-	background-color: #4fa7e2;
+	background-color: #21a0e1;
 	color: #FFF;
 	font-weight: bold;
 	font-size: 1.2em;
@@ -93,12 +136,37 @@ input#edit-delete:hover
 	line-height: 1.6em;
 	margin-bottom: 5px;
 	margin-top: 5px;
+	color: #333;
 }
 
+
+#user-register #edit-legal-accept-wrapper,
 #user-register #edit-simplenews-1-wrapper {
-  margin-top: 0px;
+  margin-bottom: 5px;
+  padding: 5px 10px;
+  background: #21a0e1;
+  color: #fff;
+  width: 680px;
+}
+#user-register #edit-legal-accept-wrapper {
+  background: #70c057;
 }
 
-#user-register #edit-legal-accept-wrapper {
-  margin-bottom: 0px;
+#user-register input#edit-profile-company-name {
+  width: 678px;
+}
+
+#edit-conditions-wrapper textarea {
+  width: 678px;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+/* compact form */
+.compact-form-label {
+    font-size: 0.9em;
+    left: 10px;
+    position: absolute;
+    top: 10px;
+    z-index: 1;
 }
