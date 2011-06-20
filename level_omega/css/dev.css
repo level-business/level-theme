@@ -129,7 +129,7 @@ body.not-front #main-content .node h4 {
 
 /* tabulation */
 div.bus_size {
-  -moz-bix-shadow: 0 0 0 transparent;
+  -moz-box-shadow: 0 0 0 transparent;
   -webkit-box-shadow: 0 0 0 transparent;
   box-shadow: 0 0 0 transparent;
   background: #fff url(../images/tabular-top.gif) 50% 0 no-repeat;
