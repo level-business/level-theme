@@ -118,7 +118,7 @@
      <?php  if ($top_bar || arg(1) == 'person'): // TOP bar used in place of standard page title ?>
         <?php print $top_bar; ?>
      <?php else:?>
-       <h1 class="title" id="page-title"><?php print t('Forget password.'); ?></h1>
+       <h1 class="title" id="page-title"><?php print t('Login.'); ?></h1>
      <?php endif;  ?>       
      </div>
    <?php endif; ?>
@@ -144,8 +144,16 @@
       
 
  
-      <div id="main-content" class="">
+      <div id="main-content" class="clearfix">
         <?php print $content; ?>
+
+        <div class="item-list additional">
+          <div class="no-account-text">Don't have an account with LevelBusiness yet?</div>
+          <ul>
+            <li class="standard-registration-option first last"><a href="/user/register">Register</a></li>
+          </ul>
+        </div>
+        
       </div><!-- /#main-content -->
       <?php if($content_bottom): ?>
         <div id="content-bottom">

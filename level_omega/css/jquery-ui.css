@@ -208,23 +208,43 @@ body .ui-dialog-content .dialog-links-wrapper {
   margin: 0 45px;
 }
 
+.dialog-links li {
+  text-align: center;
+}
+
 .dialog-links a {
   display: block;
-  width: 330px;
-  height: 60px;
-  margin: 0 45px 10px 45px;
-  text-indent: -9999em;
+  width: 329px;
+  height: 36px;
+  padding: 6px 0 18px 0;
+  margin: 5px 45px;
+  font: bold 30px/36px Arial, sans-serif;
+  letter-spacing: -1px;
+  text-align: center;
+  color: #21a0e1;
 }
 
 .dialog-links li.linkedin-login a {
-  background: transparent url(../images/button-linkedin-login.gif) 50% 50% no-repeat;
+  background: transparent url(../images/form-buttons.gif) -330px 0 no-repeat;
+  text-align: left;
+  letter-spacing: -1px;
+  width: 273px;
+  padding-left: 56px;
+  color: #333;
 }
-.dialog-links li.standard-login a {
-  background: transparent url(../images/button-standard-login.gif) 50% 50% no-repeat;
+.dialog-links li.linkedin-login a:hover {
+  background: transparent url(../images/form-buttons.gif) -330px -60px no-repeat;
 }
+
+.dialog-links li.standard-login a,
 .dialog-links li.register a {
-  background: transparent url(../images/button-standard-register.gif) 50% 50% no-repeat;
+  background: transparent url(../images/form-buttons.gif) 0 0 no-repeat;
 }
+.dialog-links li.standard-login a:hover,
+.dialog-links li.register a:hover {
+    background: transparent url(../images/form-buttons.gif) 0 -60px no-repeat;
+}
+
 
 .ui-dialog-content p.register-intro {
   background: transparent url(../images/shadow-420.gif) 50% 0 no-repeat; 

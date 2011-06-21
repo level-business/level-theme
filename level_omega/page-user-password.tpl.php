@@ -118,7 +118,7 @@
      <?php  if ($top_bar || arg(1) == 'person'): // TOP bar used in place of standard page title ?>
         <?php print $top_bar; ?>
      <?php else:?>
-       <h1 class="title" id="page-title"><?php print t('Login.'); ?></h1>
+       <h1 class="title" id="page-title"><?php print t('Password.'); ?></h1>
      <?php endif;  ?>       
      </div>
    <?php endif; ?>

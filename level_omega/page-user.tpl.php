@@ -118,7 +118,7 @@
      <?php  if ($top_bar || arg(1) == 'person'): // TOP bar used in place of standard page title ?>
         <?php print $top_bar; ?>
      <?php else:?>
-       <h1 class="title" id="page-title"><?php print t('Login.'); ?></h1>
+       <h1 class="title" id="page-title"><?php print $title; ?></h1>
      <?php endif;  ?>       
      </div>
    <?php endif; ?>
@@ -134,6 +134,10 @@
    ?>
 
    <div id="main_wrapper" class="<?php print $content_classes; ?> clearfix">
+   
+    <?php if ($tabs): ?>
+       <div id="content-tabs" class=""><?php print $tabs; ?></div><!-- /#content-tabs -->
+     <?php endif; ?>
  
      <?php if($content_top): ?>
        <div id="content-top">
