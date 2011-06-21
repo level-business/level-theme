@@ -6,7 +6,8 @@ body.page-login-opts #top_bar,
 body.page-user-password #top_bar,
 body.page-register #top_bar,
 body.page-user-register #top_bar,
-body.section-users #top_bar {
+body.section-users #top_bar,
+body.section-linkedin #top_bar {
 	background-color: inherit;
 	padding: 10px 0 0 0;
 
@@ -24,7 +25,8 @@ body.page-user-register h1.title,
 body.page-user-login h1.title,
 body.page-login-opts h1.title,
 body.page-user-password h1.title,
-body.section-users h1.title {
+body.section-users h1.title,
+body.section-linkedin h1.title {
     color: #333333;
     font: 100px/1em Georgia,'Adobe Garamond Pro',serif;
     margin: 0;
@@ -75,7 +77,7 @@ p.intro-text {
 	font-size: 0.9em;
 	font-weight: normal;
 	color: #999;
-	padding-top:3px;
+	padding-top:7px;
 }
 
 #user-register #edit-pass-wrapper #edit-pass-pass1-wrapper {
@@ -367,4 +369,29 @@ span#forgot_password a:hover {
   font-size: 0.9em;
 }
 
+/* Connect page */
+.associate-existing-acc-link {
+  display: none;
+}
 
+.linkedin-button {
+  display: block;
+  clear: both;
+  padding: 0 185px 21px 185px;
+  background: transparent url(../images/shadow-420.gif) 50% 100% no-repeat;
+}
+
+.linkedin-button a {
+  background: transparent url(../images/form-buttons.gif) -330px 0 no-repeat;
+  display: block;
+  height: 36px;
+  font: bold 30px/36px Arial, sans-serif;
+  text-align: left;
+  letter-spacing: -1px;
+  width: 273px;
+  padding: 6px 0 18px 56px;
+  color: #333;
+}
+.linkedin-button a:hover {
+  background: transparent url(../images/form-buttons.gif) -330px -60px no-repeat;
+}
