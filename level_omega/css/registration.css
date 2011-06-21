@@ -381,7 +381,12 @@ span#forgot_password a:hover {
   background: transparent url(../images/shadow-420.gif) 50% 100% no-repeat;
 }
 
-.linkedin-button a {
+.section-user .linkedin-button {
+  background: transparent;
+}
+
+.linkedin-button a,
+.section-user #main-content .item-list ul li.linkedin-button a {
   background: transparent url(../images/form-buttons.gif) -330px 0 no-repeat;
   display: block;
   height: 36px;
@@ -392,6 +397,7 @@ span#forgot_password a:hover {
   padding: 6px 0 18px 56px;
   color: #333;
 }
-.linkedin-button a:hover {
+.linkedin-button a:hover,
+.section-user #main-content .item-list ul li.linkedin-button a:hover {
   background: transparent url(../images/form-buttons.gif) -330px -60px no-repeat;
 }

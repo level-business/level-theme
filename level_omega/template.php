@@ -360,3 +360,14 @@ function level_omega_form_element($element, $value) {
 
   return $output;
 }
+
+function level_omega_linkedin_auth_display_login_block_button($display = NULL, $path = 'linkedin/login/0', $text = 'Login with LinkedIn') {
+  drupal_add_css(drupal_get_path('module', 'linkedin_auth') . '/linkedin_auth.css', 'module');
+  $data = l(t($text), $path);
+  $class = 'linkedin-button';
+  $items[] = array(
+      'data' => $data,
+      'class' => $class,
+  );
+  return theme('item_list', $items);
+}
