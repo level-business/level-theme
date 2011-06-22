@@ -118,7 +118,7 @@
      <?php  if ($top_bar || arg(1) == 'person'): // TOP bar used in place of standard page title ?>
         <?php print $top_bar; ?>
      <?php else:?>
-       <h1 class="title" id="page-title"><?php print t('Register.'); ?></h1>
+       <h1 class="title" id="page-title"><?php print $obj['title']; ?></h1>
      <?php endif;  ?>       
      </div>
    <?php endif; ?>
@@ -134,19 +134,16 @@
    ?>
 
    <div id="main_wrapper" class="<?php print $content_classes; ?> clearfix">
- 
+
      <?php if($content_top): ?>
        <div id="content-top">
           <?php print $content_top; ?>
        </div><!-- /#content-top -->
       <?php endif; ?>
- 
-      
 
- 
       <div id="main-content" class="">
-        <p class="intro-text">In order for us to know where to connect your linkedIn account, you also need to register.</p>
-        <?php print $content; ?>
+      
+        <?php print $obj['content']; ?>
       </div><!-- /#main-content -->
       <?php if($content_bottom): ?>
         <div id="content-bottom">

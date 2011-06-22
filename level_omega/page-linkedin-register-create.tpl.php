@@ -118,7 +118,7 @@
      <?php  if ($top_bar || arg(1) == 'person'): // TOP bar used in place of standard page title ?>
         <?php print $top_bar; ?>
      <?php else:?>
-       <h1 class="title" id="page-title"><?php print t('Register.'); ?></h1>
+       <h1 class="title" id="page-title"><?php print $title; ?></h1>
      <?php endif;  ?>       
      </div>
    <?php endif; ?>
@@ -145,7 +145,11 @@
 
  
       <div id="main-content" class="">
-        <p class="intro-text">In order for us to know where to connect your linkedIn account, you also need to register.</p>
+      
+        <p class="intro-text">Please Login so that we can identify the account you want to connect to LinkedIn.</p>
+        <div class="associate-existing-acc-link linkedin-button"><a href="/user/login">Link your account</a></div>
+        <p class="intro-text">If you don't yet have a LevelBusiness account to connect to then please register.</p>
+        
         <?php print $content; ?>
       </div><!-- /#main-content -->
       <?php if($content_bottom): ?>

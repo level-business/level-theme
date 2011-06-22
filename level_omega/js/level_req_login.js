@@ -17,7 +17,7 @@ Drupal.behaviors.level_platform = function (context) {
 		var $dialog = $('<div></div>')
 		
 		// Create Level text & links
-		.html('<p class="intro-text">To save a company you need to register or login</p><div class="dialog-links-wrapper"><ul class="dialog-links"><li class="linkedin-login"><a href="'+ linkedInPath +'">Login using LinkedIn</a></li><li class="standard-login"><a href="'+ loginPath +'">Login</a></li></ul><p class="register-intro">Do not have an account with LevelBusiness yet?</p><ul class="dialog-links"><li class="register"><a href="'+ registerPath +'">Register</a></li></ul></div>')
+		.html('<p class="intro-text">To save a company profile you need to register or login</p><div class="dialog-links-wrapper"><ul class="dialog-links"><li class="linkedin-login"><a href="'+ linkedInPath +'">Login with LinkedIn</a></li><li class="standard-login"><a href="'+ loginPath +'">Login</a></li></ul><p class="register-intro">Do not have an account with LevelBusiness yet?</p><ul class="dialog-links"><li class="register"><a href="'+ registerPath +'">Register</a></li></ul></div>')
 
 
 		// Create a dialog box 

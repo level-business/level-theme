@@ -6,9 +6,10 @@ body.page-login-opts #top_bar,
 body.page-user-password #top_bar,
 body.page-register #top_bar,
 body.page-user-register #top_bar,
-body.section-users #top_bar {
+body.section-users #top_bar,
+body.section-linkedin #top_bar {
 	background-color: inherit;
-	padding: 10px 0;
+	padding: 10px 0 0 0;
 
 }
 
@@ -24,11 +25,12 @@ body.page-user-register h1.title,
 body.page-user-login h1.title,
 body.page-login-opts h1.title,
 body.page-user-password h1.title,
-body.section-users h1.title {
+body.section-users h1.title,
+body.section-linkedin h1.title {
     color: #333333;
     font: 100px/1em Georgia,'Adobe Garamond Pro',serif;
-    margin: 0 0 21px 0;
-    padding: 21px 0 !important;
+    margin: 0;
+    padding: 10px 0 21px 0 !important;
     border-bottom: 1px solid #333 !important;
 }
 
@@ -46,7 +48,8 @@ body.section-users h1.title {
   margin: 0 0 21px 0;
 }
 
-label,
+.section-user #main-content #user-login label,
+#user-register label,
 p.intro-text {
 	font-size: 30px;
 	line-height: 1.2em;
@@ -60,7 +63,7 @@ p.intro-text {
 }
 
 #user-register .simplenews label,
-#edit-legal-accept-wrapper label
+.not-logged-in #edit-legal-accept-wrapper label
 {
 	font-size: 0.8em;
 	font-weight: normal;
@@ -75,7 +78,7 @@ p.intro-text {
 	font-size: 0.9em;
 	font-weight: normal;
 	color: #999;
-	padding-top:3px;
+	padding-top:7px;
 }
 
 #user-register #edit-pass-wrapper #edit-pass-pass1-wrapper {
@@ -86,8 +89,11 @@ p.intro-text {
 #user-register input.form-text,
 #user-pass input.form-text {
 	border: 1px solid #ccc;
-	padding: 10px;
-	background: #ffe;
+	padding: 14px;
+	width: 300px;
+	font-size: 14px;
+	line-height: 1em;
+	background: #fffafa;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
 	border-radius: 5px;
@@ -156,6 +162,23 @@ input#edit-delete
   border: 1px solid #ccc;
 }
 
+#user-register input#edit-submit {
+  display: block;
+  border: 0 none;
+  width: 329px;
+  height: 60px;
+  padding: 6px 0 18px 0;
+  font: bold 30px/36px Arial, sans-serif;
+  letter-spacing: -1px;
+  text-align: center;
+  color: #fff;
+  background: transparent url(../images/form-buttons.gif) -660px 0 no-repeat;
+  margin: 21px 0 0 185px;
+}
+#user-register input#edit-submit:hover {
+  background: transparent url(../images/form-buttons.gif) -660px -60px no-repeat;
+}
+
 /* error input */
 input.error {
   border: 1px solid red !important;
@@ -184,35 +207,61 @@ input.error {
 }
 
 .page-login-opts #main-content .item-list ul li {
-  padding: 0 0 21px 0;
+  padding: 0 0 15px 0;
+}
+.page-login-opts #main-content .item-list ul li.last {
+  padding-bottom: 10px;
 }
 
 .page-login-opts #main-content .item-list ul li a {
   display: block;
-  width: 330px;
-  height: 60px;
-  margin: 0 45px;
-  text-indent: -9999em;
+  width: 329px;
+  height: 36px;
+  padding: 6px 0 18px 0;
+  margin: 5px 45px;
+  font: bold 30px/36px Arial, sans-serif;
+  letter-spacing: -1px;
+  text-align: center;
+  color: #21a0e1;
 }
 
 .page-login-opts .no-account-text {
   width: 330px;
   padding: 35px 45px 7px 45px;
+  margin: 5px 0;
   color: #333;
   background: transparent url(../images/shadow-420.gif) 50% 0 no-repeat;
+  font-size: 0.9em;
+}
+
+.page-login-opts #main-content .item-list ul li.linkedin-login-option {
+  padding-top: 40px;
 }
 
 .page-login-opts #main-content .item-list ul li.linkedin-login-option a {
-  background: transparent url(../images/button-linkedin-login.gif) 50% 50% no-repeat;
+  background: transparent url(../images/form-buttons.gif) -330px 0 no-repeat;
+  text-align: left;
+  width: 273px;
+  padding-left: 56px;
+  color: #333;
+  letter-spacing: -2px;
+}
+.page-login-opts #main-content .item-list ul li.linkedin-login-option a:hover {
+  background: transparent url(../images/form-buttons.gif) -330px -60px no-repeat;
 }
 
-.page-login-opts #main-content .item-list ul li.standard-login-option a {
-  background: transparent url(../images/button-standard-login.gif) 50% 50% no-repeat;
-}
-
+.page-login-opts #main-content .item-list ul li.standard-login-option a,
 .page-login-opts #main-content .item-list ul li.standard-registration-option a {
-  background: transparent url(../images/button-standard-register.gif) 50% 50% no-repeat;
+  background: transparent url(../images/form-buttons.gif) 0 0 no-repeat;
+  color: #21a0e1;
 }
+.page-login-opts #main-content .item-list ul li.standard-login-option a:hover,
+.page-login-opts #main-content .item-list ul li.standard-registration-option a:hover {
+  background: transparent url(../images/form-buttons.gif) 0 -60px no-repeat;
+  color: #333;
+}
+
+
 
 /* user login page */
 .page-user #main-content,
@@ -221,21 +270,32 @@ input.error {
   margin: 0 140px;
 }
 
-form#user-login .description {
-  display: none;
-}
-
 #main-content form#user-login {
   width: 330px;
-  margin: 10px 45px;
+  margin: 0 45px;
 }
 
-#main-content form#user-login input#edit-submit {
-  width: 330px;
-  height: 60px;
-  padding: 0;
-  background: transparent url(../images/button-blue-login.gif) 50% 50% no-repeat;
+form#user-login .description {
+  height: 0;
   text-indent: -9999em;
+}
+
+#main-content form#user-login #edit-pass-wrapper {
+  margin-bottom: 0;
+}
+
+span#forgot_password {
+  display: block;
+  clear: both;
+  margin: 5px 0 21px 0;
+}
+span#forgot_password a {
+  color: #f00;
+  font-size: 0.9em;
+}
+
+span#forgot_password a:hover {
+  color: #333;
 }
 
 .section-user #main-content .item-list ul,
@@ -246,17 +306,144 @@ form#user-login .description {
 }
 
 .section-user #main-content .item-list ul li {
-  padding: 0 0 0 0;
+  padding: 0 0 5px 0;
 }
 
-.section-user #main-content .item-list ul li a {
+.section-user #main-content .item-list ul li a,
+#main-content form#user-login input#edit-submit {
   display: block;
-  width: 330px;
-  height: 60px;
-  padding: 0;
-  text-indent: -9999em;
+  width: 329px;
+  height: 36px;
+  padding: 6px 0 18px 0;
+  font: bold 30px/36px Arial, sans-serif;
+  text-align: center;
+  letter-spacing: -1px;
 }
 
+/* Login button */
+#main-content form#user-login input#edit-submit {
+  background: transparent url(../images/form-buttons.gif) -660px 0 no-repeat;
+  text-align: center;
+  height: 60px;
+  color: #fff;
+}
+#main-content form#user-login input#edit-submit:hover {
+  background: transparent url(../images/form-buttons.gif) -660px -60px no-repeat;
+}
+
+/* LinkedIn button*/
 .section-user #main-content .item-list ul li.linkedin-auth-login-link-drupal-login-page a {
-  background: transparent url(../images/button-linkedin-login.gif) 50% 50% no-repeat;
+  background: transparent url(../images/form-buttons.gif) -330px 0 no-repeat;
+  text-align: left;
+  letter-spacing: -2px;
+  width: 273px;
+  padding-left: 56px;
+  color: #333;
+}
+.section-user #main-content .item-list ul li.linkedin-auth-login-link-drupal-login-page a:hover {
+  background: transparent url(../images/form-buttons.gif) -330px -60px no-repeat;
+}
+
+
+.section-user #main-content .item-list ul li.standard-registration-option a {
+  background: transparent url(../images/form-buttons.gif) 0 0 no-repeat;
+  color: #21a0e1;
+}
+.section-user #main-content .item-list ul li.standard-registration-option a:hover {
+  background: transparent url(../images/form-buttons.gif) 0 -60px no-repeat;
+}
+
+.section-user #main-content form {
+  padding-bottom: 7px;
+}
+
+.section-user #main-content .additional {
+  padding: 0 45px;
+  width: 330px;
+  clear: both;
+  background: transparent url(../images/shadow-420.gif) 50% 0 no-repeat;
+}
+
+.section-user #main-content .additional .no-account-text {
+  padding: 21px 0 7px 0;
+  color: #333;
+  font-size: 0.9em;
+}
+
+/* Connect page */
+.associate-existing-acc-link {
+  display: none;
+}
+
+.linkedin-button {
+  display: block;
+  clear: both;
+  padding: 0 185px 21px 185px;
+  background: transparent url(../images/shadow-420.gif) 50% 100% no-repeat;
+}
+
+.section-user .linkedin-button {
+  background: transparent;
+}
+
+.linkedin-button a,
+.section-user #main-content .item-list ul li.linkedin-button a {
+  background: transparent url(../images/form-buttons.gif) -330px 0 no-repeat;
+  display: block;
+  height: 36px;
+  font: bold 30px/36px Arial, sans-serif;
+  text-align: left;
+  letter-spacing: -1px;
+  width: 273px;
+  padding: 6px 0 18px 56px;
+  color: #333;
+}
+.linkedin-button a:hover,
+.section-user #main-content .item-list ul li.linkedin-button a:hover {
+  background: transparent url(../images/form-buttons.gif) -330px -60px no-repeat;
+}
+
+/* Linked edit profile (JS elements) */
+#linkedinDialog {
+  text-align: center;
+  width: 700px;
+  background: transparent url(../images/black-50-opacity.png) 0 0 repeat;
+  position: absolute;
+  z-index: 999;
+}
+.section-user #linkedinDialog .linkedin-button {
+  padding: 40px 0 60px 0;
+  background: transparent url(../images/black-50-opacity.png) 0 0 repeat;
+}
+
+#linkedinDialog .linkedin-button h2 {
+  font: bold 40px/50px Arial, sans-serif;
+  color: #fff;
+  margin-bottom: 21px;
+}
+
+.section-user #linkedinDialog .linkedin-button a {
+  background: transparent url(../images/button-linkedin-transparent.png) 50% 0 no-repeat;
+  margin-left: 185px;
+}
+.section-user #linkedinDialog .linkedin-button a:hover {
+  color: #21A0E1;
+}
+
+#linkedinDialog #refuse {
+  padding: 20px;
+}
+
+#linkedinDialog #refuse a {
+  display: block;
+  height: 36px;
+  font: bold 30px/36px Arial, sans-serif;
+  letter-spacing: -1px;
+  width: 200px;
+  padding: 8px 0 6px 0;
+  margin: 0 230px;
+  background: transparent url(../images/button-grey-200.png) 50% 0 no-repeat;
+}
+#linkedinDialog #refuse a:hover {
+  background: transparent url(../images/button-grey-200.png) 50% 100% no-repeat;
 }
