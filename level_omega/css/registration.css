@@ -48,7 +48,7 @@ body.section-linkedin h1.title {
   margin: 0 0 21px 0;
 }
 
-label,
+#user-register label,
 p.intro-text {
 	font-size: 30px;
 	line-height: 1.2em;
@@ -62,7 +62,7 @@ p.intro-text {
 }
 
 #user-register .simplenews label,
-#edit-legal-accept-wrapper label
+.not-logged-in #edit-legal-accept-wrapper label
 {
 	font-size: 0.8em;
 	font-weight: normal;
@@ -400,4 +400,49 @@ span#forgot_password a:hover {
 .linkedin-button a:hover,
 .section-user #main-content .item-list ul li.linkedin-button a:hover {
   background: transparent url(../images/form-buttons.gif) -330px -60px no-repeat;
+}
+
+/* Linked edit profile (JS elements) */
+#linkedinDialog {
+  text-align: center;
+  width: 700px;
+  background: transparent url(../images/black-50-opacity.png) 0 0 repeat;
+  position: absolute;
+  z-index: 999;
+}
+.section-user #linkedinDialog .linkedin-button {
+  padding: 40px 0 60px 0;
+  background: transparent url(../images/black-50-opacity.png) 0 0 repeat;
+}
+
+#linkedinDialog .linkedin-button h2 {
+  font: bold 40px/50px Arial, sans-serif;
+  color: #fff;
+  margin-bottom: 21px;
+}
+
+.section-user #linkedinDialog .linkedin-button a {
+  background: transparent url(../images/button-linkedin-transparent.png) 50% 0 no-repeat;
+  margin-left: 185px;
+}
+.section-user #linkedinDialog .linkedin-button a:hover {
+  color: #21A0E1;
+}
+
+#linkedinDialog #refuse {
+  padding: 20px;
+}
+
+#linkedinDialog #refuse a {
+  display: block;
+  height: 36px;
+  font: bold 30px/36px Arial, sans-serif;
+  letter-spacing: -1px;
+  width: 200px;
+  padding: 8px 0 6px 0;
+  margin: 0 230px;
+  background: transparent url(../images/button-grey-200.png) 50% 0 no-repeat;
+}
+#linkedinDialog #refuse a:hover {
+  background: transparent url(../images/button-grey-200.png) 50% 100% no-repeat;
 }

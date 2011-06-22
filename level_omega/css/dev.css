@@ -24,9 +24,14 @@ body.not-front #main_wrapper {
 
 #header_container,
 #content,
+#main-content,
 #footer_wrapper {
   position: relative;
   clear: both;
+}
+
+#main_content_container {
+ position: relative;
 }
 
 #footer_main {

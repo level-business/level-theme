@@ -122,6 +122,22 @@ function level_omega_preprocess(&$vars, $hook) {
     break;
     
   }
+
+  /* Check LinkedIn account associated */
+  /* See linkedin.inc module file linkedin_get_profile_fields() */
+  
+  if (module_exists('linkedin')) {
+    global $user;
+    
+    $vars['user'] = $user->uid;
+    
+	  $associated = db_fetch_array(db_query("SELECT * FROM {linkedin_token} WHERE uid = %d AND type = 'access'", $vars['user']));
+	   // if drupal account was not associated 
+	   if (!$associated) {
+	     // add js to show dialog box which has link to linkedin
+       drupal_add_js(drupal_get_path('theme', 'level_omega').'/js/linkedin-connect.js', 'theme', 'header');
+	   }
+	}
   
 
 }
@@ -232,8 +248,9 @@ function level_omega_preprocess_page(&$vars, $hook) {
     unset($scripts['module']['sites/all/modules/level-platform/js/level_req_login.js']);
     $vars['scripts'] = drupal_get_js('header', $scripts);
   }
-  
+
 }
+
 
 
 /**
@@ -361,6 +378,7 @@ function level_omega_form_element($element, $value) {
   return $output;
 }
 
+/* Override LinkedIn button text to "Login with LinkedIn" */
 function level_omega_linkedin_auth_display_login_block_button($display = NULL, $path = 'linkedin/login/0', $text = 'Login with LinkedIn') {
   drupal_add_css(drupal_get_path('module', 'linkedin_auth') . '/linkedin_auth.css', 'module');
   $data = l(t($text), $path);
