@@ -241,13 +241,6 @@ function level_omega_preprocess_page(&$vars, $hook) {
   elseif (arg(1) == 'person') {
     $vars['main_content_attributes']['typeof'] = 'v:Person';
   }
-  
-  /* unset module dialog ui */
-  if (module_exists('level_tagging')) {
-    $scripts = drupal_add_js();
-    unset($scripts['module']['sites/all/modules/level-platform/js/level_req_login.js']);
-    $vars['scripts'] = drupal_get_js('header', $scripts);
-  }
 
   // Dynamic insert additional content and change page titles for anonymous user.
   $vars['obj'] = _level_omega_user_form_elements($vars['obj'] = array(), $vars['title'], $vars['content'], $vars['tabs']);
