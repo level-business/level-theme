@@ -249,6 +249,9 @@ function level_omega_preprocess_page(&$vars, $hook) {
     $vars['scripts'] = drupal_get_js('header', $scripts);
   }
 
+  // Dynamic insert additional content and change page titles for anonymous user.
+  $vars['obj'] = _level_omega_user_form_elements($vars['obj'] = array(), $vars['title'], $vars['content'], $vars['tabs']);
+
 }
 
 
@@ -384,8 +387,56 @@ function level_omega_linkedin_auth_display_login_block_button($display = NULL, $
   $data = l(t($text), $path);
   $class = 'linkedin-button';
   $items[] = array(
-      'data' => $data,
-      'class' => $class,
+    'data' => $data,
+    'class' => $class,
   );
   return theme('item_list', $items);
+}
+
+/* Dynamic display page & user form elements */
+function _level_omega_user_form_elements($obj = array(), $title, $content, $tabs) {
+  
+  // Get Drupal paths
+  $path = drupal_get_path_alias($_GET['q']);
+  
+  // Additional content for login page
+  $login_add_contents = '
+    <div class="item-list additional">
+      <div class="no-account-text">Don\'t have an account with LevelBusiness yet?</div>
+      <ul>
+        <li class="standard-registration-option first last"><a href="/user/register">Register</a></li>
+      </ul>
+    </div>
+  ';
+
+  $obj['tabs'] = $tabs;
+  $obj['title'] = $title;
+  $obj['content'] = $content;
+  
+  // Set Drupal paths as arguments
+  list($dest, ) = explode('/', $path, 2);
+  
+  if (arg(0) == 'login-opts') {
+    $obj['tabs'] = '';
+    $obj['title'] = 'Login.';
+  }
+  
+  if (arg(0) == 'user' && (arg(1) == NULL || arg(1) == 'login')) {
+    $obj['tabs'] = '';
+    $obj['title'] = 'Login.';
+    $obj['content'] = $content . $login_add_contents;
+  }
+  
+  if (arg(0) == 'register' && arg(1) == NULL) {
+    $obj['tabs'] = '';
+    $obj['title'] = 'Register.';
+  }
+  
+  if (arg(1) == 'register') {
+    $obj['tabs'] = '';
+    $obj['title'] = 'Register.';
+  }
+
+  return $obj;
+
 }

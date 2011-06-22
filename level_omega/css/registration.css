@@ -48,6 +48,7 @@ body.section-linkedin h1.title {
   margin: 0 0 21px 0;
 }
 
+.section-user #main-content #user-login label,
 #user-register label,
 p.intro-text {
 	font-size: 30px;
