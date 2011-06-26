@@ -1,7 +1,16 @@
 @CHARSET "UTF-8";
-/* some changes for the register page */
-body.page-register #top_bar {
+/* some changes for the user related paged */
+body.page-user #top_bar,
+body.page-user-login #top_bar,
+body.page-login-opts #top_bar,
+body.page-user-password #top_bar,
+body.page-register #top_bar,
+body.page-user-register #top_bar,
+body.section-users #top_bar,
+body.section-linkedin #top_bar {
 	background-color: inherit;
+	padding: 10px 0 0 0;
+
 }
 
 body.page-register #main_wrapper {
@@ -9,9 +18,28 @@ body.page-register #main_wrapper {
   margin-bottom: 20px;
 }
 
+/* Page titles */
+body.page-user h1.title,
+body.page-register h1.title,
+body.page-user-register h1.title,
+body.page-user-login h1.title,
+body.page-login-opts h1.title,
+body.page-user-password h1.title,
+body.section-users h1.title,
+body.section-linkedin h1.title {
+    color: #333333;
+    font: 100px/1em Georgia,'Adobe Garamond Pro',serif;
+    margin: 0;
+    padding: 10px 0 21px 0 !important;
+    border-bottom: 1px solid #333 !important;
+}
+
 #main-content form {
-	padding-left: 10px;
 	padding-bottom: 20px;
+}
+
+#main-content #user-register {
+  padding-top: 10px;
 }
 
 #user-login legend, 
@@ -20,85 +48,425 @@ body.page-register #main_wrapper {
 	display: none;
 }
 
-label {
-	font-size: 1.6em;
+#main-content #user-login .form-item,
+#main-content #user-register .form-item {
+  margin: 0 0 10px 0;
+}
+
+.section-user #main-content #user-login label,
+#user-register label,
+p.intro-text {
+	font-size: 30px;
+	line-height: 1.2em;
 	font-weight: bold;
-	color: #4fa7e2;
+	color: #21a0e1;
+	padding-top: 14px;
+}
+
+p.intro-text {
+	padding: 21px 0;
 }
 
 #user-register .simplenews label,
-#edit-legal-accept-wrapper label
-{
-	font-size: 0.8em;
-	font-weight: normal;
-	color: #999;
-}
-
-#user-register #edit-pass-pass1-wrapper label,
-#user-register #edit-pass-pass2-wrapper label,
-#user-profile-form #edit-pass-pass1-wrapper label,
-#user-profile-form #edit-pass-pass2-wrapper label
+.not-logged-in #edit-legal-accept-wrapper label
 {
 	font-size: 0.9em;
 	font-weight: normal;
+	color: #fff;
+}
+
+#user-register #edit-pass-pass1-wrapper label,
+#user-register #edit-pass-pass2-wrapper label {
+	font-size: 0.9em;
+	font-weight: normal;
 	color: #999;
-	padding-top:3px;
+	padding-top:7px;
 }
 
-#user-register input {
-	border: 1px solid #999;
+#user-register #edit-pass-wrapper #edit-pass-pass1-wrapper {
+  margin: 0 0 0 0;
 }
 
-#user-login label .form-required,
-#user-register label .form-required 
+#main-content #user-login input.form-text,
+#main-content #user-register input.form-text,
+#main-content #user-pass input.form-text {
+	border: 1px solid #ccc;
+	padding: 11px 14px;
+	width: 300px;
+	font-size: 20px;
+	line-height: 1em;
+	background: #fffafa;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+#main-content #user-login label .form-required,
+#main-content #user-register label .form-required 
 {
 	display: none;
 	width: 100%;
 	height: 25px;
 }
 
-#user-register input.form-text {
-	width: 50%;
-	height: 20px;
-}
-
 #user-register input#edit-profile-real-name,
 #user-register input#edit-mail,
 #user-register textarea
 {
-	width: 100%;
-	margin-top: 10px;
+	width: 340px;
 }
 
 input#edit-submit, 
 input#edit-delete 
 {
-	background-color: #4fa7e2;
+	background-color: #21a0e1;
 	color: #FFF;
 	font-weight: bold;
 	font-size: 1.2em;
 	padding: 5px;
-	border: 2px solid #FFF;
 	cursor: pointer;
-}
-
-input#edit-submit:hover,
-input#edit-delete:hover
-{
-	border: 2px solid #999;
+	border: 0 none;
 }
 
 #user-register .description {
 	font-size: 0.85em;
 	line-height: 1.6em;
-	margin-bottom: 5px;
-	margin-top: 5px;
+	margin: 0;
+	color: #333;
 }
 
+
+#user-register #edit-legal-accept-wrapper,
 #user-register #edit-simplenews-1-wrapper {
-  margin-top: 0px;
+  margin-bottom: 5px;
+  padding: 5px 10px;
+  background: #21a0e1;
+  color: #fff;
+  width: 680px;
+}
+#user-register #edit-legal-accept-wrapper {
+  background: #70c057;
 }
 
-#user-register #edit-legal-accept-wrapper {
-  margin-bottom: 0px;
+#user-register input#edit-profile-company-name {
+  width: 678px;
+}
+
+#edit-conditions-wrapper textarea {
+  width: 678px;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+#user-register input#edit-submit {
+  display: block;
+  border: 0 none;
+  width: 329px;
+  height: 60px;
+  padding: 6px 0 18px 0;
+  font: bold 30px/36px Arial, sans-serif;
+  letter-spacing: -1px;
+  text-align: center;
+  color: #fff;
+  background: transparent url(../images/form-buttons.gif) -660px 0 no-repeat;
+  margin: 21px 0 0 185px;
+}
+#user-register input#edit-submit:hover {
+  background: transparent url(../images/form-buttons.gif) -660px -60px no-repeat;
+}
+
+/* error input */
+input.error {
+  border: 1px solid red !important;
+}
+
+#main-content #user-register #edit-mail-wrapper {
+  margin-bottom: 0;
+}
+
+#main-content #user-register .password-strength,
+#main-content #user-register .password-confirm {
+  display: block;
+  clear: both;
+}
+
+span#company_optional {
+  font-weight: normal;
+  color: #81e0ff;
+}
+
+/* /login-opts page */
+.page-login-opts #main-content {
+  width: 420px;
+  margin: 0 140px;
+}
+
+.page-login-opts #main-content .item-list ul,
+.page-login-opts #main-content .item-list ul li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.page-login-opts #main-content .item-list ul li {
+  padding: 0 0 15px 0;
+}
+.page-login-opts #main-content .item-list ul li.last {
+  padding-bottom: 10px;
+}
+
+.page-login-opts #main-content .item-list ul li a {
+  display: block;
+  width: 329px;
+  height: 36px;
+  padding: 6px 0 18px 0;
+  margin: 5px 45px;
+  font: bold 30px/36px Arial, sans-serif;
+  letter-spacing: -1px;
+  text-align: center;
+  color: #21a0e1;
+}
+
+.page-login-opts .no-account-text {
+  width: 330px;
+  padding: 35px 45px 7px 45px;
+  margin: 0 0 5px 0;
+  color: #333;
+  background: transparent url(../images/shadow-420.gif) 50% 0 no-repeat;
+  font-size: 0.9em;
+}
+
+.page-login-opts #main-content .item-list ul li.linkedin-login-option {
+  padding-top: 35px;
+}
+
+.page-login-opts #main-content .item-list ul li.linkedin-login-option a {
+  background: transparent url(../images/form-buttons.gif) -330px 0 no-repeat;
+  text-align: left;
+  width: 273px;
+  padding-left: 56px;
+  color: #333;
+  letter-spacing: -2px;
+}
+.page-login-opts #main-content .item-list ul li.linkedin-login-option a:hover {
+  background: transparent url(../images/form-buttons.gif) -330px -60px no-repeat;
+}
+
+.page-login-opts #main-content .item-list ul li.standard-login-option a,
+.page-login-opts #main-content .item-list ul li.standard-registration-option a {
+  background: transparent url(../images/form-buttons.gif) 0 0 no-repeat;
+  color: #21a0e1;
+}
+.page-login-opts #main-content .item-list ul li.standard-login-option a:hover,
+.page-login-opts #main-content .item-list ul li.standard-registration-option a:hover {
+  background: transparent url(../images/form-buttons.gif) 0 -60px no-repeat;
+  color: #333;
+}
+
+
+
+/* user login page */
+.page-user #main-content,
+.page-user-login #main-content {
+  width: 420px;
+  margin: 0 140px;
+}
+
+#main-content form#user-login {
+  width: 330px;
+  margin: 0 45px;
+  padding-top: 10px;
+}
+
+form#user-login .description {
+  height: 0;
+  text-indent: -9999em;
+}
+
+#main-content form#user-login #edit-pass-wrapper {
+  margin-bottom: 0;
+}
+
+span#forgot_password {
+  display: block;
+  clear: both;
+  margin: 0 0 15px 0;
+}
+span#forgot_password a {
+  color: #f00;
+  font-size: 0.9em;
+}
+
+span#forgot_password a:hover {
+  color: #333;
+}
+
+.not-logged-in.page-user #main-content .item-list ul,
+.not-logged-in.page-user-login #main-content .item-list ul,
+.not-logged-in.page-user #main-content .item-list ul li,
+.not-logged-in.page-user-login #main-content .item-list ul li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.not-logged-in.page-user #main-content .item-list ul li,
+.not-logged-in.page-user-login #main-content .item-list ul li {
+  padding: 0 0 5px 0;
+}
+
+.not-logged-in.page-user #main-content .item-list ul li a,
+.not-logged-in.page-user-login #main-content .item-list ul li a,
+#main-content form#user-login input#edit-submit {
+  display: block;
+  width: 329px;
+  height: 36px;
+  padding: 6px 0 18px 0;
+  font: bold 30px/36px Arial, sans-serif;
+  text-align: center;
+  letter-spacing: -1px;
+}
+
+/* compact form */
+.compact-form-label {
+  top: 5px;
+}
+#main-content #user-login .compact-form-label,
+#main-content #user-register .compact-form-label,
+#main-content #user-password .compact-form-label {
+	font-size: 20px;
+	line-height: 1em;
+  left: 10px;
+  position: absolute;
+  top: 7px;
+  z-index: 1;
+  color: #ccc;
+}
+
+/* Login button */
+#main-content form#user-login input#edit-submit {
+  background: transparent url(../images/form-buttons.gif) -660px 0 no-repeat;
+  text-align: center;
+  height: 60px;
+  color: #fff;
+}
+#main-content form#user-login input#edit-submit:hover {
+  background: transparent url(../images/form-buttons.gif) -660px -60px no-repeat;
+}
+
+/* LinkedIn button*/
+.section-user #main-content .item-list ul li.linkedin-auth-login-link-drupal-login-page a {
+  background: transparent url(../images/form-buttons.gif) -330px 0 no-repeat;
+  text-align: left;
+  letter-spacing: -2px;
+  width: 273px;
+  padding-left: 56px;
+  color: #333;
+}
+.section-user #main-content .item-list ul li.linkedin-auth-login-link-drupal-login-page a:hover {
+  background: transparent url(../images/form-buttons.gif) -330px -60px no-repeat;
+}
+
+
+.section-user #main-content .item-list ul li.standard-registration-option a {
+  background: transparent url(../images/form-buttons.gif) 0 0 no-repeat;
+  color: #21a0e1;
+}
+.section-user #main-content .item-list ul li.standard-registration-option a:hover {
+  background: transparent url(../images/form-buttons.gif) 0 -60px no-repeat;
+}
+
+.section-user #main-content form {
+  padding-bottom: 7px;
+}
+
+.section-user #main-content .additional {
+  padding: 0 45px;
+  width: 330px;
+  clear: both;
+  background: transparent url(../images/shadow-420.gif) 50% 0 no-repeat;
+}
+
+.section-user #main-content .additional .no-account-text {
+  padding: 21px 0 7px 0;
+  color: #333;
+  font-size: 0.9em;
+}
+
+/* Connect page */
+.associate-existing-acc-link {
+  display: none;
+}
+
+.linkedin-button {
+  display: block;
+  clear: both;
+  padding: 0 185px 21px 185px;
+  background: transparent url(../images/shadow-420.gif) 50% 100% no-repeat;
+}
+
+.section-user .linkedin-button {
+  background: transparent;
+}
+
+.linkedin-button a,
+.section-user #main-content .item-list ul li.linkedin-button a {
+  background: transparent url(../images/form-buttons.gif) -330px 0 no-repeat;
+  display: block;
+  height: 36px;
+  font: bold 30px/36px Arial, sans-serif;
+  text-align: left;
+  letter-spacing: -1px;
+  width: 273px;
+  padding: 6px 0 18px 56px;
+  color: #333;
+}
+.linkedin-button a:hover,
+.section-user #main-content .item-list ul li.linkedin-button a:hover {
+  background: transparent url(../images/form-buttons.gif) -330px -60px no-repeat;
+}
+
+/* Linked edit profile (JS elements) */
+#linkedinDialog {
+  text-align: center;
+  width: 700px;
+  background: transparent url(../images/black-50-opacity.png) 0 0 repeat;
+  position: absolute;
+  z-index: 999;
+}
+.section-user #linkedinDialog .linkedin-button {
+  padding: 40px 0 60px 0;
+  background: transparent url(../images/black-50-opacity.png) 0 0 repeat;
+}
+
+#linkedinDialog .linkedin-button h2 {
+  font: bold 40px/50px Arial, sans-serif;
+  color: #fff;
+  margin-bottom: 21px;
+}
+
+.section-user #linkedinDialog .linkedin-button a {
+  background: transparent url(../images/button-linkedin-transparent.png) 50% 0 no-repeat;
+  margin-left: 185px;
+}
+.section-user #linkedinDialog .linkedin-button a:hover {
+  color: #21A0E1;
+}
+
+#linkedinDialog #refuse {
+  padding: 20px;
+}
+
+#linkedinDialog #refuse a {
+  display: block;
+  height: 36px;
+  font: bold 30px/36px Arial, sans-serif;
+  letter-spacing: -1px;
+  width: 200px;
+  padding: 8px 0 6px 0;
+  margin: 0 230px;
+  background: transparent url(../images/button-grey-200.png) 50% 0 no-repeat;
+}
+#linkedinDialog #refuse a:hover {
+  background: transparent url(../images/button-grey-200.png) 50% 100% no-repeat;
 }

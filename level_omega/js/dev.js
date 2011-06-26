@@ -61,5 +61,4 @@ $(document).ready(function() {
     $('.termDefinition').slideUp();
     return false;
   });
-  
 });
