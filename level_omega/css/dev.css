@@ -578,12 +578,21 @@ body.not-front #main-content .node {
   clear: both;
 }
 #content-bottom .block-any_vote {
-  width: 190px;
-  height: 210px;
-  padding: 10px;
+  width: 181px;
+  min-height: 210px;
+  padding: 10px 15px 15px 15px;
   margin: 10px;
   float: left;
-  background: #fff url(../images/bg-vote.gif) 50% 0 no-repeat;
+  /*background: #fff url(../images/bg-vote.gif) 50% 0 no-repeat;*/
+  background: #f7f7f7;
+  border: 1px solid #ddd;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+#content-bottom #block-any_vote-company_payment {
+  margin-right: 0;
 }
 
 #content-bottom .block-any_vote h2 {
@@ -594,7 +603,12 @@ body.not-front #main-content .node {
 
 #content-bottom .block-any_vote .question {
   color: #333;
-  font-size: 0.9em;
+  font-size: 0.85em;
+  line-height: 1.25em;
+}
+
+#content-bottom .block-any_vote .content {
+  font-size: 0.85em;
   line-height: 1.25em;
 }
 
@@ -602,8 +616,6 @@ body.not-front #main-content .node {
 #content-bottom .block_has_no_votes .content {
   color: #21a0e1;
   font-weight: bold;
-  font-size: 0.9em;
-  line-height: 1.25em;
 }
 
 /* company_payment */
@@ -625,7 +637,7 @@ body.not-front #main-content .node {
 
 #block-any_vote-company_payment .widget ul {
   float: right;
-  margin: 10px 10px 0 0;
+  margin: 10px 5px 0 0;
   padding: 0;
 }
 #block-any_vote-company_payment .widget li {
@@ -648,6 +660,8 @@ body.not-front #main-content .node {
 
 #block-any_vote-company_payment .content {
   clear: both;
+  font-size: 0.85em;
+  line-height: 1.25em;
 }
 
 /* options widget list */
@@ -687,6 +701,10 @@ body.not-front #main-content .node {
 #block-any_vote-company_qos .widget {
   margin: 25px 0 40px 0;
 }
+.block-any_vote .widget ul.any_vote_points_widget {
+  width: 183px;
+}
+
 .block-any_vote .widget .any_vote_points_widget,
 .block-any_vote .widget .any_vote_points_widget li {
   margin: 5px 0;
@@ -697,13 +715,17 @@ body.not-front #main-content .node {
   display: inline;
 }
 
+.block-any_vote .widget .any_vote_points_widget li.first a {
+  margin-left: 8px;
+}
+
 .widget .any_vote_points_widget a,
 .widget .any_vote_points_widget span {
   display: block;
   float: left;
   width: 30px;
   height: 28px;
-  margin: 2px 6px 2px 2px;
+  margin: 2px 2px 2px 2px;
   background: transparent url(../images/vote-stars.png) 0 50% no-repeat;
   text-indent: -999em;
 }
@@ -718,21 +740,65 @@ body.not-front #main-content .node {
 }
 
 /* recommend any_vote */
-#block-any_vote-company_recommendation ul.any_vote_option_widget {
-  width: 140px;
-  margin: 0 25px;
-  padding: 0;
+#block-any_vote-company_recommendation ul.any_vote_option_widget,
+#block-any_vote-company_recommendation ul.result-number {
+  margin: 0;
+  padding: 0 15px 10px 15px;
   clear: both;
+  text-align: center;
+  font-weight: bold;
 }
 
-#block-any_vote-company_recommendation ul.any_vote_option_widget li.first {
-  float: left;
+#block-any_vote-company_recommendation ul.result-number {
+  padding: 10px 0 0 0;
+  margin: 0 15px;
+  background: #f7f7f7 url(../images/bar-chart-zero-base.gif) 0 0 no-repeat;
+  position: relative;
+  left: 0;
+  top: -5px;
+  z-index: 2;
 }
-#block-any_vote-company_recommendation ul.any_vote_option_widget li.last {
+
+#block-any_vote-company_recommendation ul.result-number li {
+  display: block;
+  width: 60px;
+  height: 20px;
+  text-align: center;
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 1em;
+  padding: 0;
+}
+
+#block-any_vote-company_recommendation.block_has_no_votes ul.result-number li {
+  display: none;
+}
+
+#block-any_vote-company_recommendation ul.any_vote_option_widget li.first,
+#block-any_vote-company_recommendation ul.result-number li.first {
+  float: left;
+  color: #29B93C;
+}
+
+#block-any_vote-company_recommendation ul.any_vote_option_widget li.last,
+#block-any_vote-company_recommendation ul.result-number li.last {
   float: right;
+  color: #ee3322;
 }
 
 #block-any_vote-company_recommendation .score {
+  position: relative;
   clear: both;
-  margin: 0 25px;
+  margin: 20px 15px 0 15px;
+  overflow: hidden;
+}
+
+#block-any_vote-company_recommendation .score .content {
+  width: 140px;
+  padding: 10px 5px 20px 5px;
+}
+
+#block-any_vote-company_recommendation.block_has_no_votes .widget {
+  margin-top: 20px;
 }
