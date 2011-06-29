@@ -5,16 +5,31 @@
 
 <?php if ($block->subject): ?>
   <h2><?php print $block->subject ?></h2>
-<?php endif;?>
+<?php endif; ?>
 
   <div class="question"><?php print $block->question ?></div> 
-  
-  <div class="score">
-    <img src="https://chart.googleapis.com/chart?cht=bvs&chs=140x140&chf=bg,s,f7f7f700&chco=66cc55|ee3322" />
-  </div>
 
-  <div class="widget clearfix"><?php print $block->widget ?></div>
+  <div class="score">
+    <?php if ($block->extra_classes == 'block_has_no_votes'): ?>
+      <div class="content"><?php print $block->content ?></div>
+    <?php endif; ?>
+    
+    <?php if ($block->extra_classes !== 'block_has_no_votes'): ?>
+    <img src="http://chart.apis.google.com/chart?cht=bvg&amp;chs=150x75&amp;chbh=56,35,0&amp;chds=a&amp;chf=bg,s,F7F7F700&amp;chxs=0,F7F7F7,0,0,_,F7F7F700&amp;chxt=y&amp;chco=58c327,ee3322&amp;chd=t:<?php print $block->yes_count; ?>|<?php print $block->no_count; ?>" />
+    <?php endif; ?>
+  </div>
   
-  <div class="content"><?php print $block->content ?></div>
+
+
+  <div class="widget clearfix">
+  
+    <ul class="result-number">
+      <li class="first"><?php print $block->yes_count; ?></li>
+      <li class="last"><?php print $block->no_count; ?></li>
+    </ul>
+
+    <?php print $block->widget ?>
+  </div>
+  
   
 </div>
