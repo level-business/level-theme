@@ -197,6 +197,29 @@ function level_omega_preprocess_block(&$vars, $hook) {
   }
   
 
+  // any_vote
+  //$vars['vote_value'] = '';
+  //if (module_exists('votingapi')) {
+    //global $vote;
+	  //$vars['vote_value'] = votingapi_current_user_identifier();
+	  if ($vars['block']->module == 'any_vote') {
+	    
+      if ((arg(0) == 'node') && is_numeric(arg(1))) {
+
+        //$node = node_load(arg(1));
+        $content_type = $node->type;
+        $content_id = arg(1);
+
+
+  	    //$vars['vote_value'] = votingapi_recalculate_results($content_type, $content_id, $force_calculation = FALSE);
+
+  	    $vars['vote_value'] = votingapi_select_single_result_value($criteria = array());
+  	  }
+	  }
+	  
+
+	//}
+
 }
 
 function level_omega_preprocess_views_view_field(&$vars, $hook) {

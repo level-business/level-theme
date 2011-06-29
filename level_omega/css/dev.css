@@ -573,4 +573,166 @@ body.not-front #main-content .node {
   display: none !important;
 }
 
-/* company profile dialog box */
+/* any_vote */
+#content-bottom {
+  clear: both;
+}
+#content-bottom .block-any_vote {
+  width: 190px;
+  height: 210px;
+  padding: 10px;
+  margin: 10px;
+  float: left;
+  background: #fff url(../images/bg-vote.gif) 50% 0 no-repeat;
+}
+
+#content-bottom .block-any_vote h2 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+#content-bottom .block-any_vote .question {
+  color: #333;
+  font-size: 0.9em;
+  line-height: 1.25em;
+}
+
+/* has no vote */
+#content-bottom .block_has_no_votes .content {
+  color: #21a0e1;
+  font-weight: bold;
+  font-size: 0.9em;
+  line-height: 1.25em;
+}
+
+/* company_payment */
+#block-any_vote-company_payment .question {
+  margin-bottom: 0;
+}
+
+#block-any_vote-company_payment .score {
+  clear: both;
+  position: relative;
+}
+
+#block-any_vote-company_payment .score img {
+  width: 115px;
+  height: 115px;
+  float: left;
+  background: transparent url(../images/empty-donut.gif) 50% 50% no-repeat;
+}
+
+#block-any_vote-company_payment .widget ul {
+  float: right;
+  margin: 10px 10px 0 0;
+  padding: 0;
+}
+#block-any_vote-company_payment .widget li {
+  margin: 15px 0 0 0;
+}
+
+#block-any_vote-company_payment .score .percentage {
+  width: 115px;
+  height: 15px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-weight: bold;
+  text-align: center;
+  font-size: 15px;
+  line-height: 15px;
+  padding: 50px 0;
+  color: #29B93C;
+}
+
+#block-any_vote-company_payment .content {
+  clear: both;
+}
+
+/* options widget list */
+.widget .any_vote_option_widget li a,
+.widget .any_vote_option_widget li span {
+  display: block;
+  width: 60px;
+  height: 14px;
+  background: transparent url(../images/button-yes-no.gif) 0 50% no-repeat;
+  text-align: center;
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1em;
+  padding: 4px 0 6px 0;
+}
+
+.widget .any_vote_option_widget li.first a,
+.widget .any_vote_option_widget li.first span {
+  color: #29B93C;
+}
+.widget .any_vote_option_widget li.first a:hover {
+  color: #fff;
+  background: transparent url(../images/button-yes-no.gif) -60px 50% no-repeat;
+}
+
+.widget .any_vote_option_widget li.last a,
+.widget .any_vote_option_widget li.last span {
+  color : #ee3322;
+}
+.widget .any_vote_option_widget li.last a:hover {
+  color : #fff;
+  background: transparent url(../images/button-yes-no.gif) 100% 50% no-repeat;
+}
+
+/* star widget */
+#block-any_vote-company_qos .widget {
+  margin: 25px 0 40px 0;
+}
+.block-any_vote .widget .any_vote_points_widget,
+.block-any_vote .widget .any_vote_points_widget li {
+  margin: 5px 0;
+  padding: 0;
+  text-align: center;
+}
+.block-any_vote .widget .any_vote_points_widget li {
+  display: inline;
+}
+
+.widget .any_vote_points_widget a,
+.widget .any_vote_points_widget span {
+  display: block;
+  float: left;
+  width: 30px;
+  height: 28px;
+  margin: 2px 6px 2px 2px;
+  background: transparent url(../images/vote-stars.png) 0 50% no-repeat;
+  text-indent: -999em;
+}
+.widget .any_vote_points_widget a:hover,
+.widget .any_vote_points_widget span.user_vote_score {
+  display: block;
+  float: left;
+  width: 30px;
+  height: 28px;
+  background: transparent url(../images/vote-stars.png) 100% 50% no-repeat;
+  text-indent: -999em;
+}
+
+/* recommend any_vote */
+#block-any_vote-company_recommendation ul.any_vote_option_widget {
+  width: 140px;
+  margin: 0 25px;
+  padding: 0;
+  clear: both;
+}
+
+#block-any_vote-company_recommendation ul.any_vote_option_widget li.first {
+  float: left;
+}
+#block-any_vote-company_recommendation ul.any_vote_option_widget li.last {
+  float: right;
+}
+
+#block-any_vote-company_recommendation .score {
+  clear: both;
+  margin: 0 25px;
+}

@@ -937,12 +937,12 @@ page-doc-company-uk-06937730 #main_content_container, #block-views-company_files
 /* Styles for the accounts explained page */
 
 div.bus_size {
-	background-color: #f2f2f2;
-	height: 520px;
+  background-color: #f2f2f2;
+  height: 520px;
   background: #FFFFFF;
   margin-top: 20px;
   margin-bottom: 20px;
-	}
+}
 
    div.bus_size_heading {
     display: block;
@@ -1016,6 +1016,7 @@ div.bus_size ul li {
 {
   padding: 10px;
   background-color: #FFF;
+  clear: both;
 }
 
 #left_sidebar .block-level_search ul
