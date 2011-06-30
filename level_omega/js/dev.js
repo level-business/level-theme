@@ -61,4 +61,8 @@ $(document).ready(function() {
     $('.termDefinition').slideUp();
     return false;
   });
+  
+  // Equal height for any_vote widget blocks
+  $('#main_content_container .block-any_vote').equalHeight();
+  
 });

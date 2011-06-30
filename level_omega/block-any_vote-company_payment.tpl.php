@@ -10,24 +10,20 @@
   <div class="question"><?php print $block->question ?></div>
 
   <div class="score clearfix">
-    <img src="https://chart.googleapis.com/chart?cht=pc&chs=115x115&chf=bg,s,f7f7f700&chd=t:-1|<?php print $block->yes_count; ?>,<?php print $block->no_count; ?>&chco=58C327,58C327|ee3322" />
+    <img src="https://chart.googleapis.com/chart?cht=pc&chs=115x115&chf=bg,s,f7f7f700&chco=58C327,58C327|ee3322&chd=t:-1|<?php print $block->votes['yes']; ?>,<?php print $block->votes['no']; ?>" />
     
     <div class="widget"><?php print $block->widget ?></div>
     
     <div class="percentage">
-      <?php if($block->vote_sum == '0'): ?><span>--%</span><?php endif; ?>
+      <?php if($block->total_votes == '0'): ?><span>--%</span><?php endif; ?>
       
-      <?php if($block->vote_sum >> '0'): ?>
-        <span><?php print round($block->yes_count * 100 / $block->vote_sum,1); ?>%</span>
+      <?php if($block->total_votes >> '0'): ?>
+        <span><?php print round($block->votes['yes'] * 100 / $block->total_votes,1); ?>%</span>
       <?php endif; ?>
     </div>
     
   </div>
 
   <div class="content"><?php print $block->content ?></div>
-  
-  <!--
-  <div style="font-size:10px;color:red;margin-top:10px;">Debugging: Yes = <?php print $block->yes_count ?> No = <?php print $block->no_count ?> Sum = <?php print $block->vote_sum ?></div>
-  -->
 
 </div>
