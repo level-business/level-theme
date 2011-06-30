@@ -16,7 +16,7 @@
   <div class="question"><?php print $block->question ?></div>
 
   <div class="score clearfix">
-    <img src="https://chart.googleapis.com/chart?cht=pc&chs=115x115&chf=bg,s,f7f7f700&chco=58C327,58C327|ee3322&chd=t:-1|<?php print $yes; ?>,<?php print $$no; ?>" />
+    <img src="https://chart.googleapis.com/chart?cht=pc&chs=115x115&chf=bg,s,f7f7f700&chco=58C327,58C327|ee3322&chd=t:-1|<?php print $yes; ?>,<?php print $no; ?>" />
     
     <div class="widget"><?php print $block->widget ?></div>
     
