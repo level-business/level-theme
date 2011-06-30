@@ -703,7 +703,7 @@ body.not-front #main-content .node {
 .block-any_vote .widget ul.any_vote_points_widget {
   width: 183px;
   height: 32px;
-  padding: 45px 0;
+  padding: 45px 0 40px 0;
 }
 
 .block-any_vote .widget .any_vote_points_widget,
