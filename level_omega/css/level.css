@@ -1016,6 +1016,7 @@ div.bus_size ul li {
 {
   padding: 10px;
   background-color: #FFF;
+  clear: both;
 }
 
 #left_sidebar .block-level_search ul

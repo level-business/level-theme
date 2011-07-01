@@ -122,24 +122,6 @@ function level_omega_preprocess(&$vars, $hook) {
     break;
     
   }
-
-  /* Check LinkedIn account associated */
-  /* See linkedin.inc module file linkedin_get_profile_fields() */
-  
-  if (module_exists('linkedin')) {
-    global $user;
-    
-    $vars['user'] = $user->uid;
-    
-	  $associated = db_fetch_array(db_query("SELECT * FROM {linkedin_token} WHERE uid = %d AND type = 'access'", $vars['user']));
-	   // if drupal account was not associated 
-	   if (!$associated) {
-	     // add js to show dialog box which has link to linkedin
-       drupal_add_js(drupal_get_path('theme', 'level_omega').'/js/linkedin-connect.js', 'theme', 'header');
-	   }
-	}
-  
-
 }
 
 function level_omega_preprocess_block(&$vars, $hook) {
@@ -196,6 +178,29 @@ function level_omega_preprocess_block(&$vars, $hook) {
     } 
   }
   
+
+  // any_vote
+  //$vars['vote_value'] = '';
+  //if (module_exists('votingapi')) {
+    //global $vote;
+	  //$vars['vote_value'] = votingapi_current_user_identifier();
+	  if ($vars['block']->module == 'any_vote') {
+	    
+      if ((arg(0) == 'node') && is_numeric(arg(1))) {
+
+        //$node = node_load(arg(1));
+        $content_type = $node->type;
+        $content_id = arg(1);
+
+
+  	    //$vars['vote_value'] = votingapi_recalculate_results($content_type, $content_id, $force_calculation = FALSE);
+
+  	    $vars['vote_value'] = votingapi_select_single_result_value($criteria = array());
+  	  }
+	  }
+	  
+
+	//}
 
 }
 
