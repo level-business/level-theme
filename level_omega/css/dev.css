@@ -664,6 +664,11 @@ body.not-front #main-content .node {
   line-height: 1.25em;
 }
 
+/* override the ctools class */
+.widget a.ctools-ajaxing {
+	padding-right: 0 !important;
+	}
+	
 /* options widget list */
 .widget .any_vote_option_widget li a,
 .widget .any_vote_option_widget li span {
