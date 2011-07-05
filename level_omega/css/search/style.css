@@ -1,0 +1,30 @@
+#block-level_search-were_you_looking_for {
+  padding: 14px 12px 14px 12px;
+}
+
+#block-level_search-were_you_looking_for h2 {
+  color: #999;
+}
+
+/* Reset the list */
+#block-level_search-were_you_looking_for .item-list ul,
+#block-level_search-were_you_looking_for .item-list ul li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#block-level_search-were_you_looking_for .item-list ul li.first {
+  padding-top: 14px;
+  border-top: 0;
+}
+
+#block-level_search-were_you_looking_for .item-list ul li {
+  padding: 2px 0 2px 0;
+  border-top: 1px solid #e5e5ef;
+}
+
+#block-level_search-were_you_looking_for .item-list ul li a {
+  font-size: 11px;
+  color: #4da5e0;
+}
