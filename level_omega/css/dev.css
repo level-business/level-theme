@@ -810,4 +810,77 @@ body.not-front #main-content .node {
   margin-top: 20px;
 }
 
-/* fix some content to bottom */
+/* Company page .view-ch-company-appointments */
+
+.officer-name-and-age {
+  overflow: auto;
+}
+
+.officer-address {
+  clear: both;
+}
+
+.profile_name {
+  display: block;
+  float: left;
+  leine-height: 16px;
+  margin-right: 10px;
+}
+
+/* Director search page .view-director-search */
+.view-director-search h3 {
+  overflow: auto;
+}
+.view-director-search .views-row {
+  clear: both;
+}
+
+.view-director-search a.claim_profile {
+  margin-top: 3px;
+}
+
+/* claim profile links */
+
+a.claim_profile {
+  display: block;
+  float: left;
+  width: 78px;
+  height: 16px;
+  text-align: center;
+  background: transparent url(../images/claim_profile_buttons.png) 50% 0 no-repeat;
+  color: #fff;
+  font-size: 11px;
+  line-height: 16px;
+  font-weight: normal;
+  cursor: pointer;
+}
+a.claim_profile:hover {
+  background: transparent url(../images/claim_profile_buttons.png) 50% 100% no-repeat;
+}
+
+/* tooltip */
+#tooltip_wrap {
+  position: absolute;
+  width: 209px;
+  height: 122px;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  color: #fff;
+  background: transparent url(../images/black_arrow.png) 50% 0 no-repeat;
+}
+
+span.tooltip {
+  display: block;
+  padding: 20px;
+  font-size: 13px;
+  line-height: 1.25em;
+}
+
+span.tooltip a {
+  text-decoration: underline;
+}
+span.tooltip a:hover {
+  color: #fe0;
+  text-decoration: node;
+}

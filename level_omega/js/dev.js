@@ -64,4 +64,27 @@ $(document).ready(function() {
   
   // Equal height for any_vote widget blocks
   $('#main_content_container .block-any_vote').equalHeight();
+  
+  // Tooltip
+  // company page
+  var tooltipContent = '<span class="tooltip">Manage how others see your information. <a href="/user/login">Login</a> or <a href="/register">Register</a> in order to claim your Director Profile.</span>';
+  
+  $('.view-ch-company-appointments a.unclaimed').tooltip({
+  	contents: function(ev, settings) {
+  		return tooltipContent;
+  	},
+  	maxWidth: 209,
+  	posOffsetX: -105,
+  	posOffsetY: 30,
+  });
+  
+  $('.view-director-search a.unclaimed').tooltip({
+  	contents: function(ev, settings) {
+  		return tooltipContent ;
+  	},
+  	maxWidth: 209,
+  	posOffsetX: -105,
+  	posOffsetY: -130,
+  });
+
 });
