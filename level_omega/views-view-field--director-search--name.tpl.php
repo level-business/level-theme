@@ -4,8 +4,10 @@
 
 <?php 
   global $user; 
-  
+
+  $user = user_load($user->uid);
   $profile_id = $user->profile_director_profile_id;
+
   $name = $row->{$view->field['name']->field_alias};
   $person_number = $row->{$view->field['person_number']->field_alias};
   
@@ -14,6 +16,13 @@
 ?>
 
 
-  <span class="profile_name"><a href="doc/person/uk/<?php print $person_number; ?>"><?php print $name ?></a></span>   
-  <a class="claim_profile <?php print $class; ?>"><?php print $text; ?></a>
+  <span class="profile_name"><a href="doc/person/uk/<?php print $person_number; ?>"><?php print $name ?></a></span>
+  
+  <?php if ($profile_id == $person_number): ?>
+    <a class="claim_profile claimed"><?php print $text; ?></a>
+  <?php endif; ?>
+  
+  <?php if (!$user->uid): ?>
+    <a class="claim_profile unclaimed"><?php print $text; ?></a>
+  <?php endif; ?>
 

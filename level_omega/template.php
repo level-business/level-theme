@@ -122,6 +122,13 @@ function level_omega_preprocess(&$vars, $hook) {
     break;
     
   }
+  
+  // Need jquery_ui for dialog box
+  global $user;
+  if (!$user->uid && module_exists('jquery_ui')) {
+    jquery_ui_add('ui.dialog');
+    jquery_ui_add('ui.draggable');
+  }
 }
 
 function level_omega_preprocess_block(&$vars, $hook) {
@@ -255,6 +262,7 @@ function level_omega_preprocess_page(&$vars, $hook) {
 
   // Dynamic insert additional content and change page titles for anonymous user.
   $vars['obj'] = _level_omega_user_form_elements($vars['obj'] = array(), $vars['title'], $vars['content'], $vars['tabs']);
+
 
 }
 

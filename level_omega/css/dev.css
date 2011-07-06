@@ -78,13 +78,6 @@ body.not-front #main-content .node p {
 }
 
 /* heading */
-/*h1#page-title {
-  font: bold 20px/1em Arial, sans-serif;
-  color: #333;
-  text-align: right;
-  float: right;
-}*/
-
 body.not-front #main-content .node h2 {
   font: bold 30px/1.25em Arial, sans-serif;
   color: #21a0e1;
@@ -284,13 +277,6 @@ body.not-front #main-content .node h2.first-glossary {
 #main-content .node div.terminology .inner-wrapper {
   background: #fff url(../images/glossary-wrapper.png) 50% 100% no-repeat; 
   padding: 0 25px;
-  /*border: 1px solid #ccc;
-  -moz-border-radius-bottomleft: 5px;
-  -webkit-border-bottom-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-  -moz-border-radius-bottomright: 5px;
-  -webkit-border-bottom-right-radius: 5px;
-  border-bottom-right-radius: 5px;*/
 }
 .close-button {
   background: #fff url(../images/glossary-wrapper.png) 50% 0 no-repeat; 
@@ -389,7 +375,6 @@ body.not-front #main-content .node #ceo .quote-wrapper blockquote p {
   list-style: none;
   display: inline;
   margin-right: 1.5em;
-  /*text-transform: capitalize;*/
 }
 
 img.staff-doodle {
@@ -583,7 +568,6 @@ body.not-front #main-content .node {
   padding: 10px 15px 15px 15px;
   margin: 20px 10px;
   float: left;
-  /*background: #fff url(../images/bg-vote.gif) 50% 0 no-repeat;*/
   background: #f7f7f7;
   border: 1px solid #ddd;
   -moz-border-radius: 5px;
@@ -858,12 +842,12 @@ a.claim_profile:hover {
   background: transparent url(../images/claim_profile_buttons.png) 50% 100% no-repeat;
 }
 
-/* tooltip */
-.qtip-contentWrapper {
-  color: #fff;
-  background: transparent url(../images/black_arrow.png) 50% 0 no-repeat;
+a.claimed {
+  background: transparent url(../images/claim_profile_buttons.png) 50% 100% no-repeat;
+  cursor: text;
 }
 
+/* tooltip */
 span.tooltip {
   display: block;
   font-size: 13px;
@@ -879,27 +863,76 @@ span.tooltip a:hover {
   text-decoration: node;
 }
 
-/* tipsy */
-.tipsy { 
-  padding: 5px; 
-  font-size: 10px; 
-  opacity: 0.8; 
-  filter: alpha(opacity=80); 
-  background-repeat: no-repeat;  
-  background-image: url(../images/tipsy.gif); 
-}
-.tipsy-inner { 
-  padding: 10px 20px; 
-  background-color: black; 
-  color: white; 
-  max-width: 210px; 
-  text-align: left; 
-  -moz-border-radius:5px; 
-  -webkit-border-radius:5px;
-  border-radius:5px;
+/* dialog */
+.ui-dialog-overlay {
+  background: transparent url(../images/black-50-opacity.png) 0 0 repeat;
 }
 
-.tipsy-north { background-position: top center; }
-.tipsy-south { background-position: bottom center; }
-.tipsy-east { background-position: right center; }
-.tipsy-west { background-position: left center; }
+/* body.section-doc */
+.block-level_claim_profile {
+  margin: 10px -10px;
+}
+
+body.section-doc .ui-dialog-content .dialog-links-wrapper {
+  width: 550px;
+  margin: 0 55px;
+}
+
+body.section-doc .ui-dialog-content {
+  width: 660px !important;
+}
+
+body.section-doc .ui-dialog-content p.register-intro {
+  background: transparent url(../images/shadow-550.gif) 50% 0 no-repeat;
+  padding: 20px 110px 10px 110px;
+  margin-top: 20px;
+}
+
+body.section-doc .dialog-links a {
+  margin: 5px 110px;
+}
+
+body.section-doc .claim-steps {
+  color: #21A0E1;
+  margin-bottom: 20px;
+  padding-bottom: 40px;
+  background: transparent url(../images/shadow-550.gif) 50% 100% no-repeat;
+}
+
+body.section-doc .claim-steps li {
+  width: 160px;
+  margin-right: 5px;
+  float: left;
+  position: relative;
+}
+
+body.section-doc .claim-steps li h3,
+body.section-doc .claim-steps li p {
+  margin-left: 50px;
+}
+
+body.section-doc .claim-steps li h3 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+body.section-doc .claim-steps li p {
+  font-size: 12px;
+}
+
+body.section-doc .claim-steps .number {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  float: left;
+  width: 38px;
+  padding-left: 18px;
+  height: 56px;
+  font-size: 25px;
+  line-height: 38px;
+  font-weight: bold;
+  text-align: left;
+  color: #fff;
+  background: transparent url(../images/bg-step-number.png) 0 0 no-repeat;
+}

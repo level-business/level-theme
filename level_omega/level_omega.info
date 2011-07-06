@@ -25,6 +25,7 @@ scripts[] = js/fb-connect.js
 scripts[] = js/superfish.js
 scripts[] = js/jquery.equalHeight.js
 scripts[] = js/jquery.tipTip.minified.js
+scripts[] = js/level_dialog.js
 scripts[] = js/dev.js
 
 ; ------- Declare default theme regions
