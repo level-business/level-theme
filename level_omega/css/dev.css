@@ -873,22 +873,22 @@ span.tooltip a:hover {
   margin: 10px -10px;
 }
 
-body.section-doc .ui-dialog-content .dialog-links-wrapper {
+body.section-doc .claimDialog .dialog-links-wrapper {
   width: 550px;
   margin: 0 55px;
 }
 
-body.section-doc .ui-dialog-content {
+body.section-doc .claimDialog {
   width: 660px !important;
 }
 
-body.section-doc .ui-dialog-content p.register-intro {
+body.section-doc .claimDialog p.register-intro {
   background: transparent url(../images/shadow-550.gif) 50% 0 no-repeat;
   padding: 20px 110px 10px 110px;
   margin-top: 20px;
 }
 
-body.section-doc .dialog-links a {
+body.section-doc .claimDialog .dialog-links a {
   margin: 5px 110px;
 }
 
