@@ -247,7 +247,7 @@ function level_omega_preprocess_page(&$vars, $hook) {
   }
 
   // Linkedin claim widget.
-  if(arg(0) == 'doc' && arg(1) == 'person'  && arg(2) == 'uk') {
+  if (arg(1) == 'person' || arg(0) == 'user') {
     $vars['scripts'] .= '<script src="http://platform.linkedin.com/in.js" type="text/javascript"></script>';
   }
 

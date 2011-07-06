@@ -115,9 +115,10 @@
      
      ?>
      <div id="top_bar" class="clearfix">
-     <?php  if ($top_bar || arg(1) == 'person'): // TOP bar used in place of standard page title ?>
+     <?php  if ($top_bar && arg(1) == 'company'): // TOP bar used in place of standard page title ?>
         <?php print $top_bar; ?>
      <?php else:?>
+      <?php print $top_bar; ?>
        <h1 class="title" id="page-title"><?php print $title; ?></h1>
      <?php endif;  ?>       
      </div>
