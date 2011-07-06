@@ -69,7 +69,7 @@ $(document).ready(function() {
   // company page
   var tooltipContent = '<span class="tooltip">Manage how others see your information. <a href="/user/login">Login</a> or <a href="/register">Register</a> in order to claim your Director Profile.</span>';
   
-  $('.view-ch-company-appointments a.unclaimed').tooltip({
+  /*$('.view-ch-company-appointments a.unclaimed').tooltip({
   	contents: function(ev, settings) {
   		return tooltipContent;
   	},
@@ -85,6 +85,30 @@ $(document).ready(function() {
   	maxWidth: 209,
   	posOffsetX: -105,
   	posOffsetY: -130,
+  });*/
+  
+  /*$('a.unclaimed').qtip({
+     content: tooltipContent,
+     show: 'mouseover',
+     hide: 'mouseout'
+  });*/
+
+  /*$('a.unclaimed').attr('title', tooltipContent).tipsy({
+    gravity: $.fn.tipsy.autoNS,
+    html: true,
+    offset: 0,
+    delayOut: 5000,
+    fade: true,
+    trigger: 'manual',
+  });*/
+  
+  //$('a.unclaimed').attr('title', tooltipContent);
+  $(function(){
+    $('a.unclaimed').tipTip({
+      defaultPosition: 'top',
+      content: tooltipContent,
+      keepAlive: true,
+    });
   });
 
 });

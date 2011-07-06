@@ -15,6 +15,7 @@ stylesheets[all][] = css/grid.css
 stylesheets[all][] = css/960.css ; To block out 960s grid and use our own.
 stylesheets[all][] = css/jquery-ui.css
 stylesheets[all][] = css/static.css
+stylesheets[all][] = css/tipTip.css
 stylesheets[all][] = css/dev.css
 
 
@@ -23,7 +24,7 @@ stylesheets[all][] = css/dev.css
 scripts[] = js/fb-connect.js
 scripts[] = js/superfish.js
 scripts[] = js/jquery.equalHeight.js
-scripts[] = js/jquery.jtooltip.combined-min.js
+scripts[] = js/jquery.tipTip.minified.js
 scripts[] = js/dev.js
 
 ; ------- Declare default theme regions

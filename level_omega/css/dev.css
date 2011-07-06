@@ -859,22 +859,16 @@ a.claim_profile:hover {
 }
 
 /* tooltip */
-#tooltip_wrap {
-  position: absolute;
-  width: 209px;
-  height: 122px;
-  top: 0;
-  left: 0;
-  z-index: 99;
+.qtip-contentWrapper {
   color: #fff;
   background: transparent url(../images/black_arrow.png) 50% 0 no-repeat;
 }
 
 span.tooltip {
   display: block;
-  padding: 20px;
   font-size: 13px;
   line-height: 1.25em;
+  padding: 10px;
 }
 
 span.tooltip a {
@@ -884,3 +878,28 @@ span.tooltip a:hover {
   color: #fe0;
   text-decoration: node;
 }
+
+/* tipsy */
+.tipsy { 
+  padding: 5px; 
+  font-size: 10px; 
+  opacity: 0.8; 
+  filter: alpha(opacity=80); 
+  background-repeat: no-repeat;  
+  background-image: url(../images/tipsy.gif); 
+}
+.tipsy-inner { 
+  padding: 10px 20px; 
+  background-color: black; 
+  color: white; 
+  max-width: 210px; 
+  text-align: left; 
+  -moz-border-radius:5px; 
+  -webkit-border-radius:5px;
+  border-radius:5px;
+}
+
+.tipsy-north { background-position: top center; }
+.tipsy-south { background-position: bottom center; }
+.tipsy-east { background-position: right center; }
+.tipsy-west { background-position: left center; }
