@@ -123,12 +123,12 @@ function level_omega_preprocess(&$vars, $hook) {
     
   }
   
-  // Need jquery_ui for dialog box
-  global $user;
-  if (!$user->uid && module_exists('jquery_ui')) {
+  // Always include jquery_ui dialog boxes
+  if (module_exists('jquery_ui')) {
     jquery_ui_add('ui.dialog');
     jquery_ui_add('ui.draggable');
   }
+
 }
 
 function level_omega_preprocess_block(&$vars, $hook) {

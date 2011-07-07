@@ -16,8 +16,10 @@
 
 <?php if ($profile_id == $person_number): ?>
   <a class="claim_profile claimed"><?php print $text; ?></a>
+<?php else: ?>
+  <a class="claim_profile member_unclaimed" href="/doc/person/uk/<?php print $person_number; ?>" class="claim_profile unclaimed"><?php print $text; ?></a>
 <?php endif; ?>
 
 <?php if (!$user->uid): ?>
-  <a class="claim_profile unclaimed"><?php print $text; ?></a>
+  <a class="claim_profile unclaimed anonymous_unclaimed"><?php print $text; ?></a>
 <?php endif; ?>

@@ -1,6 +1,7 @@
 $(document).ready(function() {
-
-  $('.block-level_claim_profile a').click(function() {
+  
+  // Claim profile dialog for not-loged-in users
+  $('.not-logged-in .block-level_claim_profile a').click(function() {
     
     // Set full link destinaion paths
     var linkedInPath =  '/linkedin/login/0?destination=http://' + window.location.host + $(this).attr('href');
@@ -9,7 +10,7 @@ $(document).ready(function() {
     
     var registerPath =  '/register?destination=http://' + window.location.host + $(this).attr('href');
     
-    var claimIntro = '<p class="intro-text">In order to claim this profile you must register with us. We verify your identity by linking your LevelBusiness account with your linkedin account</p>';
+    var claimIntro = '<p class="intro-text">In order to claim this profile you must register with us. We verify your identity by linking your LevelBusiness account with your LinkedIn account.</p>';
     
     var claimSteps = '<ol class="claim-steps clearfix"><li class="first"><span class="number">1</span><h3>Login</h3><p>Login or Register</p></li><li class="second"><span class="number">2</span><h3>Link</h3><p>Authenticate by linking to a linkedin account</p></li><li class="third"><span class="number">3</span><h3>Claim</h3><p>Claim your profile</p></li><li class="forth"><span class="number">4</span><h3>Share</h3><p>Tell the word you\'ve claimed your profile</p></li></ol>';
     
@@ -30,6 +31,39 @@ $(document).ready(function() {
       width: 714,
       height: 'auto',
       title: 'Is this you?',
+    });
+    // open the dialog box
+    $dialog.dialog('open');
+    // prevent default action,
+    return false;
+  });
+  
+  
+  // Confirm dialog for loged-in user
+  
+  // create wrapper
+  $('<div id="claimContent"></div>').appendTo('body');
+  
+  // load the right form by id from claim link href before insert into dialog
+  var claimContent = $('#claimContent').load($('.logged-in .block-level_claim_profile a').attr('href') + ' .confirmation');
+  
+  // modify content as per design
+  //$('#claimContent div').hide();
+  //$('#claimContent input#edit-submit').clone().appendTo('#claimContent');
+
+  // confirmation dialog display
+  $('.logged-in .block-level_claim_profile a').click(function() {
+
+    var $dialog = $('<div class="confirmDialog"></div>')
+
+    .html(claimContent)
+
+    .dialog({
+      modal: true,
+      autoOpen: false,
+      width: 714,
+      height: 'auto',
+      title: 'Please confirm...',
     });
     // open the dialog box
     $dialog.dialog('open');
