@@ -182,7 +182,7 @@ table.ui-datepicker .ui-datepicker-title-row td a {
   color: #222222;
   border: 7px solid #ccc;
   position: relative;
-  width: 550px !important;
+  /*width: 550px !important;*/
   border-radius: 5px;
 }
 body .ui-dialog-content {
@@ -191,7 +191,7 @@ body .ui-dialog-content {
   color: #333;
   padding: 10px 20px;
   margin: 0;
-  width: 510px !important;
+  /*width: 510px !important;*/
   font-size: 1em;
 }
 
@@ -331,6 +331,7 @@ body .ui-dialog-titlebar {
 
 body .ui-dialog-title {
   font-size: 30px;
+  color: #fff;
 }
 
 body a.ui-dialog-titlebar-close,

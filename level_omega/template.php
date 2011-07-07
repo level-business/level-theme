@@ -122,6 +122,13 @@ function level_omega_preprocess(&$vars, $hook) {
     break;
     
   }
+  
+  // Always include jquery_ui dialog boxes
+  if (module_exists('jquery_ui')) {
+    jquery_ui_add('ui.dialog');
+    jquery_ui_add('ui.draggable');
+  }
+
 }
 
 function level_omega_preprocess_block(&$vars, $hook) {
@@ -238,6 +245,12 @@ function level_omega_preprocess_page(&$vars, $hook) {
     $vars['scripts'] .= '<script src="http://www.scribd.com/javascripts/view.js"></script>';
   
   }
+
+  // Linkedin claim widget.
+  if(arg(0) == 'doc' && arg(1) == 'person'  && arg(2) == 'uk') {
+    $vars['scripts'] .= '<script src="http://platform.linkedin.com/in.js" type="text/javascript"></script>';
+  }
+
   $vars['main_content_attributes'] = array();
   /* The following code should be moved to somewhere more applicable in the neer future */
   if(arg(1) == 'company') {
@@ -249,6 +262,7 @@ function level_omega_preprocess_page(&$vars, $hook) {
 
   // Dynamic insert additional content and change page titles for anonymous user.
   $vars['obj'] = _level_omega_user_form_elements($vars['obj'] = array(), $vars['title'], $vars['content'], $vars['tabs']);
+
 
 }
 
