@@ -936,3 +936,42 @@ body.section-doc .claim-steps .number {
   color: #fff;
   background: transparent url(../images/bg-step-number.png) 0 0 no-repeat;
 }
+
+/* claim profile confirmation form dialog */
+body.logged-in .confirmDialog {
+  width: 674px !important;
+}
+
+.confirmDialog p.linkedin-claim-msg {
+  padding: 20px 0;
+}
+
+.ui-dialog-container #claimContent .container-inline {
+  display: block;
+  width: 550px;
+  margin: 0;
+  padding: 25px 62px 0 62px;
+  background: transparent url(../images/shadow-550.gif) 50% 0 no-repeat;
+}
+
+.ui-dialog-container #claimContent .container-inline a {
+  display: none !important;
+}
+
+#claimContent .container-inline input#edit-submit {
+  display: block;
+  width: 329px;
+  height: 60px;
+  padding: 6px 0 18px 0;
+  margin: 0 110px;
+  font: bold 30px/36px Arial, sans-serif;
+  letter-spacing: -1px;
+  text-align: center;
+  color: #21a0e1;
+  background: transparent url(../images/form-buttons.gif) 0 0 no-repeat;
+}
+#claimContent .container-inline input#edit-submit:hover {
+  background: transparent url(../images/form-buttons.gif) 0 -60px no-repeat;
+  color: #333;
+}
+
