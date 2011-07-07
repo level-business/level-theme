@@ -938,6 +938,11 @@ body.section-doc .claim-steps .number {
 }
 
 /* claim profile confirmation form dialog */
+
+#dialogHolder {
+  display: none; /* just temporarily store contents before extract to dialog box so we have to hide it */
+}
+
 body.logged-in .confirmDialog {
   width: 674px !important;
 }
@@ -975,3 +980,18 @@ body.logged-in .confirmDialog {
   color: #333;
 }
 
+
+/* claimed-profile */
+.block-level_claim_profile .claimed-profile {
+  background: transparent url(../images/icon-claimed.gif) 0 0 no-repeat;
+  padding: 17px 0 20px 100px;
+  margin-top: -20px;
+  margin
+  min-height: 48px;
+  font-size: 0.85em;
+  color: #333;
+}
+
+span.IN-widget {
+  margin-top: 10px;
+}

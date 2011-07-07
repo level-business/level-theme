@@ -10,16 +10,29 @@
   
   $class = ($profile_id == $person_number) ? 'claimed' : 'unclaimed';
   $text = ($profile_id == $person_number) ? 'This is me' : 'Is this you?';
+
 ?>
 
 <div class="profile_name"><?php print $output; ?></div>
 
-<?php if ($profile_id == $person_number): ?>
-  <a class="claim_profile claimed"><?php print $text; ?></a>
-<?php else: ?>
-  <a class="claim_profile member_unclaimed" href="/doc/person/uk/<?php print $person_number; ?>" class="claim_profile unclaimed"><?php print $text; ?></a>
+
+<?php if (!$user->uid): // not-logged-in ?>
+  <a class="claim_profile unclaimed anonymous_unclaimed" href="/login-opts"><?php print $text; ?></a>
 <?php endif; ?>
 
-<?php if (!$user->uid): ?>
-  <a class="claim_profile unclaimed anonymous_unclaimed"><?php print $text; ?></a>
+<?php if ($user->uid): // logged-in ?>
+
+  <?php if ($profile_id !== $person_number): // logged-in but un_claimed ?>
+    <a class="claim_profile member_unclaimed" href="/doc/person/uk/<?php print $person_number; ?>" class="claim_profile unclaimed"><?php print $text; ?></a>
+  <?php endif; ?>
+
+  <?php if ($profile_id == $person_number): // logged-in & already claimed ?>
+    <a class="claim_profile claimed"><?php print $text; ?></a>
+  <?php endif; ?>
+
 <?php endif; ?>
+
+
+
+
+

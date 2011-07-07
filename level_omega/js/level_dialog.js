@@ -42,17 +42,13 @@ $(document).ready(function() {
   // Confirm dialog for loged-in user
   
   // create wrapper
-  $('<div id="claimContent"></div>').appendTo('body');
+  $('<div id="dialogHolder"><div id="claimContent"></div></div>').appendTo('body');
   
   // load the right form by id from claim link href before insert into dialog
-  var claimContent = $('#claimContent').load($('.logged-in .block-level_claim_profile a').attr('href') + ' .confirmation');
-  
-  // modify content as per design
-  //$('#claimContent div').hide();
-  //$('#claimContent input#edit-submit').clone().appendTo('#claimContent');
+  var claimContent = $('#claimContent').load($('.logged-in .block-level_claim_profile a').attr('href') + ' form.confirmation');
 
   // confirmation dialog display
-  $('.logged-in .block-level_claim_profile a').click(function() {
+  $('.logged-in .block-level_claim_profile a[href^=/claim-director/confirm/]').click(function() {
 
     var $dialog = $('<div class="confirmDialog"></div>')
 

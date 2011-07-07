@@ -18,10 +18,12 @@
 
   <span class="profile_name"><a href="doc/person/uk/<?php print $person_number; ?>"><?php print $name ?></a></span>
   
-  <?php if ($profile_id == $person_number): ?>
+  <?php if ($user->uid && $profile_id == $person_number): ?>
     <a href="/claim-director/confirm/<?php print $person_number; ?>" class="claim_profile claimed"><?php print $text; ?></a>
-  <?php else: ?>
-    <a href="/claim-director/confirm/<?php print $person_number; ?>" class="claim_profile claimed"><?php print $text; ?></a>
+  <?php endif; ?>
+  
+  <?php if ($user->uid && $profile_id !== $person_number): ?>
+    <a href="doc/person/uk/<?php print $person_number; ?>" class="claim_profile unclaimed"><?php print $text; ?></a>
   <?php endif; ?>
   
   <?php if (!$user->uid): ?>
