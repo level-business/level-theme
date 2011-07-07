@@ -995,3 +995,23 @@ body.logged-in .confirmDialog {
 span.IN-widget {
   margin-top: 10px;
 }
+
+/* linkedin user associate block */
+#block-level_user-level_user_profile_linkedin_driver .link-button {
+  padding: 0 185px 20px 185px;
+}
+
+#block-level_user-level_user_profile_linkedin_driver a.linkedin-button {
+  background: transparent url(../images/form-buttons.gif) -330px 0 no-repeat;
+  display: block;
+  height: 36px;
+  font: bold 30px/36px Arial, sans-serif;
+  text-align: left;
+  letter-spacing: -1px;
+  width: 273px;
+  padding: 6px 0 18px 56px;
+  color: #333;
+}
+#block-level_user-level_user_profile_linkedin_driver a.linkedin-button:hover {
+  background: transparent url(../images/form-buttons.gif) -330px -60px no-repeat;
+}
