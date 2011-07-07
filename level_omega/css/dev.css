@@ -78,13 +78,6 @@ body.not-front #main-content .node p {
 }
 
 /* heading */
-/*h1#page-title {
-  font: bold 20px/1em Arial, sans-serif;
-  color: #333;
-  text-align: right;
-  float: right;
-}*/
-
 body.not-front #main-content .node h2 {
   font: bold 30px/1.25em Arial, sans-serif;
   color: #21a0e1;
@@ -284,13 +277,6 @@ body.not-front #main-content .node h2.first-glossary {
 #main-content .node div.terminology .inner-wrapper {
   background: #fff url(../images/glossary-wrapper.png) 50% 100% no-repeat; 
   padding: 0 25px;
-  /*border: 1px solid #ccc;
-  -moz-border-radius-bottomleft: 5px;
-  -webkit-border-bottom-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-  -moz-border-radius-bottomright: 5px;
-  -webkit-border-bottom-right-radius: 5px;
-  border-bottom-right-radius: 5px;*/
 }
 .close-button {
   background: #fff url(../images/glossary-wrapper.png) 50% 0 no-repeat; 
@@ -389,7 +375,6 @@ body.not-front #main-content .node #ceo .quote-wrapper blockquote p {
   list-style: none;
   display: inline;
   margin-right: 1.5em;
-  /*text-transform: capitalize;*/
 }
 
 img.staff-doodle {
@@ -583,7 +568,6 @@ body.not-front #main-content .node {
   padding: 10px 15px 15px 15px;
   margin: 20px 10px;
   float: left;
-  /*background: #fff url(../images/bg-vote.gif) 50% 0 no-repeat;*/
   background: #f7f7f7;
   border: 1px solid #ddd;
   -moz-border-radius: 5px;
@@ -810,4 +794,224 @@ body.not-front #main-content .node {
   margin-top: 20px;
 }
 
-/* fix some content to bottom */
+/* Company page .view-ch-company-appointments */
+
+.officer-name-and-age {
+  overflow: auto;
+}
+
+.officer-address {
+  clear: both;
+}
+
+.profile_name {
+  display: block;
+  float: left;
+  leine-height: 16px;
+  margin-right: 10px;
+}
+
+/* Director search page .view-director-search */
+.view-director-search h3 {
+  overflow: auto;
+}
+.view-director-search .views-row {
+  clear: both;
+}
+
+.view-director-search a.claim_profile {
+  margin-top: 3px;
+}
+
+/* claim profile links */
+
+a.claim_profile {
+  display: block;
+  float: left;
+  width: 78px;
+  height: 16px;
+  text-align: center;
+  background: transparent url(../images/claim_profile_buttons.png) 50% 0 no-repeat;
+  color: #fff;
+  font-size: 11px;
+  line-height: 16px;
+  font-weight: normal;
+  cursor: pointer;
+}
+a.claim_profile:hover {
+  background: transparent url(../images/claim_profile_buttons.png) 50% 100% no-repeat;
+}
+
+a.claimed {
+  background: transparent url(../images/claim_profile_buttons.png) 50% 100% no-repeat;
+  cursor: text;
+}
+
+/* tooltip */
+span.tooltip {
+  display: block;
+  font-size: 13px;
+  line-height: 1.25em;
+  padding: 10px;
+}
+
+span.tooltip a {
+  text-decoration: underline;
+}
+span.tooltip a:hover {
+  color: #fe0;
+  text-decoration: node;
+}
+
+/* dialog */
+.ui-dialog-overlay {
+  background: transparent url(../images/black-50-opacity.png) 0 0 repeat;
+}
+
+/* body.section-doc */
+.block-level_claim_profile {
+  margin: 10px -10px;
+}
+
+body.section-doc .claimDialog .dialog-links-wrapper {
+  width: 550px;
+  margin: 0 55px;
+}
+
+body.section-doc .claimDialog {
+  width: 660px !important;
+}
+
+body.section-doc .claimDialog p.register-intro {
+  background: transparent url(../images/shadow-550.gif) 50% 0 no-repeat;
+  padding: 20px 110px 10px 110px;
+  margin-top: 20px;
+}
+
+body.section-doc .claimDialog .dialog-links a {
+  margin: 5px 110px;
+}
+
+body.section-doc .claim-steps {
+  color: #21A0E1;
+  margin-bottom: 20px;
+  padding-bottom: 40px;
+  background: transparent url(../images/shadow-550.gif) 50% 100% no-repeat;
+}
+
+body.section-doc .claim-steps li {
+  width: 160px;
+  margin-right: 5px;
+  float: left;
+  position: relative;
+}
+
+body.section-doc .claim-steps li h3,
+body.section-doc .claim-steps li p {
+  margin-left: 50px;
+}
+
+body.section-doc .claim-steps li h3 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+body.section-doc .claim-steps li p {
+  font-size: 12px;
+}
+
+body.section-doc .claim-steps .number {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  float: left;
+  width: 38px;
+  padding-left: 18px;
+  height: 56px;
+  font-size: 25px;
+  line-height: 38px;
+  font-weight: bold;
+  text-align: left;
+  color: #fff;
+  background: transparent url(../images/bg-step-number.png) 0 0 no-repeat;
+}
+
+/* claim profile confirmation form dialog */
+
+#dialogHolder {
+  display: none; /* just temporarily store contents before extract to dialog box so we have to hide it */
+}
+
+body.logged-in .confirmDialog {
+  width: 674px !important;
+}
+
+.confirmDialog p.linkedin-claim-msg {
+  padding: 20px 0;
+}
+
+.ui-dialog-container #claimContent .container-inline {
+  display: block;
+  width: 550px;
+  margin: 0;
+  padding: 25px 62px 0 62px;
+  background: transparent url(../images/shadow-550.gif) 50% 0 no-repeat;
+}
+
+.ui-dialog-container #claimContent .container-inline a {
+  display: none !important;
+}
+
+#claimContent .container-inline input#edit-submit {
+  display: block;
+  width: 329px;
+  height: 60px;
+  padding: 6px 0 18px 0;
+  margin: 0 110px;
+  font: bold 30px/36px Arial, sans-serif;
+  letter-spacing: -1px;
+  text-align: center;
+  color: #21a0e1;
+  background: transparent url(../images/form-buttons.gif) 0 0 no-repeat;
+}
+#claimContent .container-inline input#edit-submit:hover {
+  background: transparent url(../images/form-buttons.gif) 0 -60px no-repeat;
+  color: #333;
+}
+
+
+/* claimed-profile */
+.block-level_claim_profile .claimed-profile {
+  background: transparent url(../images/icon-claimed.gif) 0 0 no-repeat;
+  padding: 17px 0 20px 100px;
+  margin-top: -20px;
+  margin
+  min-height: 48px;
+  font-size: 0.85em;
+  color: #333;
+}
+
+span.IN-widget {
+  margin-top: 10px;
+}
+
+/* linkedin user associate block */
+#block-level_user-level_user_profile_linkedin_driver .link-button {
+  padding: 0 185px 20px 185px;
+}
+
+#block-level_user-level_user_profile_linkedin_driver a.linkedin-button {
+  background: transparent url(../images/form-buttons.gif) -330px 0 no-repeat;
+  display: block;
+  height: 36px;
+  font: bold 30px/36px Arial, sans-serif;
+  text-align: left;
+  letter-spacing: -1px;
+  width: 273px;
+  padding: 6px 0 18px 56px;
+  color: #333;
+}
+#block-level_user-level_user_profile_linkedin_driver a.linkedin-button:hover {
+  background: transparent url(../images/form-buttons.gif) -330px -60px no-repeat;
+}
