@@ -68,7 +68,7 @@ $(document).ready(function() {
   });
 
   // Tooltip
-  // company page
+  // For anonymous users
   var tooltipContent = '<span class="tooltip">Manage how others see your information. <a href="/user/login">Login</a> or <a href="/register">Register</a> in order to claim your Director Profile.</span>';
 
   $('a.anonymous_unclaimed').removeAttr('href');
@@ -80,6 +80,17 @@ $(document).ready(function() {
      keepAlive: true,
    });
   });
+  // Withhold fields
+  var tooltipWithhold =  '<span class="tooltip">This director has chosen to withhold this information.</span>';
+  $(function(){
+
+   $('.profile .profile-catagory .field_hidden p span, .profile .identification .field_hidden .content span, .director_appointment .field_hidden p span').tipTip({
+     defaultPosition: 'top',
+     content: tooltipWithhold,
+     keepAlive: false,
+   });
+  });
+
 });
 
 

@@ -110,6 +110,10 @@ h1.company-name {
 	background-color: #FFFFFF;
 	padding: 10px;
 }
+
+body.section-doc #top_bar {
+  padding-left: 0;
+}
 	
 #top_bar span.ui_date em {
 	font-weight: normal;

@@ -231,19 +231,19 @@ body.not-front #main-content .node h2.first-glossary {
   margin-right: 10px;
 }
 
-#main-content .node dl,
-#main-content .node dl.terminology {
+#main-content .node .profile-catagory,
+#main-content .node .profile-catagory.terminology {
   margin: 0;
   padding: 0 0 21px 0;
   background: 0 none;
 
 }
 
-#main-content .node dl.terminology .grid_1 {
+#main-content .node .profile-catagory.terminology .grid_1 {
   width: 220px;
 }
 
-#main-content .node dl.terminology div {
+#main-content .node .profile-catagory.terminology div {
   clear: both;
   overflow: auto;
 }
@@ -377,21 +377,21 @@ body.not-front #main-content .node #ceo .quote-wrapper blockquote p {
   margin-right: 1.5em;
 }
 
-img.staff-doodle {
+img.staff-doo.profile-catagorye {
   position: absolute;
   bottom: 21px;
   right: 0;
   z-index: -1;
 }
 
-.node .even-row img.staff-doodle {
+.node .even-row img.staff-doo.profile-catagorye {
   position: absolute;
   bottom: 21px;
   left: 0;
   z-index: -1;
 }
 
-/* doodle images as bg */
+/* doo.profile-catagorye images as bg */
 #ceo .staff {
   background: transparent url(../node-images/team/ceo.jpg) 100% 100% no-repeat;
 }
@@ -870,7 +870,7 @@ span.tooltip a:hover {
 
 /* body.section-doc */
 .block-level_claim_profile {
-  margin: 10px -10px;
+  margin: 10px 0;
 }
 
 body.section-doc .claimDialog .dialog-links-wrapper {
@@ -984,10 +984,10 @@ body.logged-in .confirmDialog {
 /* claimed-profile */
 .block-level_claim_profile .claimed-profile {
   background: transparent url(../images/icon-claimed.gif) 0 0 no-repeat;
-  padding: 17px 0 20px 100px;
-  margin-top: -20px;
-  margin
-  min-height: 48px;
+  padding: 17px 0 0 100px;
+  margin-top: -15px;
+  margin-left: -10px;
+  min-height: 38px;
   font-size: 0.85em;
   color: #333;
 }
@@ -1014,4 +1014,286 @@ span.IN-widget {
 }
 #block-level_user-level_user_profile_linkedin_driver a.linkedin-button:hover {
   background: transparent url(../images/form-buttons.gif) -330px -60px no-repeat;
+}
+
+
+/* Director profile(s) */
+.profile h3 {
+  display: none;
+}
+
+.profile .profile-catagory {
+  display: block;
+  position: relative;
+  width: 700px;
+  clear: both;
+  float: left;
+}
+
+.profile .profile-catagory h3 {
+  border: 0 none;
+}
+
+.profile .appointments {
+  padding: 30px 0 15px 0;
+}
+
+.profile .appointments h3 {
+  display: block;
+  border: 0 none;
+  color: #000;
+  font-size: 1em;
+  padding: 0;
+}
+
+.profile .profile-catagory .director_appointment,
+.profile .profile-catagory .director_appointmentcompany_dissolved {
+  clear: both;
+  position: realtive;
+  overflow: auto;
+}
+
+/* company name */
+#block-level_user-company_appointments p {
+  font-size: 1em;
+}
+.profile .profile-catagory .director_appointment h3.profile_field_company_name ,
+.profile .profile-catagory .director_appointment h3.company_dissolved,
+.profile .profile-catagory .director_appointmentcompany_dissolved h3.company_dissolved,
+/* new block on company page */
+#block-level_user-company_appointments .director-name {
+  display: block;
+  clear: both;
+  padding: 5px 0;
+  margin: 15px 0 5px 0;
+  font-size: 1.2em;
+  font-weight: bold;
+  border-top: 1px solid #999;
+  border-bottom: 1px solid #999;
+}
+
+#block-level_user-company_appointments .director-name h3,
+#block-level_user-company_appointments .profile_field_address h3 {
+  display: none;
+}
+
+#block-level_user-company_appointments .profile_field_name,
+#block-level_user-company_appointments .profile_field_name p,
+#block-level_user-company_appointments .profile_field_person_dob, 
+#block-level_user-company_appointments .profile_field_person_dob p {
+  float: left;
+  width: auto;
+}
+
+#block-level_user-company_appointments .profile_field_name,
+#block-level_user-company_appointments .profile_field_person_dob {
+  margin-right: 10px;
+}
+
+#block-level_user-company_appointments .profile_field_address p {
+  width: 100%;
+  color: #999;
+  font-weight: normal;
+  font-size: 1em;
+}
+
+.profile .profile-catagory .director_appointment .company_dissolved,
+.profile .profile-catagory .director_appointmentcompany_dissolved .company_dissolved {
+  color: #999;
+}
+.profile .profile-catagory .director_appointment .company_dissolved em,
+.profile .profile-catagory .director_appointmentcompany_dissolved .company_dissolved em {
+  color: #000;
+  font-style: normal;
+}
+
+/* appoinment date / type / occu */
+.profile .profile-catagory .director_appointment .profile_field_appointment_date,
+.profile .profile-catagory .director_appointment .profile_field_appointment_type,
+.profile .profile-catagory .director_appointment .profile_field_occupation,
+.profile .profile-catagory .director_appointmentcompany_dissolved .profile_field_appointment_date,
+.profile .profile-catagory .director_appointmentcompany_dissolved .profile_field_appointment_type,
+.profile .profile-catagory .director_appointmentcompany_dissolved .profile_field_occupation {
+  float: left;
+}
+
+.profile .profile-catagory .director_appointment .profile_field_appointment_date h3,
+.profile .profile-catagory .director_appointment .profile_field_appointment_type h3,
+.profile .profile-catagory .director_appointment .profile_field_occupation h3,
+.profile .profile-catagory .director_appointmentcompany_dissolved .profile_field_appointment_date h3,
+.profile .profile-catagory .director_appointmentcompany_dissolved .profile_field_appointment_type h3,
+.profile .profile-catagory .director_appointmentcompany_dissolved .profile_field_occupation h3,
+/* new block on company page */
+#block-level_user-company_appointments h3 {
+  display: block;
+  float: left;
+  width: 220px;
+  margin-right: 10px;
+  font-size: 0.9em;
+  font-weight: normal;
+  line-height: 18px;
+}
+
+.profile .profile-catagory .director_appointment .profile_field_appointment_date p,
+.profile .profile-catagory .director_appointment .profile_field_appointment_type p,
+.profile .profile-catagory .director_appointment .profile_field_occupation p,
+.profile .profile-catagory .director_appointmentcompany_dissolved .profile_field_appointment_date p,
+.profile .profile-catagory .director_appointmentcompany_dissolved .profile_field_appointment_type p,
+.profile .profile-catagory .director_appointmentcompany_dissolved .profile_field_occupation p,
+/* new block on company page */
+#block-level_user-company_appointments p {
+  display: block;
+  float: left;
+  width: 470px;
+  color: #000000;
+  font-weight: bold;
+  font-size: 0.9em;
+  line-height: 18px;
+  padding: 0;
+}
+
+.company_director_appointment > div {
+  overflow: auto;
+}
+
+/* identification */
+.profile .identification {
+  font-size: 12px;
+  line-height: 15px;
+  padding-top: 10px;
+}
+.profile .identification h4 {
+  color: #999;
+  text-transform: capitalize;
+  font-weight: normal;
+  padding: 10px 0 3px 0;
+}
+
+.profile .identification .content {
+  color: #000;
+  font-weight: normal;
+}
+.profile .identification .identification-top .content {
+  color: #000;
+  font-weight: bold;
+}
+
+.profile .identification .profile_field_nationality,
+.profile .identification .profile_field_person_dob {
+  float: left;
+  width: 220px;
+  margin-right: 10px;
+
+}
+
+/* withhold tooltip */
+.profile .identification .field_hidden .content span,
+.profile .profile-catagory .field_hidden p span,
+.director_appointment .field_hidden p span {
+  font-weight: bold;
+  color: #000;
+  cursor: help;
+}
+
+/* hide dup titles */
+body.section-users #top_bar h1#page-title,
+body.section-doc h1#profile-title {
+  display: none !important;
+}
+
+/* change title color */
+body.section-doc h1#page-title,
+h1#profile-title {
+  color: #21A0E1;
+  border: 0 none;
+}
+
+/* tabs */
+ul.primary {
+  border-bottom: 1px solid #999;
+  margin: 4px 0 20px 0;
+  padding: 0 14px;
+  font-size: 14px;
+  line-height: 20px;
+  height: 30px;
+  display: block;
+}
+ul.primary li {
+  border: 0 none;
+  background: transparent;
+  height: 30px;
+  display: block;
+  float: left;
+  padding: 0;
+  margin: 0;
+}
+ul.primary li a {
+  font-size: 13px;
+  line-height: 15px;
+  padding: 8px 14px 6px 14px;
+  margin: 0 15px 0 0;
+  font-weight: bold;
+  color: #999;
+  background: #fff;
+  border: 1px solid transparent;
+  border-bottom: 1px solid #999;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  display: block;
+  float: left;
+}
+ul.primary li a:hover {
+  color: #21A0E1;
+  background: #fff; 
+  border: 1px solid #999;
+  border-bottom: 1px solid #fff;
+}
+ul.primary li.active a,
+ul.primary li.active a:hover {
+  color: #000;
+  border: 1px solid #999;
+  border-bottom: 1px solid #fff;
+}
+
+/* #user-profile-form */
+#user-profile-form legend {
+  display: block;
+  color: #000;
+  font-weight: bold;
+  font-size: 1.2em;
+  padding-bottom: 15px;
+}
+#user-profile-form fieldset {
+  margin-bottom: 15px;
+}
+
+#edit-profile-hide-person-dob-wrapper.form-item,
+#edit-profile-hide-occupation-wrapper.form-item,
+#edit-profile-hide-address-wrapper.form-item,
+#edit-profile-hide-nationality-wrapper.form-item {
+  padding: 15px 0;
+  overflow: auto;
+  margin: 0;
+  border-bottom: 1px solid #999;
+}
+
+#edit-profile-hide-person-dob-wrapper label.option,
+#edit-profile-hide-occupation-wrapper label.option,
+#edit-profile-hide-address-wrapper label.option,
+#edit-profile-hide-nationality-wrapper label.option {
+  float: left;
+  width: 220px;
+  margin-right: 10px;
+}
+#edit-profile-hide-person-dob-wrapper .description,
+#edit-profile-hide-occupation-wrapper .description,
+#edit-profile-hide-address-wrapper .description,
+#edit-profile-hide-nationality-wrapper .description {
+  float: right;
+  width: 470px;
+}
+
+/* #block-level_user-company_appointments */
+#block-level_user-company_appointments {
+  clear: both;
 }

@@ -64,4 +64,8 @@ $(document).ready(function() {
   
   // Equal height for any_vote widget blocks
   $('#main_content_container .block-any_vote').equalHeight();
+  
+  // hide privacy legend
+  $('#user-profile-form legend:contains(privacy)').hide();
+
 });
