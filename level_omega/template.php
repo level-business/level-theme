@@ -241,9 +241,7 @@ function level_omega_preprocess_page(&$vars, $hook) {
      cookie : false, // enable cookies to allow the server to access the session
      xfbml  : true  // parse XFBML
    });
-    </script>';
-    $vars['scripts'] .= '<script src="http://www.scribd.com/javascripts/view.js"></script>';
-  
+    </script>'; 
   }
 
   // Linkedin claim widget.
