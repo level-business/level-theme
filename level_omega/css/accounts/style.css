@@ -1,0 +1,90 @@
+.widget-block {
+	padding-top: 10px;
+	padding-bottom: 10px;	
+}
+.widget-block .level-logo {
+	display: none;
+}
+.widget-block h1 {
+	color:#4fa7e2;
+	font-size: 26px;
+	font-weight: bold;
+	border-bottom: none;
+	padding: 0;
+}
+.widget-block h2 {
+	color:#999;
+	font-size: 18px;
+	font-weight: normal;
+}
+.widget-block p, #loading-window p{
+	color:#999;
+	font-size: 14px;
+	font-weight: normal;
+	margin-bottom: 10px;
+}
+.widget-block .pdf-icon {
+	margin-right: 10px;
+}
+.widget-block .alerts-icon {
+	margin-right: 10px;
+	float: left;
+}
+.widget-block a {
+	color: #4EA6E1;
+	text-decoration: none;
+}
+.widget-block a:hover {
+	text-decoration: underline;
+}
+.widget-block li {
+	padding: 0px;
+	marign: 0px;
+}
+.widget-block input.field {
+	background-color: #F7F7F7;
+	border: 1px solid #CCCCCC;
+	border-radius: 5px;
+	width: 185px;
+	height: 20px;
+	padding: 5px;
+	color: #999;
+	font-size: 14px;
+	margin-right: 10px;
+}
+.widget-block input.button {
+	border: none;
+	border-radius: 5px;
+	background-image: url(/sites/all/themes/level-theme/level_omega/css/accounts/alert-me-button.png);
+	background-repeat: repeat-x;	
+	height: 30px;
+	padding: 5px;
+	font-size: 14px;
+	color: #FFF;
+	cursor: pointer;
+}
+.widget-block input.button:hover {
+	background-image: url(/sites/all/themes/level-theme/level_omega/css/accounts/alert-me-button-hover.png);
+}
+#downloads-list .views-row {
+	border-top: none;
+	border-bottom: none;
+	padding-top: 0.0em;
+	padding-bottom: 0.0em;
+}
+#loading-window {
+	background-color: #FFFFFF;
+	padding: 10px;
+	position: relative;
+	text-align: center;
+	top: -80px;
+	width: 490px;
+	height: 80px;
+	background-image: url(/sites/all/themes/level-theme/level_omega/css/accounts/ajax-loader.gif);
+	background-repeat: no-repeat;
+ 	background-position: center 50px;
+}
+.divider {
+	border-bottom: 1px dotted #999999;	
+}
+

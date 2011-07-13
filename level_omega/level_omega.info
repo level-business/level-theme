@@ -18,6 +18,7 @@ stylesheets[all][] = css/static.css
 stylesheets[all][] = css/tipTip.css
 stylesheets[all][] = css/dev.css
 stylesheets[all][] = css/search/style.css
+stylesheets[all][] = css/accounts/style.css
 
 
 ; ------- Declare default javascript includes
