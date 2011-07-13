@@ -67,5 +67,16 @@ $(document).ready(function() {
   
   // hide privacy legend
   $('#user-profile-form legend:contains(privacy)').hide();
+  
+  var moreLikeThisContent = '<span class="tooltip">This panel shows companies that share the same SIC codes as the profile you are viewing. The greater the number of SIC codes a company has in common, the higher it will appear in this list.</span>';
+  
+  $(function(){
+	   // only show tooltip for anonymous users
+	   $('#block-level_search-more_like_this').tipTip({
+	     defaultPosition: 'top',
+	     content: moreLikeThisContent,
+	     keepAlive: false,
+	   });
+	  });
 
 });
