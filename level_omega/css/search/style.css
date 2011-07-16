@@ -1,13 +1,17 @@
 #block-level_search-were_you_looking_for,
 #block-level_search-more_like_this
 {
-  padding: 14px 12px 14px 12px;
+  padding: 14px 0px 14px 0px;
 }
 
 #block-level_search-were_you_looking_for h2,
 #block-level_search-more_like_this h2
 {
+  font-size: 14px;
   color: #999;
+  border-bottom: 1px solid #999390;
+  padding-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 /* Reset the list */
@@ -24,20 +28,28 @@
 #block-level_search-were_you_looking_for .item-list ul li.first,
 #block-level_search-more_like_this .item-list ul li.first
 {
-  padding-top: 14px;
+  padding-top: 4px;
   border-top: 0;
 }
 
 #block-level_search-were_you_looking_for .item-list ul li,
 #block-level_search-more_like_this .item-list ul li
 {
-  padding: 2px 0 2px 0;
+  padding: 5px 0 5px 0;
   border-top: 1px solid #e5e5ef;
+  font-size: 12px;
+  font-weight: normal;
+  color: #333;
 }
 
 #block-level_search-were_you_looking_for .item-list ul li a,
 #block-level_search-more_like_this .item-list ul li a
 {
   font-size: 11px;
-  color: #4da5e0;
+  color: #333;
+}
+
+#block-level_search-were_you_looking_for .item-list ul li a:hover,
+#block-level_search-more_like_this .item-list ul li a:hover {
+	  color: #4da5e0;
 }
