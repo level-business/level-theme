@@ -2,7 +2,7 @@
 ; ------- Declare default theme information
 
 name        = Omega Level 
-description = Omega LEvel 
+description = Omega Level 
 screenshot = screenshot.png
 core       = 6.x
 base theme = omega
@@ -28,6 +28,7 @@ scripts[] = js/superfish.js
 scripts[] = js/jquery.equalHeight.js
 scripts[] = js/jquery.tipTip.minified.js
 scripts[] = js/level_claim_profile.js
+scripts[] = js/level_any_vote.js
 scripts[] = js/level.js
 
 ; ------- Declare default theme regions
