@@ -8,6 +8,6 @@
 <?php // endif; ?>
 
   <div class="question"><?php print $block->question ?></div> 
-  <div class="content"><?php print $block->content ?></div>
   <div class="widget clearfix"><?php print $block->widget ?></div>
+  <div class="content"><?php print $block->content ?></div>
 </div>

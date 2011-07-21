@@ -186,34 +186,23 @@ function level_omega_preprocess_block(&$vars, $hook) {
   }
   
 
-  // any_vote
-  //$vars['vote_value'] = '';
-  //if (module_exists('votingapi')) {
-    //global $vote;
-	  //$vars['vote_value'] = votingapi_current_user_identifier();
-	  if ($vars['block']->module == 'any_vote') {
-	    
-      if ((arg(0) == 'node') && is_numeric(arg(1))) {
+  if ($vars['block']->module == 'any_vote') {
+    
+    if ((arg(0) == 'node') && is_numeric(arg(1))) {
 
-        //$node = node_load(arg(1));
-        $content_type = $node->type;
-        $content_id = arg(1);
-
-
-  	    //$vars['vote_value'] = votingapi_recalculate_results($content_type, $content_id, $force_calculation = FALSE);
-
-  	    $vars['vote_value'] = votingapi_select_single_result_value($criteria = array());
-  	  }
+      $content_type = $node->type;
+      $content_id = arg(1);
+	    $vars['vote_value'] = votingapi_select_single_result_value($criteria = array());
 	  }
-	  
-
-	//}
-
+  }
+  
+  if ($vars['block']->module == 'level_user'
+      && $vars['block']->delta == 'company_description') {
+         $vars['extra_classes'] = ($vars['block']->empty_company_description) ? 'company_description_empty' : '';
+  }
 }
 
 function level_omega_preprocess_views_view_field(&$vars, $hook) {
-  //var_dump(array_keys($vars));
-  //var_dump($vars['field']->options['id']);
   switch($vars['field']->options['id']) {
   case 'return_made_up_date':
   case 'incorporation_date':
