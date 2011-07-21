@@ -851,20 +851,20 @@ a.claimed {
   cursor: text;
 }
 
-/* tooltip */
-span.tooltip {
-  display: block;
+/* TipTip tooltip */
+#tiptip_content {
   font-size: 13px;
   line-height: 1.25em;
-  padding: 10px;
+  padding: 14px 18px 15px 18px;
 }
 
-span.tooltip a {
+#tiptip_content a {
   text-decoration: underline;
 }
-span.tooltip a:hover {
+
+#tiptip_content a:hover {
   color: #fe0;
-  text-decoration: node;
+  text-decoration: none;
 }
 
 /* dialog */

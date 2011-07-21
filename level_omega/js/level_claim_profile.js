@@ -69,7 +69,7 @@ $(document).ready(function() {
 
   // Tooltip
   // For anonymous users
-  var tooltipContent = '<span class="tooltip">Manage how others see your information. <a href="/user/login">Login</a> or <a href="/register">Register</a> in order to claim your Director Profile.</span>';
+  var tooltipContent = 'Manage how others see your information. <a href="/user/login">Login</a> or <a href="/register">register</a> in order to claim your Director Profile.';
 
   $('a.anonymous_unclaimed').removeAttr('href');
   $(function(){
@@ -80,15 +80,30 @@ $(document).ready(function() {
      keepAlive: true,
    });
   });
-  // Withhold fields
-  var tooltipWithhold =  '<span class="tooltip">This director has chosen to withhold this information.</span>';
-  $(function(){
 
-   $('.profile .profile-catagory .field_hidden p span, .profile .identification .field_hidden .content span, .director_appointment .field_hidden p span').tipTip({
-     defaultPosition: 'top',
-     content: tooltipWithhold,
-     keepAlive: false,
-   });
+  // Withheld fields
+  $(function(){
+	/**
+	 * Fields that a director has chosen to withhold:
+	 */
+    $('.profile .profile-catagory .field_hidden p span, \
+       .profile .identification .field_hidden .content span, \
+       .director_appointment .field_hidden p span')
+    .tipTip({
+      defaultPosition: 'top',
+      content: 'This director has chosen to withhold this information from unregistered users. Please <a href="/user/login">login</a> or <a href="/register">register</a> in order to see this information, or to claim your own profile.',
+    });
+
+    /*
+     * Fields that are hidden by default, unless the director chooses to show them:
+     */
+    $('.profile .profile-catagory .field_hidden.field_opt_in p span, \
+       .profile .identification .field_hidden.field_opt_in .content span, \
+       .director_appointment .field_hidden.field_opt_in p span')
+    .tipTip({
+      defaultPosition: 'top',
+      content: 'This field is only available to registered users. Please <a href="/user/login">login</a> or <a href="/register">register</a> in order to see this information, or to claim your own profile.',
+    });
   });
 
 });
