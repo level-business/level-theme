@@ -17,8 +17,9 @@ stylesheets[all][] = css/jquery-ui.css
 stylesheets[all][] = css/static.css
 stylesheets[all][] = css/tipTip.css
 stylesheets[all][] = css/dev.css
-stylesheets[all][] = css/search/style.css
 stylesheets[all][] = css/accounts/style.css
+stylesheets[all][] = css/claim_profile/style.css
+stylesheets[all][] = css/search/style.css
 
 
 ; ------- Declare default javascript includes

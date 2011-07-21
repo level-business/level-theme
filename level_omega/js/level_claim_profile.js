@@ -45,7 +45,7 @@ $(document).ready(function() {
   $('<div id="dialogHolder"><div id="claimContent"></div></div>').appendTo('body');
   
   // load the right form by id from claim link href before insert into dialog
-  var claimContent = $('#claimContent').load($('.logged-in .block-level_claim_profile a').attr('href') + ' form.confirmation');
+  var claimContent = $('#claimContent').load($('.logged-in #block-level_claim_profile-account-progress-block a').attr('href') + ' form.confirmation');
 
   // confirmation dialog display
   $('.logged-in .block-level_claim_profile a[href^=/claim-director/confirm/]').click(function() {

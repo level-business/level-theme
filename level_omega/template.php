@@ -233,6 +233,9 @@ function level_omega_preprocess_views_view_field(&$vars, $hook) {
  *   The name of the template being rendered ("page" in this case.)
  */
 function level_omega_preprocess_page(&$vars, $hook) {
+  
+  $body_classes = array($vars['body_classes']);
+
   if(arg(1) == 'company' || arg(0) == 'company') {
     $vars['scripts'] .= '<script src="http://platform.twitter.com/widgets.js"></script>';
     $vars['scripts'] .= '<script> FB.init({
@@ -253,10 +256,16 @@ function level_omega_preprocess_page(&$vars, $hook) {
   /* The following code should be moved to somewhere more applicable in the neer future */
   if(arg(1) == 'company') {
     $vars['main_content_attributes']['typeof'] = 'v:Organization gr:BusinessEntity vcard:Organization';
+    // add another <body> class for better theming
+    $body_classes[] = 'page-doc-company';
   }
   elseif (arg(1) == 'person') {
     $vars['main_content_attributes']['typeof'] = 'v:Person';
+    // add another <body> class for better theming
+    $body_classes[] = 'page-doc-person';
   }
+  
+  $vars['body_classes'] = implode(' ', $body_classes);
 
   // Dynamic insert additional content and change page titles for anonymous user.
   $vars['obj'] = _level_omega_user_form_elements($vars['obj'] = array(), $vars['title'], $vars['content'], $vars['tabs']);

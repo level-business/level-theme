@@ -1,0 +1,243 @@
+/* Director search page .view-director-search */
+.view-director-search a.claim_profile {
+  margin-top: 3px;
+}
+
+/* claim profile links */
+a.claim_profile {
+  display: block;
+  float: left;
+  width: 78px;
+  height: 16px;
+  text-align: center;
+  background: transparent url(../../images/claim_profile_buttons.png) 50% 0 no-repeat;
+  color: #fff;
+  font-size: 11px;
+  line-height: 16px;
+  font-weight: normal;
+  cursor: pointer;
+}
+a.claim_profile:hover {
+  background: transparent url(../../images/claim_profile_buttons.png) 50% 100% no-repeat;
+}
+
+a.claimed {
+  background: transparent url(../../images/claim_profile_buttons.png) 50% 100% no-repeat;
+  cursor: text;
+}
+
+/* body.section-doc */
+.block-level_claim_profile {
+  margin: 10px 0;
+}
+
+body.section-doc .claimDialog .dialog-links-wrapper {
+  width: 550px;
+  margin: 0 55px;
+}
+
+body.section-doc .claimDialog {
+  width: 660px !important;
+}
+
+body.section-doc .claimDialog p.register-intro {
+  background: transparent url(../../images/shadow-550.gif) 50% 0 no-repeat;
+  padding: 20px 110px 10px 110px;
+  margin-top: 20px;
+}
+
+body.section-doc .claimDialog .dialog-links a {
+  margin: 5px 110px;
+}
+
+body.section-doc .claim-steps {
+  color: #21A0E1;
+  margin-bottom: 20px;
+  padding-bottom: 40px;
+  background: transparent url(../../images/shadow-550.gif) 50% 100% no-repeat;
+}
+
+body.section-doc .claim-steps li {
+  width: 160px;
+  margin-right: 5px;
+  float: left;
+  position: relative;
+}
+
+body.section-doc .claim-steps li h3,
+body.section-doc .claim-steps li p {
+  margin-left: 50px;
+}
+
+body.section-doc .claim-steps li h3 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+body.section-doc .claim-steps li p {
+  font-size: 12px;
+}
+
+body.section-doc .claim-steps .number {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  float: left;
+  width: 38px;
+  padding-left: 18px;
+  height: 56px;
+  font-size: 25px;
+  line-height: 38px;
+  font-weight: bold;
+  text-align: left;
+  color: #fff;
+  background: transparent url(../../images/bg-step-number.png) 0 0 no-repeat;
+}
+
+/* claim profile confirmation form dialog */
+#dialogHolder {
+  display: none; /* just temporarily store contents before extract to dialog box so we have to hide it */
+}
+
+body.logged-in .confirmDialog {
+  width: 674px !important;
+}
+
+.confirmDialog p.linkedin-claim-msg {
+  padding: 20px 0;
+}
+
+.ui-dialog-container #claimContent .container-inline {
+  display: block;
+  width: 550px;
+  margin: 0;
+  padding: 25px 62px 0 62px;
+  background: transparent url(../../images/shadow-550.gif) 50% 0 no-repeat;
+}
+
+.ui-dialog-container #claimContent .container-inline a {
+  display: none !important;
+}
+
+#claimContent .container-inline input#edit-submit {
+  display: block;
+  width: 329px;
+  height: 60px;
+  padding: 6px 0 18px 0;
+  margin: 0 110px;
+  font: bold 30px/36px Arial, sans-serif;
+  letter-spacing: -1px;
+  text-align: center;
+  color: #21a0e1;
+  background: transparent url(../../images/form-buttons.gif) 0 0 no-repeat;
+}
+
+#claimContent .container-inline input#edit-submit:hover {
+  background: transparent url(../../images/form-buttons.gif) 0 -60px no-repeat;
+  color: #333;
+}
+
+/* claimed-profile */
+.block-level_claim_profile .claimed-profile {
+  background: transparent url(../../images/icon-claimed.gif) 0 0 no-repeat;
+  padding: 17px 0 0 100px;
+  margin-top: -15px;
+  margin-left: -10px;
+  min-height: 38px;
+  font-size: 0.85em;
+  color: #333;
+}
+
+/* claim profile blocks */
+#block-level_claim_profile-claim-director-profile-link-block {
+  width: 460px;
+  float: left;
+  font: normal 24px/30px Georgia, 'Adobe Garamond Pro', serif;
+  margin-bottom: 0
+}
+
+#block-level_claim_profile-account-progress-block {
+  float: right;
+  width: 198px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  background: #f7f7f7;
+  margin-bottom: 20px;
+}
+
+#block-level_claim_profile-claim-director-profile-link-block h2 {
+  font: normal 50px/60px Georgia, 'Adobe Garamond Pro', serif;
+  color: #000;
+  margin-bottom: 5px;
+}
+
+#block-level_claim_profile-account-progress-block h2 {
+  font: normal 20px/25px Georgia, 'Adobe Garamond Pro', serif;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+#block-level_claim_profile-account-progress-block .item-list ol {
+  margin: 0 0 10px 0;
+  padding: 0;
+
+}
+#block-level_claim_profile-account-progress-block .item-list ol li {
+  list-style: decimal inside;
+  margin: 0;
+  padding: 5px 0;
+  border-bottom: 1px solid #ccc;
+  color: #555;
+  font-size: 14px;
+  line-height: 16px;
+}
+#block-level_claim_profile-account-progress-block .item-list ol li.last {
+  border-bottom: 0 none;
+}
+#block-level_claim_profile-account-progress-block .item-list ol li span {
+  color: #999;
+}
+
+#block-level_claim_profile-account-progress-block .item-list ol li.ticked {
+  background: transparent url(../../images/icon-ticked.gif) 100% 50% no-repeat;
+}
+#block-level_claim_profile-account-progress-block .item-list ol li.unticked {
+  background: transparent url(../../images/icon-unticked.gif) 100% 50% no-repeat;
+}
+
+#block-level_claim_profile-account-progress-block a {
+  display: block;
+  float: left;
+  font-size: 12px;
+  padding: 7px 10px;
+  border: 1px solid #ccc;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  color: #999;
+  background: transparent url(../../images/button-grey-gradient.gif) 0 0 repeat-x;
+}
+#block-level_claim_profile-account-progress-block a:hover {
+  color: #555;
+  background: transparent url(../../images/button-grey-gradient.gif) 0 100% repeat-x;
+}
+
+/* claimed block */
+#block-level_claim_profile-claim-director-profile-link-block .claimed-profile {
+  clear: both;
+  width: 600px;
+  font-size: 13px;
+  line-height: 1.5em;
+  padding-top: 14px;
+  font-family: Arial, sans-serif;
+}
+
+/* help button */
+#block-level_claim_profile-account-progress-block a.help {
+  float: right;
+  margin-right: 0;
+}
