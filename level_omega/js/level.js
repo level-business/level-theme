@@ -78,5 +78,12 @@ $(document).ready(function() {
 	     keepAlive: false,
 	   });
 	  });
+	
+	// To-do add equalHeight() to  ul.linkedin_contact_list li
+	
+	// LinkedIn Carousel
+	$(function(){
+    $('ul.linkedin_contact_list').jcarousel();
+  });
 
 });

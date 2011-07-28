@@ -1602,3 +1602,249 @@ body.section-doc #main-content form#node-form #edit-body-wrapper label {
   font-weight: bold;
   margin-bottom: 10px;
 }
+
+/* LinkedIn #block-level_platform-people_known */
+#block-level_platform-people_known > h2 {
+  position: relative;
+  float: left;
+  margin-left: 20px;
+  top: 1px;
+  padding: 10px;
+  background: #f7f7f7;
+  color: #333;
+  border: 1px solid #ccc;
+  border-bottom: 0 none;
+  z-index: 9;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-top-right-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-topright: 3px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  display: none !important; /* temporal hide */
+}
+
+#block-level_platform-people_known > .content {
+  clear: both;
+  width: 678px;
+  padding: 10px;
+  margin-bottom: 20px;
+  margin-top:15px;
+  background: #f7f7f7;
+  border: 1px solid #ccc;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -moz-box-shadow: 5px 5px 10px #ddd;
+  -webkit-box-shadow: 5px 5px 10px #ddd;
+  box-shadow: 5px 5px 10px #ddd;
+  overflow: hidden;
+  position: relative;
+  z-index: 8;
+}
+
+#block-level_platform-people_known ul.linkedin_contact_list,
+#block-level_platform-people_known ul.linkedin_contact_list li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#block-level_platform-people_known ul.linkedin_contact_list {
+
+}
+
+#block-level_platform-people_known ul.linkedin_contact_list li {
+  float: left;
+  margin-right: 30px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+#block-level_platform-people_known ul.linkedin_contact_list li a,
+#block-level_platform-people_known ul.linkedin_contact_list li a span {
+  display: block;
+}
+
+#block-level_platform-people_known ul.linkedin_contact_list li a {
+  width: 185px;
+  float: left;
+  padding: 10px;
+}
+#block-level_platform-people_known ul.linkedin_contact_list li a:hover {
+  background: #fff;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-top-right-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-topright: 3px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  -moz-box-shadow: 3px 3px 5px #ddd;
+  -webkit-box-shadow: 3px 3px 5px #ddd;
+  box-shadow: 3px 3px 5px #ddd;
+}
+
+#block-level_platform-people_known ul.linkedin_contact_list li img,
+#block-level_platform-people_known ul.linkedin_contact_list li .img-placeholder {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border: 3px solid #ccc;
+  float: left;
+  margin-right: 10px;
+}
+
+#block-level_platform-people_known ul.linkedin_contact_list li .img-placeholder {
+  background: transparent url(../images/icon_linkedin_no_photo_40x40.gif) 50% 50% no-repeat;
+}
+
+#block-level_platform-people_known ul.linkedin_contact_list li .name {
+  float: left;
+  font-size: 13px;
+  padding: 2px 0;
+}
+
+#block-level_platform-people_known ul.linkedin_contact_list li a .name {
+  color: #333;
+  font-weight: bold;
+}
+#block-level_platform-people_known ul.linkedin_contact_list li a:hover .name {
+  color: #21A0E1;
+}
+
+#block-level_platform-people_known ul.linkedin_contact_list .relationship {
+  clear: both;
+  padding: 10px 0 5px 0;
+  font-size: 12px;
+  line-height: 1.4em;
+  font-weight: normal;
+  color: #333;
+}
+
+#block-level_platform-people_known .contact_count {
+  clear: both;
+  padding: 10px 180px;
+  font-size: 12px;
+  line-height: 1.4em;
+  font-weight: normal;
+  color: #333;
+  text-align: center;
+}
+
+/* jcaruosel */
+.jcarousel-container-horizontal {
+  width: 678px;
+}
+
+.jcarousel-prev,
+.jcarousel-next {
+  width: 70px;
+  height: 30px;
+  cursor: pointer;
+  opacity: 1;
+  position: absolute;
+  bottom: -40px;
+  z-index:  10;
+}
+
+.jcarousel-prev {
+  background: transparent url(../images/carousel-prev-next.png) 0 50% no-repeat;
+  left: 10px;
+}
+
+.jcarousel-next {
+  background: transparent url(../images/carousel-prev-next.png) 100% 50% no-repeat;
+  right: 10px;
+}
+
+.jcarousel-prev-disabled,
+.jcarousel-next-disabled {
+  opacity: 0.5;
+  cursor: auto;
+}
+
+/* not-logged-in */
+#block-level_platform-people_known > .content h3 {
+  font: normal 50px/60px Georgia, 'Adobe Garamond Pro', serif;
+  color: #000;
+  margin-bottom: 5px;
+  width: 440px;
+  float: left;
+}
+
+#block-level_platform-people_known > .content p {
+  float: left;
+  font: normal 24px/30px Georgia, 'Adobe Garamond Pro', serif;
+  margin-bottom: 20px;
+  width: 440px;
+  float: left;
+}
+
+#block-level_platform-people_known > .content #block-level_platform-steps_to_activate {
+  float: right;
+  width: 198px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  background: #f7f7f7;
+  margin-bottom: 20px;
+  position: absolute;
+  top: 20px;
+  right: 10px;
+}
+
+#block-level_platform-people_known > .content #block-level_platform-steps_to_activate > h2 {
+  font: normal 20px/25px Georgia, 'Adobe Garamond Pro', serif;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+#block-level_platform-people_known > .content #block-level_platform-steps_to_activate .content {
+  position: relative;
+}
+
+#block-level_platform-people_known > .content #block-level_platform-steps_to_activate .item-list ol {
+  margin: 0 0 10px 0;
+  padding: 0;
+}
+#block-level_platform-people_known > .content #block-level_platform-steps_to_activate .item-list ol li {
+  list-style: decimal inside;
+  margin: 0;
+  padding: 5px 0;
+  border-bottom: 1px solid #ccc;
+  color: #555;
+  font-size: 14px;
+  line-height: 16px;
+}
+#block-level_platform-people_known > .content #block-level_platform-steps_to_activate .item-list ol li.last {
+  border-bottom: 0 none;
+}
+#block-level_platform-people_known > .content #block-level_platform-steps_to_activate .item-list ol li span {
+  color: #999;
+}
+
+#block-level_platform-people_known > .content #block-level_platform-steps_to_activate .item-list ol li.ticked {
+  background: transparent url(../images/icon-ticked.gif) 100% 50% no-repeat;
+}
+#block-level_platform-people_known > .content #block-level_platform-steps_to_activate .item-list ol li.unticked {
+  background: transparent url(../images/icon-unticked.gif) 100% 50% no-repeat;
+}
+
+#block-level_platform-people_known > .content #block-level_platform-steps_to_activate a {
+  display: block;
+  float: left;
+  font-size: 12px;
+  padding: 7px 10px;
+  border: 1px solid #ccc;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  color: #999;
+  background: transparent url(../images/button-grey-gradient.gif) 0 0 repeat-x;
+}
+#block-level_platform-people_known > .content #block-level_platform-steps_to_activate a:hover {
+  color: #555;
+  background: transparent url(../images/button-grey-gradient.gif) 0 100% repeat-x;
+}

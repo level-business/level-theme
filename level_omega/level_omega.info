@@ -30,6 +30,7 @@ scripts[] = js/jquery.equalHeight.js
 scripts[] = js/jquery.tipTip.minified.js
 scripts[] = js/level_claim_profile.js
 scripts[] = js/level_any_vote.js
+scripts[] = js/jquery.jcarousel.min.js
 scripts[] = js/level.js
 
 ; ------- Declare default theme regions
