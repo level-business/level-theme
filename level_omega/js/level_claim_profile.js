@@ -41,31 +41,35 @@ $(document).ready(function() {
   
   // Confirm dialog for loged-in user
   
-  // create wrapper
-  $('<div id="dialogHolder"><div id="claimContent"></div></div>').appendTo('body');
-  
-  // load the right form by id from claim link href before insert into dialog
-  var claimContent = $('#claimContent').load($('.logged-in #block-level_claim_profile-account-progress-block a').attr('href') + ' form.confirmation');
+  // Firstly, check if the trigger link exists
+  if ($('.logged-in .block-level_claim_profile a[href^=/claim-director/confirm/]').length > 0) {
 
-  // confirmation dialog display
-  $('.logged-in .block-level_claim_profile a[href^=/claim-director/confirm/]').click(function() {
+    // create wrapper
+    $('<div id="dialogHolder"><div id="claimContent"></div></div>').appendTo('body');
 
-    var $dialog = $('<div class="confirmDialog"></div>')
+    // load the right form by id from claim link href before insert into dialog
+    var claimContent = $('#claimContent').load($('.logged-in #block-level_claim_profile-account-progress-block a').attr('href') + ' form.confirmation');
 
-    .html(claimContent)
+    // confirmation dialog display
+    $('.logged-in .block-level_claim_profile a[href^=/claim-director/confirm/]').click(function() {
 
-    .dialog({
-      modal: true,
-      autoOpen: false,
-      width: 714,
-      height: 'auto',
-      title: 'Please confirm...',
+      var $dialog = $('<div class="confirmDialog"></div>')
+
+      .html(claimContent)
+
+      .dialog({
+        modal: true,
+        autoOpen: false,
+        width: 714,
+        height: 'auto',
+        title: 'Please confirm...',
+      });
+      // open the dialog box
+      $dialog.dialog('open');
+      // prevent default action,
+      return false;
     });
-    // open the dialog box
-    $dialog.dialog('open');
-    // prevent default action,
-    return false;
-  });
+  }
 
   // Tooltip
   // For anonymous users
@@ -107,5 +111,3 @@ $(document).ready(function() {
   });
 
 });
-
-
