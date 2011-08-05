@@ -221,6 +221,9 @@ h1, h2, h3, h4, h5 {
 }
 
 /* Seartch forms */
+.level_search_tabbed_form {
+  display: none;
+}
 #edit-text,
 #edit-name
 {
@@ -271,34 +274,34 @@ h1, h2, h3, h4, h5 {
 }
 
 /* Front page search tabs */
-.front #block-level_search-level_search_tabs {
+.front #content-top #block-level_search-level_search_tabs {
 }
 
-.front #block-level_search-level_search_tabs ul.links {
+.front #content-top #block-level_search-level_search_tabs ul.links {
 	font-size: 80px;
 	padding: 0;
 	text-align: center;
 }
 
-.front #block-level_search-level_search_tabs ul.links li {
+.front #content-top #block-level_search-level_search_tabs ul.links li {
   padding: 0 0 50px 0;
   height: 82px; /* required to stop some browsers spacing problems with tet going from normal to bold weight */
 }
 
-.front #block-level_search-level_search_tabs .content .item-list {
+.front #content-top #block-level_search-level_search_tabs .content .item-list {
 	background-color: #FFF;
 }
 
-.front #block-level_search-level_search_tabs .content .item-list ul.links li a {
+.front #content-top #block-level_search-level_search_tabs .content .item-list ul.links li a {
   color: #a0a0a0;
   font-family: Helvetica;
 }
 
-.front #block-level_search-level_search_tabs .content .item-list ul.links li a:hover {
+.front #content-top #block-level_search-level_search_tabs .content .item-list ul.links li a:hover {
   color: #21A0E1;
 }
 
-.front #block-level_search-level_search_tabs .content .item-list ul.links li.first
+.front #content-top #block-level_search-level_search_tabs .content .item-list ul.links li.first
 {
 	background-image: url('../images/home_search_companiesoff.png');
 	background-repeat: no-repeat;
@@ -308,7 +311,7 @@ h1, h2, h3, h4, h5 {
 	width: 50%;
 }
 
-.front #block-level_search-level_search_tabs .content .item-list ul.links li.last
+.front #content-top #block-level_search-level_search_tabs .content .item-list ul.links li.last
 {
 	background-image: url('../images/home_search_directorsoff.png');
 	background-repeat: no-repeat;
@@ -318,25 +321,25 @@ h1, h2, h3, h4, h5 {
 	width: 50%;
 }
 
-.front #block-level_search-level_search_tabs .content .item-list ul.links li.active_tab a {
+.front #content-top #block-level_search-level_search_tabs .content .item-list ul.links li.active_tab a {
   color: #21A0E1;
   font-weight: bold;
 }
 
-.front #block-level_search-level_search_tabs .content .item-list ul.links li.active_tab_companies {
+.front #content-top #block-level_search-level_search_tabs .content .item-list ul.links li.active_tab_companies {
   background-image: url('../images/home_search_companieson.png');
   background-repeat: no-repeat;
   background-position: 100% 100%;
 }
 
-.front #block-level_search-level_search_tabs .content .item-list ul.links li.active_tab_directors {
+.front #content-top #block-level_search-level_search_tabs .content .item-list ul.links li.active_tab_directors {
   background-image: url('../images/home_search_directorson.png');
   background-repeat: no-repeat;
   background-position: 0 100%;
 }
 
-.front #level_search_block_form_companies,
-.front #level_search_block_form_directors
+.front #content-top #level_search_block_form_companies,
+.front #content-top #level_search_block_form_directors
 {
 	background-image: url('../images/home_search_bottom.png');
 	height: 92px;
@@ -530,7 +533,7 @@ div.ld_label {
 	font-style: normal;
 	}
 	
-.front drush #main-content {
+.front #main-content {
 	background-color: #FFFFFF;
 	}	
 	
@@ -1066,11 +1069,6 @@ div.level_search_tabbed_form .form-item label,
 div.level_search_tabbed_form .form-instructions,
 div.level_search_tabbed_form #edit-submit
 {
-	display: none;
-}
-
-/* Hide all forms */
-.level_search_tabbed_form {
 	display: none;
 }
 

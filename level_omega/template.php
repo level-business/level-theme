@@ -401,6 +401,23 @@ function level_omega_linkedin_auth_display_login_block_button($display = NULL, $
   return theme('item_list', $items);
 }
 
+/* Theme function for the Global Toolbar */
+function level_omega_global_toolbar($vars) {
+  
+  $output = '<div id="profile-links">'.
+              $vars['links']['my_profile'].
+              $vars['links']['my_account'].
+            '</div>'.
+            
+            '<div id="access-links">'.
+              $vars['links']['login'].
+              $vars['links']['register'].
+              $vars['links']['logout'].
+            '</div>';
+
+  return $output;
+}
+
 /* Dynamic display page & user form elements */
 function _level_omega_user_form_elements($obj = array(), $title, $content, $tabs) {
   

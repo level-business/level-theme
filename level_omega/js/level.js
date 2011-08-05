@@ -68,6 +68,13 @@ $(document).ready(function() {
   // hide privacy legend
   $('#user-profile-form legend:contains(privacy)').hide();
   
+  // LinkedIn Carousel
+  $(function(){
+    $('ul.linkedin_contact_list').jcarousel();
+  });
+  // To-do add equalHeight() to  ul.linkedin_contact_list li
+	
+  
   var moreLikeThisContent = '<span class="tooltip">This panel shows companies that share the same SIC codes as the profile you are viewing. The greater the number of SIC codes a company has in common, the higher it will appear in this list.</span>';
   
   $(function(){
@@ -79,11 +86,58 @@ $(document).ready(function() {
 	   });
 	  });
 	
-	// To-do add equalHeight() to  ul.linkedin_contact_list li
-	
-	// LinkedIn Carousel
-	$(function(){
-    $('ul.linkedin_contact_list').jcarousel();
-  });
+
+  /* New #block-level_search-level_search_tabs on #page_tools
+   */
+   var topSearchBox = '#page_tools #block-level_search-level_search_tabs';
+   // Only if there's topSearchBox
+   if ($(topSearchBox).length > 0) {
+
+     // Change <label> texts to "Search UK Companies" : "Search UK Directors"
+     $('#level_search_block_form_companies .views-widget-filter-text_1 label').text('Search UK Companies');
+     $('#level_search_block_form_directors .views-widget-filter-text label').text('Search UK Directors');
+     
+     // Hide inactive tab & form
+     $('.level_search_tabbed_form').not('.level_search_tabbed_form_active').hide();
+
+     $(topSearchBox + ' .item-list ul li').not('.active_tab').hide();
+     $(topSearchBox + ' .item-list ul li').not('.active_tab').appendTo(topSearchBox + ' .item-list ul');
+     
+     // Expand both Companies & Directors tabs when rollover
+     $(topSearchBox + ' .item-list ul').hover(
+       // mouseover
+       function(){
+         // show inactive tab
+         $(this).children().not('.active_tab').show();
+         // when rollover each tabs
+         $(this).children().mouseover(function(){
+            // add .active_tab class to it then remove that class from its sibling
+            $(this).addClass('active_tab');
+            $(this).siblings().removeClass('active_tab');
+            
+            // if Directors tab is active, show its form & hide Companies form
+            if ($(this).children().hasClass('search_block_tab_Directors')) {
+              $(topSearchBox + ' #level_search_block_form_companies').hide();
+              $(topSearchBox + ' #level_search_block_form_directors').show();
+            }
+            // if Companies tab is active, show its form & hide Directors form
+            if ($(this).children().hasClass('search_block_tab_Companies')) {
+              $(topSearchBox + ' #level_search_block_form_directors').hide();
+              $(topSearchBox + ' #level_search_block_form_companies').show();
+            }
+         });
+       },
+       // mouseout
+       function(){
+         $(this).children().not('.active_tab').appendTo(this).hide();
+       }
+     );
+     
+     // hide annoying Directors .compact-form-label in FireFox
+     if ($('.level_search_tabbed_form').not('.level_search_tabbed_form_active')) {
+       $(topSearchBox + ' #level_search_block_form_directors label.compact-form-label').hide();
+     }
+     
+   }
 
 });

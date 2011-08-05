@@ -50,6 +50,7 @@
 
 
 <body class="<?php print $body_classes; ?>">
+
   <?php if($help || $messages): ?>
     <div id="system_messages">
        <?php print $help; ?>
@@ -57,9 +58,11 @@
     </div><!-- /.container-xx -->
   <?php endif; ?>              
   <?php if (!empty($admin)) print $admin; ?>
+
   <div id="page" class="clearfix">
-  <div id="header_container" class="container_4">
-    <div id="site-header" class="grid_4 alpha">
+
+  <div id="header_container" class="container_4 clearfix">
+    <div id="site-header" class="grid_4 alpha clearfix">
       <div id="branding" class="grid_1 alpha omega">
         <?php //if ($linked_logo_img): ?>
           <?php //print $linked_logo_img; ?>
@@ -82,19 +85,15 @@
        }
       ?>
     </div>
-  </div>
-  <?php if (!empty($page_tools)): ?>
-    <div class="container_4"> 
-      <div class="grid_1 alpha">
-        &nbsp;
-      </div>
-      <div id="page_tools" class="grid_3 omega">
-        <?php print $page_tools; ?>
-      </div>            
-    </div>
- <?php endif; ?>
+  </div><!--/ #header_container -->
 
-  <div id="content" class="container_4">
+  <?php if (!empty($page_tools)): ?>           
+    <div id="page_tools" class="container_4 clearfix">
+      <?php print $page_tools; ?>
+    </div>
+  <?php endif; ?>
+
+  <div id="content" class="container_4 clearfix">
 
     <div id="left_sidebar" class="grid_1 alpha">
       <?php 
@@ -106,22 +105,22 @@
 	       }?>
     </div>
 
-<div id="main_content_container" class="grid_3 clearfix omega" <?php print drupal_attributes($main_content_attributes); ?>>
-  <?php if($top_bar || $title):
+    <div id="main_content_container" class="grid_3 clearfix omega" <?php print drupal_attributes($main_content_attributes); ?>>
+    <?php if($top_bar || $title):
       /* top_bar can be used for bold page titles such as company
        * names on the company profile page. It will allways span 
        * the page after the left column.
        */
      
      ?>
-     <div id="top_bar" class="clearfix">
-     <?php  if ($top_bar && arg(1) == 'company'): // TOP bar used in place of standard page title ?>
-        <?php print $top_bar; ?>
-     <?php else:?>
-      <?php print $top_bar; ?>
-       <h1 class="title" id="page-title"><?php print $title; ?></h1>
-     <?php endif;  ?>       
-     </div>
+       <div id="top_bar" class="clearfix">
+        <?php  if ($top_bar && arg(1) == 'company'): // TOP bar used in place of standard page title ?>
+           <?php print $top_bar; ?>
+        <?php else:?>
+         <?php print $top_bar; ?>
+          <h1 class="title" id="page-title"><?php print $title; ?></h1>
+        <?php endif;  ?>       
+        </div>
    <?php endif; ?>
 
    <?php //Calculate suffix (TODO: put in preprocess function)
@@ -136,20 +135,17 @@
 
    <div id="main_wrapper" class="<?php print $content_classes; ?> clearfix">
    
-   <?php if ($tabs): ?>
-     <div id="content-tabs" class=""><?php print $tabs; ?></div><!-- /#content-tabs -->
-   <?php endif; ?>
+    <?php if ($tabs): ?>
+       <div id="content-tabs" class=""><?php print $tabs; ?></div><!-- /#content-tabs -->
+     <?php endif; ?>
  
      <?php if($content_top): ?>
        <div id="content-top">
           <?php print $content_top; ?>
        </div><!-- /#content-top -->
       <?php endif; ?>
- 
-      
 
- 
-      <div id="main-content" class="">
+      <div id="main-content">
         <?php print $content; ?>
       </div><!-- /#main-content -->
       <?php if($content_bottom): ?>
@@ -157,6 +153,7 @@
           <?php print $content_bottom; ?>
         </div><!-- /#content-bottom -->
       <?php endif; ?>
+
     </div><!-- /#main-wrapper -->   
 
 
@@ -166,24 +163,24 @@
        </div>
    <?php endif;?> 
 
-
-</div>
-
-</div>
+   </div><!--/ #main_content_container -->
+  </div><!--/ #content -->
                 
 
-<div id="footer_wrapper" class="container_4">
- 
- <div id="footer_main" class="grid_4 clearfix alpha">
-  <?php if($footer) {
+  <div id="footer_wrapper" class="container_4 clearfix">
+    <div id="footer_main" class="grid_4 clearfix alpha">
+      <?php if($footer) {
             print $footer;
-          }?>
-</div>
-</div>
+      }?>
+    </div>
+  </div>
+
 </div><!-- /page -->
+
   <?php print $closure; ?>
    <script type="text/javascript">
      FB.XFBML.parse();
-   </script>          
+   </script>  
+        
 </body>
 </html>

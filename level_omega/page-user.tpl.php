@@ -48,17 +48,19 @@
   ?> 
 </head>
 
-
 <body class="<?php print $body_classes; ?>">
+
   <?php if($help || $messages): ?>
     <div id="system_messages">
        <?php print $help; ?>
        <?php print $messages; ?>
     </div><!-- /.container-xx -->
-  <?php endif; ?>              
+  <?php endif; ?>   
+           
   <?php if (!empty($admin)) print $admin; ?>
   <div id="page" class="clearfix">
-  <div id="header_container" class="container_4">
+
+  <div id="header_container" class="container_4 clearfix">
     <div id="site-header" class="grid_4 alpha">
       <div id="branding" class="grid_1 alpha omega">
         <?php //if ($linked_logo_img): ?>
@@ -83,18 +85,14 @@
       ?>
     </div>
   </div>
-  <?php if (!empty($page_tools)): ?>
-    <div class="container_4"> 
-      <div class="grid_1 alpha">
-        &nbsp;
-      </div>
-      <div id="page_tools" class="grid_3 omega">
-        <?php print $page_tools; ?>
-      </div>            
-    </div>
- <?php endif; ?>
 
-  <div id="content" class="container_4">
+  <?php if (!empty($page_tools)): ?>           
+    <div id="page_tools" class="container_4 clearfix">
+      <?php print $page_tools; ?>
+    </div>
+  <?php endif; ?>
+
+  <div id="content" class="container_4 clearfix">
 
     <div id="left_sidebar" class="grid_1 alpha">
       <?php 
@@ -145,7 +143,7 @@
        </div><!-- /#content-top -->
       <?php endif; ?>
  
-      <div id="main-content" class="">
+      <div id="main-content">
         <?php print $obj['content']; ?>
       </div><!-- /#main-content -->
       <?php if($content_bottom): ?>
@@ -168,7 +166,7 @@
 </div>
                 
 
-<div id="footer_wrapper" class="container_4">
+<div id="footer_wrapper" class="container_4 clearfix">
  
  <div id="footer_main" class="grid_4 clearfix alpha">
   <?php if($footer) {
