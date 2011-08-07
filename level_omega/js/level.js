@@ -139,5 +139,32 @@ $(document).ready(function() {
      }
      
    }
+   
+   // #page_tools My List
+   var myLists = '#page_tools #global-links-middle';
+   
+   if (myLists.length > 1 && $('body.page-doc-company').length < 1) {
+
+     $(myLists).addClass('jsEnabled').wrapInner('<div id="wrapInner" />');
+
+     // Change text
+     $(myLists + ' h2').text('My Lists');
+
+     $(myLists).hover(
+       // mouseover
+       function(){
+         $(myLists + ' #wrapInner').addClass('jsHover clearfix');
+         $(myLists + ' .item-list').show();
+       },
+
+       // mouseout
+       function(){
+         $(myLists + ' .item-list').hide()
+         $(myLists + ' #wrapInner').removeClass('jsHover clearfix');
+       }
+     );
+     
+
+   }
 
 });

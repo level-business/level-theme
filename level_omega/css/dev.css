@@ -1856,8 +1856,6 @@ body.section-doc #main-content form#node-form #edit-body-wrapper label {
 }
 
 
-
-
 /* New pagetools */
 #page_tools {
   height: auto;
@@ -1870,15 +1868,15 @@ body.section-doc #main-content form#node-form #edit-body-wrapper label {
 }
 
 /* buttons */
-#profile-links {
+#global-links-left {
   float: left;
 }
-#access-links {
+#global-links-right {
   float: right;
 }
 
-#profile-links a,
-#access-links a {
+#global-links-left a,
+#global-links-right a {
   display: block;
   float: left;
   font-size: 11px;
@@ -1893,8 +1891,8 @@ body.section-doc #main-content form#node-form #edit-body-wrapper label {
   background: transparent url(../images/button-grey-gradient.gif) 0 0 repeat-x;
 }
 
-#profile-links a:hover,
-#access-links a:hover {
+#global-links-left a:hover,
+#global-links-right a:hover {
   color: #555;
   background: transparent url(../images/button-grey-gradient.gif) 0 100% repeat-x;
 }
@@ -2049,4 +2047,192 @@ a#level_accounts_download_link {
 #block-boxes-tweet_block {
   float: right;
   margin-left: 10px;
+}
+
+
+/* #global-links-middle */
+#page_tools #global-links-middle {
+  float: left;
+  border: 0 none;
+  padding: 0;
+  position: relative;
+}
+
+#page_tools #global-links-middle.jsEnabled #wrapInner {
+  position: relative;
+}
+
+#page_tools #global-links-middle h2 {
+  display: block;
+  float: left;
+  font-size: 11px;
+  font-weight: normal;
+  line-height: 16px;
+  padding: 5px 10px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  color: #999;
+  background: transparent url(../images/button-grey-gradient.gif) 0 0 repeat-x;
+}
+
+#page_tools #global-links-middle.jsEnabled #wrapInner.jsHover {
+  width: 200px;
+  margin-right: 10px;
+  margin-left: -7px;
+  padding-left: 7px;
+  padding-right: 7px;
+  background: #f9f9f9;
+  border: 1px solid #ccc;
+  margin-top: 0px;
+  position: absolute;
+  top: -3px;
+  left: 0;
+  z-index: 111;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  -moz-box-shadow: 3px 3px 10px #ccc;
+  -webkit-box-shadow: 3px 3px 10px #ccc;
+  box-shadow: 3px 3px 10px #ccc;
+}
+
+#page_tools #global-links-middle .item-list {
+  display: none;
+  clear: both;
+}
+
+#page_tools #global-links-middle.jsEnabled .item-list ul {
+  padding: 7px 10px 10px 10px;
+  margin: 0;
+}
+
+#page_tools #global-links-middle.jsEnabled .item-list ul li {
+  font-size: 12px;
+  line-height: 16px;
+  color: #000;
+  background: transparent;
+  border-top: 1px solid #ccc;
+  border-bottom: 0 none;
+  padding: 3px 7px;
+  margin: 0 -7px;
+}
+
+#page_tools #global-links-middle.jsEnabled .item-list ul li .tag_summary_tag_name {
+  float: left;
+}
+
+#page_tools #global-links-middle.jsEnabled .item-list ul li .tag_summary_tag_total {
+  float: right;
+}
+
+#page_tools #global-links-middle h2 {
+  margin: 0;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+#page_tools #global-links-middle.jsEnabled #wrapInner.jsHover h2 {
+  background: transparent;
+  border: 0 none;
+  margin-top: 3px;
+}
+
+#page_tools #global-links-middle.jsEnabled .item-list ul li a {
+  color: #000;
+}
+#page_tools #global-links-middle.jsEnabled .item-list ul li:hover a {
+  color: #21A0E1;
+}
+
+/* level_tagging superfish js menu */
+
+#page_tools #level_tagging_save_box {
+	position: absolute;
+}
+
+#page_tools #level_tagging_save_box #sf_save_profile {
+  margin: 0;
+  padding: 0;
+}
+
+#page_tools #level_tagging_save_box #sf_save_profile li.top_item {
+  background: transparent;
+  border: 0 none;
+}
+
+#page_tools #level_tagging_save_box #sf_save_profile li.top_item.sfHover {
+  width: 200px;
+  margin-right: 10px;
+  margin-left: -7px;
+  padding-left: 7px;
+  padding-right: 7px;
+  background: #f9f9f9;
+  border: 1px solid #ccc;
+  margin-top: 0px;
+  position: absolute;
+  top: -3px;
+  left: 0;
+  z-index: 111;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  -moz-box-shadow: 3px 3px 10px #ccc;
+  -webkit-box-shadow: 3px 3px 10px #ccc;
+  box-shadow: 3px 3px 10px #ccc;
+}
+
+#level_tagging_save_box ul#sf_save_profile li.top_item a.top_link {
+  display: block;
+  width: auto;
+  float: left;
+  font-size: 11px;
+  font-weight: normal;
+  line-height: 16px;
+  padding: 5px 10px;
+  margin: 0 10px 0 0;
+  border: 1px solid #ccc;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  color: #999;
+  background: transparent url(../images/button-grey-gradient.gif) 0 0 repeat-x;
+}
+#level_tagging_save_box ul#sf_save_profile li.top_item.sfHover a.top_link {
+  background: transparent;
+  border: 0 none;
+  margin-top: -2px;
+}
+
+#page_tools #level_tagging_save_box #sf_save_profile ul#level_tagging_save_list {
+  clear: both;
+  padding: 6px 10px 10px 10px;
+  margin: 0;
+}
+
+
+#level_tagging_save_box ul#sf_save_profile li.top_item ul#level_tagging_save_list li {
+  display: block;
+  color: #000;
+  background: transparent;
+  border-top: 1px solid #ccc;
+  border-bottom: 0 none;
+  padding: 0;
+  margin: 0 -7px;
+}
+
+#level_tagging_save_box ul#sf_save_profile li.top_item ul#level_tagging_save_list li a {
+  display: block;
+  font-size: 12px;
+  color: #000;
+  background: transparent;
+  padding: 0 7px;
+  margin: 0;
+
+}
+#level_tagging_save_box ul#sf_save_profile li.top_item ul#level_tagging_save_list li a:hover {
+  color: #21A0E1;
+  background: transparent;
 }
