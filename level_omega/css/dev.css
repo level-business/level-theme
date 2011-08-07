@@ -2236,3 +2236,22 @@ a#level_accounts_download_link {
   color: #21A0E1;
   background: transparent;
 }
+
+.action-button {
+  display: block;
+  float: left;
+  font-size: 11px;
+  line-height: 16px;
+  padding: 5px 10px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  color: #999;
+  background: transparent url(../images/button-grey-gradient.gif) 0 0 repeat-x;
+}
+.action-button:hover {
+  color: #555;
+  background: transparent url(../images/button-grey-gradient.gif) 0 100% repeat-x;
+}
