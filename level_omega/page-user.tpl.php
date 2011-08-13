@@ -94,17 +94,9 @@
 
   <div id="content" class="container_4 clearfix">
 
-    <div id="left_sidebar" class="grid_1 alpha">
-      <?php 
-	        if($left_sidebar) {
-	          print $left_sidebar; 
-	        }
-	        else {
-	         print "&nbsp;";
-	       }?>
-    </div>
 
-<div id="main_content_container" class="grid_3 clearfix omega" <?php print drupal_attributes($main_content_attributes); ?>>
+
+<div id="main_content_container" class="grid_4 clearfix alpha omega" <?php print drupal_attributes($main_content_attributes); ?>>
   <?php if($top_bar || $title):
       /* top_bar can be used for bold page titles such as company
        * names on the company profile page. It will allways span 
@@ -124,10 +116,10 @@
    <?php //Calculate suffix (TODO: put in preprocess function)
    
    if ($right_sidebar) {
-     $content_classes = "grid_2 alpha";
+     $content_classes = "grid_3 alpha";
     }
     else {
-      $content_classes = "grid_3 alpha omega";
+      $content_classes = "grid_4 alpha omega";
     }
    ?>
 

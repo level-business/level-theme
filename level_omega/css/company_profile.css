@@ -1,0 +1,114 @@
+@CHARSET "UTF-8";
+
+#main-content .stats_col, .company_statistics .stats_col {
+	width: 210px;
+	float: left;
+	padding: 10px;
+	margin-right: 5px;
+}
+#main-content .last-child , .company_statistics .last-child {
+	margin-right: 0px;
+}
+#main-content h2 {
+	font-size: 26px;
+	color: #333;
+	font-family: Georgia, serif;
+	font-weight: normal;
+	margin: 10px 0px 20px 10px;
+	width: 950px;
+	float: left;
+}
+.company_statistics {
+	background-color: #F7F7F7;
+	overflow: auto;
+	width: 700px;
+	float: right;
+}
+.stats_col h3, .improve-stats h3 {
+	color: #333;
+	font-size: 12px;
+	font-weight: bold:
+}
+.stats_col img {
+	margin-bottom: 10px;
+}
+.stats_col p, .improve-stats p {
+	font-size: 12px;
+	color: #666;
+	margin-top: 5px;
+}
+.box_group {
+	width: 50px;
+	height: 50px;
+	padding: 5px;
+	border: 1px solid #DDDDDD;
+	float: left;
+	margin: 10px 5px 10px 0px;
+	font-family: Georgia, serif;
+	font-size: 30px;
+	color: #0099CC;
+	text-align: center;
+}
+.stats_col table {
+	width: 100%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-size: 12px;
+}
+.stats_col table tr td {
+	padding-bottom: 6px;
+}
+.improve-stats {
+	background-color: #FFF;
+	padding: 10px;
+	float: left;
+	font-size: 12px;
+	margin: 10px;
+}
+.improve-stats p {
+	width: 66%;
+	float: left;
+}
+.improve-stats .addthis_toolbox {
+	float: right;
+	margin-top: 5px;
+}
+
+
+/*////////////////// NEW TABBED SECONDARY NAVIGATION STYLE ///////////////*/
+
+#main_wrapper .item-list ul.secondary {
+	border-bottom: none;
+	margin: 0;
+	padding: 10px 0 10px 0;
+	width: 220px;
+}
+#main_wrapper .item-list ul.secondary li {
+	border-right: none;
+	display: block;
+	float: left;
+	list-style: none;
+	margin: 0 0 5px 0;
+	padding: 0;
+}
+#main_wrapper .item-list ul.secondary li a {
+	font-size: 15px;
+	color: #999;
+	padding: 5px 10px 5px 10px;
+	width: 220px;
+	display: block;
+}
+#main_wrapper .item-list ul.secondary li a:hover {
+	color: #666;
+}
+#main_wrapper .item-list ul.secondary li a.active {
+	border-bottom: none;
+	color: #666;
+	background-color: #F7F7F7;
+}
+
+
+
+
+
+
