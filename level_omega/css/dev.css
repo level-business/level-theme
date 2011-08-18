@@ -1061,77 +1061,13 @@ body.page-doc-person h1#page-title {
   cursor: help;
 }
 
-/* hide dup titles */
-body.section-users #top_bar h1#page-title,
-body.section-doc h1#profile-title {
-  display: none !important;
-}
-
 /* change title color */
-body.section-doc h1#page-title,
-h1#profile-title {
-  color: #21A0E1;
+body.section-doc h1#page-title, h1#profile-title {
+  color: #333;
   border: 0 none;
+  font-family: Georgia, serif;
+  font-weight: normal;
   clear: both;
-}
-
-/* tabs */
-ul.primary {
-  border-bottom: 1px solid #999;
-  margin: 4px 0 20px 0;
-  padding: 0 14px;
-  font-size: 14px;
-  line-height: 20px;
-  height: 30px;
-  display: block;
-}
-ul.primary li {
-  border: 0 none;
-  background: transparent;
-  height: 30px;
-  display: block;
-  float: left;
-  padding: 0;
-  margin: 0;
-}
-ul.primary li a {
-  font-size: 13px;
-  line-height: 15px;
-  padding: 8px 14px 6px 14px;
-  margin: 0 15px 0 0;
-  font-weight: bold;
-  color: #999;
-  background: #fff;
-  border: 1px solid transparent;
-  border-bottom: 1px solid #999;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  display: block;
-  float: left;
-}
-ul.primary li a:hover {
-  color: #21A0E1;
-  background: #fff; 
-  border: 1px solid #999;
-  border-bottom: 1px solid #fff;
-}
-ul.primary li.active a,
-ul.primary li.active a:hover {
-  color: #000;
-  border: 1px solid #999;
-  border-bottom: 1px solid #fff;
-}
-
-/* #user-profile-form */
-#user-profile-form legend {
-  display: block;
-  color: #000;
-  font-weight: bold;
-  font-size: 1.2em;
-  padding-bottom: 15px;
-}
-#user-profile-form fieldset {
-  margin-bottom: 15px;
 }
 
 #edit-profile-hide-person-dob-wrapper.form-item,
@@ -1151,13 +1087,6 @@ ul.primary li.active a:hover {
   float: left;
   width: 220px;
   margin-right: 10px;
-}
-#edit-profile-hide-person-dob-wrapper .description,
-#edit-profile-hide-occupation-wrapper .description,
-#edit-profile-hide-address-wrapper .description,
-#edit-profile-hide-nationality-wrapper .description {
-  float: right;
-  width: 470px;
 }
 
 /* #block-level_user-company_appointments */
@@ -1335,41 +1264,21 @@ ul.primary li.active a:hover {
 
 }
 
-/* withhold tooltip */
-.profile .identification .field_hidden .content span,
-.profile .profile-catagory .field_hidden p span,
-.director_appointment .field_hidden p span {
-  font-weight: bold;
-  color: #000;
-  cursor: help;
-}
-
 /* hide dup titles */
-body.section-users #top_bar h1#page-title,
-body.section-doc h1#profile-title {
+body.section-users #top_bar h1#page-title, body.section-user #top_bar h1#page-title, body.section-doc h1#profile-title {
   display: none !important;
-}
-
-/* change title color */
-body.section-doc h1#page-title,
-h1#profile-title {
-  color: #21A0E1;
-  border: 0 none;
 }
 
 /* tabs */
 ul.primary {
-  border-bottom: 1px solid #999;
-  margin: 4px 0 20px 0;
-  padding: 0 14px;
-  font-size: 14px;
-  line-height: 20px;
+  padding: 20px 0 20px 5px;
+  margin: 0 0 20px 0;
+  border-bottom: 1px solid #CCC;
   height: 30px;
   display: block;
 }
 ul.primary li {
-  border: 0 none;
-  background: transparent;
+  border: 0 none;x
   height: 30px;
   display: block;
   float: left;
@@ -1377,31 +1286,29 @@ ul.primary li {
   margin: 0;
 }
 ul.primary li a {
-  font-size: 13px;
+  font-size: 15px;
   line-height: 15px;
-  padding: 8px 14px 6px 14px;
+  padding: 9px;
   margin: 0 15px 0 0;
-  font-weight: bold;
+  font-weight: normal;
   color: #999;
-  background: #fff;
-  border: 1px solid transparent;
-  border-bottom: 1px solid #999;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+  background: #FFF;
   display: block;
   float: left;
+  border: none;
 }
 ul.primary li a:hover {
-  color: #21A0E1;
-  background: #fff; 
-  border: 1px solid #999;
-  border-bottom: 1px solid #fff;
+  color: #333;
+  background: #FFF;
 }
 ul.primary li.active a,
 ul.primary li.active a:hover {
-  color: #000;
-  border: 1px solid #999;
-  border-bottom: 1px solid #fff;
+  color: #333;
+  background: #F7F7F7;
+  border: none;
+  -moz-box-shadow: 0 0 4px 4px #EEE;
+  -webkit-box-shadow: 0 0 4px 4px#EEE;
+  box-shadow: 0 0 4px 4px #EEE;
 }
 
 /* #user-profile-form */
@@ -1439,7 +1346,7 @@ ul.primary li.active a:hover {
 #edit-profile-hide-address-wrapper .description,
 #edit-profile-hide-nationality-wrapper .description {
   float: right;
-  width: 470px;
+  width: 450px;
 }
 
 /* #block-level_user-company_appointments */

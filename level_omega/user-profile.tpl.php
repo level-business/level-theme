@@ -43,7 +43,7 @@
 <?php if (!$account->hide_profile): ?>
   <?php profile_load_profile($account); ?>
 
-  <h1 id="profile-title"><?php print check_plain($account->name); ?><?php print check_plain($account->profile_age['#value']); ?></h1>
+  <h1 id="profile-title"><?php print ucwords(strtolower($account->name)); ?><?php print check_plain($account->profile_age['#value']); ?></h1>
 
   <div class="profile clear-block">
 

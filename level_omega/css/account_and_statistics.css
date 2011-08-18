@@ -9,7 +9,7 @@
 #main-content .last-child , .company_statistics .last-child {
 	margin-right: 0px;
 }
-#main-content h2 {
+.level-account-statistics #main-content h2 {
 	font-size: 26px;
 	color: #333;
 	font-family: Georgia, serif;
@@ -77,13 +77,17 @@
 
 /*////////////////// NEW TABBED SECONDARY NAVIGATION STYLE ///////////////*/
 
-#main_wrapper .item-list ul.secondary {
+#main_wrapper ul.secondary {
 	border-bottom: none;
 	margin: 0;
 	padding: 10px 0 10px 0;
 	width: 220px;
+	position: absolute;
 }
-#main_wrapper .item-list ul.secondary li {
+.level-account-statistics #main_wrapper ul.secondary {
+	position: relative;
+}
+#main_wrapper ul.secondary li {
 	border-right: none;
 	display: block;
 	float: left;
@@ -91,15 +95,20 @@
 	margin: 0 0 5px 0;
 	padding: 0;
 }
-#main_wrapper .item-list ul.secondary li a {
+#main_wrapper ul.secondary li a {
 	font-size: 15px;
 	color: #999;
 	padding: 5px 10px 5px 10px;
 	width: 220px;
 	display: block;
 }
-#main_wrapper .item-list ul.secondary li a:hover {
+#main_wrapper ul.secondary li a:hover {
 	color: #666;
+}
+#main_wrapper ul.secondary li a.active {
+	border-bottom: none;
+	color: #666;
+	background-color: #F7F7F7;
 }
 #main_wrapper .item-list ul.secondary li a.active {
 	border-bottom: none;
@@ -107,8 +116,10 @@
 	background-color: #F7F7F7;
 }
 
-
-
-
-
-
+.level-my-account #main-content  {
+    float: right;
+    width: 680px;
+    background-color: #F7F7F7;
+    padding: 10px;
+    min-height: 205px;
+}

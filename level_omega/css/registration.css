@@ -1,16 +1,14 @@
 @CHARSET "UTF-8";
 /* some changes for the user related paged */
-body.page-user #top_bar,
 body.page-user-login #top_bar,
 body.page-login-opts #top_bar,
 body.page-user-password #top_bar,
 body.page-register #top_bar,
 body.page-user-register #top_bar,
-body.section-users #top_bar,
+body.section-terms #top_bar,
 body.section-linkedin #top_bar {
 	background-color: inherit;
-	padding: 10px 0 0 0;
-
+	padding: 10px 0 10px 0;
 }
 
 body.page-register #main_wrapper {
@@ -119,13 +117,22 @@ p.intro-text {
 input#edit-submit, 
 input#edit-delete 
 {
-	background-color: #21a0e1;
-	color: #FFF;
-	font-weight: bold;
-	font-size: 1.2em;
-	padding: 5px;
-	cursor: pointer;
-	border: 0 none;
+    background: url("../images/button-grey-gradient.gif") repeat-x scroll 0 0 transparent;
+    border: 1px solid #CCCCCC;
+    border-radius: 2px 2px 2px 2px;
+    color: #999999;
+    display: block;
+    float: left;
+    font-size: 12px;
+    margin-right: 10px;
+    padding: 7px 10px;
+    cursor: pointer; 
+}
+input:hover#edit-submit, 
+input:hover#edit-delete 
+{
+  background: url("../images/button-grey-gradient.gif") repeat-x scroll 0 100% transparent;
+  color: #555555;
 }
 
 #user-register .description {
@@ -153,26 +160,25 @@ input#edit-delete
 }
 
 #edit-conditions-wrapper textarea {
-  width: 678px;
+  width: 650px;
   padding: 10px;
   border: 1px solid #ccc;
 }
 
 #user-register input#edit-submit {
-  display: block;
-  border: 0 none;
-  width: 329px;
-  height: 60px;
-  padding: 6px 0 18px 0;
-  font: bold 30px/36px Arial, sans-serif;
-  letter-spacing: -1px;
-  text-align: center;
-  color: #fff;
-  background: transparent url(../images/form-buttons.gif) -660px 0 no-repeat;
-  margin: 21px 0 0 185px;
+    background: url("../images/button-grey-gradient.gif") repeat-x scroll 0 0 transparent;
+    border: 1px solid #CCCCCC;
+    border-radius: 2px 2px 2px 2px;
+    color: #999999;
+    display: block;
+    float: left;
+    font-size: 12px;
+    margin-right: 10px;
+    padding: 7px 10px;
 }
 #user-register input#edit-submit:hover {
-  background: transparent url(../images/form-buttons.gif) -660px -60px no-repeat;
+  background: url("../images/button-grey-gradient.gif") repeat-x scroll 0 100% transparent;
+  color: #555555;
 }
 
 /* error input */

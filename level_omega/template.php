@@ -248,10 +248,16 @@ function level_omega_preprocess_page(&$vars, $hook) {
     // add another <body> class for better theming
     $body_classes[] = 'page-doc-company';
   }
-  elseif (arg(1) == 'person') {
+  if (arg(1) == 'person') {
     $vars['main_content_attributes']['typeof'] = 'v:Person';
     // add another <body> class for better theming
     $body_classes[] = 'page-doc-person';
+  }
+  elseif (arg(2) == 'edit') {
+    $body_classes[] = 'level-my-account';
+  }
+  elseif (arg(2) == 'stats') {
+    $body_classes[] = 'level-account-statistics';
   }
   
   $vars['body_classes'] = implode(' ', $body_classes);
