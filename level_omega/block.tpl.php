@@ -33,6 +33,6 @@
 <?php endif;?>
 
   <div class="content">
-    <?php print $block->content ?>
+    <?php print $block->content; ?>
   </div>
 </div>
