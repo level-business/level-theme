@@ -35,4 +35,13 @@ $(document).ready(function() {
       }
     );
   });
+  
+  var registerToVoteContent = '<span class="tooltip">Voting on a company is only available to registered users. Please <a href="/user/login">login</a> or <a href="/register">register</a>  to vote on this company.</span>';
+  // Vote to Register
+  $('.vote_registration').tipTip({
+    defaultPosition: 'top',
+	content:registerToVoteContent,
+	keepAlive: true,
+  });
+	  
 });
