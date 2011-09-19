@@ -41,50 +41,10 @@
  */
 ?>
 <?php if (!$account->hide_profile): ?>
-  <?php profile_load_profile($account); ?>
-
+  
   <h1 id="profile-title"><?php print ucwords(strtolower($account->name)); ?><?php print check_plain($account->profile_age['#value']); ?></h1>
 
-  <div class="profile clear-block">
-
-    <div class="linkedin_additional clear-block">
-      <?php print $account->content['linkedin_additional']['options']['#value']; ?>
-    </div>
-  
-    <?php if (isset($account->content['identification'])): ?>
-      <div class="identification clear-block">
-        <div class="identification-top clear-block">
-          <div <?php print drupal_attributes($account->content['identification']['profile_nationality']['#attributes']); ?>>
-            <h4><?php print check_plain($account->content['identification']['profile_nationality']['#title']); ?></h4>
-            <div class="content"><span><?php print check_plain($account->content['identification']['profile_nationality']['#value']); ?></span></div>
-          </div>
-             
-          <div <?php print drupal_attributes($account->content['identification']['profile_date_of_birth']['#attributes']); ?>>
-            <h4>Date of Birth</h4>
-            <div class="content"><span><?php print check_plain($account->content['identification']['profile_date_of_birth']['#value']); ?></span></div>
-          </div>
-
-          <div <?php print drupal_attributes($account->content['identification']['profile_age']['#attributes']); ?>>
-            <h4><?php print check_plain($account->content['identification']['profile_age']['#title']); ?></h4>
-            <div class="content"><span><?php print check_plain($account->content['identification']['profile_age']['#value']); ?> years</span></div>
-          </div>
-        </div>
-
-        <div <?php print drupal_attributes($account->content['identification']['profile_occupation']['#attributes']); ?>>
-          <h4><?php print check_plain($account->content['identification']['profile_occupation']['#title']); ?></h4>
-          <div class="content"><span><?php print check_plain($account->content['identification']['profile_occupation']['#value']); ?></span></div>
-        </div>
-    
-        <div <?php print drupal_attributes($account->content['identification']['profile_address']['#attributes']); ?>>
-          <h4><?php print check_plain($account->content['identification']['profile_address']['#title']); ?></h4>
-          <div class="content"><span><?php print check_plain($account->content['identification']['profile_address']['#value']); ?></span></div>
-        </div>
-      </div><!--/ .identification -->
-  
-      <div class="appointments clear-block">
-        <?php print $profile['appointments']; ?>
-      </div>
-  
-    <?php endif ?>
+  <div class="profile">
+   <?php print $user_profile ?>     
   </div>
 <?php endif ?>

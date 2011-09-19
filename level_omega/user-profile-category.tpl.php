@@ -28,6 +28,6 @@
   <h3><?php print $title; ?></h3>
 <?php endif; ?>
 
-<div class="profile-catagory">
+<div <?php print $attributes; ?>>
   <?php print $profile_items; ?>
 </div>

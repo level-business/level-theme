@@ -18,8 +18,9 @@
  * 
  */
 ?>
-
-<div <?php print drupal_attributes($field['#attributes'])?>>
-<h3><?php print $field['#title']?>:</h3>
-<p><span><?php print $field['#value']?></span></p>
-</div>
+<?php if (isset($field['#value']) && $field['#value'] != ""): ?>
+  <div <?php print drupal_attributes($field['#attributes'])?>>
+  <h3><?php print $field['#title']?>:</h3>
+  <p><span><?php print $field['#value']?></span></p>
+  </div>
+<?php endif;?>

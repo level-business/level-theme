@@ -94,14 +94,6 @@ function level_omega_preprocess(&$vars, $hook) {
           $company_name = $vars['view']->result[0]->name;
         }
       }
-      if($vars['name'] == "director_profile") {
-        if ($vars['view']->result[0]->name) {
-          drupal_set_title($vars['view']->result[0]->name . ' director profile');
-          global $director_name;
-          $director_name = $vars['view']->result[0]->name;
-        }
-       
-     }
 
      if ($vars['name'] == 'ch_solr_transactions') {
         // Get the date and set the title if the view is one of the main blocks
@@ -366,6 +358,15 @@ function level_omega_apachesolr_unclick_link($facet_text, $path, $options = arra
 //  var_dump($options);
   return   apachesolr_l('<div class="link_text">' . $facet_text . '</div> (remove)', $path, $options);
 }
+
+function level_omega_preprocess_user_profile_item(&$variables) {
+  // Hide empty profile items
+  if ($variables['value'] == NULL) {
+    $variables['value'] = "N/A";
+  }  
+}
+
+
 
 function level_omega_form_element($element, $value) {
   // This is also used in the installer, pre-database setup.

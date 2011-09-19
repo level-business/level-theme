@@ -24,5 +24,5 @@
 ?>
 <div <?php print $attributes; ?>>
   <h4 class="identification-title"><?php print $title; ?></h4>
-  <div class="identification-content"><?php print $value; ?></div>
+  <div class="content"><span><?php print $value; ?></span></div>
 </div>
