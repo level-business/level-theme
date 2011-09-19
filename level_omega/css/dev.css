@@ -572,6 +572,7 @@ body.not-front #main-content .node {
   padding: 10px 15px 15px 15px;
   margin: 20px 10px;
   float: left;
+  clear: right;
   background: #f7f7f7;
   border: 1px solid #ddd;
   -moz-border-radius: 5px;
@@ -654,9 +655,9 @@ body.not-front #main-content .node {
 
 /* override the ctools class */
 .widget a.ctools-ajaxing {
-	padding-right: 0 !important;
-	}
-	
+  padding-right: 0 !important;
+  }
+  
 /* options widget list */
 .widget .any_vote_option_widget li a,
 .widget .any_vote_option_widget li span {
@@ -1361,12 +1362,12 @@ ul.primary li.active a:hover {
 #block-level_user-company_description,
 #block-boxes-level_profile_blurb {
   clear: both;
-  margin: 0 10px 15px 0;
-  padding: 0 0 40px 0;
+  margin:  0 0 10px 0;
+  padding: 10px 0 10px 0;
   font-size: 1em;
   line-height: 1.5em;
-  border-bottom: 1px dotted #999;
-  border-top: 0 none;
+  border-top: 1px solid #C0C0C0;
+  border-bottom: 1px solid #C0C0C0;
 }
 
 #block-level_user-company_description {
@@ -2057,7 +2058,7 @@ a#level_accounts_download_link {
 /* level_tagging superfish js menu */
 
 #page_tools #level_tagging_save_box {
-	position: absolute;
+  position: absolute;
 }
 
 #page_tools #level_tagging_save_box #sf_save_profile {

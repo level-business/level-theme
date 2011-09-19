@@ -1356,3 +1356,66 @@ body.front 	#block-level_user-user_login_logout_links {
 .view-id-director_search .views-field {
   font-size: 0.9em;
 }
+
+.block_help_text { display: none; }
+
+/************************* Addtional CSS to correct rest of the page based on September 2011 profile page redesign ***********************/
+  
+#block-views-d2a5830eb7ed82ff47f3bdf289b6ab03, .company-details-view {
+  margin:  0 0 10px 0;
+  padding: 10px 0 0 0;
+  border-top: 1px solid #C0C0C0;
+}
+#block-views-d2a5830eb7ed82ff47f3bdf289b6ab03 h2 {
+  font-size:  1.4em;
+  color: #333;
+  margin-bottom: 5px;
+}
+#block-views-d2a5830eb7ed82ff47f3bdf289b6ab03 .view-header {
+  width: 32%;
+  margin-right: 2%;
+  font-family: "Lucida Grande", Arial, Helvetica, sans-serif;
+  color: #666;
+  font-size: 0.9em;
+  float: left;
+}
+#block-views-d2a5830eb7ed82ff47f3bdf289b6ab03 .view-content {
+  width: 66%;
+  float: left;
+}
+#block-views-d2a5830eb7ed82ff47f3bdf289b6ab03 li {
+  width: 33%;
+  margin-right: 2%;
+  padding-left: 15%;
+  background:  url('images/download-accounts.jpg');
+  background-repeat: no-repeat;
+  background-position: left center; 
+  height: 50px;
+  color: #21AAE9;
+  float: left;
+}
+
+#block-views-d2a5830eb7ed82ff47f3bdf289b6ab03  .views-row {
+	border-bottom: none;
+}
+
+div .company-details-view .field-content, div .company-details-view .company-details-label {
+    font-size: 1em;
+    line-height: 0.8em;
+}
+div .company-details-view .company-address {
+    padding-left: 0px;
+}
+div #block-boxes-level_profile_blurb h2 {
+    font-size: 1.2em;
+}
+div #block-boxes-level_profile_blurb p {
+    line-height: 1.2em;
+    padding-bottom: 0.5em;
+    padding-top: 0.5em;
+}
+div #top_bar h1.company-name {
+    margin: 10px 0 5px 0;
+    padding: 0;
+}
+

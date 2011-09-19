@@ -200,6 +200,10 @@ function level_omega_preprocess_block(&$vars, $hook) {
       && $vars['block']->delta == 'company_description') {
          $vars['extra_classes'] = ($vars['block']->empty_company_description) ? 'company_description_empty' : '';
   }
+  // Set the block md5 so that the content of the block can be tracked with javascript
+  if($vars['block']->module == 'level_profiles' && $vars['block']->delta == 'company_profile_help') {
+    $vars['extra_classes'] = 'block_help_text block_content_' . md5($vars['block']->content);
+  }
 }
 
 function level_omega_preprocess_views_view_field(&$vars, $hook) {
@@ -407,12 +411,22 @@ function level_omega_linkedin_auth_display_login_block_button($display = NULL, $
   return theme('item_list', $items);
 }
 
+
+function level_omega_preprocess_appointment_field(&$variables) {
+  // If field is witheld then change value to 'register to view'
+  if ($variables['field']['#withheld'] == TRUE) {
+    $variables['field']['#attributes']['class'] .= ' field_register_to_view';
+    $variables['field']['#value'] = 'Register to view';
+  }
+}
+
 /* Theme function for the Global Toolbar */
 function level_omega_global_toolbar($vars) {
   
   $output = '<div id="global-links-left">'.
               $vars['links']['my_profile'].
               $vars['links']['my_account'].
+              $vars['links']['monitor'].
             '</div>'.
 
             _level_omega_get_level_tagging_block().
